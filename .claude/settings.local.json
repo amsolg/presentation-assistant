@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Read(C:\\repos\\pt-workspace\\knowledge-base\\premier-tech\\groups\\ptg\\teams\\information-technology/**)",
+      "Read(C:\\repos\\pt-workspace\\knowledge-base\\premier-tech\\groups\\ptg\\teams\\information-technology\\enterprise-architecture/**)",
+      "Read(C:\\repos\\pt-workspace\\knowledge-base\\premier-tech\\groups\\ptg\\teams\\information-technology\\enterprise-architecture/**)",
+      "Bash(pip install:*)",
+      "Bash(python:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

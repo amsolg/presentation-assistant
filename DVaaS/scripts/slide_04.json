@@ -1,0 +1,260 @@
+{
+  "slide_number": 4,
+  "slide_title": "BI Development Workflow",
+  "layout_name": "Titre + 2 listes à puces",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Sources typiques de données pour le développement BI chez Premier Tech. JDE, Salesforce et les bases de données SQL internes.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 91.67,
+              "width": 1111.33,
+              "height": 70.04,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "BI Development Workflow",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 14,
+            "type": "picture",
+            "position": {
+              "left": 192.47,
+              "top": 481.41,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 15,
+            "type": "picture",
+            "position": {
+              "left": 321.64,
+              "top": 170.5,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 16,
+            "type": "picture",
+            "position": {
+              "left": 129.41,
+              "top": 318.82,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_5",
+            "shape_id": 17,
+            "type": "text_box",
+            "position": {
+              "left": 148.86,
+              "top": 299.44,
+              "width": 57.09,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "SQL",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_6",
+            "shape_id": 18,
+            "type": "text_box",
+            "position": {
+              "left": 213.52,
+              "top": 462.02,
+              "width": 53.89,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "JDE",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_7",
+            "shape_id": 19,
+            "type": "text_box",
+            "position": {
+              "left": 310.09,
+              "top": 163.83,
+              "width": 119.11,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Salesforce",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Titre + 2 listes à puces",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Voici notre workflow typique de développement Business Intelligence chez Premier Tech! Cette slide présente les fondations de notre écosystème de données actuel avec nos trois sources principales. Nous avons J-D-E, notre système ERP central qui gère toutes nos opérations financières et de fabrication. Ensuite, Salesforce, notre plateforme CRM qui centralise nos interactions client et nos processus de vente. Et finalement, nos bases de données SQL internes qui contiennent une multitude d'informations spécialisées métier. Ces trois piliers constituent la base de notre infrastructure de données actuelle."
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "slide_number": 49,
+  "slide_title": "Slide 381",
+  "layout_name": "Titre + 2 listes à puces",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Cette image donne un aperçu de la progression des coûts selon l'utilisation. Encore une fois, le coût de Fabric à sa capacité la plus élevée dépasse à peine le coût de Fabric à sa capacité la plus basse.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 6,
+            "type": "picture",
+            "position": {
+              "left": 0.0,
+              "top": 0.0,
+              "width": 1244.08,
+              "height": 720.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          }
+        ],
+        "layout": "Titre + 2 listes à puces",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Cette image nous donne un aperçu fascinant de la progression des coûts selon l'utilisation, et c'est là qu'on voit toute la beauté du modèle Fabric ! Regardez cette courbe : même quand Microsoft Fabric atteint sa capacité la plus élevée, le coût dépasse à peine celui de la capacité la plus basse de Denodo !"
+    }
+  ]
+}

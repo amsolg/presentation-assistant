@@ -1,0 +1,573 @@
+{
+  "slide_number": 43,
+  "slide_title": "Data Virtualization as a Service",
+  "layout_name": "Titre + 2 listes à puces",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Ici, on mentionne qu'on a exploré Denodo et ses capacités de virtualisation des données. Comme on pouvait s'y en attendre, Denodo fonctionne bien. Cependant, le modèle opérationnel n'est pas tout à fait compatible avec la structure IT actuel et le coût d'entrée est beaucoup trop élevé. Considérant les tendances de Premier Tech en matière d'adaptation IT, il y a un risque qu'adopter Denodo nous mène à des pertes financières, même à long terme.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 91.67,
+              "width": 1111.33,
+              "height": 70.04,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Data Virtualization as a Service",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 4,
+            "type": "picture",
+            "position": {
+              "left": 192.47,
+              "top": 481.41,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 9,
+            "type": "picture",
+            "position": {
+              "left": 321.64,
+              "top": 170.5,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 10,
+            "type": "picture",
+            "position": {
+              "left": 129.41,
+              "top": 318.82,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_5",
+            "shape_id": 11,
+            "type": "text_box",
+            "position": {
+              "left": 148.86,
+              "top": 299.44,
+              "width": 57.09,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "SQL",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_6",
+            "shape_id": 12,
+            "type": "text_box",
+            "position": {
+              "left": 213.52,
+              "top": 462.02,
+              "width": 53.89,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "JDE",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_7",
+            "shape_id": 13,
+            "type": "text_box",
+            "position": {
+              "left": 310.09,
+              "top": 163.83,
+              "width": 119.11,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Salesforce",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_8",
+            "shape_id": 7,
+            "type": "unknown_shape",
+            "position": {
+              "left": 369.32,
+              "top": 247.76,
+              "width": 0.0,
+              "height": 60.71,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_9",
+            "shape_id": 8,
+            "type": "unknown_shape",
+            "position": {
+              "left": 213.52,
+              "top": 360.0,
+              "width": 121.77,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_10",
+            "shape_id": 16,
+            "type": "unknown_shape",
+            "position": {
+              "left": 267.41,
+              "top": 402.95,
+              "width": 73.06,
+              "height": 78.46,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_11",
+            "shape_id": 24,
+            "type": "picture",
+            "position": {
+              "left": 878.7,
+              "top": 481.41,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_12",
+            "shape_id": 25,
+            "type": "picture",
+            "position": {
+              "left": 990.7,
+              "top": 170.5,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_13",
+            "shape_id": 26,
+            "type": "picture",
+            "position": {
+              "left": 1052.23,
+              "top": 314.82,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_14",
+            "shape_id": 27,
+            "type": "unknown_shape",
+            "position": {
+              "left": 924.33,
+              "top": 409.88,
+              "width": 0.0,
+              "height": 90.92,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_15",
+            "shape_id": 28,
+            "type": "unknown_shape",
+            "position": {
+              "left": 952.11,
+              "top": 266.5,
+              "width": 58.0,
+              "height": 59.85,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_16",
+            "shape_id": 29,
+            "type": "unknown_shape",
+            "position": {
+              "left": 974.7,
+              "top": 356.47,
+              "width": 94.12,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_17",
+            "shape_id": 20,
+            "type": "unknown_shape",
+            "position": {
+              "left": 321.64,
+              "top": 298.16,
+              "width": 658.83,
+              "height": 116.66,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {
+                "type": "SOLID (1)",
+                "color": null
+              },
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_18",
+            "shape_id": 1026,
+            "type": "picture",
+            "position": {
+              "left": 446.51,
+              "top": 252.71,
+              "width": 415.85,
+              "height": 180.2,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          }
+        ],
+        "layout": "Titre + 2 listes à puces",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Commençons par Denodo. Et là, aucune surprise, Denodo fonctionne exactement comme annoncé ! C'est une plateforme mature, robuste, qui fait exactement ce qu'on attend d'une solution de virtualisation de données. Mais - et c'est un gros mais - le modèle opérationnel ne colle pas du tout avec notre structure IT actuelle. Sans compter le coût d'entrée qui nous ferait pleurer ! Considérant les tendances de Premier Tech en matière d'adaptation IT, adopter Denodo nous mènerait probablement vers des pertes financières, même à long terme. C'est le syndrome de la Ferrari quand on a besoin d'un pick-up. Magnifique, mais complètement inadapté à nos besoins réels."
+    }
+  ]
+}

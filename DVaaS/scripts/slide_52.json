@@ -1,0 +1,27 @@
+{
+  "slide_number": 52,
+  "slide_title": "Slide 265",
+  "layout_name": "Monogramme PT",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Merci, etc.",
+      "technical_description": {
+        "visual_elements": [],
+        "layout": "Monogramme PT",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Merci infiniment pour votre attention tout au long de cette présentation ! C'était un véritable plaisir de partager avec vous cette vision passionnante de notre transformation à venir. Ensemble, nous venons d'explorer les fondations de ce qui sera une révolution dans notre gestion des données chez Premier Tech. L'avenir s'annonce extraordinaire, et j'ai hâte de voir cette vision prendre vie grâce à votre engagement et votre expertise ! Merci encore et à bientôt !"
+    }
+  ]
+}

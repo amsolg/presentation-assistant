@@ -1,0 +1,57 @@
+{
+  "slide_number": 13,
+  "slide_title": "Slide 525",
+  "layout_name": "Monogramme PT",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide de clôture utilisant le template 'Monogramme PT' de Premier Tech. Cette dernière slide marque la fin officielle de la présentation du PoC Microsoft Fabric. Elle affiche le logo corporatif et peut inclure les coordonnées de contact ou servir de transition vers la période de questions-réponses. Le monogramme PT renforce l'identité de marque et signale professionnellement la conclusion de la présentation technique sur la modernisation d'ETO v2.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1255.0,
+              "top": 687.67,
+              "width": 25.0,
+              "height": 19.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "13",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Monogramme PT",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "On a parcouru ensemble un voyage extraordinaire aujourd'hui. On a commencé par un problème massif - 8 à 11 heures quotidiennes monopolisées par e-téovédeu pour ensuite dévoiler une solution élégante et puissante avec Microsoft Fabric. On a préparé un plan d'exécution précis, on a établi des critères de succès clairs et mesurables, mais plus important encore, on a démontré que ce projet incarne parfaitement les valeurs de Premier Tech : innovation audacieuse, excellence opérationnelle, et impact positif durable. Le coût estimé de moins de 3000 dollars pour une transformation de cette ampleur est presque incroyable et on est prêt à démarrer immédiatement. L'expertise est assemblée, le plan est solide et les bénéfices sont spectaculaires. Il ne manque que votre feu vert pour lancer cette révolution data. Merci pour votre temps et votre confiance. L'avenir de nos données commence maintenant."
+    }
+  ]
+}

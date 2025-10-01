@@ -1,0 +1,65 @@
+{
+  "slide_number": 28,
+  "slide_title": "Slide 359",
+  "layout_name": "1 ou 2 mots",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "C'est maintenant le temps de parler de l'exploration qu'on a fait pour moderniser tout ça.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 271.14,
+              "width": 1111.33,
+              "height": 177.72,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Exploration\u000bLooking for the needle in the needlestack",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 80.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "1 ou 2 mots",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Bon. Assez parlé de nos malheurs ! Maintenant que vous avez une image claire de notre réalité, il est temps de parler de solutions. Parce que oui, on peut faire mieux ! Alors parlons de la modernisation qu'on a explorée pour transformer cette anarchie architecturale en quelque chose d'élégant, de cohérent, et - osons rêver - de prévisible."
+    }
+  ]
+}

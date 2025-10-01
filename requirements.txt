@@ -1,0 +1,31 @@
+# Presentation Assistant - Requirements
+# Assistant de présentation avec génération vocale Sam AI
+
+# Core PowerPoint processing
+python-pptx>=0.6.21
+
+# Audio generation with ElevenLabs  
+elevenlabs>=0.2.24
+
+# Audio/Video processing
+moviepy>=1.0.3
+pydub>=0.25.1
+
+# Data processing and utilities
+requests>=2.31.0
+pathlib2>=2.3.7
+xmltodict>=0.13.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.0.0
+
+# PowerPoint automation
+pywin32>=306
+pygame>=2.5.0
+keyboard>=0.13.5
+
+# Optional: Advanced animation/transition support
+# spire-presentation>=0.8.0  # Uncomment for enhanced animation support

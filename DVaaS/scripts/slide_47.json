@@ -1,0 +1,56 @@
+{
+  "slide_number": 47,
+  "slide_title": "Slide 377",
+  "layout_name": "Titre + 2 listes à puces",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Cette image montre que le coût d'entrée de Denodo est colossal, montrant qu'en divisant le coût d'entrée par le nombre d'utilisateurs initial, le coût par utilisateur dépasse aisément les dizines de milliers de dollars. En comparaison, Microsoft Fabric permet une approche progressive et adaptée à notre réalité.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 7,
+            "type": "picture",
+            "position": {
+              "left": 0.0,
+              "top": 0.0,
+              "width": 1244.97,
+              "height": 720.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          }
+        ],
+        "layout": "Titre + 2 listes à puces",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Et maintenant, parlons chiffres ! Cette image est absolument révélatrice et franchement... elle fait mal aux yeux ! Regardez le coût d'entrée de Denodo : il est littéralement colossal ! Si on divise ce coût d'entrée par notre nombre d'utilisateurs initial, on arrive à des dizaines de milliers de dollars par utilisateur ! En comparaison, Microsoft Fabric nous offre exactement ce qu'il nous faut : une approche progressive et adaptée à notre réalité. Pas de choc financier, pas d'investissement pharaonique dès le départ. Juste une montée en puissance intelligente qui grandit avec nos besoins !"
+    }
+  ]
+}

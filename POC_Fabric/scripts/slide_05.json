@@ -1,0 +1,159 @@
+{
+  "slide_number": 5,
+  "slide_title": "Slide 559",
+  "layout_name": "Diapositive vide",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide détaillant la composition et les performances dégradantes du workflow ETO v2. Présentation des deux jobs critiques : RDL00001_FULL (à 23h00, 4h de traitement) et RDL00001_PARTITIONS (3 exécutions quotidiennes de 1h45-2h30). Cette slide quantifie l'impact total de 8-11 heures quotidiennes et identifie les équipes affectées (infrastructure, utilisateurs PTG, consommateurs BI). Elle démontre l'ampleur du problème et l'urgence d'une solution moderne.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "5",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 91.67,
+              "width": 1111.33,
+              "height": 70.04,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Défis actuels des données métier",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 4,
+            "type": "picture",
+            "position": {
+              "left": 84.33,
+              "top": 177.33,
+              "width": 547.67,
+              "height": 398.67,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.jpeg",
+                "content_type": "image/jpeg"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 5,
+            "type": "text_box",
+            "position": {
+              "left": 648.0,
+              "top": 177.37,
+              "width": 547.67,
+              "height": 398.67,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Workflow ETO v2 = 8 à 11 heures par jour\nRetards dans la disponibilité des données\nInfrastructure monopolisée, frein aux projets BI\nArchitecture SSIS vieillissante et difficile à optimiser",
+              "has_text_frame": true,
+              "paragraphs_count": 5
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Diapositive vide",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Maintenant, regardons la réalité en face avec ces quatre défi majeur. Premièrement, le workflow e-téovédeu monopolise 8 à 11 heure par jour. C'est une journée complète de traitement qui s'étale sur la période opérationnelle. Ensuite, les retard dans la disponibilité des données fait en sorte que l'équipe métier doit attendre des heures avant d'avoir accès aux information dont elles ont besoin pour prendre des décisions. Troisième défi - les ressource du serveur sont monopolisée, créant un frein majeur aux autre projet biaille. Impossible de lancer de nouvelles initiatives quand e-téovédeu accapare toutes les ressources. Finalement, l'architecture SSIS est vieillissante et difficile à optimiser. Nous sommes coincés avec une technologie qui a atteint ses limites et qui ne peut plus évoluer avec nos besoins. Ces quatre points forment un cercle vicieux qui impacte toute l'organisation et c'est exactement pourquoi nous devons agir maintenant."
+    }
+  ]
+}

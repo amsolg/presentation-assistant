@@ -1,0 +1,17 @@
+{
+  "presentation_name": "POC_Fabric",
+  "total_slides": 13,
+  "extraction_version": "1.0.0",
+  "supported_features": [
+    "text_extraction",
+    "shape_positions",
+    "speaker_notes",
+    "basic_formatting",
+    "shape_properties"
+  ],
+  "limitations": [
+    "complex_animations_via_xml_only",
+    "transitions_limited",
+    "embedded_media_basic"
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "slide_number": 7,
+  "slide_title": "Slide 563",
+  "layout_name": "Titre de section bleu",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide de transition vers la section 'Proposition' du PoC Microsoft Fabric. Cette slide marque le passage de l'analyse du problème vers la présentation de la solution proposée. Elle prépare l'audience à découvrir comment Microsoft Fabric peut résoudre les défis de performance d'ETO v2 grâce à une approche de modernisation complète plutôt qu'une simple migration.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 54.17,
+              "top": 65.77,
+              "width": 1171.67,
+              "height": 80.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Architecture technique",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "7",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 4,
+            "type": "text_box",
+            "position": {
+              "left": 631.5,
+              "top": 166.55,
+              "width": 574.5,
+              "height": 456.96,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Composants Fabric : OneLake, Dataflow Gen2, Fabric Data Warehouse, Power BI\nApproche Extraction JDE : Incrémentale avec Dataflow Gen2\nExclusions PoC : Production, Purview, workflows non critiques",
+              "has_text_frame": true,
+              "paragraphs_count": 3
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 7,
+            "type": "picture",
+            "position": {
+              "left": 24.42,
+              "top": 142.39,
+              "width": 591.0,
+              "height": 505.28,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          }
+        ],
+        "layout": "Titre de section bleu",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Maintenant, voici les composants clés de notre solution. Premièrement, les composant Fabric qui forme le cœur de notre architecture moderne : OneLake pour le stockage unifié de toutes nos données, Dataflow Gen2 qui remplace complètement SSIS avec une puissance cloud inégalée, Fabric Data Warehouse pour l'analytique haute performance, et Power BI intégré nativement pour nos rapports. Deuxièmement, pour notre approche d'extraction J.D.E, nous allons utiliser le mirroring natif de base de donnée Oracle. Cette fonctionnalité a récemment été mis en preview publique et c'est l'occasion idéale pour l'essayer. Si jamais ça ne performe pas comme souhaité, nous avons un plan B qui est la stratégie incrémentale classique à travers Dataflow Gen2 - simple et efficace. Et troisièmement, soyons clairs sur ce que nous excluons de cette poque pour rester focusés : pas de Purview pour l'instant, et pas d'autres workflows non critiques. Cette architecture ciblée va nous permettre de valider le concept de façon précise et efficace."
+    }
+  ]
+}

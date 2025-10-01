@@ -1,0 +1,159 @@
+{
+  "slide_number": 11,
+  "slide_title": "Slide 571",
+  "layout_name": "Titre de section bleu",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide de conclusion présentant la décision attendue et les prochaines étapes post-PoC. Détaille les scénarios selon les résultats : succès complet (phase pilote élargie sur 3-5 workflows), succès partiel (itération ciblée), ou échec technique (réévaluation stratégique). Présente la validation des parties prenantes requise et l'analyse des risques détaillée. Met l'accent sur l'engagement minimal mais l'impact maximal : apprentissage concret avant décisions majeures, avec validation d'une base pour modernisation complète.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 54.17,
+              "top": 65.77,
+              "width": 1171.67,
+              "height": 80.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Prochaines étapes",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "11",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 5,
+            "type": "picture",
+            "position": {
+              "left": 54.17,
+              "top": 166.55,
+              "width": 565.83,
+              "height": 456.96,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.jpeg",
+                "content_type": "image/jpeg"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 4,
+            "type": "text_box",
+            "position": {
+              "left": 660.0,
+              "top": 166.55,
+              "width": 565.83,
+              "height": 456.96,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Accès : Tables JDE et code source de la solution actuelle\nEnvironnement : Déterminer dans quelle instance de Fabric la PoC aura lieu\nParticipants : Définir le niveau d’implication requis par les différentes équipes.\nDécision finale : Go/No-Go par Management IT",
+              "has_text_frame": true,
+              "paragraphs_count": 4
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Titre de section bleu",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Nous avons une feuille de route claire et précise pour transformer cette poque en réalité. Premièrement, côté accès - nous devons sécuriser l'accès aux tables J.D.E et au code source de la solution actuelle. C'est la fondation de notre travail. Deuxièmement, l'environnement - nous devons déterminer dans quelle instance de Fabric la poque aura lieu. Troisièmement, les participant - nous devons définir formellement le niveau d'implication requis par les différentes équipes. Et finalement, la décision finale - le Go ou No-Go. Ces quatre étapes sont nos jalons immédiats. Chaque élément est crucial pour le succès de notre poque. Nous avons l'expertise technique, le plan d'exécution, le budget maîtrisé, et maintenant nous avons la roadmap des prochaines action concrète. Tout est aligné pour transformer cette vision en réalité. Le momentum est parfait, l'équipe est prête, et l'opportunité nous attend."
+    }
+  ]
+}

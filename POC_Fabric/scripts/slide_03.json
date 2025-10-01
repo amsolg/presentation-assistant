@@ -1,0 +1,159 @@
+{
+  "slide_number": 3,
+  "slide_title": "Slide 560",
+  "layout_name": "Diapositive vide",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide présentant les objectifs du Proof of Concept Microsoft Fabric. Cette slide établit clairement les buts ambitieux du projet : réduire de 90% le temps d'exécution d'ETO v2 (de 8-11h à moins de 2h par jour), valider la viabilité de Microsoft Fabric dans le contexte Premier Tech, et établir une méthodologie reproductible pour d'autres workflows critiques. Les objectifs combinent des métriques de performance précises avec des bénéfices business stratégiques.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "3",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 170.53,
+              "width": 509.44,
+              "height": 67.86,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Objectifs",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 4,
+            "type": "picture",
+            "position": {
+              "left": 692.17,
+              "top": 0.0,
+              "width": 587.83,
+              "height": 720.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.jpeg",
+                "content_type": "image/jpeg"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 5,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 253.77,
+              "width": 509.5,
+              "height": 374.82,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Réduction du temps de traitement de 90 %\nMigration d’un processus BI\nModernisation complète d’un use case\nMéthodologie reproductible pour d’autres workflows",
+              "has_text_frame": true,
+              "paragraphs_count": 4
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Diapositive vide",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Voici les trois piliers fondamentaux de notre preuve de concept. Le premier objectif est la réduction du temps de traitement de quatro-vingt-dix pourcent. C'est notre cible phare avec un gain de performance absolument spectaculaire qui transformera complètement notre efficacité opérationnelle. Le deuxième objectif est la modernisation complète d'un processus biaille. Nous allons démontrer que le transfert de nos processus biaille existant vers Fabric est non seulement possible mais aussi fluide et efficace. Le troisième objectif est la conception d'une méthodologie reproductible pour d'autres workflows. Ce n'est pas juste pour e-téovédeu, c'est la création d'un blueprint que nous pourrons répliquer sur d'autre processus critique. Ces trois objectif forme ensemble une vision cohérente de transformation."
+    }
+  ]
+}

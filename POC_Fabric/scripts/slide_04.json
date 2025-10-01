@@ -1,0 +1,159 @@
+{
+  "slide_number": 4,
+  "slide_title": "Slide 561",
+  "layout_name": "Titre de section bleu",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide de titre de section présentant le problème critique d'ETO v2. Cette slide introduit la situation actuelle alarmante : le workflow ETO v2 monopolise 8 à 11 heures de ressources infrastructure par jour, impactant l'ensemble de l'écosystème BI. Elle établit l'urgence business de trouver une solution pour libérer 6 à 9 heures de capacité quotidiennes et améliorer la réactivité des données business.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 54.17,
+              "top": 65.77,
+              "width": 1171.67,
+              "height": 80.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Défis métier : Pourquoi, comment, pourquoi maintenant",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 40.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "4",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 4,
+            "type": "picture",
+            "position": {
+              "left": 54.17,
+              "top": 166.55,
+              "width": 565.83,
+              "height": 456.96,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.jpeg",
+                "content_type": "image/jpeg"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 5,
+            "type": "text_box",
+            "position": {
+              "left": 660.0,
+              "top": 166.55,
+              "width": 565.83,
+              "height": 456.96,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Pourquoi? : Impact direct sur la disponibilité des données, pertes de productivité.\nComment? : Réarchitecture complète, exploitation native de Fabric (parallélisation, mise en cache, stockage unifié).\nPourquoi maintenant? : Performance du processus BI actuel est en dégradation, Fabric est mature, fenêtre d’opportunité pour tester.",
+              "has_text_frame": true,
+              "paragraphs_count": 3
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": true,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": "CENTER (2)"
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Titre de section bleu",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Pourquoi, comment, pourquoi maintenant. Cette slide encapsule l'essence même de notre démarche stratégique. Pourquoi agir? Parce qu'e-téovédeu impacte directement la disponibilité des données. Comment résoudre? Avec une modernisation qui dort sur nos tablettes depuis des années! Pourquoi maintenant? Parce que chaque jour d'attente, c'est des heures de capacité perdue, c'est des équipiers frustrées, c'est des décisions business retardées. L'urgence n'est pas juste technique, elle est aussi business. Cette transformation va libérer un potentiel énorme et tracer le chemin vers une modernisation majeure."
+    }
+  ]
+}

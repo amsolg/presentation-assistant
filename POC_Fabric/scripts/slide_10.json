@@ -1,0 +1,159 @@
+{
+  "slide_number": 10,
+  "slide_title": "Slide 570",
+  "layout_name": "Diapositive vide",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide détaillant les critères de réussite techniques et business du PoC. Critères techniques : migration réussie des 2 jobs ETO v2, performance FULL <30 minutes, performance PARTITIONS <15 minutes, équivalence fonctionnelle, et catalogue automatisé à 90%+. Critères business : reproductibilité de la méthodologie, complexité manageable, valeur démontrée validée par Jean-Guy, et intégration PowerBI Online. Inclut les métriques de validation précises pour mesurer le succès.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "10",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 170.53,
+              "width": 509.44,
+              "height": 67.86,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Budget et risques",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 40.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 4,
+            "type": "picture",
+            "position": {
+              "left": 692.17,
+              "top": 0.0,
+              "width": 587.83,
+              "height": 720.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.jpeg",
+                "content_type": "image/jpeg"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 5,
+            "type": "text_box",
+            "position": {
+              "left": 63.42,
+              "top": 275.52,
+              "width": 587.83,
+              "height": 374.82,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Budget : <3000 $ (capacité F2/F4, stockage inclus)\nPrincipaux risques :\nAccès JDE pour les données requises\nDisponibilité limitée des experts",
+              "has_text_frame": true,
+              "paragraphs_count": 4
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Diapositive vide",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Côté budget et risques, commençons par la bonne nouvelle : le coût estimé de la poque est inférieur à 3000 dollars. Ça couvre aisément la capacité Fabric F2 ou F4 pour la durée du projet avec le stockage OneLake inclus. Quand on considère qu'on cherche à libérer 6 à 9 heure de capacité d'infrastructure quotidienne, le retour sur investissement est phénoménal. Côté risques, on a identifié deux risques principaux qui devrait pouvoir être géré rapidement. Le premier risque è l'accès à Jidé-E pour les données requises. Il faudra donc voir à sécuriser ces accès dès le début. Le deuxième risque è la disponibilité limitée des expert. Notre mitigation? Avoir accès à la solution originale du projet e-téovédeu. Ces risque sont maîtrisable et nos mitigation sont solides. Le véritable risque, c'est de ne rien faire et continuer à perdre 8 à 11 heure par jour."
+    }
+  ]
+}

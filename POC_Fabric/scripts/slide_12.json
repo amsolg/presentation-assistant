@@ -1,0 +1,57 @@
+{
+  "slide_number": 12,
+  "slide_title": "Slide 491",
+  "layout_name": "We are PT",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Slide de transition ou intermède utilisant le template corporatif 'We are PT' de Premier Tech. Cette slide marque une pause dans la présentation technique et renforce l'identité organisationnelle. Elle peut servir de transition avant une session de questions-réponses ou avant d'aborder une section différente de la présentation. Le template renforce l'appartenance à l'écosystème Premier Tech et l'alignement du projet avec les valeurs de l'entreprise.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "12",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "We are PT",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "We are PT! Nous sommes Premier Tech, une organisation qui ne se contente pas du minimum et qui vise l'excellence. Cette poque Microsoft Fabric incarne parfaitement notre ADN d'innovation. Pensez-y : 90 pourcent d'amélioration de performance, c'est exactement le genre d'objectif audacieux qui fait la réputation de Premier Tech. Nous avons toujours été des pionniers, et aujourd'hui nous écrivons le prochain chapitre de notre histoire technologique."
+    }
+  ]
+}

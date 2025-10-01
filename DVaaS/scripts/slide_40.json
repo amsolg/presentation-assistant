@@ -1,0 +1,4462 @@
+{
+  "slide_number": 40,
+  "slide_title": "Data Virtualization as a Service",
+  "layout_name": "Titre + 2 listes à puces",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Les rapports qui consomment ces données deviennent des rapports en or.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 84.33,
+              "top": 91.67,
+              "width": 1111.33,
+              "height": 70.04,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Data Virtualization as a Service",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 4,
+            "type": "picture",
+            "position": {
+              "left": 192.47,
+              "top": 481.41,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 9,
+            "type": "picture",
+            "position": {
+              "left": 321.64,
+              "top": 170.5,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 10,
+            "type": "picture",
+            "position": {
+              "left": 129.41,
+              "top": 318.82,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_5",
+            "shape_id": 11,
+            "type": "text_box",
+            "position": {
+              "left": 148.86,
+              "top": 299.44,
+              "width": 57.09,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "SQL",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_6",
+            "shape_id": 12,
+            "type": "text_box",
+            "position": {
+              "left": 213.52,
+              "top": 462.02,
+              "width": 53.89,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "JDE",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_7",
+            "shape_id": 13,
+            "type": "text_box",
+            "position": {
+              "left": 310.09,
+              "top": 163.83,
+              "width": 119.11,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Salesforce",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_8",
+            "shape_id": 7,
+            "type": "unknown_shape",
+            "position": {
+              "left": 369.32,
+              "top": 247.76,
+              "width": 0.0,
+              "height": 60.71,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_9",
+            "shape_id": 8,
+            "type": "unknown_shape",
+            "position": {
+              "left": 213.52,
+              "top": 360.0,
+              "width": 121.77,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_10",
+            "shape_id": 16,
+            "type": "unknown_shape",
+            "position": {
+              "left": 267.41,
+              "top": 402.95,
+              "width": 73.06,
+              "height": 78.46,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_11",
+            "shape_id": 24,
+            "type": "picture",
+            "position": {
+              "left": 878.7,
+              "top": 481.41,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_12",
+            "shape_id": 25,
+            "type": "picture",
+            "position": {
+              "left": 990.7,
+              "top": 170.5,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_13",
+            "shape_id": 26,
+            "type": "picture",
+            "position": {
+              "left": 1052.23,
+              "top": 314.82,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_14",
+            "shape_id": 27,
+            "type": "unknown_shape",
+            "position": {
+              "left": 924.33,
+              "top": 409.88,
+              "width": 0.0,
+              "height": 90.92,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_15",
+            "shape_id": 28,
+            "type": "unknown_shape",
+            "position": {
+              "left": 952.11,
+              "top": 266.5,
+              "width": 58.0,
+              "height": 59.85,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_16",
+            "shape_id": 29,
+            "type": "unknown_shape",
+            "position": {
+              "left": 974.7,
+              "top": 356.47,
+              "width": 94.12,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_17",
+            "shape_id": 20,
+            "type": "unknown_shape",
+            "position": {
+              "left": 321.64,
+              "top": 298.16,
+              "width": 658.83,
+              "height": 116.66,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {
+                "type": "SOLID (1)",
+                "color": null
+              },
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_18",
+            "shape_id": 5,
+            "type": "unknown_shape",
+            "position": {
+              "left": 321.64,
+              "top": 296.84,
+              "width": 115.06,
+              "height": 117.99,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {
+                "type": "SOLID (1)",
+                "color": null
+              },
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_19",
+            "shape_id": 30,
+            "type": "picture",
+            "position": {
+              "left": 347.7,
+              "top": 369.36,
+              "width": 41.66,
+              "height": 41.66,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_20",
+            "shape_id": 31,
+            "type": "picture",
+            "position": {
+              "left": 351.52,
+              "top": 294.59,
+              "width": 46.68,
+              "height": 46.68,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_21",
+            "shape_id": 32,
+            "type": "picture",
+            "position": {
+              "left": 326.41,
+              "top": 335.66,
+              "width": 36.81,
+              "height": 36.81,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_22",
+            "shape_id": 6,
+            "type": "unknown_shape",
+            "position": {
+              "left": 437.0,
+              "top": 296.66,
+              "width": 419.96,
+              "height": 117.99,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {
+                "type": "SOLID (1)",
+                "color": null
+              },
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_23",
+            "shape_id": 3,
+            "type": "unknown_shape",
+            "position": {
+              "left": 384.52,
+              "top": 327.17,
+              "width": 106.41,
+              "height": 50.88,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_24",
+            "shape_id": 14,
+            "type": "picture",
+            "position": {
+              "left": 513.89,
+              "top": 368.22,
+              "width": 41.66,
+              "height": 41.66,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_25",
+            "shape_id": 15,
+            "type": "picture",
+            "position": {
+              "left": 517.7,
+              "top": 293.45,
+              "width": 46.68,
+              "height": 46.68,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_26",
+            "shape_id": 17,
+            "type": "picture",
+            "position": {
+              "left": 492.6,
+              "top": 334.52,
+              "width": 36.81,
+              "height": 36.81,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_27",
+            "shape_id": 19,
+            "type": "unknown_shape",
+            "position": {
+              "left": 617.85,
+              "top": 351.25,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_28",
+            "shape_id": 21,
+            "type": "unknown_shape",
+            "position": {
+              "left": 633.85,
+              "top": 367.25,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_29",
+            "shape_id": 22,
+            "type": "unknown_shape",
+            "position": {
+              "left": 638.36,
+              "top": 351.07,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_30",
+            "shape_id": 23,
+            "type": "unknown_shape",
+            "position": {
+              "left": 654.36,
+              "top": 367.07,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_31",
+            "shape_id": 33,
+            "type": "unknown_shape",
+            "position": {
+              "left": 640.86,
+              "top": 334.32,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_32",
+            "shape_id": 34,
+            "type": "unknown_shape",
+            "position": {
+              "left": 656.86,
+              "top": 350.32,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_33",
+            "shape_id": 35,
+            "type": "unknown_shape",
+            "position": {
+              "left": 661.36,
+              "top": 334.14,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_34",
+            "shape_id": 36,
+            "type": "unknown_shape",
+            "position": {
+              "left": 677.36,
+              "top": 350.14,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_35",
+            "shape_id": 37,
+            "type": "unknown_shape",
+            "position": {
+              "left": 649.08,
+              "top": 382.33,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_36",
+            "shape_id": 38,
+            "type": "unknown_shape",
+            "position": {
+              "left": 665.08,
+              "top": 398.33,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_37",
+            "shape_id": 39,
+            "type": "unknown_shape",
+            "position": {
+              "left": 669.59,
+              "top": 382.15,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_38",
+            "shape_id": 40,
+            "type": "unknown_shape",
+            "position": {
+              "left": 685.59,
+              "top": 398.15,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_39",
+            "shape_id": 41,
+            "type": "unknown_shape",
+            "position": {
+              "left": 672.09,
+              "top": 365.4,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_40",
+            "shape_id": 42,
+            "type": "unknown_shape",
+            "position": {
+              "left": 688.09,
+              "top": 381.4,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_41",
+            "shape_id": 43,
+            "type": "unknown_shape",
+            "position": {
+              "left": 692.59,
+              "top": 365.22,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_42",
+            "shape_id": 44,
+            "type": "unknown_shape",
+            "position": {
+              "left": 708.59,
+              "top": 381.22,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_43",
+            "shape_id": 45,
+            "type": "unknown_shape",
+            "position": {
+              "left": 573.85,
+              "top": 382.76,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_44",
+            "shape_id": 46,
+            "type": "unknown_shape",
+            "position": {
+              "left": 589.85,
+              "top": 398.76,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_45",
+            "shape_id": 47,
+            "type": "unknown_shape",
+            "position": {
+              "left": 594.35,
+              "top": 382.58,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_46",
+            "shape_id": 48,
+            "type": "unknown_shape",
+            "position": {
+              "left": 610.35,
+              "top": 398.58,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_47",
+            "shape_id": 49,
+            "type": "unknown_shape",
+            "position": {
+              "left": 596.85,
+              "top": 365.84,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_48",
+            "shape_id": 50,
+            "type": "unknown_shape",
+            "position": {
+              "left": 612.85,
+              "top": 381.84,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_49",
+            "shape_id": 51,
+            "type": "unknown_shape",
+            "position": {
+              "left": 617.35,
+              "top": 365.65,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_50",
+            "shape_id": 52,
+            "type": "unknown_shape",
+            "position": {
+              "left": 633.35,
+              "top": 381.65,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_51",
+            "shape_id": 53,
+            "type": "unknown_shape",
+            "position": {
+              "left": 564.41,
+              "top": 338.0,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_52",
+            "shape_id": 54,
+            "type": "unknown_shape",
+            "position": {
+              "left": 580.41,
+              "top": 354.0,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_53",
+            "shape_id": 55,
+            "type": "unknown_shape",
+            "position": {
+              "left": 584.91,
+              "top": 337.82,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_54",
+            "shape_id": 56,
+            "type": "unknown_shape",
+            "position": {
+              "left": 600.91,
+              "top": 353.82,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_55",
+            "shape_id": 57,
+            "type": "unknown_shape",
+            "position": {
+              "left": 587.41,
+              "top": 321.07,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_56",
+            "shape_id": 58,
+            "type": "unknown_shape",
+            "position": {
+              "left": 603.41,
+              "top": 337.07,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_57",
+            "shape_id": 59,
+            "type": "unknown_shape",
+            "position": {
+              "left": 607.92,
+              "top": 320.89,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_58",
+            "shape_id": 60,
+            "type": "unknown_shape",
+            "position": {
+              "left": 623.92,
+              "top": 336.89,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_59",
+            "shape_id": 61,
+            "type": "unknown_shape",
+            "position": {
+              "left": 664.29,
+              "top": 321.07,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_60",
+            "shape_id": 62,
+            "type": "unknown_shape",
+            "position": {
+              "left": 680.29,
+              "top": 337.07,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_61",
+            "shape_id": 63,
+            "type": "unknown_shape",
+            "position": {
+              "left": 684.8,
+              "top": 320.89,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_62",
+            "shape_id": 64,
+            "type": "unknown_shape",
+            "position": {
+              "left": 700.8,
+              "top": 336.89,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_63",
+            "shape_id": 65,
+            "type": "unknown_shape",
+            "position": {
+              "left": 687.3,
+              "top": 304.14,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_64",
+            "shape_id": 66,
+            "type": "unknown_shape",
+            "position": {
+              "left": 703.3,
+              "top": 320.14,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_65",
+            "shape_id": 67,
+            "type": "unknown_shape",
+            "position": {
+              "left": 707.8,
+              "top": 303.96,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_66",
+            "shape_id": 68,
+            "type": "unknown_shape",
+            "position": {
+              "left": 723.8,
+              "top": 319.96,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_67",
+            "shape_id": 69,
+            "type": "unknown_shape",
+            "position": {
+              "left": 626.42,
+              "top": 321.64,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_68",
+            "shape_id": 70,
+            "type": "unknown_shape",
+            "position": {
+              "left": 628.91,
+              "top": 304.89,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_69",
+            "shape_id": 71,
+            "type": "unknown_shape",
+            "position": {
+              "left": 644.91,
+              "top": 320.89,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_70",
+            "shape_id": 72,
+            "type": "unknown_shape",
+            "position": {
+              "left": 649.42,
+              "top": 304.71,
+              "width": 7.79,
+              "height": 5.22,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_71",
+            "shape_id": 74,
+            "type": "unknown_shape",
+            "position": {
+              "left": 625.64,
+              "top": 353.68,
+              "width": 12.71,
+              "height": 0.18,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_72",
+            "shape_id": 77,
+            "type": "unknown_shape",
+            "position": {
+              "left": 627.81,
+              "top": 326.86,
+              "width": 2.5,
+              "height": 10.04,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_73",
+            "shape_id": 79,
+            "type": "unknown_shape",
+            "position": {
+              "left": 644.75,
+              "top": 326.11,
+              "width": 4.06,
+              "height": 8.21,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_74",
+            "shape_id": 80,
+            "type": "unknown_shape",
+            "position": {
+              "left": 600.49,
+              "top": 384.76,
+              "width": 12.71,
+              "height": 0.18,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_75",
+            "shape_id": 81,
+            "type": "unknown_shape",
+            "position": {
+              "left": 657.54,
+              "top": 384.94,
+              "width": 12.71,
+              "height": 0.18,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_76",
+            "shape_id": 82,
+            "type": "unknown_shape",
+            "position": {
+              "left": 590.54,
+              "top": 340.43,
+              "width": 12.71,
+              "height": 0.18,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_77",
+            "shape_id": 83,
+            "type": "unknown_shape",
+            "position": {
+              "left": 664.65,
+              "top": 353.5,
+              "width": 12.71,
+              "height": 0.18,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_78",
+            "shape_id": 84,
+            "type": "unknown_shape",
+            "position": {
+              "left": 664.0,
+              "top": 327.13,
+              "width": 4.06,
+              "height": 8.21,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_79",
+            "shape_id": 85,
+            "type": "unknown_shape",
+            "position": {
+              "left": 648.81,
+              "top": 310.25,
+              "width": 3.9,
+              "height": 10.63,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_80",
+            "shape_id": 86,
+            "type": "unknown_shape",
+            "position": {
+              "left": 600.49,
+              "top": 358.54,
+              "width": 4.06,
+              "height": 8.21,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_81",
+            "shape_id": 87,
+            "type": "unknown_shape",
+            "position": {
+              "left": 680.91,
+              "top": 342.11,
+              "width": 4.06,
+              "height": 8.21,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_82",
+            "shape_id": 89,
+            "type": "unknown_shape",
+            "position": {
+              "left": 642.25,
+              "top": 340.11,
+              "width": 2.94,
+              "height": 10.96,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_83",
+            "shape_id": 91,
+            "type": "unknown_shape",
+            "position": {
+              "left": 660.1,
+              "top": 339.81,
+              "width": 5.32,
+              "height": 9.68,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_84",
+            "shape_id": 93,
+            "type": "unknown_shape",
+            "position": {
+              "left": 647.71,
+              "top": 352.18,
+              "width": 8.64,
+              "height": 1.32,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_85",
+            "shape_id": 95,
+            "type": "unknown_shape",
+            "position": {
+              "left": 704.69,
+              "top": 325.93,
+              "width": 2.03,
+              "height": 10.97,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_86",
+            "shape_id": 97,
+            "type": "unknown_shape",
+            "position": {
+              "left": 684.8,
+              "top": 326.86,
+              "width": 3.89,
+              "height": 9.89,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_87",
+            "shape_id": 99,
+            "type": "unknown_shape",
+            "position": {
+              "left": 688.97,
+              "top": 309.36,
+              "width": 2.22,
+              "height": 10.77,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_88",
+            "shape_id": 101,
+            "type": "unknown_shape",
+            "position": {
+              "left": 692.54,
+              "top": 323.5,
+              "width": 9.54,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_89",
+            "shape_id": 103,
+            "type": "unknown_shape",
+            "position": {
+              "left": 707.54,
+              "top": 309.93,
+              "width": 3.84,
+              "height": 9.46,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_90",
+            "shape_id": 105,
+            "type": "unknown_shape",
+            "position": {
+              "left": 711.49,
+              "top": 322.57,
+              "width": 11.18,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_91",
+            "shape_id": 107,
+            "type": "unknown_shape",
+            "position": {
+              "left": 637.75,
+              "top": 356.4,
+              "width": 5.14,
+              "height": 10.85,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_92",
+            "shape_id": 109,
+            "type": "unknown_shape",
+            "position": {
+              "left": 637.25,
+              "top": 372.29,
+              "width": 0.25,
+              "height": 9.36,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_93",
+            "shape_id": 111,
+            "type": "unknown_shape",
+            "position": {
+              "left": 658.25,
+              "top": 356.25,
+              "width": 2.72,
+              "height": 10.82,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_94",
+            "shape_id": 113,
+            "type": "unknown_shape",
+            "position": {
+              "left": 680.9,
+              "top": 367.82,
+              "width": 11.08,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_95",
+            "shape_id": 115,
+            "type": "unknown_shape",
+            "position": {
+              "left": 696.47,
+              "top": 383.26,
+              "width": 12.12,
+              "height": 0.57,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_96",
+            "shape_id": 117,
+            "type": "unknown_shape",
+            "position": {
+              "left": 689.48,
+              "top": 386.44,
+              "width": 2.41,
+              "height": 11.71,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_97",
+            "shape_id": 119,
+            "type": "unknown_shape",
+            "position": {
+              "left": 668.98,
+              "top": 387.56,
+              "width": 4.65,
+              "height": 10.77,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_98",
+            "shape_id": 121,
+            "type": "unknown_shape",
+            "position": {
+              "left": 678.24,
+              "top": 384.42,
+              "width": 8.45,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_99",
+            "shape_id": 123,
+            "type": "unknown_shape",
+            "position": {
+              "left": 673.48,
+              "top": 371.19,
+              "width": 2.21,
+              "height": 10.96,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_100",
+            "shape_id": 125,
+            "type": "unknown_shape",
+            "position": {
+              "left": 652.71,
+              "top": 372.51,
+              "width": 6.05,
+              "height": 9.32,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_101",
+            "shape_id": 127,
+            "type": "unknown_shape",
+            "position": {
+              "left": 642.18,
+              "top": 383.83,
+              "width": 6.91,
+              "height": 1.11,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_102",
+            "shape_id": 129,
+            "type": "unknown_shape",
+            "position": {
+              "left": 614.25,
+              "top": 387.06,
+              "width": 1.97,
+              "height": 11.53,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_103",
+            "shape_id": 131,
+            "type": "unknown_shape",
+            "position": {
+              "left": 593.74,
+              "top": 388.11,
+              "width": 3.9,
+              "height": 10.66,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_104",
+            "shape_id": 132,
+            "type": "unknown_shape",
+            "position": {
+              "left": 583.17,
+              "top": 384.76,
+              "width": 10.68,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_105",
+            "shape_id": 135,
+            "type": "unknown_shape",
+            "position": {
+              "left": 620.64,
+              "top": 384.45,
+              "width": 12.3,
+              "height": 0.31,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_106",
+            "shape_id": 137,
+            "type": "unknown_shape",
+            "position": {
+              "left": 662.78,
+              "top": 368.55,
+              "width": 7.91,
+              "height": 0.76,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_107",
+            "shape_id": 139,
+            "type": "unknown_shape",
+            "position": {
+              "left": 604.81,
+              "top": 342.27,
+              "width": 2.5,
+              "height": 11.55,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_108",
+            "shape_id": 141,
+            "type": "unknown_shape",
+            "position": {
+              "left": 589.14,
+              "top": 355.89,
+              "width": 11.43,
+              "height": 0.54,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_109",
+            "shape_id": 143,
+            "type": "unknown_shape",
+            "position": {
+              "left": 630.4,
+              "top": 310.11,
+              "width": 2.41,
+              "height": 10.89,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_110",
+            "shape_id": 145,
+            "type": "unknown_shape",
+            "position": {
+              "left": 616.64,
+              "top": 322.57,
+              "width": 9.99,
+              "height": 1.09,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_111",
+            "shape_id": 147,
+            "type": "unknown_shape",
+            "position": {
+              "left": 607.31,
+              "top": 325.67,
+              "width": 4.5,
+              "height": 11.4,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_112",
+            "shape_id": 149,
+            "type": "unknown_shape",
+            "position": {
+              "left": 596.33,
+              "top": 323.37,
+              "width": 11.31,
+              "height": 0.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_113",
+            "shape_id": 151,
+            "type": "unknown_shape",
+            "position": {
+              "left": 573.34,
+              "top": 340.08,
+              "width": 11.35,
+              "height": 0.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_114",
+            "shape_id": 153,
+            "type": "unknown_shape",
+            "position": {
+              "left": 589.48,
+              "top": 325.18,
+              "width": 18.52,
+              "height": 11.57,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_115",
+            "shape_id": 155,
+            "type": "unknown_shape",
+            "position": {
+              "left": 577.74,
+              "top": 371.06,
+              "width": 22.46,
+              "height": 11.7,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_116",
+            "shape_id": 157,
+            "type": "unknown_shape",
+            "position": {
+              "left": 685.15,
+              "top": 352.75,
+              "width": 10.44,
+              "height": 11.9,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_117",
+            "shape_id": 159,
+            "type": "unknown_shape",
+            "position": {
+              "left": 617.22,
+              "top": 371.85,
+              "width": 3.29,
+              "height": 8.21,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_118",
+            "shape_id": 161,
+            "type": "unknown_shape",
+            "position": {
+              "left": 626.42,
+              "top": 368.55,
+              "width": 5.9,
+              "height": 0.81,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_119",
+            "shape_id": 18,
+            "type": "unknown_shape",
+            "position": {
+              "left": 756.53,
+              "top": 314.25,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_120",
+            "shape_id": 73,
+            "type": "unknown_shape",
+            "position": {
+              "left": 787.66,
+              "top": 313.92,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_121",
+            "shape_id": 76,
+            "type": "unknown_shape",
+            "position": {
+              "left": 756.59,
+              "top": 332.43,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_122",
+            "shape_id": 90,
+            "type": "unknown_shape",
+            "position": {
+              "left": 756.8,
+              "top": 350.8,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_123",
+            "shape_id": 96,
+            "type": "unknown_shape",
+            "position": {
+              "left": 756.53,
+              "top": 369.31,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_124",
+            "shape_id": 102,
+            "type": "unknown_shape",
+            "position": {
+              "left": 756.39,
+              "top": 387.76,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_125",
+            "shape_id": 108,
+            "type": "unknown_shape",
+            "position": {
+              "left": 858.26,
+              "top": 296.94,
+              "width": 121.61,
+              "height": 117.99,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {
+                "type": "SOLID (1)",
+                "color": null
+              },
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_126",
+            "shape_id": 110,
+            "type": "unknown_shape",
+            "position": {
+              "left": 840.54,
+              "top": 329.92,
+              "width": 61.45,
+              "height": 50.88,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_127",
+            "shape_id": 104,
+            "type": "unknown_shape",
+            "position": {
+              "left": 787.52,
+              "top": 387.42,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_128",
+            "shape_id": 75,
+            "type": "unknown_shape",
+            "position": {
+              "left": 819.01,
+              "top": 314.1,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_129",
+            "shape_id": 88,
+            "type": "unknown_shape",
+            "position": {
+              "left": 819.07,
+              "top": 332.28,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_130",
+            "shape_id": 94,
+            "type": "unknown_shape",
+            "position": {
+              "left": 818.95,
+              "top": 350.65,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_131",
+            "shape_id": 100,
+            "type": "unknown_shape",
+            "position": {
+              "left": 819.01,
+              "top": 369.15,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_132",
+            "shape_id": 106,
+            "type": "unknown_shape",
+            "position": {
+              "left": 818.87,
+              "top": 387.6,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_133",
+            "shape_id": 78,
+            "type": "unknown_shape",
+            "position": {
+              "left": 787.72,
+              "top": 332.1,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_134",
+            "shape_id": 92,
+            "type": "unknown_shape",
+            "position": {
+              "left": 787.6,
+              "top": 350.47,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_135",
+            "shape_id": 98,
+            "type": "unknown_shape",
+            "position": {
+              "left": 787.66,
+              "top": 368.97,
+              "width": 15.0,
+              "height": 10.05,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "unknown_shape",
+              "data": {
+                "description": "Élément de type unknown_shape",
+                "shape_category": "unknown_shape"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_136",
+            "shape_id": 112,
+            "type": "picture",
+            "position": {
+              "left": 938.55,
+              "top": 301.45,
+              "width": 38.01,
+              "height": 38.01,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_137",
+            "shape_id": 114,
+            "type": "picture",
+            "position": {
+              "left": 901.2,
+              "top": 301.33,
+              "width": 38.01,
+              "height": 38.01,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_138",
+            "shape_id": 116,
+            "type": "picture",
+            "position": {
+              "left": 938.99,
+              "top": 335.67,
+              "width": 38.01,
+              "height": 38.01,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_139",
+            "shape_id": 118,
+            "type": "picture",
+            "position": {
+              "left": 901.08,
+              "top": 335.24,
+              "width": 38.01,
+              "height": 38.01,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_140",
+            "shape_id": 120,
+            "type": "picture",
+            "position": {
+              "left": 947.13,
+              "top": 377.64,
+              "width": 29.88,
+              "height": 29.88,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_141",
+            "shape_id": 122,
+            "type": "picture",
+            "position": {
+              "left": 924.07,
+              "top": 377.81,
+              "width": 29.88,
+              "height": 29.88,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_142",
+            "shape_id": 124,
+            "type": "picture",
+            "position": {
+              "left": 900.89,
+              "top": 377.8,
+              "width": 29.88,
+              "height": 29.88,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_143",
+            "shape_id": 126,
+            "type": "picture",
+            "position": {
+              "left": 877.15,
+              "top": 377.8,
+              "width": 29.88,
+              "height": 29.88,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_144",
+            "shape_id": 128,
+            "type": "picture",
+            "position": {
+              "left": -283.11,
+              "top": 481.41,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_145",
+            "shape_id": 130,
+            "type": "picture",
+            "position": {
+              "left": -427.11,
+              "top": 481.41,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_146",
+            "shape_id": 133,
+            "type": "picture",
+            "position": {
+              "left": -262.53,
+              "top": 269.22,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_147",
+            "shape_id": 134,
+            "type": "picture",
+            "position": {
+              "left": -406.53,
+              "top": 269.22,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_148",
+            "shape_id": 136,
+            "type": "picture",
+            "position": {
+              "left": -240.89,
+              "top": 90.5,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_149",
+            "shape_id": 138,
+            "type": "picture",
+            "position": {
+              "left": -384.89,
+              "top": 90.5,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_150",
+            "shape_id": 140,
+            "type": "picture",
+            "position": {
+              "left": 1475.62,
+              "top": 264.0,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_151",
+            "shape_id": 142,
+            "type": "picture",
+            "position": {
+              "left": 1462.77,
+              "top": 43.67,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_152",
+            "shape_id": 144,
+            "type": "picture",
+            "position": {
+              "left": 1468.94,
+              "top": 482.22,
+              "width": 96.0,
+              "height": 96.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          }
+        ],
+        "layout": "Titre + 2 listes à puces",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Et voici où la magie de DVaaS atteint son apogée : tout ce qui consomme des données de la Zone Or devient en or ! Les rapports deviennent des rapports en or ! Imaginez l'impact sur votre organisation ! Les projets avancent plus vite parce que les données sont fiables. Les équipes sont plus heureuses de collaborer parce qu'elles font confiance aux chiffres. Le marketing fait des demandes avec des deadlines réalistes dans le futur au lieu de 'pour hier' ! C'est l'effet domino positif : quand vos données sont en or, toute votre organisation brille !"
+    }
+  ]
+}

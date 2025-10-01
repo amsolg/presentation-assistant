@@ -1,0 +1,56 @@
+{
+  "slide_number": 48,
+  "slide_title": "Slide 378",
+  "layout_name": "Titre + 2 listes à puces",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "Cette image montre la progression du coût des deux plateformes sur 3 ans. À noter que, selon cette image, après 3 ans d'utilisation de Microsoft Fabric, le coût d'utilisation des ressources n'aura pas atteint le prix d'entrée de Denodo qui n'inclut peut-être même pas les coûts d'utilisations. À noter également que l'évolution du coût de Microsoft Fabric est basé sur une utilisation immédiate d'une capacité à F64, ce qui ne correspond pas à l'implémentation progressive qui est prévus.",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 6,
+            "type": "picture",
+            "position": {
+              "left": 0.0,
+              "top": 0.0,
+              "width": 1280.0,
+              "height": 720.0,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          }
+        ],
+        "layout": "Titre + 2 listes à puces",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "Cette image montre la progression du coût des deux plateformes sur 3 ans, et les chiffres sont tout simplement stupéfiants ! Regardez bien : après 3 ans d'utilisation complète de Microsoft Fabric, le coût total n'aura même pas atteint le prix d'entrée de Denodo ! Et on parle ici juste du prix d'entrée de Denodo, qui n'inclut probablement même pas tous les coûts d'utilisation ! De plus, cette évolution de coût pour Microsoft Fabric assume une utilisation immédiate d'une capacité F64, ce qui ne correspond pas à notre implémentation progressive prévue. En réalité, nos coûts seront encore plus raisonnables !"
+    }
+  ]
+}
