@@ -1,0 +1,11 @@
+{
+  "test_suite": "column_clustered",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "output_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\column_clustered\\output\\test_column_clustered.pptx",
+  "tests_completed": 7,
+  "final_slide_count": 8,
+  "new_features_tested": [
+    "Titre de s\u00e9rie personnalis\u00e9",
+    "Diversit\u00e9 de couleurs pour multi-s\u00e9ries"
+  ]
+}

@@ -8,7 +8,15 @@
       "Read(C:\\repos\\pt-workspace\\knowledge-base\\premier-tech\\groups\\ptg\\teams\\information-technology\\enterprise-architecture/**)",
       "Read(C:\\repos\\pt-workspace\\knowledge-base\\premier-tech\\groups\\ptg\\teams\\information-technology\\enterprise-architecture/**)",
       "Bash(pip install:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "Bash(timeout:*)",
+      "Bash(dir \"C:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\slide_46\")",
+      "Bash(dir \"C:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\slide_46\\output\")",
+      "Bash(del analyze_presentation.py compare_presentations.py examine_template_slide.py)",
+      "Bash(dir output)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

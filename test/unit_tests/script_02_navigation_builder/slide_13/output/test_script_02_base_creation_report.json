@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-10T10:12:42.403315",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "TEST UNITAIRE - Script 02",
+    "subtitle": "Présentation de base pour test de navigation",
+    "metadata": "2025.10.10 - Test Navigation"
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_02_navigation_builder\\slide_13\\output\\test_script_02_base.pptx",
+  "file_size_kb": 296.22,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

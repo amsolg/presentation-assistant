@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-10T10:12:58.833691",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "TEST UNITAIRE - Script 05 Four Stats Lines",
+    "subtitle": "Presentation de base pour test 4 statistiques avec lignes",
+    "metadata": "2025.10.10 - Test 4 Statistiques Premium"
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_05_statistics_builder\\slide_26\\output\\test_script_05_slide_26_lines.pptx",
+  "file_size_kb": 296.24,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

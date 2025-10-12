@@ -1,0 +1,139 @@
+{
+  "slide_number": 1,
+  "slide_title": "Fonte Premier Tech",
+  "layout_name": "Page titre",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 54.17,
+              "top": 395.69,
+              "width": 887.45,
+              "height": 38.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "XXXX.XX.XX – Statut de projet, acronymes",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 54.17,
+              "top": 296.9,
+              "width": 887.45,
+              "height": 87.24,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Fonte Premier Tech",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 4,
+            "type": "text_box",
+            "position": {
+              "left": 54.17,
+              "top": 223.97,
+              "width": 887.45,
+              "height": 61.39,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Modèle PowerPoint PT",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Page titre",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": ""
+    }
+  ]
+}

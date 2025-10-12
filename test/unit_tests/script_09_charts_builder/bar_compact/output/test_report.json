@@ -1,0 +1,23 @@
+{
+  "test_suite": "bar_compact",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "output_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\bar_compact\\output\\test_bar_compact.pptx",
+  "tests_completed": 6,
+  "final_slide_count": 7,
+  "test_focus": "Graphiques en barres horizontales compactes",
+  "features_tested": [
+    "Comparaison rapide 3 options",
+    "Top 5 classement compact",
+    "Comparaison binaire (Pour/Contre)",
+    "Scores de satisfaction",
+    "Indicateurs de progression",
+    "Cat\u00e9gories minimales (2-3)"
+  ],
+  "key_characteristics": [
+    "Pas de l\u00e9gende",
+    "Dimensions r\u00e9duites (7.0x4.0 inches)",
+    "Id\u00e9al pour comparaisons simples",
+    "Maximum 5 cat\u00e9gories recommand\u00e9",
+    "Parfait pour dashboards"
+  ]
+}

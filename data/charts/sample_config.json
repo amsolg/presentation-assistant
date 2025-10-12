@@ -1,0 +1,23 @@
+{
+  "title": "Exemple de Configuration Graphique",
+  "style": "column_clustered",
+  "data": {
+    "labels": [
+      "T1 2024",
+      "T2 2024",
+      "T3 2024",
+      "T4 2024"
+    ],
+    "values": [
+      2500000,
+      3200000,
+      2800000,
+      3700000
+    ]
+  },
+  "insights": "Croissance continue avec pic en T4",
+  "formatting": {
+    "show_legend": true,
+    "show_data_labels": true
+  }
+}

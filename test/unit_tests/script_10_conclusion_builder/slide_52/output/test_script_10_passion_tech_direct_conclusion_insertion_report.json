@@ -1,0 +1,33 @@
+{
+  "creation_time": "2025-10-10T10:13:43.635187",
+  "template_used": "templates/Template_PT.pptx",
+  "source_slide": 52,
+  "style_used": "passion_tech",
+  "style_info": {
+    "slide_index": 51,
+    "name": "Passion et Technologies",
+    "usage": "Message corporate principal",
+    "audience": "Toutes audiences",
+    "style": "passion_tech",
+    "conclusion_type": "corporate_message",
+    "description": "Message de fermeture avec l'identité Premier Tech",
+    "layout_name": "Passion et Technologies pour faire la différence"
+  },
+  "content_customized": {
+    "message": "Notre passion pour la technologie guide notre innovation",
+    "call_to_action": "",
+    "title": "",
+    "custom_text": "Faire la différence ensemble"
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_10_conclusion_builder\\slide_52\\output\\test_script_10_passion_tech.pptx",
+  "creation_mode": "insertion",
+  "widen_objects_enabled": true,
+  "success": true,
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Slide 52 clonée avec fidélité parfaite",
+    "Conclusion corporate professionnelle",
+    "Personnalisation intelligente du contenu",
+    "Sauvegarde automatique (mode insertion)"
+  ]
+}

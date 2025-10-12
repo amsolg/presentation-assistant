@@ -1,0 +1,35 @@
+{
+  "insertion_timestamp": "2025-10-10T10:12:48.005858",
+  "method": "Direct Layout-Based Message Insertion (Premier Tech Standards)",
+  "template_used": "templates/Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_04_simple_message_builder\\slide_17\\output\\test_script_04_slide_17.pptx",
+  "message_details": {
+    "text": "Voici un exemple de message centre pour notre test unitaire",
+    "keywords": null,
+    "image_description": null,
+    "style": "centered",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 16,
+    "number": 17,
+    "layout": "Court énoncé",
+    "style_description": "Message unique sans titre, focus maximal"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'centered' adapté à l'usage"
+  ]
+}

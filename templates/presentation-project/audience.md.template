@@ -1,0 +1,158 @@
+# Profil d'Audience: {AUDIENCE_NAME}
+
+## Caractéristiques Principales
+
+**Niveau d'Expertise** : {EXPERTISE_LEVEL}
+**Contexte Professionnel** : {PROFESSIONAL_CONTEXT}
+**Rôle Décisionnel** : {DECISION_ROLE}
+**Secteur d'Activité** : {INDUSTRY_SECTOR}
+
+## Objectifs et Motivations
+
+### Objectifs Professionnels
+- {PROFESSIONAL_OBJECTIVE_1}
+- {PROFESSIONAL_OBJECTIVE_2}
+- {PROFESSIONAL_OBJECTIVE_3}
+
+### Motivations Personnelles
+- {PERSONAL_MOTIVATION_1}
+- {PERSONAL_MOTIVATION_2}
+- {PERSONAL_MOTIVATION_3}
+
+## Besoins et Attentes
+
+### Besoins Informationnels
+- {INFORMATIONAL_NEED_1}
+- {INFORMATIONAL_NEED_2}
+- {INFORMATIONAL_NEED_3}
+
+### Attentes de Présentation
+- {PRESENTATION_EXPECTATION_1}
+- {PRESENTATION_EXPECTATION_2}
+- {PRESENTATION_EXPECTATION_3}
+
+## Contraintes et Préférences
+
+### Contraintes de Temps
+**Durée optimale** : {OPTIMAL_DURATION} minutes
+**Attention span** : {ATTENTION_SPAN}
+**Disponibilité** : {AVAILABILITY_CONTEXT}
+
+### Préférences de Format
+**Style préféré** : {PREFERRED_STYLE}
+**Niveau de détail** : {DETAIL_LEVEL}
+**Type d'interaction** : {INTERACTION_TYPE}
+
+### Contraintes Techniques
+**Environnement** : {TECHNICAL_ENVIRONMENT}
+**Équipement** : {EQUIPMENT_CONTEXT}
+**Connectivité** : {CONNECTIVITY_REQUIREMENTS}
+
+## Profil Cognitif
+
+### Style d'Apprentissage
+**Préférence principale** : {LEARNING_STYLE}
+**Modalité optimale** : {OPTIMAL_MODALITY}
+**Rythme de traitement** : {PROCESSING_PACE}
+
+### Niveau de Technicité Toléré
+**Vocabulaire technique** : {TECHNICAL_VOCABULARY_LEVEL}
+**Concepts complexes** : {COMPLEX_CONCEPTS_TOLERANCE}
+**Détails techniques** : {TECHNICAL_DETAILS_LEVEL}
+
+## Adaptation Sam AI
+
+### Style de Communication Recommandé
+**Ton général** : {SAM_TONE}
+**Niveau d'enthousiasme** : {SAM_ENTHUSIASM_LEVEL}
+**Approche pédagogique** : {SAM_PEDAGOGICAL_APPROACH}
+
+### Focus de Personnalité
+**Orientation principale** : {SAM_PRIMARY_FOCUS}
+**Mise en avant** : {SAM_HIGHLIGHT_AREAS}
+**Éviter** : {SAM_AVOID_AREAS}
+
+### Configuration Technique Sam
+```json
+{
+  "communication_style": "{SAM_COMMUNICATION_STYLE}",
+  "expertise_level": "{SAM_EXPERTISE_LEVEL}",
+  "engagement_approach": "{SAM_ENGAGEMENT_APPROACH}",
+  "technical_depth": "{SAM_TECHNICAL_DEPTH}",
+  "enthusiasm_level": "{SAM_ENTHUSIASM_LEVEL}",
+  "focus_areas": ["{SAM_FOCUS_1}", "{SAM_FOCUS_2}", "{SAM_FOCUS_3}"]
+}
+```
+
+## Métriques de Succès
+
+### Indicateurs Quantitatifs
+- {QUANTITATIVE_METRIC_1}
+- {QUANTITATIVE_METRIC_2}
+- {QUANTITATIVE_METRIC_3}
+
+### Indicateurs Qualitatifs
+- {QUALITATIVE_METRIC_1}
+- {QUALITATIVE_METRIC_2}
+- {QUALITATIVE_METRIC_3}
+
+## Adaptation de Contenu
+
+### Messages Clés à Prioriser
+1. **{KEY_MESSAGE_1}** - {KEY_MESSAGE_1_RATIONALE}
+2. **{KEY_MESSAGE_2}** - {KEY_MESSAGE_2_RATIONALE}
+3. **{KEY_MESSAGE_3}** - {KEY_MESSAGE_3_RATIONALE}
+
+### Éléments à Éviter
+- {AVOID_ELEMENT_1}
+- {AVOID_ELEMENT_2}
+- {AVOID_ELEMENT_3}
+
+### Exemples et Analogies Pertinents
+- {RELEVANT_EXAMPLE_1}
+- {RELEVANT_EXAMPLE_2}
+- {RELEVANT_EXAMPLE_3}
+
+## Contexte Organisationnel
+
+### Structure Hiérarchique
+**Position dans l'organisation** : {ORGANIZATIONAL_POSITION}
+**Rapports hiérarchiques** : {HIERARCHICAL_CONTEXT}
+**Influence décisionnelle** : {DECISION_INFLUENCE}
+
+### Contraintes Organisationnelles
+**Politiques internes** : {INTERNAL_POLICIES}
+**Budget et ressources** : {BUDGET_CONSTRAINTS}
+**Calendrier organisationnel** : {ORGANIZATIONAL_SCHEDULE}
+
+## Recommandations Stratégiques
+
+### Approche de Présentation
+{PRESENTATION_APPROACH_RECOMMENDATION}
+
+### Séquence Optimale
+1. {OPTIMAL_SEQUENCE_STEP_1}
+2. {OPTIMAL_SEQUENCE_STEP_2}
+3. {OPTIMAL_SEQUENCE_STEP_3}
+4. {OPTIMAL_SEQUENCE_STEP_4}
+
+### Points d'Attention Particuliers
+- {ATTENTION_POINT_1}
+- {ATTENTION_POINT_2}
+- {ATTENTION_POINT_3}
+
+---
+
+## Métadonnées
+
+**Profil créé le** : {CREATION_DATE}
+**Dernière mise à jour** : {LAST_UPDATE}
+**Créé pour le projet** : {PARENT_PROJECT}
+**Version** : 1.0
+
+## Validation
+
+- [ ] Profil validé par l'utilisateur
+- [ ] Adaptations Sam testées
+- [ ] Contraintes techniques vérifiées
+- [ ] Métriques de succès définies

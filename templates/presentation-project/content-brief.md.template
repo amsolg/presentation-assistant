@@ -1,0 +1,200 @@
+# Brief de Contenu: {PRESENTATION_SUBJECT} pour {AUDIENCE_NAME}
+
+## Angle de Présentation
+
+{PRESENTATION_ANGLE}
+
+## Messages Clés Adaptés
+
+### 1. Message Principal
+**Contenu** : {MAIN_MESSAGE}
+**Adaptation audience** : {MAIN_MESSAGE_ADAPTATION}
+**Justification** : {MAIN_MESSAGE_RATIONALE}
+
+### 2. Arguments Secondaires
+**Argument 1** : {SECONDARY_ARGUMENT_1}
+- **Adaptation** : {SECONDARY_ARGUMENT_1_ADAPTATION}
+- **Support** : {SECONDARY_ARGUMENT_1_SUPPORT}
+
+**Argument 2** : {SECONDARY_ARGUMENT_2}
+- **Adaptation** : {SECONDARY_ARGUMENT_2_ADAPTATION}
+- **Support** : {SECONDARY_ARGUMENT_2_SUPPORT}
+
+**Argument 3** : {SECONDARY_ARGUMENT_3}
+- **Adaptation** : {SECONDARY_ARGUMENT_3_ADAPTATION}
+- **Support** : {SECONDARY_ARGUMENT_3_SUPPORT}
+
+### 3. Call-to-Action
+**Action souhaitée** : {CALL_TO_ACTION}
+**Formulation adaptée** : {CTA_ADAPTATION}
+**Mesure de succès** : {CTA_SUCCESS_METRIC}
+
+## Structure Recommandée
+
+### Ouverture (2-3 slides)
+**Slide 1 - Titre** : {OPENING_SLIDE_1}
+- **Script** : `01_slide_title_creator.py`
+- **Adaptation** : {OPENING_SLIDE_1_ADAPTATION}
+
+**Slide 2 - Accroche** : {OPENING_SLIDE_2}
+- **Script** : `{OPENING_SLIDE_2_SCRIPT}`
+- **Adaptation** : {OPENING_SLIDE_2_ADAPTATION}
+
+**Slide 3 - Navigation** (si nécessaire) : {OPENING_SLIDE_3}
+- **Script** : `02_navigation_builder.py`
+- **Adaptation** : {OPENING_SLIDE_3_ADAPTATION}
+
+### Développement ({DEVELOPMENT_SLIDE_COUNT} slides)
+**Section 1** : {DEVELOPMENT_SECTION_1}
+- **Slides** : {DEV_SECTION_1_SLIDES}
+- **Scripts** : {DEV_SECTION_1_SCRIPTS}
+- **Points clés** : {DEV_SECTION_1_KEY_POINTS}
+- **Adaptation audience** : {DEV_SECTION_1_ADAPTATION}
+
+**Section 2** : {DEVELOPMENT_SECTION_2}
+- **Slides** : {DEV_SECTION_2_SLIDES}
+- **Scripts** : {DEV_SECTION_2_SCRIPTS}
+- **Points clés** : {DEV_SECTION_2_KEY_POINTS}
+- **Adaptation audience** : {DEV_SECTION_2_ADAPTATION}
+
+**Section 3** : {DEVELOPMENT_SECTION_3}
+- **Slides** : {DEV_SECTION_3_SLIDES}
+- **Scripts** : {DEV_SECTION_3_SCRIPTS}
+- **Points clés** : {DEV_SECTION_3_KEY_POINTS}
+- **Adaptation audience** : {DEV_SECTION_3_ADAPTATION}
+
+### Conclusion (1-2 slides)
+**Slide finale** : {CONCLUSION_SLIDE}
+- **Script** : `10_conclusion_builder.py`
+- **Style** : {CONCLUSION_STYLE}
+- **Message final** : {CONCLUSION_MESSAGE}
+
+## Éléments Visuels Recommandés
+
+### Types de Graphiques
+{CHART_RECOMMENDATIONS}
+
+### Niveau de Complexité des Données
+**Complexité optimale** : {DATA_COMPLEXITY_LEVEL}
+**Types de métriques** : {METRICS_TYPES}
+**Visualisations préférées** : {PREFERRED_VISUALIZATIONS}
+
+### Styles Visuels Préférés
+**Palette de couleurs** : {COLOR_PALETTE}
+**Style de templates** : {TEMPLATE_STYLE}
+**Niveau de détail visuel** : {VISUAL_DETAIL_LEVEL}
+
+## Adaptation Terminologique
+
+### Vocabulaire à Privilégier
+| **Concept Technique** | **Terme Adapté** | **Justification** |
+|----------------------|------------------|-------------------|
+| {TECHNICAL_TERM_1} | {ADAPTED_TERM_1} | {TERM_1_JUSTIFICATION} |
+| {TECHNICAL_TERM_2} | {ADAPTED_TERM_2} | {TERM_2_JUSTIFICATION} |
+| {TECHNICAL_TERM_3} | {ADAPTED_TERM_3} | {TERM_3_JUSTIFICATION} |
+
+### Concepts à Simplifier
+- **{COMPLEX_CONCEPT_1}** → {SIMPLIFIED_EXPLANATION_1}
+- **{COMPLEX_CONCEPT_2}** → {SIMPLIFIED_EXPLANATION_2}
+- **{COMPLEX_CONCEPT_3}** → {SIMPLIFIED_EXPLANATION_3}
+
+### Analogies et Métaphores
+- {ANALOGY_1}
+- {ANALOGY_2}
+- {ANALOGY_3}
+
+## Exemples et Cas d'Usage
+
+### Exemples Pertinents pour l'Audience
+1. **{RELEVANT_EXAMPLE_1}**
+   - **Contexte** : {EXAMPLE_1_CONTEXT}
+   - **Pertinence** : {EXAMPLE_1_RELEVANCE}
+
+2. **{RELEVANT_EXAMPLE_2}**
+   - **Contexte** : {EXAMPLE_2_CONTEXT}
+   - **Pertinence** : {EXAMPLE_2_RELEVANCE}
+
+3. **{RELEVANT_EXAMPLE_3}**
+   - **Contexte** : {EXAMPLE_3_CONTEXT}
+   - **Pertinence** : {EXAMPLE_3_RELEVANCE}
+
+### Cas d'Usage Concrets
+- {USE_CASE_1}
+- {USE_CASE_2}
+- {USE_CASE_3}
+
+## Configuration Sam AI Spécialisée
+
+### Ton et Style pour cette Audience
+**Niveau d'enthousiasme** : {SAM_ENTHUSIASM_FOR_AUDIENCE}
+**Style de communication** : {SAM_COMMUNICATION_STYLE_AUDIENCE}
+**Focus narratif** : {SAM_NARRATIVE_FOCUS}
+
+### Adaptations Spécifiques Sam
+```json
+{
+  "audience_name": "{AUDIENCE_NAME}",
+  "communication_adaptations": {
+    "vocabulary_level": "{SAM_VOCABULARY_LEVEL}",
+    "technical_depth": "{SAM_TECHNICAL_DEPTH}",
+    "engagement_style": "{SAM_ENGAGEMENT_STYLE}",
+    "examples_type": "{SAM_EXAMPLES_TYPE}"
+  },
+  "emphasis_areas": [
+    "{SAM_EMPHASIS_1}",
+    "{SAM_EMPHASIS_2}",
+    "{SAM_EMPHASIS_3}"
+  ],
+  "avoid_areas": [
+    "{SAM_AVOID_1}",
+    "{SAM_AVOID_2}"
+  ]
+}
+```
+
+## Métriques et Données Clés
+
+### Statistiques à Mettre en Avant
+- **{KEY_STATISTIC_1}** : {KEY_STAT_1_VALUE} - {KEY_STAT_1_CONTEXT}
+- **{KEY_STATISTIC_2}** : {KEY_STAT_2_VALUE} - {KEY_STAT_2_CONTEXT}
+- **{KEY_STATISTIC_3}** : {KEY_STAT_3_VALUE} - {KEY_STAT_3_CONTEXT}
+
+### Graphiques Recommandés
+{RECOMMENDED_CHARTS}
+
+### Sources de Données
+- {DATA_SOURCE_1}
+- {DATA_SOURCE_2}
+- {DATA_SOURCE_3}
+
+## Timeline et Contraintes
+
+### Durée Optimale par Section
+- **Ouverture** : {OPENING_DURATION} minutes
+- **Développement** : {DEVELOPMENT_DURATION} minutes
+- **Conclusion** : {CONCLUSION_DURATION} minutes
+- **Total** : {TOTAL_DURATION} minutes
+
+### Points de Validation
+- [ ] Messages clés validés pour l'audience
+- [ ] Terminologie adaptée et approuvée
+- [ ] Exemples pertinents et vérifiés
+- [ ] Configuration Sam testée
+- [ ] Durée respectant les contraintes
+
+## Prochaines Étapes
+
+1. **Validation du brief** avec les parties prenantes
+2. **Génération du script détaillé** avec le template `presentation-script.md.template`
+3. **Construction de la présentation** avec le script `build_presentation.py` personnalisé
+4. **Test et itération** selon retours
+
+---
+
+## Métadonnées
+
+**Brief créé le** : {CREATION_DATE}
+**Pour le projet** : {PARENT_PROJECT}
+**Audience cible** : {AUDIENCE_NAME}
+**Version** : 1.0
+**Statut** : {STATUS}

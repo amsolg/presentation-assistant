@@ -1,0 +1,106 @@
+# {PRESENTATION_SUBJECT}
+
+## Contexte Global
+
+{CONTEXT_DESCRIPTION}
+
+## Objectifs de Présentation
+
+- {OBJECTIVE_1}
+- {OBJECTIVE_2}
+- {OBJECTIVE_3}
+
+## Domaine et Complexité
+
+**Domaine** : {DOMAIN}
+**Niveau de Complexité** : {COMPLEXITY_LEVEL}/5
+**Type de Contenu** : {CONTENT_TYPE}
+
+## Audiences Potentielles
+
+- **{AUDIENCE_1}** - {AUDIENCE_1_JUSTIFICATION}
+- **{AUDIENCE_2}** - {AUDIENCE_2_JUSTIFICATION}
+- **{AUDIENCE_3}** - {AUDIENCE_3_JUSTIFICATION}
+
+## Documentation Disponible
+
+- {DOCUMENTATION_SOURCE_1}
+- {DOCUMENTATION_SOURCE_2}
+- {DOCUMENTATION_SOURCE_3}
+
+## Analyse Technique
+
+### Scripts Presentation Builder Recommandés
+
+- ✅ **01_slide_title_creator.py** - Page titre (obligatoire)
+- {RECOMMENDED_SCRIPT_2}
+- {RECOMMENDED_SCRIPT_3}
+- {RECOMMENDED_SCRIPT_4}
+
+### Besoins en Données
+
+{DATA_REQUIREMENTS}
+
+### Configuration Sam AI
+
+**Style de Communication** : {SAM_STYLE}
+**Niveau d'Expertise** : {SAM_EXPERTISE_LEVEL}
+**Approche d'Engagement** : {SAM_ENGAGEMENT_APPROACH}
+
+## Structure du Projet
+
+```
+{PRESENTATION_SUBJECT_NORMALIZED}/
+├── README.md                           # Ce fichier
+├── documentation/
+│   ├── context.md                      # Analyse contextuelle détaillée
+│   ├── sources/                        # Documents de référence
+│   └── research-notes.md               # Notes de recherche
+├── {AUDIENCE_1_NORMALIZED}/            # Variante pour {AUDIENCE_1}
+│   ├── audience.md                     # Profil détaillé
+│   ├── content-brief.md               # Contenu adapté
+│   ├── presentation-script.md         # Script détaillé
+│   ├── build_presentation.py          # Script d'orchestration
+│   └── output/                        # Résultats finaux
+├── {AUDIENCE_2_NORMALIZED}/            # Variante pour {AUDIENCE_2}
+└── templates/                          # Ressources réutilisables
+```
+
+## Prochaines Étapes
+
+1. **Enrichir la documentation** avec sources spécifiques
+2. **Créer les dossiers d'audience** avec leurs fichiers de configuration
+3. **Générer les scripts d'orchestration** personnalisés pour chaque audience
+4. **Construire les présentations** avec les scripts presentation_builder
+
+## Historique du Projet
+
+- **{CREATION_DATE}** : Initialisation du projet avec analyse contextuelle
+- **À compléter** : Évolutions et ajustements selon retours
+
+## Métadonnées Techniques
+
+**Projet créé le** : {CREATION_DATE}
+**Créé par** : Claude Code - Presentation Assistant
+**Version workflow** : 2.5 (Agent Orchestrator)
+**Estimation slides** : {ESTIMATED_SLIDES}
+**Estimation durée** : {ESTIMATED_DURATION} minutes
+
+---
+
+## Utilisation du Projet
+
+### Pour créer une variante audience :
+1. Créer le dossier `{PRESENTATION_SUBJECT}/[nom-audience]/`
+2. Utiliser les templates dans `templates/presentation-project/` pour générer les fichiers
+3. Adapter le contenu selon le profil d'audience
+
+### Pour générer un script d'orchestration :
+1. Utiliser le template `build_presentation.py.template`
+2. Personnaliser selon les besoins spécifiques de l'audience
+3. Configurer la séquence de scripts presentation_builder
+
+### Pour construire la présentation finale :
+1. Exécuter le script `build_presentation.py` personnalisé
+2. Vérifier la sortie dans le dossier `output/`
+3. Valider la qualité avec les templates Premier Tech

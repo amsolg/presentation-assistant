@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-10T10:13:24.765354",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "Test Presentation - Testimonial",
+    "subtitle": null,
+    "metadata": null
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_08_testimonial_builder\\slide_45\\output\\base_presentation.pptx",
+  "file_size_kb": 296.22,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

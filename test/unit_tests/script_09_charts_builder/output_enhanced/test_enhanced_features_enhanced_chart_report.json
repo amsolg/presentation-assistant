@@ -1,0 +1,24 @@
+{
+  "insertion_info": {
+    "timestamp": "2025-10-10T10:06:57.204699",
+    "script": "09_charts_builder.py",
+    "target_presentation": "C:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\output_enhanced\\test_enhanced_features.pptx",
+    "backup_created": "C:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\output_enhanced\\test_enhanced_features_backup_before_enhanced_chart.pptx"
+  },
+  "slide_details": {
+    "title": "Test Intégration Complète",
+    "style": "pie_chart",
+    "chart_type": "PIE",
+    "data_source": "Direct",
+    "has_multi_series": false,
+    "num_categories": 10,
+    "has_insights": true
+  },
+  "standards_applied": {
+    "dimensions": "6.0x4.5 inches",
+    "colors": "Palette Premier Tech appliquée",
+    "formatting": "Standards visuels respectés"
+  },
+  "position": 11,
+  "total_slides": 11
+}

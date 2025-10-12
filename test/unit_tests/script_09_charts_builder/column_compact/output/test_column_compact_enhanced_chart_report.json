@@ -1,0 +1,24 @@
+{
+  "insertion_info": {
+    "timestamp": "2025-10-10T10:13:35.998182",
+    "script": "09_charts_builder.py",
+    "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\column_compact\\output\\test_column_compact.pptx",
+    "backup_created": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\column_compact\\output\\test_column_compact_backup_before_enhanced_chart.pptx"
+  },
+  "slide_details": {
+    "title": "Taux de Réussite",
+    "style": "column_compact",
+    "chart_type": "COLUMN_CLUSTERED",
+    "data_source": "Direct",
+    "has_multi_series": false,
+    "num_categories": 4,
+    "has_insights": true
+  },
+  "standards_applied": {
+    "dimensions": "7.0x4.0 inches",
+    "colors": "Palette Premier Tech appliquée",
+    "formatting": "Standards visuels respectés"
+  },
+  "position": 7,
+  "total_slides": 7
+}

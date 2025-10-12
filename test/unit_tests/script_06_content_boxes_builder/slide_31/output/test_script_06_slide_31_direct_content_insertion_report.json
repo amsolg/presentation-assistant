@@ -1,0 +1,46 @@
+{
+  "insertion_timestamp": "2025-10-10T10:13:07.442414",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "templates/Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_31\\output\\test_script_06_slide_31.pptx",
+  "content_details": {
+    "title": "Cycle de développement logiciel",
+    "concepts": [
+      "La collecte des exigences implique une analyse approfondie des besoins fonctionnels et non-fonctionnels avec les parties prenantes.",
+      "La conception architecturale établit les bases techniques solides en définissant les patterns, technologies et interfaces du système.",
+      "Le développement suit les meilleures pratiques de codage avec une approche agile permettant des itérations rapides et efficaces.",
+      "Les tests automatisés et le déploiement continu garantissent la qualité et la fiabilité du produit livré en production."
+    ],
+    "subtitles": [
+      "Analyse des besoins",
+      "Conception technique",
+      "Développement",
+      "Tests et déploiement"
+    ],
+    "style": "grey_4_detailed",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 30,
+    "number": 31,
+    "layout": "4 boîtes grises pour courts énoncés avec sous-titres",
+    "style_description": "Processus techniques détaillés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'grey_4_detailed' adapté à l'usage",
+    "3 concepts équilibrés"
+  ]
+}

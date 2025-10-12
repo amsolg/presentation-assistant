@@ -1,0 +1,24 @@
+{
+  "test_suite": "enhanced_features",
+  "template_used": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "output_presentation": "C:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\output_enhanced\\test_enhanced_features.pptx",
+  "tests_completed": 6,
+  "final_slide_count": 11,
+  "features_validated": {
+    "color_diversity": "✅ Palette Premier Tech avec couleurs diversifiées",
+    "custom_series_title": "✅ Titre de série personnalisable",
+    "white_insights": "✅ Texte des insights en blanc",
+    "pie_label_positioning": "✅ Labels externes sans coupure",
+    "color_consistency": "✅ Cohérence des couleurs",
+    "integration": "✅ Toutes les fonctionnalités intégrées"
+  },
+  "premier_tech_colors": {
+    "primary_blue": "#41B6E6",
+    "vivid_blue": "#0077C8",
+    "medium_gray": "#8A8D8F",
+    "dark_gray": "#54585B",
+    "light_gray": "#BDBDBD",
+    "white_text": "#FFFFFF"
+  },
+  "test_timestamp": "2025-10-10T10:06:57.243738"
+}

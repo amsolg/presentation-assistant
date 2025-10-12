@@ -1,0 +1,8 @@
+{
+  "test_suite": "line_chart",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "output_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\line_chart\\output\\test_line_chart.pptx",
+  "tests_completed": 6,
+  "final_slide_count": 7,
+  "test_focus": "Graphiques lin\u00e9aires pour tendances temporelles"
+}

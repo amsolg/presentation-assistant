@@ -1,0 +1,44 @@
+{
+  "insertion_timestamp": "2025-10-10T10:13:04.238006",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "templates/Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_29\\output\\test_script_06_slide_29.pptx",
+  "content_details": {
+    "title": "Piliers de la transformation numérique",
+    "concepts": [
+      "Notre feuille de route 2024 définit une approche progressive vers la digitalisation complète des processus métiers avec des objectifs mesurables.",
+      "Le change management accompagne nos équipes dans l'adoption des nouvelles technologies grâce à une formation personnalisée et un support continu.",
+      "Les partenariats R&D avec des leaders technologiques nous permettent d'innover rapidement et d'intégrer les dernières avancées dans nos solutions."
+    ],
+    "subtitles": [
+      "Stratégie digitale",
+      "Transformation organisationnelle",
+      "Innovation technologique"
+    ],
+    "style": "blue_3_detailed",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 28,
+    "number": 29,
+    "layout": "3 boîtes bleues pour courts énoncés avec sous-titres",
+    "style_description": "Concepts catégorisés, détails structurés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'blue_3_detailed' adapté à l'usage",
+    "3 concepts équilibrés"
+  ]
+}

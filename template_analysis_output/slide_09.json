@@ -1,0 +1,1886 @@
+{
+  "slide_number": 9,
+  "slide_title": "Slide 411",
+  "layout_name": "Titre & Espace pour tableau ou graphique",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 82,
+            "type": "picture",
+            "position": {
+              "left": 167.38,
+              "top": 172.18,
+              "width": 74.71,
+              "height": 74.71,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 83,
+            "type": "picture",
+            "position": {
+              "left": 80.0,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 84,
+            "type": "picture",
+            "position": {
+              "left": 253.85,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 85,
+            "type": "picture",
+            "position": {
+              "left": 340.63,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_5",
+            "shape_id": 86,
+            "type": "picture",
+            "position": {
+              "left": 511.56,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_6",
+            "shape_id": 87,
+            "type": "picture",
+            "position": {
+              "left": 426.36,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_7",
+            "shape_id": 88,
+            "type": "picture",
+            "position": {
+              "left": 949.32,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_8",
+            "shape_id": 89,
+            "type": "picture",
+            "position": {
+              "left": 862.04,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_9",
+            "shape_id": 90,
+            "type": "picture",
+            "position": {
+              "left": 773.7,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_10",
+            "shape_id": 91,
+            "type": "picture",
+            "position": {
+              "left": 426.59,
+              "top": 263.43,
+              "width": 74.37,
+              "height": 74.37,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_11",
+            "shape_id": 92,
+            "type": "picture",
+            "position": {
+              "left": 340.63,
+              "top": 263.43,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_12",
+            "shape_id": 93,
+            "type": "picture",
+            "position": {
+              "left": 253.85,
+              "top": 263.43,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_13",
+            "shape_id": 94,
+            "type": "picture",
+            "position": {
+              "left": 1039.61,
+              "top": 172.19,
+              "width": 74.73,
+              "height": 74.68,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_14",
+            "shape_id": 95,
+            "type": "picture",
+            "position": {
+              "left": 167.36,
+              "top": 263.51,
+              "width": 74.73,
+              "height": 74.68,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_15",
+            "shape_id": 96,
+            "type": "picture",
+            "position": {
+              "left": 1126.27,
+              "top": 172.49,
+              "width": 74.73,
+              "height": 74.73,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_16",
+            "shape_id": 97,
+            "type": "picture",
+            "position": {
+              "left": 80.0,
+              "top": 263.43,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_17",
+            "shape_id": 98,
+            "type": "picture",
+            "position": {
+              "left": 687.71,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_18",
+            "shape_id": 99,
+            "type": "picture",
+            "position": {
+              "left": 598.22,
+              "top": 172.12,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_19",
+            "shape_id": 100,
+            "type": "picture",
+            "position": {
+              "left": 511.4,
+              "top": 263.49,
+              "width": 75.15,
+              "height": 74.71,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_20",
+            "shape_id": 101,
+            "type": "picture",
+            "position": {
+              "left": 598.06,
+              "top": 263.49,
+              "width": 75.15,
+              "height": 74.71,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_21",
+            "shape_id": 102,
+            "type": "picture",
+            "position": {
+              "left": 773.7,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_22",
+            "shape_id": 103,
+            "type": "picture",
+            "position": {
+              "left": 340.63,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_23",
+            "shape_id": 104,
+            "type": "picture",
+            "position": {
+              "left": 426.36,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_24",
+            "shape_id": 105,
+            "type": "picture",
+            "position": {
+              "left": 253.91,
+              "top": 358.3,
+              "width": 74.73,
+              "height": 74.73,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_25",
+            "shape_id": 106,
+            "type": "picture",
+            "position": {
+              "left": 949.32,
+              "top": 263.2,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_26",
+            "shape_id": 107,
+            "type": "picture",
+            "position": {
+              "left": 862.04,
+              "top": 263.2,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_27",
+            "shape_id": 108,
+            "type": "picture",
+            "position": {
+              "left": 511.56,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_28",
+            "shape_id": 109,
+            "type": "picture",
+            "position": {
+              "left": 862.04,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_29",
+            "shape_id": 110,
+            "type": "picture",
+            "position": {
+              "left": 687.71,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_30",
+            "shape_id": 111,
+            "type": "picture",
+            "position": {
+              "left": 773.7,
+              "top": 263.43,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_31",
+            "shape_id": 112,
+            "type": "picture",
+            "position": {
+              "left": 80.0,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_32",
+            "shape_id": 113,
+            "type": "picture",
+            "position": {
+              "left": 1039.56,
+              "top": 262.75,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_33",
+            "shape_id": 114,
+            "type": "picture",
+            "position": {
+              "left": 687.71,
+              "top": 263.61,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_34",
+            "shape_id": 115,
+            "type": "picture",
+            "position": {
+              "left": 1126.21,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_35",
+            "shape_id": 116,
+            "type": "picture",
+            "position": {
+              "left": 167.31,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_36",
+            "shape_id": 117,
+            "type": "picture",
+            "position": {
+              "left": 80.0,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_37",
+            "shape_id": 118,
+            "type": "picture",
+            "position": {
+              "left": 949.32,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_38",
+            "shape_id": 119,
+            "type": "picture",
+            "position": {
+              "left": 1039.56,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_39",
+            "shape_id": 120,
+            "type": "picture",
+            "position": {
+              "left": 598.22,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_40",
+            "shape_id": 121,
+            "type": "picture",
+            "position": {
+              "left": 1126.21,
+              "top": 263.43,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_41",
+            "shape_id": 122,
+            "type": "picture",
+            "position": {
+              "left": 167.31,
+              "top": 358.25,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_42",
+            "shape_id": 123,
+            "type": "picture",
+            "position": {
+              "left": 340.63,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_43",
+            "shape_id": 124,
+            "type": "picture",
+            "position": {
+              "left": 253.85,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_44",
+            "shape_id": 125,
+            "type": "picture",
+            "position": {
+              "left": 687.71,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_45",
+            "shape_id": 126,
+            "type": "picture",
+            "position": {
+              "left": 862.04,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_46",
+            "shape_id": 127,
+            "type": "picture",
+            "position": {
+              "left": 773.7,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_47",
+            "shape_id": 128,
+            "type": "picture",
+            "position": {
+              "left": 511.56,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_48",
+            "shape_id": 129,
+            "type": "picture",
+            "position": {
+              "left": 598.22,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_49",
+            "shape_id": 130,
+            "type": "picture",
+            "position": {
+              "left": 167.31,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_50",
+            "shape_id": 131,
+            "type": "picture",
+            "position": {
+              "left": 687.71,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_51",
+            "shape_id": 132,
+            "type": "picture",
+            "position": {
+              "left": 862.04,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_52",
+            "shape_id": 133,
+            "type": "picture",
+            "position": {
+              "left": 773.7,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_53",
+            "shape_id": 134,
+            "type": "picture",
+            "position": {
+              "left": 598.22,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_54",
+            "shape_id": 135,
+            "type": "picture",
+            "position": {
+              "left": 949.32,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_55",
+            "shape_id": 136,
+            "type": "picture",
+            "position": {
+              "left": 1039.56,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_56",
+            "shape_id": 137,
+            "type": "picture",
+            "position": {
+              "left": 1126.21,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_57",
+            "shape_id": 138,
+            "type": "picture",
+            "position": {
+              "left": 511.56,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_58",
+            "shape_id": 139,
+            "type": "picture",
+            "position": {
+              "left": 426.36,
+              "top": 450.81,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_59",
+            "shape_id": 140,
+            "type": "picture",
+            "position": {
+              "left": 80.0,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_60",
+            "shape_id": 141,
+            "type": "picture",
+            "position": {
+              "left": 426.36,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_61",
+            "shape_id": 142,
+            "type": "picture",
+            "position": {
+              "left": 253.85,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_62",
+            "shape_id": 143,
+            "type": "picture",
+            "position": {
+              "left": 340.63,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_63",
+            "shape_id": 144,
+            "type": "picture",
+            "position": {
+              "left": 1039.56,
+              "top": 541.97,
+              "width": 74.83,
+              "height": 74.83,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_64",
+            "shape_id": 145,
+            "type": "picture",
+            "position": {
+              "left": 949.38,
+              "top": 542.03,
+              "width": 74.71,
+              "height": 74.71,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "image",
+              "data": {
+                "filename": "image.png",
+                "content_type": "image/png"
+              }
+            },
+            "formatting": {
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not a placeholder"
+            }
+          },
+          {
+            "element_id": "shape_65",
+            "shape_id": 3,
+            "type": "text_box",
+            "position": {
+              "left": 54.17,
+              "top": 65.77,
+              "width": 1171.67,
+              "height": 80.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "Iconographie Premier Tech",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {
+                "font_name": "+mj-lt",
+                "font_size": null,
+                "bold": false,
+                "italic": null,
+                "underline": null,
+                "color": null,
+                "alignment": null
+              },
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_66",
+            "shape_id": 2,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "9",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "Titre & Espace pour tableau ou graphique",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": "To change the color of an icon :\nSelect the icon.\nChoose the color via the ‘’Format menu’’ and ‘’Graphics Fill option’’."
+    }
+  ]
+}

@@ -1,0 +1,177 @@
+{
+  "slide_number": 30,
+  "slide_title": "Slide 548",
+  "layout_name": "3 boîtes bleues pour courts énoncés sans sous-titres",
+  "total_scenes": 1,
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_type": "static_content",
+      "context": "",
+      "technical_description": {
+        "visual_elements": [
+          {
+            "element_id": "shape_1",
+            "shape_id": 4,
+            "type": "placeholder",
+            "position": {
+              "left": 450.19,
+              "top": 211.5,
+              "width": 379.63,
+              "height": 323.43,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "placeholder",
+              "data": {
+                "placeholder_type": "BODY (2)",
+                "description": "Zone de texte de mise en page"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_2",
+            "shape_id": 5,
+            "type": "placeholder",
+            "position": {
+              "left": 846.21,
+              "top": 211.5,
+              "width": 379.63,
+              "height": 323.43,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "placeholder",
+              "data": {
+                "placeholder_type": "BODY (2)",
+                "description": "Zone de texte de mise en page"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_3",
+            "shape_id": 3,
+            "type": "placeholder",
+            "position": {
+              "left": 54.17,
+              "top": 211.5,
+              "width": 379.63,
+              "height": 323.43,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "placeholder",
+              "data": {
+                "placeholder_type": "BODY (2)",
+                "description": "Zone de texte de mise en page"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_4",
+            "shape_id": 2,
+            "type": "placeholder",
+            "position": {
+              "left": 54.17,
+              "top": 66.1,
+              "width": 1171.67,
+              "height": 80.78,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "placeholder",
+              "data": {
+                "placeholder_type": "TITLE (1)",
+                "description": "Zone de texte de mise en page"
+              }
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          },
+          {
+            "element_id": "shape_5",
+            "shape_id": 9,
+            "type": "text_box",
+            "position": {
+              "left": 1234.92,
+              "top": 687.72,
+              "width": 24.92,
+              "height": 18.94,
+              "rotation": 0.0
+            },
+            "content": {
+              "type": "text",
+              "data": "30",
+              "has_text_frame": true,
+              "paragraphs_count": 1
+            },
+            "formatting": {
+              "text": {},
+              "fill": {},
+              "line": {
+                "color": null,
+                "width": null
+              }
+            },
+            "properties": {
+              "error": "shape is not an auto shape"
+            }
+          }
+        ],
+        "layout": "3 boîtes bleues pour courts énoncés sans sous-titres",
+        "background": {
+          "type": "unknown",
+          "note": "Background extraction requires XML analysis"
+        },
+        "automatic_animations": [],
+        "slide_dimensions": {
+          "width": 1280.0,
+          "height": 720.0
+        }
+      },
+      "speaker_notes": ""
+    }
+  ]
+}

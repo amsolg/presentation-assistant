@@ -1,0 +1,41 @@
+{
+  "insertion_timestamp": "2025-10-10T10:13:09.065724",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "templates/Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_32\\output\\test_script_06_slide_32.pptx",
+  "content_details": {
+    "title": "Architecture complète des outils d'exploitation pour systèmes d'information critiques",
+    "concepts": [
+      "Monitoring en temps réel avec surveillance proactive des performances système, métriques applicatives et indicateurs de santé infrastructurel pour anticipation des incidents.",
+      "Logging centralisé avec collecte automatisée des événements, indexation intelligente des traces et corrélation avancée pour diagnostic rapide des problématiques.",
+      "Alerting intelligent avec seuils adaptatifs, escalade automatique selon criticité et notifications multi-canaux pour réactivité opérationnelle optimale et continues.",
+      "Backup stratégique avec sauvegarde incrémentale, réplication géographique sécurisée et tests réguliers de récupération pour garantie de continuité d'activité."
+    ],
+    "subtitles": [],
+    "style": "grey_4_simple",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 31,
+    "number": 32,
+    "layout": "4 boîtes grises pour courts énoncés sans sous-titres",
+    "style_description": "Processus techniques simples"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'grey_4_simple' adapté à l'usage",
+    "3 concepts équilibrés"
+  ]
+}

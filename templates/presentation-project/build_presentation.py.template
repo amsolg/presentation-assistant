@@ -1,0 +1,446 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Script d'orchestration automatique - {PRESENTATION_SUBJECT} pour {AUDIENCE_NAME}
+Généré automatiquement par le Presentation Assistant le {CREATION_DATE}
+
+Ce script utilise les presentation_builder pour construire une présentation
+adaptée spécifiquement à l'audience {AUDIENCE_NAME} selon l'analyse contextuelle.
+
+Configuration audience:
+- Niveau d'expertise: {EXPERTISE_LEVEL}
+- Style Sam: {SAM_STYLE}
+- Durée cible: {TARGET_DURATION} minutes
+- Scripts utilisés: {SCRIPTS_COUNT}
+
+NOTES IMPORTANTES pour présentations complètes:
+- Les titres doivent faire moins de 45 caractères (limitation script 01)
+- Script 01: Titre en argument positionnel (pas --title), utilise --subtitle, --metadata, --output
+- Scripts 02-10: Tous nécessitent --insert-into et --template
+- Chemins relatifs depuis presentation_builder/: ../presentations/[sujet]/[audience]/output/
+- Template path: ../templates/Template_PT.pptx pour tous les scripts d'insertion
+- Séquence recommandée: 01→02→03/04→05/06→07/08/09→10 pour 8-12 slides
+- Graphiques (script 09): Nécessitent fichiers CSV dans dossier data/
+"""
+
+import os
+import sys
+import subprocess
+import json
+from datetime import datetime
+from pathlib import Path
+
+class PresentationOrchestrator:
+    """Orchestrateur pour la construction automatique de présentation"""
+
+    def __init__(self):
+        self.project_root = Path(__file__).parent.parent.parent.parent
+        self.presentation_builder_path = self.project_root / "presentation_builder"
+        self.output_dir = Path(__file__).parent / "output"
+        self.output_dir.mkdir(exist_ok=True)
+
+        # Configuration spécifique à l'audience
+        self.audience_config = {
+            "audience": "{AUDIENCE_NAME}",
+            "expertise_level": "{EXPERTISE_LEVEL}",
+            "duration_target": "{TARGET_DURATION} minutes",
+            "sam_style": "{SAM_STYLE}",
+            "technical_depth": "{TECHNICAL_DEPTH}",
+            "communication_style": "{COMMUNICATION_STYLE}"
+        }
+
+        # Informations du projet
+        self.project_info = {
+            "subject": "{PRESENTATION_SUBJECT}",
+            "creation_date": "{CREATION_DATE}",
+            "target_audience": "{AUDIENCE_NAME}",
+            "estimated_slides": {ESTIMATED_SLIDES},
+            "complexity_level": "{COMPLEXITY_LEVEL}"
+        }
+
+        # Séquence de construction optimisée pour cette audience
+        self.build_sequence = {BUILD_SEQUENCE_JSON}
+
+        # Exemple de séquence complète pour présentations 8-12 slides
+        self.example_complete_sequence = [
+            {
+                "step_id": "title_slide",
+                "script": "01_slide_title_creator.py",
+                "params": ["{PRESENTATION_TITLE}", "--subtitle", "{PRESENTATION_SUBTITLE}", "--metadata", "{CREATION_DATE}", "--output", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}"],
+                "description": "Création de la slide de titre",
+                "critical": True
+            },
+            {
+                "step_id": "navigation",
+                "script": "02_navigation_builder.py",
+                "params": ["--insert-into", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}", "--template", "../templates/Template_PT.pptx", "--sections", "Introduction", "Analyse", "Solutions", "Implémentation", "Conclusion"],
+                "description": "Ajout de la navigation/table des matières",
+                "critical": True
+            },
+            {
+                "step_id": "section_intro",
+                "script": "03_section_header_builder.py",
+                "params": ["--insert-into", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}", "--template", "../templates/Template_PT.pptx", "--title", "Introduction", "--style", "major"],
+                "description": "En-tête section Introduction",
+                "critical": False
+            },
+            {
+                "step_id": "content_main",
+                "script": "06_content_boxes_builder.py",
+                "params": ["--insert-into", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}", "--template", "../templates/Template_PT.pptx", "--title", "Points Clés", "--content", "Point 1", "Point 2", "Point 3"],
+                "description": "Contenu principal avec boîtes",
+                "critical": True
+            },
+            {
+                "step_id": "statistics",
+                "script": "05_statistics_builder.py",
+                "params": ["--insert-into", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}", "--template", "../templates/Template_PT.pptx", "--title", "Statistiques Clés", "--stats", "75%:Satisfaction", "€2.5M:Économies"],
+                "description": "Ajout de statistiques importantes",
+                "critical": False
+            },
+            {
+                "step_id": "charts",
+                "script": "09_charts_builder.py",
+                "params": ["--insert-into", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}", "--template", "../templates/Template_PT.pptx", "--title", "Évolution des Résultats", "--style", "column_clustered", "--csv", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/data/metrics.csv"],
+                "description": "Graphiques avec données",
+                "critical": False
+            },
+            {
+                "step_id": "testimonial",
+                "script": "08_testimonial_builder.py",
+                "params": ["--insert-into", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}", "--template", "../templates/Template_PT.pptx", "--quote", "Cette solution a transformé notre processus", "--author", "Client Référence"],
+                "description": "Témoignage client",
+                "critical": False
+            },
+            {
+                "step_id": "conclusion",
+                "script": "10_conclusion_builder.py",
+                "params": ["--insert-into", "../presentations/{PRESENTATION_SUBJECT}/{AUDIENCE_NAME}/output/{PRESENTATION_FILENAME}", "--template", "../templates/Template_PT.pptx", "--title", "Prochaines Étapes", "--cta", "Commençons ensemble"],
+                "description": "Slide de conclusion avec call-to-action",
+                "critical": True
+            }
+        ]
+
+    def log_step(self, step, message):
+        """Log des étapes de construction"""
+        timestamp = datetime.now().strftime("%H:%M:%S")
+        print(f"[{timestamp}] ÉTAPE {step}: {message}")
+
+    def execute_script(self, script_name, params, description):
+        """Exécute un script presentation_builder avec gestion d'erreurs"""
+        self.log_step("EXEC", f"Exécution de {script_name} - {description}")
+
+        script_path = self.presentation_builder_path / script_name
+        cmd = [sys.executable, str(script_path)] + params
+
+        try:
+            result = subprocess.run(cmd,
+                                  cwd=self.presentation_builder_path,
+                                  capture_output=True,
+                                  text=True,
+                                  timeout=120)
+
+            if result.returncode == 0:
+                self.log_step("SUCCESS", f"{script_name} exécuté avec succès")
+                if result.stdout:
+                    print(f"  Output: {result.stdout.strip()}")
+                return True
+            else:
+                self.log_step("ERROR", f"Échec de {script_name}")
+                if result.stderr:
+                    print(f"  STDERR: {result.stderr}")
+                if result.stdout:
+                    print(f"  STDOUT: {result.stdout}")
+                return False
+
+        except subprocess.TimeoutExpired:
+            self.log_step("ERROR", f"Timeout lors de l'exécution de {script_name}")
+            return False
+        except Exception as e:
+            self.log_step("ERROR", f"Erreur inattendue avec {script_name}: {e}")
+            return False
+
+    def validate_environment(self):
+        """Valide l'environnement avant construction"""
+        self.log_step("VALIDATE", "Validation de l'environnement")
+
+        # Vérifier template Premier Tech
+        template_path = self.project_root / "templates" / "Template_PT.pptx"
+        if not template_path.exists():
+            self.log_step("ERROR", f"Template Premier Tech non trouvé: {template_path}")
+            return False
+
+        # Scripts presentation_builder disponibles (validés depuis l'analyse)
+        required_scripts = [
+            "01_slide_title_creator.py",
+            "02_navigation_builder.py",
+            "03_section_header_builder.py",
+            "04_simple_message_builder.py",
+            "05_statistics_builder.py",
+            "06_content_boxes_builder.py",
+            "07_detailed_explanation_builder.py",
+            "08_testimonial_builder.py",
+            "09_charts_builder.py",
+            "10_conclusion_builder.py"
+        ]
+
+        # Scripts requis pour cette présentation spécifique
+        scripts_for_this_presentation = {REQUIRED_SCRIPTS_LIST}
+
+        # Valider tous les scripts disponibles
+        for script in required_scripts:
+            script_path = self.presentation_builder_path / script
+            if not script_path.exists():
+                self.log_step("ERROR", f"Script de base manquant: {script}")
+                return False
+
+        # Valider les scripts requis pour cette présentation
+        for script in scripts_for_this_presentation:
+            script_path = self.presentation_builder_path / script
+            if not script_path.exists():
+                self.log_step("ERROR", f"Script requis manquant: {script}")
+                return False
+
+        # Vérifier la structure des données pour graphiques si nécessaire
+        data_dir = Path(__file__).parent / "data"
+        if any("09_charts_builder.py" in step.get("script", "") for step in self.build_sequence):
+            if not data_dir.exists():
+                self.log_step("WARNING", "Dossier data/ manquant - graphiques utiliseront données par défaut")
+
+        self.log_step("SUCCESS", "Environnement validé")
+        return True
+
+    def validate_script_parameters(self):
+        """Valide que les paramètres des scripts sont corrects selon les tests analysés"""
+        self.log_step("VALIDATE", "Validation des paramètres de scripts")
+
+        for step in self.build_sequence:
+            script_name = step.get("script", "")
+            params = step.get("params", [])
+
+            # Validation spécifique pour script 01 (titre creator)
+            if script_name == "01_slide_title_creator.py":
+                if "--title" in params:
+                    self.log_step("WARNING", "Script 01: Utiliser titre en argument positionnel, pas --title")
+
+            # Validation pour scripts 02-10 (insertion)
+            elif script_name.startswith(("02_", "03_", "04_", "05_", "06_", "07_", "08_", "09_", "10_")):
+                if "--insert-into" not in params:
+                    self.log_step("WARNING", f"{script_name}: Paramètre --insert-into requis")
+                if "--template" not in params:
+                    self.log_step("WARNING", f"{script_name}: Paramètre --template requis")
+
+        self.log_step("SUCCESS", "Paramètres validés")
+
+    def build_presentation(self):
+        """Construction séquentielle de la présentation"""
+        self.log_step("START", "Début de la construction de présentation")
+
+        # Validation de l'environnement
+        if not self.validate_environment():
+            return False
+
+        # Variables de construction
+        presentation_title = "{PRESENTATION_TITLE}"
+        presentation_file = "{PRESENTATION_FILENAME}"
+        presentation_path = self.output_dir / presentation_file
+
+        # Validation des paramètres spécifiques aux scripts
+        self.validate_script_parameters()
+
+        steps_completed = []
+        total_steps = len(self.build_sequence)
+
+        # Construction séquentielle selon la séquence optimisée
+        for step_num, step_config in enumerate(self.build_sequence, 1):
+            self.log_step("PROGRESS", f"Étape {step_num}/{total_steps}: {step_config['description']}")
+
+            success = self.execute_script(
+                step_config["script"],
+                step_config["params"],
+                step_config["description"]
+            )
+
+            if success:
+                steps_completed.append(step_config["step_id"])
+                self.log_step("STEP_SUCCESS", f"Étape {step_num} terminée avec succès")
+            else:
+                self.log_step("STEP_FAILED", f"Échec de l'étape {step_num}")
+                if step_config.get("critical", True):
+                    self.log_step("ABORT", "Étape critique échouée - arrêt du processus")
+                    return False
+
+        # Validation finale de la présentation générée
+        if presentation_path.exists():
+            file_size = presentation_path.stat().st_size
+            self.log_step("SUCCESS", f"Présentation créée: {presentation_file} ({file_size:,} bytes)")
+        else:
+            self.log_step("ERROR", "Fichier de présentation non trouvé après construction")
+            return False
+
+        # Génération du rapport final
+        self.generate_build_report(steps_completed, presentation_path)
+
+        return True
+
+    def generate_build_report(self, steps_completed, presentation_path):
+        """Génère le rapport de construction"""
+        report = {
+            "presentation_info": self.project_info,
+            "audience_config": self.audience_config,
+            "build_timestamp": datetime.now().isoformat(),
+            "steps_completed": steps_completed,
+            "total_steps": len(self.build_sequence),
+            "success_rate": len(steps_completed) / len(self.build_sequence) * 100,
+            "output_file": str(presentation_path),
+            "file_exists": presentation_path.exists(),
+            "file_size_kb": presentation_path.stat().st_size // 1024 if presentation_path.exists() else 0,
+            "build_sequence_used": self.build_sequence
+        }
+
+        # Sauvegarde du rapport
+        report_path = self.output_dir / "build_report.json"
+        with open(report_path, 'w', encoding='utf-8') as f:
+            json.dump(report, f, indent=2, ensure_ascii=False)
+
+        # Rapport détaillé en markdown
+        self.generate_detailed_report(report)
+
+        self.log_step("REPORT", f"Rapport généré: {report_path}")
+        self.log_step("COMPLETE", f"Construction terminée - Présentation: {presentation_path}")
+
+    def generate_detailed_report(self, report):
+        """Génère un rapport détaillé en markdown"""
+        report_md = f"""# Rapport de Construction - {self.project_info['subject']}
+
+## Informations Générales
+
+**Audience**: {self.audience_config['audience']}
+**Date de construction**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+**Durée cible**: {self.audience_config['duration_target']}
+**Style Sam**: {self.audience_config['sam_style']}
+
+## Résultats de Construction
+
+**Statut**: {"✅ Succès complet" if report['success_rate'] == 100 else f"⚠️ Partiel ({report['success_rate']:.1f}%)"}
+**Fichier généré**: `{report['output_file']}`
+**Taille**: {report['file_size_kb']:,} KB
+**Slides estimées**: {self.project_info['estimated_slides']}
+
+## Étapes Exécutées
+
+"""
+        for i, step in enumerate(self.build_sequence, 1):
+            status = "✅" if step["step_id"] in report["steps_completed"] else "❌"
+            report_md += f"- {status} **Étape {i}**: {step['description']} (`{step['script']}`)\n"
+
+        report_md += f"""
+## Configuration Sam AI
+
+- **Style de communication**: {self.audience_config['communication_style']}
+- **Profondeur technique**: {self.audience_config['technical_depth']}
+- **Adaptation audience**: Optimisée pour {self.audience_config['audience']}
+
+## Prochaines Étapes
+
+1. **Révision**: Examiner la présentation générée
+2. **Ajustements**: Modifier ce script si nécessaire
+3. **Narration**: Intégrer avec Sam AI pour audio
+4. **Distribution**: Prêt pour présentation
+
+## Support Technique
+
+- **Script source**: `build_presentation.py`
+- **Logs détaillés**: Disponibles dans la console
+- **Configuration**: Modifiable dans `__init__` de ce script
+
+---
+
+*Généré automatiquement par Presentation Assistant v2.5*
+"""
+
+        report_md_path = self.output_dir / "build_report.md"
+        with open(report_md_path, 'w', encoding='utf-8') as f:
+            f.write(report_md)
+
+    def print_usage_help(self):
+        """Affiche l'aide pour l'utilisation du template avec présentations complètes"""
+        help_text = f"""
+AIDE POUR PRÉSENTATIONS COMPLÈTES
+{"="*50}
+
+Ce script génère des présentations de 8-12 slides utilisant les templates Premier Tech.
+
+SÉQUENCE EXEMPLE (8 slides):
+1. Script 01: Slide titre                    → Slide 1
+2. Script 02: Navigation/table des matières  → Slide 2
+3. Script 03: En-tête section               → Slide 3
+4. Script 06: Contenu principal (boîtes)    → Slide 4
+5. Script 05: Statistiques clés             → Slide 5
+6. Script 09: Graphiques avec données       → Slide 6
+7. Script 08: Témoignage client             → Slide 7
+8. Script 10: Conclusion avec CTA           → Slide 8
+
+PARAMÈTRES CRITIQUES:
+• Script 01: python 01_slide_title_creator.py "Titre" --subtitle "Sous-titre"
+• Scripts 02-10: Tous nécessitent --insert-into fichier.pptx --template ../templates/Template_PT.pptx
+
+DONNÉES REQUISES POUR GRAPHIQUES:
+• Créer dossier data/ dans le même répertoire que ce script
+• Fichiers CSV avec colonnes: Catégorie, Valeur (ou structures multi-séries)
+
+AUDIENCE: {self.audience_config['audience']}
+EXPERTISE: {self.audience_config['expertise_level']}
+STYLE SAM: {self.audience_config['sam_style']}
+
+PERSONNALISATION:
+1. Modifier self.build_sequence dans __init__()
+2. Adapter les paramètres selon votre contenu
+3. Utiliser self.example_complete_sequence comme base
+
+EXEMPLE D'UTILISATION:
+python build_presentation.py
+        """
+        print(help_text)
+
+def main():
+    """Point d'entrée principal"""
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Orchestrateur de présentation complète")
+    parser.add_argument("--help-complete", action="store_true",
+                       help="Afficher l'aide détaillée pour présentations complètes")
+    args = parser.parse_args()
+
+    print("=" * 60)
+    print(f"ORCHESTRATEUR DE PRÉSENTATION")
+    print(f"Sujet: {PRESENTATION_SUBJECT}")
+    print(f"Audience: {AUDIENCE_NAME}")
+    print(f"Généré le: {CREATION_DATE}")
+    print("=" * 60)
+
+    orchestrator = PresentationOrchestrator()
+
+    if args.help_complete:
+        orchestrator.print_usage_help()
+        return
+
+    success = orchestrator.build_presentation()
+
+    if success:
+        print("\n" + "=" * 60)
+        print("🎉 SUCCÈS: Présentation construite avec succès!")
+        print("📁 Fichiers générés dans le dossier 'output/'")
+        print("🤖 Prêt pour la narration Sam AI")
+        print("📋 Consultez build_report.md pour les détails")
+        print("=" * 60)
+    else:
+        print("\n" + "=" * 60)
+        print("❌ ÉCHEC: Erreurs lors de la construction")
+        print("📋 Consultez les logs ci-dessus pour diagnostiquer")
+        print("🔧 Modifiez la configuration si nécessaire")
+        print("=" * 60)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main()

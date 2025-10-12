@@ -1,0 +1,23 @@
+{
+  "test_suite": "pie_chart",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "output_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\pie_chart\\output\\test_pie_chart.pptx",
+  "tests_completed": 8,
+  "final_slide_count": 9,
+  "test_focus": "Graphiques en secteurs pour r\u00e9partitions et proportions",
+  "features_tested": [
+    "Import CSV budget",
+    "Normalisation automatique \u00e0 100%",
+    "Donn\u00e9es KPI",
+    "Regroupement cat\u00e9gories (>8)",
+    "Configuration JSON",
+    "Donn\u00e9es minimales",
+    "Titre de s\u00e9rie personnalis\u00e9",
+    "Texte des insights en blanc"
+  ],
+  "new_features": [
+    "Diversit\u00e9 de couleurs pour secteurs",
+    "Pr\u00e9vention de la coupure de mots dans les labels",
+    "Positionnement externe des \u00e9tiquettes"
+  ]
+}

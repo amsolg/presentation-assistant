@@ -1,0 +1,16 @@
+{
+  "test_suite": "bar_clustered",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "output_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\bar_clustered\\output\\test_bar_clustered.pptx",
+  "tests_completed": 6,
+  "final_slide_count": 7,
+  "test_focus": "Graphiques en barres horizontales pour comparaisons",
+  "features_tested": [
+    "Comparaison horizontale simple",
+    "Classement top 10",
+    "Multi-s\u00e9ries r\u00e9gionales",
+    "Noms de cat\u00e9gories longs",
+    "Donn\u00e9es en pourcentages",
+    "Valeurs n\u00e9gatives/positives"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "title": "Évolution des Ventes Trimestrielles 2024",
+  "style": "line_chart",
+  "data": {
+    "labels": ["T1 2024", "T2 2024", "T3 2024", "T4 2024"],
+    "values": [3.1, 3.9, 3.5, 4.2]
+  },
+  "insights": "Croissance de 35% sur l'année avec un pic significatif au T4",
+  "formatting": {
+    "show_legend": true,
+    "show_data_labels": true,
+    "value_axis_format": "0.0 M€"
+  }
+}

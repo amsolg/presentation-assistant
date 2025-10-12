@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-10T10:12:50.676855",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "TEST UNITAIRE - Script 04",
+    "subtitle": "Presentation de base pour test message keywords simple",
+    "metadata": "2025.10.10 - Test Keywords Simple"
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_04_simple_message_builder\\slide_19\\output\\test_script_04_slide_19.pptx",
+  "file_size_kb": 296.23,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

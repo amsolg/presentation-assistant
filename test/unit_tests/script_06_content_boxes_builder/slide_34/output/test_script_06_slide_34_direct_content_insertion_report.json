@@ -1,0 +1,41 @@
+{
+  "insertion_timestamp": "2025-10-10T10:13:12.326352",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "templates/Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_34\\output\\test_script_06_slide_34.pptx",
+  "content_details": {
+    "title": "Méthodologie agile complète pour la gestion de projets technologiques d'envergure",
+    "concepts": [
+      "Planification stratégique avec analyse approfondie des besoins, définition des objectifs SMART et élaboration de roadmaps détaillées pour garantir l'alignement organisationnel.",
+      "Exécution méthodique avec équipes cross-fonctionnelles, gestion des sprints agile et coordination continue des livrables pour respecter les échéances critiques.",
+      "Contrôle qualité rigoureux avec indicateurs de performance clés, revues régulières des jalons et ajustements proactifs pour maintenir la trajectoire stratégique.",
+      "Amélioration continue avec retours d'expérience structurés, optimisation des processus et capitalisation des apprentissages pour excellence opérationnelle durable."
+    ],
+    "subtitles": [],
+    "style": "blue_4_simple",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 33,
+    "number": 34,
+    "layout": "4 boîtes bleues pour courts énoncés sans sous-titres",
+    "style_description": "Processus business équilibrés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'blue_4_simple' adapté à l'usage",
+    "3 concepts équilibrés"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "insertion_timestamp": "2025-10-10T10:12:46.421713",
+  "method": "Direct Layout-Based Section Header Insertion (Premier Tech Standards)",
+  "template_used": "templates/Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_03_section_header_builder\\slide_16\\output\\test_script_03_slide_16.pptx",
+  "section_details": {
+    "title": "Section Moderee Sous-Detail",
+    "number": null,
+    "style": "moderate",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 15,
+    "number": 16,
+    "layout": "Titre de section blanc",
+    "style_description": "Transitions modérées, sous-sections"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'moderate' adapté à l'usage"
+  ]
+}

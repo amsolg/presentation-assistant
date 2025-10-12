@@ -1,0 +1,44 @@
+{
+  "insertion_timestamp": "2025-10-10T10:13:01.046136",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "templates/Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_27\\output\\test_script_06_slide_27.pptx",
+  "content_details": {
+    "title": "Solutions techniques avancées",
+    "concepts": [
+      "L'architecture microservices permet une scalabilité horizontale et une maintenance simplifiée grâce à la séparation des responsabilités.",
+      "Le chiffrement end-to-end garantit la confidentialité des données sensibles lors du transit et du stockage dans nos systèmes.",
+      "Le cache distribué améliore significativement les temps de réponse en réduisant la charge sur les bases de données principales."
+    ],
+    "subtitles": [
+      "Architecture système",
+      "Sécurité des données",
+      "Performance optimisée"
+    ],
+    "style": "grey_3_detailed",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 26,
+    "number": 27,
+    "layout": "3 boîtes grises pour courts énoncés avec sous-titres",
+    "style_description": "Concepts techniques catégorisés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'grey_3_detailed' adapté à l'usage",
+    "3 concepts équilibrés"
+  ]
+}

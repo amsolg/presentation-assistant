@@ -1,0 +1,24 @@
+{
+  "insertion_info": {
+    "timestamp": "2025-10-10T10:13:33.353978",
+    "script": "09_charts_builder.py",
+    "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\column_clustered\\output\\test_column_clustered.pptx",
+    "backup_created": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\column_clustered\\output\\test_column_clustered_backup_before_enhanced_chart.pptx"
+  },
+  "slide_details": {
+    "title": "Test Diversité Couleurs",
+    "style": "column_clustered",
+    "chart_type": "COLUMN_CLUSTERED",
+    "data_source": "CSV",
+    "has_multi_series": true,
+    "num_categories": 4,
+    "has_insights": true
+  },
+  "standards_applied": {
+    "dimensions": "8.5x4.5 inches",
+    "colors": "Palette Premier Tech appliquée",
+    "formatting": "Standards visuels respectés"
+  },
+  "position": 7,
+  "total_slides": 7
+}
