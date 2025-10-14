@@ -1,5 +1,5 @@
 {
-  "creation_timestamp": "2025-10-10T10:12:47.522856",
+  "creation_timestamp": "2025-10-14T12:20:56.443275",
   "method": "Template Slide Cloning (Premier Tech Standards)",
   "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
   "source_slide": {
@@ -10,10 +10,10 @@
   "content": {
     "title": "TEST UNITAIRE - Script 04",
     "subtitle": "Presentation de base pour test message centre",
-    "metadata": "2025.10.10 - Test Message Centre"
+    "metadata": "2025.10.14 - Test Message Centre"
   },
   "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_04_simple_message_builder\\slide_17\\output\\test_script_04_slide_17.pptx",
-  "file_size_kb": 296.22,
+  "file_size_kb": 298.19,
   "quality_assurance": {
     "method": "Template Slide Cloning",
     "styles_preserved": true,

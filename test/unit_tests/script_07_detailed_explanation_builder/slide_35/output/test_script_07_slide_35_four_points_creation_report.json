@@ -1,5 +1,5 @@
 {
-  "creation_timestamp": "2025-10-10T10:13:13.454074",
+  "creation_timestamp": "2025-10-14T12:21:21.615920",
   "method": "Template Slide Cloning (Premier Tech Standards)",
   "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
   "source_slide": {
@@ -10,10 +10,10 @@
   "content": {
     "title": "TEST UNITAIRE - Script 07",
     "subtitle": "Présentation de base pour test explications détaillées",
-    "metadata": "2025.10.10 - Test Four Points Explanation"
+    "metadata": "2025.10.14 - Test Four Points Explanation"
   },
   "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_07_detailed_explanation_builder\\slide_35\\output\\test_script_07_slide_35_four_points.pptx",
-  "file_size_kb": 296.24,
+  "file_size_kb": 298.21,
   "quality_assurance": {
     "method": "Template Slide Cloning",
     "styles_preserved": true,

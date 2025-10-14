@@ -1,0 +1,51 @@
+{
+  "insertion_timestamp": "2025-10-14T14:24:33.225418",
+  "method": "JSON Statistics Builder 2025 - Direct Insertion",
+  "template_used": "C:\\repos\\presentation-assistant\\test\\unit_tests\\statistics_builder\\..\\..\\..\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\test\\unit_tests\\statistics_builder\\..\\..\\..\\presentations\\unit-tests\\statistics_builder_tester\\output\\20251014_1424_test_statistics_builder_-_three_stats.pptx",
+  "statistics_details": {
+    "title": "Indicateurs Clés de Performance",
+    "style": "three_stats",
+    "statistics_count": 3,
+    "statistics": [
+      {
+        "value": "23+",
+        "label": "Années d'Expérience"
+      },
+      {
+        "value": "87%",
+        "label": "Satisfaction Client"
+      },
+      {
+        "value": "150M$",
+        "label": "Revenus Générés"
+      }
+    ],
+    "intended_position": 1,
+    "auto_widen_enabled": true
+  },
+  "source_slide": {
+    "index": 23,
+    "number": 24,
+    "layout": "3 statistiques & Mots-clés",
+    "style_description": "Comparaison étendue avec contexte"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'three_stats' adapté à l'usage",
+    "Comparaisons chiffrées professionnelles"
+  ]
+}

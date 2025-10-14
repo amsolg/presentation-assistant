@@ -1,0 +1,28 @@
+{
+  "build_timestamp": "2025-10-14T14:22:33.163747",
+  "presentation_config": {
+    "name": "Test Content Boxes - 4 Grises Détaillées",
+    "subject": "unit-tests",
+    "audience": "content-boxes",
+    "title": "Test Content Boxes - 4 Grises Détaillées"
+  },
+  "build_result": {
+    "success": true,
+    "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\content_boxes_builder\\..\\..\\..\\presentations\\unit-tests\\content-boxes\\output\\20251014_1422_test_content_boxes_-_4_grises_détaillées.pptx",
+    "file_exists": true,
+    "file_size_kb": 300.3
+  },
+  "slides_summary": {
+    "title_slide": "Créée (obligatoire)",
+    "content_slides": 1,
+    "closing_slide": "Ajoutée (obligatoire)",
+    "total_slides": 3
+  },
+  "architecture": {
+    "method": "JSON-based Presentation Builder v2",
+    "base_template": "c:\\repos\\presentation-assistant\\test\\unit_tests\\content_boxes_builder\\..\\..\\..\\templates\\Template_PT.pptx",
+    "premier_tech_standards": true,
+    "orchestrated_build": true,
+    "version": "2.0 - Version fonctionnelle sauvegardée"
+  }
+}

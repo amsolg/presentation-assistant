@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-10-14T12:24:50.014274",
+  "test_suite": "SectionHeaderBuilder JSON Architecture 2025",
+  "subject": "unit-tests",
+  "audience": "section_header_builder_tester",
+  "results": {
+    "tests_run": 8,
+    "failures": 1,
+    "errors": 0,
+    "success_rate": 87.5
+  },
+  "details": {
+    "failures": [
+      {
+        "test": "test_moderate_section_header (__main__.TestSectionHeaderBuilder.test_moderate_section_header)",
+        "error": "Traceback (most recent call last):\n  File \"c:\\repos\\presentation-assistant\\test\\unit_tests\\section_header_builder\\test_section_header_builder.py\", line 56, in _create_presentation_from_schema\n    result_path = builder.build_presentation(\"presentation_schema.json\")\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\repos\\presentation-assistant\\test\\unit_tests\\section_header_builder\\..\\..\\..\\presentation_builder\\presentation_builder.py\", line 564, in build_presentation\n    raise Exception(\"Échec création slide titre\")\nException: Échec création slide titre\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"c:\\repos\\presentation-assistant\\test\\unit_tests\\section_header_builder\\test_section_header_builder.py\", line 99, in test_moderate_section_header\n    presentation_path = self._create_presentation_from_schema(\"moderate_section\")\n                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"c:\\repos\\presentation-assistant\\test\\unit_tests\\section_header_builder\\test_section_header_builder.py\", line 68, in _create_presentation_from_schema\n    self.fail(f\"Erreur création présentation {test_name}: {e}\")\nAssertionError: Erreur création présentation moderate_section: Échec création slide titre\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"c:\\repos\\presentation-assistant\\test\\unit_tests\\section_header_builder\\test_section_header_builder.py\", line 114, in test_moderate_section_header\n    self.fail(f\"Erreur test section header modérée: {e}\")\nAssertionError: Erreur test section header modérée: Erreur création présentation moderate_section: Échec création slide titre\n"
+      }
+    ],
+    "errors": []
+  }
+}

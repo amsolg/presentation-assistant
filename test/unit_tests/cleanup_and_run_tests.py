@@ -2,6 +2,7 @@
 """
 Script de nettoyage et d'exécution des tests unitaires
 - Supprime récursivement tous les dossiers nommés "output" dans test/unit_tests
+- Supprime récursivement tous les dossiers nommés "output" dans presentations/unit-tests
 - Exécute tous les scripts nommés "run_test" trouvés récursivement
 """
 
@@ -106,18 +107,30 @@ def main():
     print("[CLEAN] Script de nettoyage et d'exécution des tests unitaires")
     print("=" * 60)
 
-    # Définir le chemin de base
+    # Définir les chemins de base
     script_dir = Path(__file__).parent
     base_path = script_dir
 
+    # Chemin vers presentations/unit-tests depuis test/unit_tests
+    presentations_unit_tests_path = script_dir.parent.parent / "presentations" / "unit-tests"
+
     print(f"[PATH] Répertoire de base: {base_path}")
+    print(f"[PATH] Répertoire presentations unit-tests: {presentations_unit_tests_path}")
     print()
 
     # Étape 1: Nettoyer les dossiers output
     print("[STEP 1] Suppression des dossiers 'output'")
     print("-" * 40)
 
+    # Nettoyer dans test/unit_tests
     removed_dirs = find_and_remove_output_dirs(base_path)
+
+    # Nettoyer dans presentations/unit-tests si le dossier existe
+    if presentations_unit_tests_path.exists():
+        removed_dirs_presentations = find_and_remove_output_dirs(presentations_unit_tests_path)
+        removed_dirs.extend(removed_dirs_presentations)
+    else:
+        print(f"[INFO] Le dossier {presentations_unit_tests_path} n'existe pas")
 
     if removed_dirs:
         print(f"[OK] {len(removed_dirs)} dossier(s) 'output' supprimé(s)")

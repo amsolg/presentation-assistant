@@ -1,0 +1,15 @@
+{
+  "presentation_name": "Test direct_json",
+  "subject": "unit-tests",
+  "audience": "simple_message_builder_tester",
+  "title_slide": {
+    "title": "Test Simple Message Builder - direct_json",
+    "subtitle": "Tests unitaires architecture JSON 2025",
+    "metadata": "2025-01-15 - Tests Unitaires"
+  },
+  "slides": [],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}

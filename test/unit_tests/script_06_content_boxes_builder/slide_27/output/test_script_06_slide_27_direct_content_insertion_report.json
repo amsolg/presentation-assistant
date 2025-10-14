@@ -1,8 +1,8 @@
 {
-  "insertion_timestamp": "2025-10-10T10:13:01.046136",
+  "insertion_timestamp": "2025-10-14T14:11:40.106979",
   "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
   "template_used": "templates/Template_PT.pptx",
-  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_27\\output\\test_script_06_slide_27.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_27\\output\\test_script_06_slide_27.pptx",
   "content_details": {
     "title": "Solutions techniques avancées",
     "concepts": [

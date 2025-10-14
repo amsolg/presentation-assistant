@@ -1,0 +1,28 @@
+{
+  "build_timestamp": "2025-10-14T14:24:30.176513",
+  "presentation_config": {
+    "name": "Test Statistics Builder - Blue Line",
+    "subject": "unit-tests",
+    "audience": "statistics_builder_tester",
+    "title": "Test Statistics Builder - Blue Line"
+  },
+  "build_result": {
+    "success": true,
+    "output_file": "C:\\repos\\presentation-assistant\\test\\unit_tests\\statistics_builder\\..\\..\\..\\presentations\\unit-tests\\statistics_builder_tester\\output\\20251014_1424_test_statistics_builder_-_blue_line.pptx",
+    "file_exists": true,
+    "file_size_kb": 299.86
+  },
+  "slides_summary": {
+    "title_slide": "Créée (obligatoire)",
+    "content_slides": 1,
+    "closing_slide": "Ajoutée (obligatoire)",
+    "total_slides": 3
+  },
+  "architecture": {
+    "method": "JSON-based Presentation Builder v2",
+    "base_template": "C:\\repos\\presentation-assistant\\test\\unit_tests\\statistics_builder\\..\\..\\..\\templates\\Template_PT.pptx",
+    "premier_tech_standards": true,
+    "orchestrated_build": true,
+    "version": "2.0 - Version fonctionnelle sauvegardée"
+  }
+}

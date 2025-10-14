@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-14T12:26:24.868739",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "Test Navigation Builder - TOC Basique",
+    "subtitle": "Tests unitaires pour l'architecture JSON 2025",
+    "metadata": "2025-01-15 - Tests Unitaires"
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\navigation_builder\\..\\..\\..\\presentations\\unit-tests\\navigation_builder_tester\\output\\20251014_1226_test_navigation_builder_-_toc_basique.pptx",
+  "file_size_kb": 298.2,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": false,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

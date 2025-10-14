@@ -31,14 +31,53 @@ audience_configs = {
 
 ### Stack Principal
 - **ElevenLabs API v3** : Synthèse vocale Sam (~75ms latence)
-- **Templates Premier Tech** : 40+ slides authentiques
-- **Presentation Builder** : 10 scripts spécialisés
-- **Enhanced Builder V2** : Construction sans duplication
+- **Templates Premier Tech** : 57 slides authentiques
+- **Architecture JSON** : Configuration basée sur JSON au lieu d'arguments CLI
+- **Orchestrateur principal** : `presentation_builder.py` coordonne tout
 
-### Scripts de Construction (presentation_builder/)
+### 🚀 **Nouvelle Architecture JSON (2025)**
+
+**Révolution majeure** : Abandon des arguments CLI pour une approche JSON complète
+
+#### **Script Principal**
+```bash
+python presentation_builder/presentation_builder.py config.json
 ```
-01_slide_title_creator.py     # SEUL créateur de présentations
-02-10_*.py                    # Insertion via --insert-into
+
+#### **Configuration JSON**
+```json
+{
+  "presentation_name": "Ma Présentation",
+  "subject": "sujet-exemple",
+  "audience": "audience-cible",
+  "title_slide": {
+    "title": "Titre Principal",
+    "subtitle": "Sous-titre",
+    "metadata": "2025-01-15 – Premier Tech"
+  },
+  "slides": [],  // Scripts 02-09 pour contenu
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}
+```
+
+#### **Workflow Automatisé**
+1. **Slide titre (obligatoire)** : Slide 11 - Créée automatiquement
+2. **Slides contenu** : Array JSON - Scripts 02-09 selon configuration
+3. **Slide fermeture (obligatoire)** : Slide 57 (Monogramme PT) - Ajoutée automatiquement
+
+#### **Structure de sortie**
+```
+presentations/[sujet]/[audience]/output/[timestamp]_[nom].pptx
+```
+
+### Scripts Legacy (presentation_builder/)
+```
+01_slide_title_creator.py     # Utilisé par l'orchestrateur
+02-10_*.py                    # Prêts pour refactorisation en fonctions
+presentation_builder.py       # NOUVEAU - Orchestrateur JSON
 ```
 
 ### Mapping Templates Intelligents
@@ -321,34 +360,85 @@ def customize_slide_clean(slide, data):
             shape.text = data['content'][i]  # REMPLACE
 ```
 
-### Workflow Obligatoire
+### Workflow Nouveau (Architecture JSON)
+1. **`presentation_builder.py`** : Orchestrateur unique basé sur JSON
+2. **Slide titre automatique** : Script 01 intégré
+3. **Slides contenu** : Scripts 02-09 appelés selon configuration JSON
+4. **Slide fermeture automatique** : Slide 57 (Monogramme PT) ajoutée via logique script 10
+5. **Templates authentiques** : Zero modification des styles PT
+6. **Validation complète** : Tests unitaires avec array slides vide = 2 slides
+
+### Workflow Legacy (Disponible)
 1. **Script 01** : SEUL créateur de présentations
 2. **Scripts 02-10** : Insertion via `--insert-into` uniquement
 3. **Templates authentiques** : Zero modification des styles PT
-4. **Sam AI** : Configuration automatique selon audience
 
 ## 📁 **Structure Projet**
 
 ```
 presentation-assistant/
-├── presentation_builder/        # 10 scripts spécialisés
-├── templates/Template_PT.pptx   # 57 slides authentiques PT
-├── presentations/               # Projets organisés par sujet
+├── presentation_builder/        # Architecture JSON + Scripts legacy
+│   ├── presentation_builder.py # NOUVEAU - Orchestrateur JSON principal
+│   ├── 01_slide_title_creator.py # Intégré dans orchestrateur
+│   └── 02-10_*.py              # Scripts prêts pour refactorisation
+├── templates/
+│   ├── Template_PT.pptx        # 57 slides authentiques PT
+│   └── presentation-project/
+│       ├── presentation_schema_template.json # Schema de validation JSON
+│       └── slide-payload-templates/
+│           └── presentation_template.json # Template JSON vide
+├── presentations/              # Structure organisée [sujet]/[audience]/
 │   └── [sujet]/
-│       ├── README.md           # Contexte global
-│       ├── documentation/      # Sources et contexte
-│       └── [audience]/         # Variations par audience
-├── src/                        # Code source avancé
-└── test/unit_tests/           # Tests qualité
+│       └── [audience]/
+│           └── output/         # Présentations générées
+├── test/unit_tests/
+│   └── presentation_builder/   # NOUVEAU - Tests architecture JSON
+│       ├── test_presentation_builder.py
+│       └── test_empty_slides_array.json
+└── src/                       # Code source avancé
 ```
 
 ## 🔄 **Setup et Utilisation**
 
+### Installation
 ```bash
-# Installation
 pip install -r requirements.txt
 export ELEVENLABS_API_KEY="your_key"
+```
 
+### 🚀 **Nouvelle Méthode JSON (Recommandée)**
+```bash
+# 1. Créer un fichier JSON de configuration
+cp templates/presentation-project/slide-payload-templates/presentation_template.json ma_config.json
+
+# 2. Éditer la configuration JSON
+# 3. Exécuter l'orchestrateur
+python presentation_builder/presentation_builder.py ma_config.json
+
+# Résultat : presentations/[sujet]/[audience]/output/[timestamp]_[nom].pptx
+```
+
+### **Configuration JSON Exemple**
+```json
+{
+  "presentation_name": "Stratégie Innovation 2025",
+  "subject": "innovation-strategy",
+  "audience": "c-level",
+  "title_slide": {
+    "title": "Innovation Strategy 2025",
+    "subtitle": "Driving Digital Transformation",
+    "metadata": "2025-01-15 – Executive Briefing"
+  },
+  "slides": [],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}
+```
+
+### **Méthode Legacy (Disponible)**
+```bash
 # Demander une présentation à Claude Code :
 # "Je veux une présentation sur [sujet] pour [audience]"
 # → Création automatique du workflow complet avec :
@@ -432,3 +522,50 @@ L'avenir des présentations intelligentes, c'est maintenant ! 🎊
 - **Noms de scripts** : Ne jamais supposer, toujours vérifier dans presentation_builder/
 
 **🎯 Note Importante :** Ce système utilise les templates Premier Tech avec préservation complète des styles. Chaque présentation générée respecte parfaitement l'identité visuelle corporate et est de qualité broadcast-ready.
+
+---
+
+## 🎊 **Révisions Majeures 2025**
+
+### ✅ **Architecture JSON Complète (Janvier 2025)**
+
+**Révolution technique majeure** : Abandon complet des arguments CLI pour une approche JSON moderne
+
+#### **Avantages de la Nouvelle Architecture**
+- ✅ **Configuration centralisée** : Un seul fichier JSON configure toute la présentation
+- ✅ **Structure organisée** : Navigation automatique `presentations/[sujet]/[audience]/`
+- ✅ **Workflow simplifié** : Une seule commande pour tout
+- ✅ **Slides automatiques** : Titre + Fermeture ajoutées automatiquement
+- ✅ **Templates préservés** : Zero modification des styles Premier Tech
+- ✅ **Tests validés** : Architecture testée et fonctionnelle
+
+#### **Problèmes Résolus**
+- 🔧 **Corruption PowerPoint** : Utilisation de la logique du script 10 éprouvée
+- 🔧 **Slide 57 authentique** : Monogramme Premier Tech avec layout correct
+- 🔧 **Validation complète** : Tests unitaires garantissent la qualité
+- 🔧 **Organisation optimale** : Structure de fichiers cohérente et prévisible
+
+#### **Tests Unitaires Validés**
+```bash
+# Test avec array slides vide = 2 slides exactement
+cd test/unit_tests/presentation_builder
+python run_test.py
+
+# Résultat attendu :
+# ✅ Validation JSON réussie
+# ✅ Construction présentation réussie
+# ✅ Validation contenu réussie (2 slides : titre + fermeture)
+# ✅ Fichier PowerPoint s'ouvre sans corruption
+```
+
+#### **Migration Recommandée**
+**NOUVEAU** : Utiliser `presentation_builder.py` avec JSON
+**LEGACY** : Scripts 01-10 individuels toujours disponibles
+
+### 🚀 **Prochaines Étapes Planifiées**
+1. **Refactorisation scripts 02-09** : Conversion en fonctions pour JSON
+2. **Templates slides JSON** : Configuration granulaire par type de slide
+3. **Tests de contenu** : Validation avec slides dans l'array JSON
+4. **Documentation interactive** : Guides d'utilisation détaillés
+
+**L'architecture JSON est opérationnelle et prête pour la production !** 🎯

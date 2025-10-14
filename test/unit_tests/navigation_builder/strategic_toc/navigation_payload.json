@@ -1,0 +1,12 @@
+{
+  "title": "Agenda exécutif",
+  "sections": [
+    "Vision stratégique",
+    "Opportunités de marché",
+    "Recommandations clés"
+  ],
+  "options": {
+    "auto_widen": false,
+    "insert_position": 1
+  }
+}

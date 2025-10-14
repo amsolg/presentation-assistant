@@ -1,0 +1,47 @@
+{
+  "insertion_timestamp": "2025-10-14T14:23:21.342066",
+  "method": "JSON Statistics Builder 2025 - Direct Insertion",
+  "template_used": "C:\\repos\\presentation-assistant\\test\\unit_tests\\statistics_builder\\..\\..\\..\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\test\\unit_tests\\statistics_builder\\..\\..\\..\\presentations\\unit-tests\\statistics_builder_tester\\output\\20251014_1423_test_statistics_builder_-_grey_line.pptx",
+  "statistics_details": {
+    "title": "Métriques Techniques",
+    "style": "grey_line",
+    "statistics_count": 2,
+    "statistics": [
+      {
+        "value": "99.8%",
+        "label": "Disponibilité Système"
+      },
+      {
+        "value": "15ms",
+        "label": "Latence Moyenne"
+      }
+    ],
+    "intended_position": 1,
+    "auto_widen_enabled": true
+  },
+  "source_slide": {
+    "index": 22,
+    "number": 23,
+    "layout": "2 statistiques avec ligne grise",
+    "style_description": "Comparaison neutre, technique"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'grey_line' adapté à l'usage",
+    "Comparaisons chiffrées professionnelles"
+  ]
+}

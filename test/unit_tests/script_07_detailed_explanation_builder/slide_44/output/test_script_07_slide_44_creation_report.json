@@ -1,6 +1,6 @@
 {
   "test_name": "Test Unitaire - Script 07 - Slide 44 (dual_lists)",
-  "timestamp": "2025-10-10T10:13:23.266294",
+  "timestamp": "2025-10-14T12:21:31.081071",
   "script_tested": "07_detailed_explanation_builder.py",
   "slide_number": 44,
   "slide_style": "dual_lists_grey",
@@ -15,6 +15,6 @@
     ]
   },
   "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_07_detailed_explanation_builder\\slide_44\\output\\test_script_07_slide_44.pptx",
-  "file_size_bytes": 304410,
+  "file_size_bytes": 306423,
   "test_status": "SUCCESS"
 }

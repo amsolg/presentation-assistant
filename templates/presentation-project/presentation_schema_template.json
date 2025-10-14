@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Presentation Builder Schema",
+  "description": "Schema pour définir une présentation avec l'architecture JSON",
+  "type": "object",
+  "required": ["presentation_name", "subject", "audience", "slides"],
+  "properties": {
+    "presentation_name": {
+      "type": "string",
+      "description": "Nom de la présentation"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Sujet de la présentation (pour navigation dans presentations/[sujet]/)"
+    },
+    "audience": {
+      "type": "string",
+      "description": "Audience cible (pour navigation dans presentations/[sujet]/[audience]/)"
+    },
+    "title_slide": {
+      "type": "object",
+      "description": "Configuration de la slide titre (obligatoire, créée automatiquement)",
+      "required": ["title"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Titre principal de la présentation"
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Sous-titre de la présentation"
+        },
+        "metadata": {
+          "type": "string",
+          "description": "Métadonnées (date, auteur, etc.)"
+        }
+      }
+    },
+    "slides": {
+      "type": "array",
+      "description": "Liste des slides à insérer entre titre et fermeture. Chaque slide spécifie sa position, le script à appeler et son payload JSON.",
+      "items": {
+        "type": "object",
+        "required": ["position", "script_name", "payload_path"],
+        "properties": {
+          "position": {
+            "type": "integer",
+            "minimum": 2,
+            "description": "Position de la slide dans la présentation (minimum 2, après la slide titre)"
+          },
+          "script_name": {
+            "type": "string",
+            "enum": [
+              "navigation_builder",
+              "section_header_builder",
+              "simple_message_builder",
+              "statistics_builder",
+              "content_boxes_builder",
+              "detailed_explanation_builder",
+              "testimonial_builder",
+              "charts_builder"
+            ],
+            "description": "Nom du script à appeler (sans extension .py)"
+          },
+          "payload_path": {
+            "type": "string",
+            "description": "Chemin relatif vers le fichier JSON contenant le payload pour ce script",
+            "pattern": "^[^/\\\\]+\\.json$"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description optionnelle de cette slide pour documentation"
+          }
+        }
+      }
+    },
+    "build_options": {
+      "type": "object",
+      "description": "Options globales de construction",
+      "properties": {
+        "base_template": {
+          "type": "string",
+          "default": "templates/Template_PT.pptx"
+        },
+        "auto_widen_text": {
+          "type": "boolean",
+          "default": true
+        },
+        "generate_reports": {
+          "type": "boolean",
+          "default": true
+        },
+        "preserve_styles": {
+          "type": "boolean",
+          "default": true
+        }
+      }
+    }
+  }
+}

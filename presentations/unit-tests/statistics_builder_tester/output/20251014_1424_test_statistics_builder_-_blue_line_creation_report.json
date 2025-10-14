@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-14T14:24:29.605201",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "Test Statistics Builder - Blue Line",
+    "subtitle": "Tests unitaires pour l'architecture JSON 2025",
+    "metadata": "2025-01-15 - Tests Unitaires"
+  },
+  "output_file": "C:\\repos\\presentation-assistant\\test\\unit_tests\\statistics_builder\\..\\..\\..\\presentations\\unit-tests\\statistics_builder_tester\\output\\20251014_1424_test_statistics_builder_-_blue_line.pptx",
+  "file_size_kb": 298.19,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

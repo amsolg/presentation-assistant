@@ -1,0 +1,13 @@
+{
+  "title": "Table des matières",
+  "sections": [
+    "Vue d'ensemble du projet",
+    "Méthodologie utilisée",
+    "Résultats obtenus",
+    "Conclusions et recommandations"
+  ],
+  "options": {
+    "auto_widen": false,
+    "insert_position": 1
+  }
+}

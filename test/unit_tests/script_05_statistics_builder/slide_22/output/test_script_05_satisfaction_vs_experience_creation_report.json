@@ -1,5 +1,5 @@
 {
-  "creation_timestamp": "2025-10-10T10:12:52.247062",
+  "creation_timestamp": "2025-10-14T14:11:32.021907",
   "method": "Template Slide Cloning (Premier Tech Standards)",
   "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
   "source_slide": {
@@ -10,10 +10,10 @@
   "content": {
     "title": "TEST UNITAIRE - Script 05",
     "subtitle": "Presentation de base pour test statistiques",
-    "metadata": "2025.10.10 - Test Statistiques Satisfaction vs Experience"
+    "metadata": "2025.10.14 - Test Statistiques Satisfaction vs Experience"
   },
-  "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_05_statistics_builder\\slide_22\\output\\test_script_05_satisfaction_vs_experience.pptx",
-  "file_size_kb": 296.24,
+  "output_file": "C:\\repos\\presentation-assistant\\test\\unit_tests\\script_05_statistics_builder\\slide_22\\output\\test_script_05_satisfaction_vs_experience.pptx",
+  "file_size_kb": 298.2,
   "quality_assurance": {
     "method": "Template Slide Cloning",
     "styles_preserved": true,

@@ -1,0 +1,315 @@
+{
+  "template_name": "Content Boxes Builder Template",
+  "template_version": "2025.1",
+  "description": "Template JSON pour la création de slides avec boîtes de contenu Premier Tech",
+  "architecture": "JSON 2025",
+  "builder_type": "content_boxes_builder",
+
+  "payload_structure": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "description": "Titre principal de la slide",
+      "max_length": 100,
+      "example": "Nos 3 Piliers Technologiques"
+    },
+    "content_style": {
+      "type": "string",
+      "required": true,
+      "description": "Style des boîtes de contenu",
+      "enum": [
+        "grey_3_detailed", "grey_3_simple", "blue_3_detailed", "blue_3_simple",
+        "grey_4_detailed", "grey_4_simple", "blue_4_detailed", "blue_4_simple"
+      ],
+      "default": "blue_3_simple"
+    },
+    "concepts": {
+      "type": "array",
+      "required": true,
+      "description": "Liste des concepts principaux (3 ou 4 selon le style)",
+      "min_items": 3,
+      "max_items": 4,
+      "items": {
+        "type": "string",
+        "max_length": 200,
+        "description": "Contenu d'une boîte de concept"
+      }
+    },
+    "subtitles": {
+      "type": "array",
+      "required": false,
+      "description": "Sous-titres pour les styles détaillés uniquement",
+      "max_items": 4,
+      "items": {
+        "type": "string",
+        "max_length": 50,
+        "description": "Sous-titre pour un concept"
+      }
+    },
+    "options": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "auto_widen": {
+          "type": "boolean",
+          "default": true,
+          "description": "Active l'élargissement automatique des objets texte"
+        },
+        "insert_position": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Position d'insertion dans la présentation (null = fin)"
+        }
+      }
+    }
+  },
+
+  "examples": {
+    "blue_3_simple": {
+      "title": "Nos 3 Piliers Stratégiques",
+      "content_style": "blue_3_simple",
+      "concepts": [
+        "Innovation Continue",
+        "Excellence Opérationnelle",
+        "Satisfaction Client"
+      ],
+      "options": {
+        "auto_widen": true,
+        "insert_position": 2
+      }
+    },
+
+    "blue_3_detailed": {
+      "title": "Architecture Technique",
+      "content_style": "blue_3_detailed",
+      "concepts": [
+        "Architecture microservices permettant une scalabilité horizontale et une maintenance simplifiée des composants applicatifs.",
+        "Infrastructure cloud-native avec orchestration Kubernetes pour l'automatisation du déploiement et la gestion des ressources.",
+        "Sécurité intégrée avec authentification multi-facteurs, chiffrement bout-en-bout et audit complet des accès."
+      ],
+      "subtitles": [
+        "Microservices",
+        "Cloud Native",
+        "Sécurité"
+      ],
+      "options": {
+        "auto_widen": true
+      }
+    },
+
+    "blue_4_simple": {
+      "title": "Processus de Développement",
+      "content_style": "blue_4_simple",
+      "concepts": [
+        "Planification",
+        "Développement",
+        "Tests & Validation",
+        "Déploiement"
+      ],
+      "options": {
+        "auto_widen": true,
+        "insert_position": 3
+      }
+    },
+
+    "grey_4_detailed": {
+      "title": "Analyse Technique Détaillée",
+      "content_style": "grey_4_detailed",
+      "concepts": [
+        "Analyse des performances actuelles avec métriques de latence, throughput et utilisation des ressources pour identifier les goulots d'étranglement.",
+        "Évaluation de l'architecture existante incluant les patterns de conception, les dépendances inter-services et la dette technique.",
+        "Stratégie de migration progressive avec phases de validation, rollback automatique et monitoring en temps réel des impacts.",
+        "Plan de formation équipes avec modules techniques spécialisés, certification des compétences et support post-formation."
+      ],
+      "subtitles": [
+        "Performances",
+        "Architecture",
+        "Migration",
+        "Formation"
+      ],
+      "options": {
+        "auto_widen": true
+      }
+    },
+
+    "custom_content": {
+      "title": "Configuration Personnalisée",
+      "content_style": "blue_3_simple",
+      "concepts": [
+        "Premier concept personnalisé selon vos besoins spécifiques",
+        "Deuxième concept avec votre contenu et votre vocabulaire",
+        "Troisième concept adapté à votre audience cible"
+      ],
+      "options": {
+        "auto_widen": true,
+        "insert_position": 5
+      }
+    }
+  },
+
+  "validation": {
+    "rules": [
+      {
+        "field": "concepts",
+        "rule": "length_match_style",
+        "description": "Le nombre de concepts doit correspondre au style choisi (3 pour styles _3_, 4 pour styles _4_)"
+      },
+      {
+        "field": "subtitles",
+        "rule": "required_for_detailed",
+        "description": "Les sous-titres sont recommandés pour les styles _detailed"
+      },
+      {
+        "field": "content_style",
+        "rule": "valid_enum",
+        "description": "Le style doit être l'un des styles supportés par Premier Tech"
+      },
+      {
+        "field": "concepts",
+        "rule": "non_empty_strings",
+        "description": "Tous les concepts doivent être des chaînes non vides"
+      }
+    ],
+    "warnings": [
+      {
+        "condition": "concepts.length != expected_for_style",
+        "message": "Le nombre de concepts ne correspond pas au style sélectionné"
+      },
+      {
+        "condition": "subtitles provided for simple style",
+        "message": "Les sous-titres seront ignorés pour les styles simples"
+      },
+      {
+        "condition": "no subtitles for detailed style",
+        "message": "Les styles détaillés sont plus efficaces avec des sous-titres"
+      }
+    ]
+  },
+
+  "technical_details": {
+    "template_slides": {
+      "grey_3_detailed": {
+        "slide_index": 26,
+        "slide_number": 27,
+        "description": "3 boîtes grises avec sous-titres",
+        "audience": "Spécialistes, Audiences techniques",
+        "usage": "Concepts techniques catégorisés"
+      },
+      "grey_3_simple": {
+        "slide_index": 27,
+        "slide_number": 28,
+        "description": "3 boîtes grises sans sous-titres",
+        "audience": "Spécialistes, Audiences techniques",
+        "usage": "Concepts techniques simples"
+      },
+      "blue_3_detailed": {
+        "slide_index": 28,
+        "slide_number": 29,
+        "description": "3 boîtes bleues avec sous-titres",
+        "audience": "Managers, Spécialistes",
+        "usage": "Concepts catégorisés, détails structurés"
+      },
+      "blue_3_simple": {
+        "slide_index": 29,
+        "slide_number": 30,
+        "description": "3 boîtes bleues sans sous-titres",
+        "audience": "Toutes audiences",
+        "usage": "Concepts équivalents, importance égale"
+      },
+      "grey_4_detailed": {
+        "slide_index": 30,
+        "slide_number": 31,
+        "description": "4 boîtes grises avec sous-titres",
+        "audience": "Spécialistes, Équipes techniques",
+        "usage": "Processus techniques détaillés"
+      },
+      "grey_4_simple": {
+        "slide_index": 31,
+        "slide_number": 32,
+        "description": "4 boîtes grises sans sous-titres",
+        "audience": "Spécialistes, Équipes techniques",
+        "usage": "Processus techniques simples"
+      },
+      "blue_4_detailed": {
+        "slide_index": 32,
+        "slide_number": 33,
+        "description": "4 boîtes bleues avec sous-titres",
+        "audience": "Managers, Directeurs",
+        "usage": "Processus business catégorisés"
+      },
+      "blue_4_simple": {
+        "slide_index": 33,
+        "slide_number": 34,
+        "description": "4 boîtes bleues sans sous-titres",
+        "audience": "Toutes audiences business",
+        "usage": "Processus business équilibrés"
+      }
+    },
+
+    "shape_mapping": {
+      "3_boxes": {
+        "title_shapes": [3],
+        "content_shapes": [2, 0, 1],
+        "subtitle_shapes": [4, 5, 6],
+        "pattern": "3_box_layout"
+      },
+      "4_boxes": {
+        "title_shapes": [4],
+        "content_shapes": [3, 0, 1, 2],
+        "subtitle_shapes": [5, 6, 7, 8],
+        "pattern": "4_box_layout"
+      }
+    },
+
+    "quality_standards": {
+      "styles_preservation": "100% des styles Premier Tech préservés",
+      "text_wrapping": "Activé pour gérer les longs contenus",
+      "auto_widening": "Élargissement automatique des objets texte",
+      "content_validation": "Validation du placement de tous les contenus",
+      "fallback_support": "Méthodes fallback pour compatibilité maximale"
+    },
+
+    "integration": {
+      "orchestrator": "presentation_builder.py",
+      "function_signature": "process_content_boxes_config(json_config, base_presentation_path)",
+      "json_schema_validation": "Validation complète des payloads",
+      "error_handling": "Gestion d'erreurs robuste avec rollback automatique",
+      "reporting": "Rapports JSON détaillés pour chaque opération"
+    }
+  },
+
+  "usage_guidelines": {
+    "choosing_style": {
+      "business_audience": "Utilisez les styles blue_ pour les audiences business",
+      "technical_audience": "Utilisez les styles grey_ pour les audiences techniques",
+      "3_vs_4_boxes": "3 boîtes pour concepts principaux, 4 boîtes pour processus détaillés",
+      "simple_vs_detailed": "Simple pour messages directs, detailed pour explications structurées"
+    },
+
+    "content_best_practices": {
+      "concept_length": "Adaptez la longueur du concept au style choisi",
+      "subtitle_usage": "Utilisez des sous-titres courts et descriptifs pour les styles detailed",
+      "consistency": "Maintenez un niveau de détail cohérent entre tous les concepts",
+      "audience_adaptation": "Adaptez le vocabulaire et les exemples à l'audience cible"
+    },
+
+    "common_patterns": {
+      "strategic_overview": "blue_3_simple pour vision globale",
+      "technical_architecture": "grey_3_detailed pour architecture technique",
+      "process_workflow": "blue_4_simple pour flux de processus",
+      "detailed_analysis": "grey_4_detailed pour analyses approfondies"
+    }
+  },
+
+  "migration_notes": {
+    "from_legacy": "Migration depuis 06_content_boxes_builder.py vers architecture JSON 2025",
+    "compatibility": "100% compatible avec les templates Premier Tech existants",
+    "advantages": [
+      "Configuration JSON centralisée",
+      "Validation automatique des payloads",
+      "Intégration native avec l'orchestrateur",
+      "Rapports détaillés automatiques",
+      "Support multi-audiences amélioré"
+    ]
+  }
+}

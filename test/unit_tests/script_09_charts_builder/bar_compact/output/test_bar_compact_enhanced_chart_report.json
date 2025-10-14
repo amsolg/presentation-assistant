@@ -1,6 +1,6 @@
 {
   "insertion_info": {
-    "timestamp": "2025-10-10T10:13:30.544109",
+    "timestamp": "2025-10-14T12:21:38.284903",
     "script": "09_charts_builder.py",
     "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\bar_compact\\output\\test_bar_compact.pptx",
     "backup_created": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\bar_compact\\output\\test_bar_compact_backup_before_enhanced_chart.pptx"

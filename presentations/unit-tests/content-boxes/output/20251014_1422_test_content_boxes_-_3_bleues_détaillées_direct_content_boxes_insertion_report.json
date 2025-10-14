@@ -1,0 +1,48 @@
+{
+  "insertion_timestamp": "2025-10-14T14:22:30.898791",
+  "method": "JSON Content Boxes Builder 2025 - Direct Insertion",
+  "template_used": "c:\\repos\\presentation-assistant\\test\\unit_tests\\content_boxes_builder\\..\\..\\..\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\content_boxes_builder\\..\\..\\..\\presentations\\unit-tests\\content-boxes\\output\\20251014_1422_test_content_boxes_-_3_bleues_détaillées.pptx",
+  "content_details": {
+    "title": "Architecture Technique Moderne",
+    "concepts": [
+      "Architecture microservices permettant une scalabilité horizontale et une maintenance simplifiée des composants applicatifs.",
+      "Infrastructure cloud-native avec orchestration Kubernetes pour l'automatisation du déploiement et la gestion des ressources.",
+      "Sécurité intégrée avec authentification multi-facteurs, chiffrement bout-en-bout et audit complet des accès."
+    ],
+    "subtitles": [
+      "Microservices",
+      "Cloud Native",
+      "Sécurité"
+    ],
+    "content_style": "blue_3_detailed",
+    "box_count": 3,
+    "intended_position": 1,
+    "auto_widen_enabled": true
+  },
+  "source_slide": {
+    "index": 28,
+    "number": 29,
+    "layout": "3 boîtes bleues pour courts énoncés avec sous-titres",
+    "style_description": "Concepts catégorisés, détails structurés"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true,
+    "text_wrapping_enabled": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Text wrapping intelligent activé",
+    "Auto-widening des objets texte",
+    "Mapping précis des templates",
+    "Sauvegarde automatique créée"
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "insertion_info": {
-    "timestamp": "2025-10-10T10:13:42.029081",
+    "timestamp": "2025-10-14T12:21:49.160676",
     "script": "09_charts_builder.py",
     "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\pie_chart\\output\\test_pie_chart.pptx",
     "backup_created": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_09_charts_builder\\pie_chart\\output\\test_pie_chart_backup_before_enhanced_chart.pptx"

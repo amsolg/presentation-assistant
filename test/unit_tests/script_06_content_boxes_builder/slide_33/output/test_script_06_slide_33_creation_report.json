@@ -1,5 +1,5 @@
 {
-  "creation_timestamp": "2025-10-10T10:13:10.199694",
+  "creation_timestamp": "2025-10-14T12:21:18.415230",
   "method": "Template Slide Cloning (Premier Tech Standards)",
   "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
   "source_slide": {
@@ -10,10 +10,10 @@
   "content": {
     "title": "TEST UNITAIRE - Script 06",
     "subtitle": "Presentation de base pour test content boxes",
-    "metadata": "2025.10.10 - Test Content Boxes"
+    "metadata": "2025.10.14 - Test Content Boxes"
   },
   "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_06_content_boxes_builder\\slide_33\\output\\test_script_06_slide_33.pptx",
-  "file_size_kb": 296.22,
+  "file_size_kb": 298.19,
   "quality_assurance": {
     "method": "Template Slide Cloning",
     "styles_preserved": true,

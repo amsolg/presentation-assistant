@@ -1,5 +1,5 @@
 {
-  "creation_timestamp": "2025-10-10T10:12:41.309419",
+  "creation_timestamp": "2025-10-14T12:20:51.010191",
   "method": "Template Slide Cloning (Premier Tech Standards)",
   "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
   "source_slide": {
@@ -10,10 +10,10 @@
   "content": {
     "title": "TEST UNITAIRE - Script 01",
     "subtitle": "Validation de la création de slide titre (Template 11)",
-    "metadata": "2025.10.10 - Test Automatisé"
+    "metadata": "2025.10.14 - Test Automatisé"
   },
   "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_01_slide_title_creator\\slide_11\\output\\test_script_01_slide_11.pptx",
-  "file_size_kb": 296.23,
+  "file_size_kb": 298.2,
   "quality_assurance": {
     "method": "Template Slide Cloning",
     "styles_preserved": true,

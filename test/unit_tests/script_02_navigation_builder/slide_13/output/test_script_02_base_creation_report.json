@@ -1,5 +1,5 @@
 {
-  "creation_timestamp": "2025-10-10T10:12:42.403315",
+  "creation_timestamp": "2025-10-14T12:20:52.054454",
   "method": "Template Slide Cloning (Premier Tech Standards)",
   "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
   "source_slide": {
@@ -10,10 +10,10 @@
   "content": {
     "title": "TEST UNITAIRE - Script 02",
     "subtitle": "Présentation de base pour test de navigation",
-    "metadata": "2025.10.10 - Test Navigation"
+    "metadata": "2025.10.14 - Test Navigation"
   },
   "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\script_02_navigation_builder\\slide_13\\output\\test_script_02_base.pptx",
-  "file_size_kb": 296.22,
+  "file_size_kb": 298.19,
   "quality_assurance": {
     "method": "Template Slide Cloning",
     "styles_preserved": true,

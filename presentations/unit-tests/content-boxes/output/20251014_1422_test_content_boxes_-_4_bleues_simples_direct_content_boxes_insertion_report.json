@@ -1,0 +1,45 @@
+{
+  "insertion_timestamp": "2025-10-14T14:22:31.915981",
+  "method": "JSON Content Boxes Builder 2025 - Direct Insertion",
+  "template_used": "c:\\repos\\presentation-assistant\\test\\unit_tests\\content_boxes_builder\\..\\..\\..\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\test\\unit_tests\\content_boxes_builder\\..\\..\\..\\presentations\\unit-tests\\content-boxes\\output\\20251014_1422_test_content_boxes_-_4_bleues_simples.pptx",
+  "content_details": {
+    "title": "Processus de Développement",
+    "concepts": [
+      "Planification",
+      "Développement",
+      "Tests & Validation",
+      "Déploiement"
+    ],
+    "subtitles": [],
+    "content_style": "blue_4_simple",
+    "box_count": 4,
+    "intended_position": 1,
+    "auto_widen_enabled": true
+  },
+  "source_slide": {
+    "index": 33,
+    "number": 34,
+    "layout": "4 boîtes bleues pour courts énoncés sans sous-titres",
+    "style_description": "Processus business équilibrés"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true,
+    "text_wrapping_enabled": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Text wrapping intelligent activé",
+    "Auto-widening des objets texte",
+    "Mapping précis des templates",
+    "Sauvegarde automatique créée"
+  ]
+}

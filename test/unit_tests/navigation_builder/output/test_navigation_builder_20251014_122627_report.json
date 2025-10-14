@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-10-14T12:26:27.481852",
+  "test_suite": "NavigationBuilder JSON Architecture 2025",
+  "subject": "unit-tests",
+  "audience": "navigation_builder_tester",
+  "results": {
+    "tests_run": 6,
+    "failures": 0,
+    "errors": 0,
+    "success_rate": 100.0
+  },
+  "details": {
+    "failures": [],
+    "errors": []
+  }
+}

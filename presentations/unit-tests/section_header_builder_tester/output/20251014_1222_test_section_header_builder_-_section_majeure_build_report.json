@@ -1,0 +1,28 @@
+{
+  "build_timestamp": "2025-10-14T12:22:09.061731",
+  "presentation_config": {
+    "name": "Test Section Header Builder - Section Majeure",
+    "subject": "unit-tests",
+    "audience": "section_header_builder_tester",
+    "title": "Test Section Header Builder - Section Majeure"
+  },
+  "build_result": {
+    "success": true,
+    "output_file": "c:\\repos\\presentation-assistant\\test\\unit_tests\\section_header_builder\\..\\..\\..\\presentations\\unit-tests\\section_header_builder_tester\\output\\20251014_1222_test_section_header_builder_-_section_majeure.pptx",
+    "file_exists": true,
+    "file_size_kb": 299.76
+  },
+  "slides_summary": {
+    "title_slide": "Créée (obligatoire)",
+    "content_slides": 1,
+    "closing_slide": "Ajoutée (obligatoire)",
+    "total_slides": 3
+  },
+  "architecture": {
+    "method": "JSON-based Presentation Builder v2",
+    "base_template": "c:\\repos\\presentation-assistant\\test\\unit_tests\\section_header_builder\\..\\..\\..\\templates\\Template_PT.pptx",
+    "premier_tech_standards": true,
+    "orchestrated_build": true,
+    "version": "2.0 - Version fonctionnelle sauvegardée"
+  }
+}
