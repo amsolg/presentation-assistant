@@ -1,0 +1,26 @@
+{
+  "title": "ROI Exceptionnel des Programmes d'Hygiène",
+  "style": "four_stats_lines",
+  "statistics": [
+    {
+      "value": "92x",
+      "label": "ROI Maximum (Inde)"
+    },
+    {
+      "value": "$260B",
+      "label": "Économies Possibles US"
+    },
+    {
+      "value": "50%",
+      "label": "Réduction Infections"
+    },
+    {
+      "value": "$11.5K",
+      "label": "Économie/Employé/An"
+    }
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}

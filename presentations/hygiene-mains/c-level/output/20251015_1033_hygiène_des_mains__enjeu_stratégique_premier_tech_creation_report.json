@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-15T10:33:42.037884",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "Hygiène des Mains",
+    "subtitle": "Un Levier Stratégique pour Premier Tech",
+    "metadata": "2025-01-15 – Équipe Exécutive"
+  },
+  "output_file": "C:\\repos\\presentation-assistant\\presentations\\hygiene-mains\\c-level\\output\\20251015_1033_hygiène_des_mains__enjeu_stratégique_premier_tech.pptx",
+  "file_size_kb": 298.2,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

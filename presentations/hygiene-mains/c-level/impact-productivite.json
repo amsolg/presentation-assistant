@@ -1,0 +1,22 @@
+{
+  "title": "Impact Productivité et Coûts Évités",
+  "style": "three_stats",
+  "statistics": [
+    {
+      "value": "40%",
+      "label": "Maladies Évitables"
+    },
+    {
+      "value": "$33+",
+      "label": "Économie/Employé Présentéisme"
+    },
+    {
+      "value": "77%",
+      "label": "Entreprises Adoptantes COVID"
+    }
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}

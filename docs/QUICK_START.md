@@ -2,7 +2,27 @@
 
 ## 🎯 Que voulez-vous créer ?
 
-### 🚀 **Workflow Automatisé** (Recommandé - Production Complète)
+### 🚀 **Architecture JSON** (Méthode Unique)
+
+**Approche moderne basée sur JSON :**
+```bash
+# 1. Créer un fichier de configuration JSON
+cp templates/presentation-project/presentation_schema_template.json ma_config.json
+
+# 2. Éditer la configuration (titre, slides, payloads)
+# 3. Construire la présentation
+python presentation_builder/presentation_builder.py ma_config.json
+```
+
+**Avantages :**
+- Configuration centralisée dans un seul fichier JSON
+- Payloads modulaires pour chaque slide
+- Slides automatiques : titre + fermeture Premier Tech
+- Structure organisée : `presentations/[sujet]/[audience]/`
+- Templates préservés (styles Premier Tech authentiques)
+- Tests unitaires validés
+
+### 🤖 **Workflow Automatisé** (Production Complète avec Claude)
 
 Demandez simplement à Claude Code :
 ```
@@ -12,36 +32,25 @@ Demandez simplement à Claude Code :
 **Résultat automatique :**
 - Structure projet dans `presentations/[sujet]/`
 - Recherche web automatique et documentation
-- Script Python d'orchestration personnalisé
+- Configuration JSON centralisée
+- Payloads JSON séparés pour chaque slide
 - Configuration Sam AI adaptée à l'audience
 - Présentation finale avec narration intégrée
 
-### 📄 **Construction Manuelle** (Scripts individuels)
+### 📊 **Modules JSON Disponibles**
 
-```bash
-# 1. Créer la base (OBLIGATOIRE en premier)
-python presentation_builder/01_slide_title_creator.py "Mon Titre de Présentation"
-
-# 2. Ajouter navigation (recommandé si >5 slides)
-python presentation_builder/02_navigation_builder.py \
-  --insert-into "mon_titre_de_presentation.pptx" \
-  --sections "Introduction" "Analyse" "Solutions" "Conclusion"
-
-# 3. Ajouter contenu selon vos besoins (voir tableau ci-dessous)
-```
-
-### 📊 **Sélection Rapide par Besoin**
-
-| **Vous voulez ajouter...** | **Script à utiliser** | **Exemple de commande** |
+| **Type de contenu** | **Module JSON** | **Template de payload** |
 |---------------------------|----------------------|------------------------|
-| 🏷️ **Nouvelle section** | `03_section_header_builder.py` | `python ... "Introduction" --insert-into "fichier.pptx" --style major` |
-| 💬 **Message important** | `04_simple_message_builder.py` | `python ... "Message impactant" --insert-into "fichier.pptx" --style centered` |
-| 📈 **2 statistiques** | `05_statistics_builder.py` | `python ... "85%" "Revenue" "92%" "Satisfaction" --insert-into "fichier.pptx"` |
-| 📝 **3 ou 4 concepts** | `06_content_boxes_builder.py` | `python ... --insert-into "fichier.pptx" "Concept 1" "Concept 2" "Concept 3"` |
-| 📖 **Explications détaillées** | `07_detailed_explanation_builder.py` | `python ... --insert-into "fichier.pptx" --style "four_points" --title "Architecture"` |
-| 💬 **Témoignage client** | `08_testimonial_builder.py` | `python ... "Citation excellente" "Jean Dupont" --insert-into "fichier.pptx" --position "Directeur"` |
-| 📈 **Graphiques/Charts** | `09_charts_builder.py` | `python ... --insert-into "fichier.pptx" --data-file "data/ventes.csv" --chart-type "column_clustered"` |
-| 🎯 **Conclusion PT** | `10_conclusion_builder.py` | `python ... --insert-into "fichier.pptx" --style "passion_tech"` |
+| 🏷️ **Nouvelle section** | `section_header_builder` | `section_header_builder_template.json` |
+| 💬 **Message important** | `simple_message_builder` | `simple_message_builder_template.json` |
+| 📈 **Statistiques** | `statistics_builder` | `statistics_builder_template.json` |
+| 📝 **Boîtes de contenu** | `content_boxes_builder` | `content_boxes_builder_template.json` |
+| 📖 **Explications détaillées** | `detailed_explanation_builder` | `detailed_explanation_builder_template.json` |
+| 💬 **Témoignage client** | `testimonial_builder` | `testimonial_builder_template.json` |
+| 📈 **Graphiques** | `charts_builder` | `charts_builder_template.json` |
+| 🧭 **Navigation** | `navigation_builder` | `navigation_builder_template.json` |
+
+**Note :** Slide titre et fermeture Premier Tech ajoutées automatiquement.
 
 ### 🤖 **Sam AI - Configuration Automatique**
 
@@ -57,76 +66,78 @@ export ELEVENLABS_API_KEY="your_key"
 
 ---
 
-## 🚀 **Exemple Complet - Présentation "Transformation Numérique"**
+## 🚀 **Exemple Complet - Architecture JSON**
 
-```bash
-# 1. Créer la base
-python presentation_builder/01_slide_title_creator.py "Transformation Numérique 2024" \
-  --subtitle "Stratégie et Roadmap" \
-  --metadata "2024.10.07 – Direction IT"
-
-# 2. Navigation
-python presentation_builder/02_navigation_builder.py \
-  --insert-into "transformation_numerique_2024.pptx" \
-  --sections "Context" "Stratégie" "Plan d'Action" "ROI"
-
-# 3. Section "Context"
-python presentation_builder/03_section_header_builder.py "Context" \
-  --insert-into "transformation_numerique_2024.pptx" --style major
-
-# 4. Message d'accroche
-python presentation_builder/04_simple_message_builder.py \
-  "Le numérique transforme nos opérations quotidiennes" \
-  --insert-into "transformation_numerique_2024.pptx" --style centered
-
-# 5. KPI actuels (2 statistiques)
-python presentation_builder/05_statistics_builder.py \
-  "78%" "Satisfaction Équipes" "120%" "Productivité" \
-  --insert-into "transformation_numerique_2024.pptx"
-
-# 6. Section "Stratégie"
-python presentation_builder/03_section_header_builder.py "Stratégie" \
-  --insert-into "transformation_numerique_2024.pptx" --style major
-
-# 7. Les 4 concepts clés
-python presentation_builder/06_content_boxes_builder.py \
-  --insert-into "transformation_numerique_2024.pptx" \
-  "Cloud First" "Data Driven" "DevOps Culture" "Security by Design"
-
-# 8. Témoignage
-python presentation_builder/08_testimonial_builder.py \
-  "Cette approche nous a permis de doubler notre vélocité" "Marie Tremblay" \
-  --insert-into "transformation_numerique_2024.pptx" \
-  --position "Chef de Projet" --company "Équipe DevOps"
-
-# 9. Conclusion
-python presentation_builder/10_conclusion_builder.py \
-  --insert-into "transformation_numerique_2024.pptx" --style "passion_tech"
+### 1. Configuration JSON (hygiene_mains.json)
+```json
+{
+  "presentation_name": "Hygiène des Mains : Enjeu Stratégique Premier Tech",
+  "subject": "hygiene-mains",
+  "audience": "c-level",
+  "title_slide": {
+    "title": "Hygiène des Mains",
+    "subtitle": "Un Levier Stratégique pour Premier Tech",
+    "metadata": "2025-01-15 – Équipe Exécutive"
+  },
+  "slides": [
+    {
+      "position": 2,
+      "script_name": "simple_message_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/message-ouverture.json",
+      "description": "Message d'ouverture stratégique"
+    },
+    {
+      "position": 3,
+      "script_name": "statistics_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/stats-roi.json",
+      "description": "ROI et métriques financières"
+    },
+    {
+      "position": 4,
+      "script_name": "content_boxes_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/benefices-business.json",
+      "description": "Bénéfices business concrets"
+    }
+  ],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}
 ```
+
+### 2. Construction
+```bash
+python presentation_builder/presentation_builder.py hygiene_mains.json
+```
+
+**Résultat :** `presentations/hygiene-mains/c-level/output/[timestamp]_hygiene_des_mains_enjeu_strategique_premier_tech.pptx`
 
 ---
 
 ## ⚠️ **Règles Importantes**
 
-1. **TOUJOURS commencer par le Script 01** (création de base)
-2. **Utiliser `--insert-into "fichier.pptx"`** pour tous les autres scripts (02-10)
-3. **Le nom du fichier** est généré automatiquement à partir du titre
-4. **Sauvegarde automatique** avant chaque modification
-5. **Templates Premier Tech** : 57 slides authentiques (préservation styles)
-6. **Workflow moderne** : Préférer le workflow automatisé par sujet
+### Architecture JSON (Unique)
+1. **Configuration centralisée** : Un seul fichier JSON configure toute la présentation
+2. **Payloads modulaires** : Chaque slide a son propre fichier JSON de payload
+3. **Slides automatiques** : Titre et fermeture Premier Tech ajoutées automatiquement
+4. **Structure organisée** : Sortie dans `presentations/[sujet]/[audience]/output/`
+5. **Templates préservés** : 57 slides Premier Tech authentiques
+6. **Tests validés** : Architecture testée avec tests unitaires
+7. **Schema validation** : Validation automatique des configurations JSON
 
 ---
 
 ## 📖 **Besoin de plus de détails ?**
 
 ### Documentation Complète
-- [COMMANDES.md](COMMANDES.md) : Paramètres détaillés des scripts
+- [JSON_ARCHITECTURE_GUIDE.md](JSON_ARCHITECTURE_GUIDE.md) : Guide complet architecture JSON
 - [CHARTS_ENHANCED_GUIDE.md](CHARTS_ENHANCED_GUIDE.md) : Guide graphiques avec CSV
 - [../CLAUDE.md](../CLAUDE.md) : Architecture complète et workflow automatisé
-- [../templates/presentation-project/](../templates/presentation-project/) : Templates de projet
+- [../templates/presentation-project/](../templates/presentation-project/) : Templates JSON
 
 ### Projets d'Exemple
-- [../presentations/](../presentations/) : Exemples par sujet et audience
+- [../presentations/](../presentations/) : Exemples par sujet et audience avec configurations JSON
 
 ---
 
@@ -137,22 +148,28 @@ python presentation_builder/10_conclusion_builder.py \
 pip install -r requirements.txt
 export ELEVENLABS_API_KEY="your_key"
 
-# Lister les options disponibles
-python presentation_builder/[SCRIPT_NAME].py --help
+# Architecture JSON
+python presentation_builder/presentation_builder.py config.json
+python presentation_builder/presentation_builder.py config.json --validate
 
-# Exemples de données pour graphiques
-ls data/charts/  # CSV d'exemples fournis
+# Templates disponibles
+ls templates/presentation-project/slide-payload-templates/
 
 # Structure d'un projet automatisé
 ls presentations/[sujet]/[audience]/
+
+# Tests unitaires
+cd test/unit_tests/presentation_builder && python test_presentation_builder.py
 ```
 
-## 🎯 **Évolution du Workflow**
+## 🎯 **Architecture JSON 2025 - Production Ready**
 
-**Traditionnel** : Construction slide par slide
-**Moderne** : Workflow automatisé par sujet avec :
+**Approche Moderne** : Configuration centralisée JSON avec payloads modulaires
+**Workflow Automatisé** : Création complète via Claude Code intégrant :
 - Documentation automatique via recherche web
-- Scripts Python d'orchestration personnalisés
+- Configuration JSON centralisée avec validation
+- Payloads JSON séparés pour modularité
 - Configuration Sam AI adaptative
 - Structure réutilisable multi-audiences
-- Qualité Premier Tech garantie
+- Templates Premier Tech préservés
+- Qualité broadcast-ready garantie

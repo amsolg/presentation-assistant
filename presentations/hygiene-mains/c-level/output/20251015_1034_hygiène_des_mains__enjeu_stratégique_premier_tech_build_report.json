@@ -1,0 +1,28 @@
+{
+  "build_timestamp": "2025-10-15T10:34:49.684930",
+  "presentation_config": {
+    "name": "Hygiène des Mains : Enjeu Stratégique Premier Tech",
+    "subject": "hygiene-mains",
+    "audience": "c-level",
+    "title": "Hygiène des Mains"
+  },
+  "build_result": {
+    "success": true,
+    "output_file": "C:\\repos\\presentation-assistant\\presentations\\hygiene-mains\\c-level\\output\\20251015_1034_hygiène_des_mains__enjeu_stratégique_premier_tech.pptx",
+    "file_exists": true,
+    "file_size_kb": 306.29
+  },
+  "slides_summary": {
+    "title_slide": "Créée (obligatoire)",
+    "content_slides": 7,
+    "closing_slide": "Ajoutée (obligatoire)",
+    "total_slides": 9
+  },
+  "architecture": {
+    "method": "JSON-based Presentation Builder v2",
+    "base_template": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+    "premier_tech_standards": true,
+    "orchestrated_build": true,
+    "version": "2.0 - Version fonctionnelle sauvegardée"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "insertion_timestamp": "2025-10-15T10:34:49.201071",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\presentations\\hygiene-mains\\c-level\\output\\20251015_1034_hygiène_des_mains__enjeu_stratégique_premier_tech.pptx",
+  "content_details": {
+    "title": "Avantage Concurrentiel Durable",
+    "concepts": [
+      "Culture de Sécurité Proactive",
+      "Différenciation Marque Employeur",
+      "Conformité Anticipée",
+      "Résilience Opérationnelle"
+    ],
+    "subtitles": [],
+    "style": "blue_4_simple",
+    "intended_position": 7,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 33,
+    "number": 34,
+    "layout": "4 boîtes bleues pour courts énoncés sans sous-titres",
+    "style_description": "Processus business équilibrés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'blue_4_simple' adapté à l'usage",
+    "4 concepts équilibrés"
+  ]
+}

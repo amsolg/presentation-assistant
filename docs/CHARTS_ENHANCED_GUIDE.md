@@ -1,15 +1,15 @@
-# 📊 Guide du Script Charts Builder Enhanced
+# 📊 Guide du Module Charts Builder - Architecture JSON
 
 ## 🚀 Vue d'ensemble
 
-Le script `09_charts_builder.py` est une version améliorée du générateur de graphiques qui offre :
+Le module `charts_builder` dans l'architecture JSON offre :
 
+- ✅ **Configuration JSON centralisée** avec payloads modulaires
 - ✅ **Import automatique depuis CSV/Excel**
 - ✅ **Support multi-séries** pour comparaisons complexes
-- ✅ **Configuration JSON** pour paramètres avancés
 - ✅ **Standards visuels Premier Tech** strictement respectés
 - ✅ **Validation et enrichissement** automatique des données
-- ✅ **Export de données** de graphiques existants
+- ✅ **Intégration native** avec l'orchestrateur presentation_builder
 
 ## 📁 Fichiers d'exemples fournis
 
@@ -24,46 +24,79 @@ Le script `09_charts_builder.py` est une version améliorée du générateur de 
 - `config_budget.json` - Configuration pour graphique en secteurs
 - `config_regions.json` - Configuration multi-séries régions
 
-## 🎯 Cas d'usage typiques
+## 🎯 Utilisation avec Architecture JSON
 
-### 1️⃣ Import simple depuis CSV
+### 1️⃣ Configuration dans la présentation
 
-```bash
-# Graphique en colonnes depuis CSV
-python 09_charts_builder.py "Ventes Trimestrielles" \
-  --insert-into ma_presentation.pptx \
-  --csv ../data/charts/ventes_trimestrielles.csv \
-  --style column_clustered
+**Dans votre fichier config.json principal :**
+```json
+{
+  "presentation_name": "Analyse des Ventes Q4",
+  "subject": "ventes",
+  "audience": "executives",
+  "slides": [
+    {
+      "position": 3,
+      "script_name": "charts_builder",
+      "payload_path": "presentations/ventes/executives/chart-ventes.json",
+      "description": "Graphique ventes trimestrielles"
+    }
+  ]
+}
 ```
 
-### 2️⃣ Graphique en secteurs avec CSV
+### 2️⃣ Payload JSON pour graphique simple
 
-```bash
-# Répartition budgétaire
-python 09_charts_builder.py "Budget 2024" \
-  --insert-into ma_presentation.pptx \
-  --csv ../data/charts/budget_repartition.csv \
-  --style pie_chart \
-  --insights "R&D représente 35% du budget total"
+**Fichier `chart-ventes.json` :**
+```json
+{
+  "chart_type": "column_clustered",
+  "data_source": "presentations/ventes/executives/data/ventes_trimestrielles.csv",
+  "title": "Ventes Trimestrielles 2024",
+  "x_axis_label": "Trimestres",
+  "y_axis_label": "Ventes (M€)",
+  "options": {
+    "auto_widen": true
+  }
+}
 ```
 
-### 3️⃣ Multi-séries depuis CSV
+### 3️⃣ Payload JSON pour graphique en secteurs
 
-```bash
-# Comparaison régionale multi-séries
-python 09_charts_builder.py "Performance Régions" \
-  --insert-into ma_presentation.pptx \
-  --csv ../data/charts/regions_comparison.csv \
-  --style line_chart
+**Fichier `chart-budget.json` :**
+```json
+{
+  "chart_type": "pie_chart",
+  "data_source": "presentations/budget/c-level/data/budget_repartition.csv",
+  "title": "Répartition Budget 2024",
+  "insights": "R&D représente 35% du budget total",
+  "options": {
+    "show_percentages": true,
+    "show_legend": true,
+    "auto_widen": true
+  }
+}
 ```
 
-### 4️⃣ Configuration JSON complète
+### 4️⃣ Payload JSON pour graphique multi-séries
 
-```bash
-# Utilisation d'une configuration JSON
-python 09_charts_builder.py \
-  --insert-into ma_presentation.pptx \
-  --json-config ../data/charts/config_budget.json
+**Fichier `chart-regions.json` :**
+```json
+{
+  "chart_type": "bar_clustered",
+  "data_source": "presentations/strategy/executives/data/regions_comparison.csv",
+  "title": "Performance par Région",
+  "x_axis_label": "Régions",
+  "y_axis_label": "Chiffre d'Affaires (M€)",
+  "series_config": {
+    "multi_series": true,
+    "series_names": ["2023", "2024", "Objectif 2025"]
+  },
+  "options": {
+    "show_legend": true,
+    "auto_widen": true
+  }
+}
 ```
 
 ### 5️⃣ Export de données existantes

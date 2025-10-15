@@ -1,0 +1,59 @@
+{
+  "presentation_name": "Hygiène des Mains : Enjeu Stratégique Premier Tech",
+  "subject": "hygiene-mains",
+  "audience": "c-level",
+  "title_slide": {
+    "title": "Hygiène des Mains",
+    "subtitle": "Un Levier Stratégique pour Premier Tech",
+    "metadata": "2025-01-15 – Équipe Exécutive"
+  },
+  "slides": [
+    {
+      "position": 2,
+      "script_name": "simple_message_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/message-ouverture.json",
+      "description": "Message d'ouverture sur l'importance stratégique"
+    },
+    {
+      "position": 3,
+      "script_name": "statistics_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/stats-roi.json",
+      "description": "ROI et métriques financières clés"
+    },
+    {
+      "position": 4,
+      "script_name": "content_boxes_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/benefices-business.json",
+      "description": "Bénéfices business concrets"
+    },
+    {
+      "position": 5,
+      "script_name": "detailed_explanation_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/framework-implementation.json",
+      "description": "Framework d'implémentation et stratégie"
+    },
+    {
+      "position": 6,
+      "script_name": "statistics_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/impact-productivite.json",
+      "description": "Impact sur productivité et coûts"
+    },
+    {
+      "position": 7,
+      "script_name": "content_boxes_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/avantage-concurrentiel.json",
+      "description": "Positionnement concurrentiel et culture"
+    },
+    {
+      "position": 8,
+      "script_name": "simple_message_builder",
+      "payload_path": "presentations/hygiene-mains/c-level/call-to-action.json",
+      "description": "Appel à l'action et prochaines étapes"
+    }
+  ],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true,
+    "preserve_styles": true
+  }
+}

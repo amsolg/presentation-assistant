@@ -1,0 +1,38 @@
+{
+  "insertion_timestamp": "2025-10-15T10:34:48.981528",
+  "method": "Direct Layout-Based Statistics Insertion (Premier Tech Standards)",
+  "template_used": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\presentations\\hygiene-mains\\c-level\\output\\20251015_1034_hygiène_des_mains__enjeu_stratégique_premier_tech.pptx",
+  "statistics_details": {
+    "stat1_value": "40%",
+    "stat1_label": "Maladies Évitables",
+    "stat2_value": "$33+",
+    "stat2_label": "Économie/Employé Présentéisme",
+    "slide_title": "Impact Productivité et Coûts Évités",
+    "style": "three_stats",
+    "intended_position": 6,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 23,
+    "number": 24,
+    "layout": "3 statistiques & Mots-clés",
+    "style_description": "Comparaison étendue avec contexte"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'three_stats' adapté à l'usage",
+    "Comparaisons chiffrées professionnelles"
+  ]
+}

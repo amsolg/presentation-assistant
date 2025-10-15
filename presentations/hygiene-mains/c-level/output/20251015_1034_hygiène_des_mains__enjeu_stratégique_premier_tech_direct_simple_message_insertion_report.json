@@ -1,0 +1,37 @@
+{
+  "insertion_timestamp": "2025-10-15T10:34:49.412009",
+  "method": "JSON Simple Message Builder 2025 - Direct Insertion",
+  "template_used": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\presentations\\hygiene-mains\\c-level\\output\\20251015_1034_hygiène_des_mains__enjeu_stratégique_premier_tech.pptx",
+  "message_details": {
+    "text": "Le moment d'agir est maintenant : Investissons dans l'hygiène des mains pour sécuriser notre avantage concurrentiel et générer un ROI exceptionnel pour Premier Tech",
+    "keywords": "Action • Leadership • Performance",
+    "image_description": null,
+    "style": "keyword_simple",
+    "intended_position": 8,
+    "auto_widen_enabled": true
+  },
+  "source_slide": {
+    "index": 18,
+    "number": 19,
+    "layout": "Mots-clés & Court énoncé",
+    "style_description": "Concept de base avec contexte"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'keyword_simple' adapté à l'usage"
+  ]
+}
