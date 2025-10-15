@@ -58,3 +58,6 @@ logs/
 *.tmp
 temp/
 tmp/
+
+# Unit test outputs
+presentations/unit-tests/
