@@ -1,0 +1,38 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:38.980325",
+  "method": "Direct Layout-Based Statistics Insertion (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\statistics_builder_tester\\output\\20251015_1000_test_statistics_four_stats_lines.pptx",
+  "statistics_details": {
+    "stat1_value": "2.5x",
+    "stat1_label": "Innovation ROI",
+    "stat2_value": "94%",
+    "stat2_label": "User Adoption",
+    "slide_title": "Premium Metrics Innovation 2025",
+    "style": "four_stats_lines",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 25,
+    "number": 26,
+    "layout": "4 statistiques & Mots-clés avec lignes",
+    "style_description": "Dashboard premium avec séparations visuelles"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'four_stats_lines' adapté à l'usage",
+    "Comparaisons chiffrées professionnelles"
+  ]
+}

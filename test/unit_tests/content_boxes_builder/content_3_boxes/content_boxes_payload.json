@@ -1,0 +1,13 @@
+{
+  "title": "Nos 3 Piliers Technologiques",
+  "content_style": "blue_3_simple",
+  "concepts": [
+    "Développement Agile",
+    "Architecture Moderne",
+    "Sécurité Intégrée"
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": 2
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:37.919110",
+  "method": "Direct Layout-Based Statistics Insertion (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\statistics_builder_tester\\output\\20251015_1000_test_statistics_four_stats.pptx",
+  "statistics_details": {
+    "stat1_value": "195%",
+    "stat1_label": "YoY Growth",
+    "stat2_value": "92%",
+    "stat2_label": "Client Satisfaction",
+    "slide_title": "Executive Dashboard Q4 2024",
+    "style": "four_stats",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 24,
+    "number": 25,
+    "layout": "4 statistiques & Mots-clés",
+    "style_description": "Dashboard complet, vue d'ensemble"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'four_stats' adapté à l'usage",
+    "Comparaisons chiffrées professionnelles"
+  ]
+}

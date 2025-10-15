@@ -1,0 +1,15 @@
+{
+  "quote_text": "L'excellence technique au service de l'innovation.",
+  "author": "Sophie Durand",
+  "position": "Innovation Manager",
+  "company": "Premier Tech",
+  "style": "standard",
+  "options": {
+    "auto_widen": true,
+    "text_wrapping": {
+      "quote_wrapping": false,
+      "attribution_wrapping": false
+    },
+    "insert_position": null
+  }
+}

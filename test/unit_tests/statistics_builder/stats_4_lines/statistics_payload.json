@@ -1,0 +1,26 @@
+{
+  "title": "Premium Metrics Innovation 2025",
+  "style": "four_stats_lines",
+  "statistics": [
+    {
+      "value": "2.5x",
+      "label": "Innovation ROI"
+    },
+    {
+      "value": "94%",
+      "label": "User Adoption"
+    },
+    {
+      "value": "67",
+      "label": "Patents Filed"
+    },
+    {
+      "value": "45M$",
+      "label": "Savings Generated"
+    }
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}

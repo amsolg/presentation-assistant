@@ -1,0 +1,46 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:17.930412",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\content_boxes_builder_tester\\output\\20251015_1000_test_content_boxes_4_detailed.pptx",
+  "content_details": {
+    "title": "Processus de Développement Complet",
+    "concepts": [
+      "Analyse des besoins clients avec méthodologie design thinking et recherche utilisateur approfondie pour définir les spécifications fonctionnelles",
+      "Conception architecture logicielle moderne utilisant les patterns microservices, containerisation Docker et orchestration Kubernetes",
+      "Développement agile avec intégration continue, tests automatisés complets et revues de code systématiques pour assurer la qualité",
+      "Déploiement progressif avec monitoring temps réel, rollback automatique et métriques de performance pour la production"
+    ],
+    "subtitles": [
+      "Analyse & Design",
+      "Architecture",
+      "Développement",
+      "Production"
+    ],
+    "style": "blue_4_detailed",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 32,
+    "number": 33,
+    "layout": "4 boîtes bleues pour courts énoncés avec sous-titres",
+    "style_description": "Processus business catégorisés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'blue_4_detailed' adapté à l'usage",
+    "4 concepts équilibrés"
+  ]
+}

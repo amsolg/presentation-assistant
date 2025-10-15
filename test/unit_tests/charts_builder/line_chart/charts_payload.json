@@ -1,0 +1,19 @@
+{
+  "title": "Évolution KPI Mensuelle",
+  "style": "line_chart",
+  "data_source": {
+    "type": "direct",
+    "labels": ["Jan", "Fév", "Mar", "Avr", "Mai", "Jun", "Jul", "Aoû", "Sep", "Oct", "Nov", "Déc"],
+    "values": [85, 87, 89, 92, 88, 94, 91, 96, 93, 97, 95, 98]
+  },
+  "formatting": {
+    "series_title": "Performance (%)",
+    "show_legend": true,
+    "show_data_labels": false,
+    "insights": "Tendance positive constante - Objectif 100% presque atteint en décembre"
+  },
+  "options": {
+    "auto_widen": true,
+    "position": 2
+  }
+}

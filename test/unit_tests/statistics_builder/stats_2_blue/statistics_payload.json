@@ -1,0 +1,18 @@
+{
+  "title": "Performance Metrics Q4",
+  "style": "blue_line",
+  "statistics": [
+    {
+      "value": "87%",
+      "label": "Client Satisfaction"
+    },
+    {
+      "value": "142M$",
+      "label": "Annual Revenue"
+    }
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}

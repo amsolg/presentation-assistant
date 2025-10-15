@@ -1,0 +1,19 @@
+{
+  "title": "Revenus Trimestriels 2024",
+  "style": "column_clustered",
+  "data_source": {
+    "type": "direct",
+    "labels": ["T1 2024", "T2 2024", "T3 2024", "T4 2024"],
+    "values": [2500000, 3200000, 2800000, 3700000]
+  },
+  "formatting": {
+    "series_title": "Revenus (€)",
+    "show_legend": true,
+    "show_data_labels": true,
+    "insights": "Croissance continue avec pic en T4 - Objectif 2025: maintenir la tendance"
+  },
+  "options": {
+    "auto_widen": true,
+    "position": 2
+  }
+}

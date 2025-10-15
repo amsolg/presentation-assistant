@@ -1,0 +1,44 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:18.937643",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\content_boxes_builder_tester\\output\\20251015_1000_test_content_boxes_custom.pptx",
+  "content_details": {
+    "title": "Analyse Technique Détaillée",
+    "concepts": [
+      "Évaluation des performances actuelles avec analyse des métriques de latence, throughput et utilisation des ressources système",
+      "Audit de l'architecture existante incluant les patterns de conception, les dépendances inter-services et l'évaluation de la dette technique",
+      "Stratégie de migration progressive avec phases de validation, procédures de rollback automatique et monitoring temps réel des impacts"
+    ],
+    "subtitles": [
+      "Performance",
+      "Architecture",
+      "Migration"
+    ],
+    "style": "grey_3_detailed",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 26,
+    "number": 27,
+    "layout": "3 boîtes grises pour courts énoncés avec sous-titres",
+    "style_description": "Concepts techniques catégorisés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'grey_3_detailed' adapté à l'usage",
+    "3 concepts équilibrés"
+  ]
+}

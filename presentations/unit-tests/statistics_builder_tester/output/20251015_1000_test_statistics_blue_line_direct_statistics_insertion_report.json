@@ -1,0 +1,38 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:34.788337",
+  "method": "Direct Layout-Based Statistics Insertion (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\statistics_builder_tester\\output\\20251015_1000_test_statistics_blue_line.pptx",
+  "statistics_details": {
+    "stat1_value": "87%",
+    "stat1_label": "Client Satisfaction",
+    "stat2_value": "142M$",
+    "stat2_label": "Annual Revenue",
+    "slide_title": "Performance Metrics Q4",
+    "style": "blue_line",
+    "intended_position": 2,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 21,
+    "number": 22,
+    "layout": "2 statistiques avec ligne bleue",
+    "style_description": "Comparaison valorisée, mise en valeur"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'blue_line' adapté à l'usage",
+    "Comparaisons chiffrées professionnelles"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-15T10:00:42.020374",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "Test Expert Testimonial Builder",
+    "subtitle": "Avis Expert - Architecture JSON 2025",
+    "metadata": "2025-01-15 – Test Unitaire"
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\testimonial_builder_tester\\output\\20251015_1000_test_expert_testimonial.pptx",
+  "file_size_kb": 298.19,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

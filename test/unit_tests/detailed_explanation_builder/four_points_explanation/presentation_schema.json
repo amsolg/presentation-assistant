@@ -1,0 +1,22 @@
+{
+  "presentation_name": "Test Four Points Explanation",
+  "subject": "unit-tests",
+  "audience": "detailed_explanation_builder_tester",
+  "title_slide": {
+    "title": "Test Explication 4 Points",
+    "subtitle": "Test unitaire detailed_explanation_builder",
+    "metadata": "2025-01-14 – Test Premier Tech"
+  },
+  "slides": [
+    {
+      "position": 2,
+      "script_name": "detailed_explanation_builder",
+      "payload_path": "../test/unit_tests/detailed_explanation_builder/four_points_explanation/detailed_explanation_payload.json",
+      "description": "Test explication détaillée avec 4 points structurés"
+    }
+  ],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}

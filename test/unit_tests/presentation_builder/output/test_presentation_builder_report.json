@@ -1,5 +1,5 @@
 {
-  "test_timestamp": "2025-10-14T12:20:49.929548",
+  "test_timestamp": "2025-10-15T10:00:27.368678",
   "test_name": "Test Unitaire - Presentation Builder - Architecture JSON",
   "test_configuration": {
     "script_tested": "c:\\repos\\presentation-assistant\\presentation_builder\\presentation_builder.py",
@@ -12,7 +12,7 @@
     "content_validation": true,
     "overall_success": true
   },
-  "output_file": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\presentation_builder_tester\\output\\20251014_1220_test_présentation_vide.pptx",
+  "output_file": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\presentation_builder_tester\\output\\20251015_1000_test_présentation_vide.pptx",
   "architecture_validation": {
     "json_based_config": true,
     "automatic_title_creation": true,

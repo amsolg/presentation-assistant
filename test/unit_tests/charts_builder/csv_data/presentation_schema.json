@@ -1,0 +1,22 @@
+{
+  "presentation_name": "Test CSV Data Chart",
+  "subject": "unit-tests",
+  "audience": "charts_builder_tester",
+  "title_slide": {
+    "title": "Test Présentation - Données CSV",
+    "subtitle": "Test unitaire du charts_builder",
+    "metadata": "2025-01-15 - Tests Automatisés"
+  },
+  "slides": [
+    {
+      "position": 2,
+      "script_name": "charts_builder",
+      "payload_path": "test/unit_tests/charts_builder/csv_data/charts_payload.json",
+      "description": "Test graphique avec import de données CSV"
+    }
+  ],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "builder_name": "testimonial_builder",
+  "description": "Template JSON pour la création de slides de témoignages Premier Tech utilisant la slide 45 (index 44) du template.",
+  "version": "2025.1",
+  "architecture": "JSON Native",
+
+  "payload_structure": {
+    "quote_text": {
+      "type": "string",
+      "required": true,
+      "description": "Texte de la citation ou du témoignage",
+      "min_length": 10,
+      "max_length": 500,
+      "validation": "Doit être une citation significative et professionnelle"
+    },
+    "author": {
+      "type": "string",
+      "required": true,
+      "description": "Nom complet de l'auteur du témoignage",
+      "min_length": 2,
+      "max_length": 100,
+      "validation": "Nom réel et complet recommandé pour crédibilité"
+    },
+    "position": {
+      "type": "string",
+      "required": false,
+      "description": "Poste ou fonction de l'auteur",
+      "max_length": 150,
+      "examples": ["Directeur IT", "Chef de projet", "CEO", "Responsable technique"]
+    },
+    "company": {
+      "type": "string",
+      "required": false,
+      "description": "Entreprise ou organisation de l'auteur",
+      "max_length": 150,
+      "examples": ["TechCorp Inc.", "Solutions Innovantes", "Premier Tech"]
+    },
+    "testimonial_title": {
+      "type": "string",
+      "required": false,
+      "description": "Titre optionnel de la slide de témoignage",
+      "max_length": 100,
+      "examples": ["Témoignage Client", "Retour d'Expérience", "Avis Expert"]
+    },
+    "style": {
+      "type": "string",
+      "required": false,
+      "default": "standard",
+      "enum": ["standard"],
+      "description": "Style du témoignage (seul 'standard' disponible avec slide 45)"
+    },
+    "options": {
+      "type": "object",
+      "required": false,
+      "properties": {
+        "auto_widen": {
+          "type": "boolean",
+          "default": true,
+          "description": "Active l'élargissement automatique des objets texte"
+        },
+        "text_wrapping": {
+          "type": "object",
+          "properties": {
+            "quote_wrapping": {
+              "type": "boolean",
+              "default": true,
+              "description": "Active le text wrapping pour la citation (recommandé pour longues citations)"
+            },
+            "attribution_wrapping": {
+              "type": "boolean",
+              "default": false,
+              "description": "Text wrapping pour l'attribution (généralement désactivé)"
+            }
+          }
+        },
+        "insert_position": {
+          "type": "integer",
+          "default": null,
+          "minimum": 0,
+          "description": "Position d'insertion dans la présentation (null = fin)"
+        }
+      }
+    }
+  },
+
+  "examples": {
+    "client_testimonial": {
+      "quote_text": "Cette solution a transformé notre productivité. L'implémentation s'est déroulée sans accroc et les résultats dépassent nos attentes.",
+      "author": "Marie Dubois",
+      "position": "Directrice des Opérations",
+      "company": "InnovateTech Solutions",
+      "testimonial_title": "Témoignage Client",
+      "style": "standard",
+      "options": {
+        "auto_widen": true,
+        "text_wrapping": {
+          "quote_wrapping": true,
+          "attribution_wrapping": false
+        }
+      }
+    },
+
+    "expert_testimonial": {
+      "quote_text": "Une approche technique remarquable qui démontre une excellente maîtrise des enjeux technologiques modernes.",
+      "author": "Dr. Jean-Pierre Martin",
+      "position": "Expert en Architecture Logicielle",
+      "company": "Consortium Technologique",
+      "testimonial_title": "Avis d'Expert",
+      "style": "standard",
+      "options": {
+        "auto_widen": true,
+        "text_wrapping": {
+          "quote_wrapping": true,
+          "attribution_wrapping": false
+        }
+      }
+    },
+
+    "quote_testimonial": {
+      "quote_text": "L'excellence technique au service de l'innovation.",
+      "author": "Sophie Durand",
+      "position": "Innovation Manager",
+      "company": "Premier Tech",
+      "style": "standard",
+      "options": {
+        "auto_widen": true,
+        "text_wrapping": {
+          "quote_wrapping": false,
+          "attribution_wrapping": false
+        }
+      }
+    },
+
+    "custom_testimonial": {
+      "quote_text": "Une expérience utilisateur exceptionnelle qui a révolutionné notre façon de travailler. Chaque fonctionnalité a été pensée pour optimiser l'efficacité.",
+      "author": "Paul Leroy",
+      "position": "Chief Technology Officer",
+      "company": "Digital Dynamics Corp.",
+      "testimonial_title": "Retour d'Expérience",
+      "style": "standard",
+      "options": {
+        "auto_widen": true,
+        "text_wrapping": {
+          "quote_wrapping": true,
+          "attribution_wrapping": false
+        },
+        "insert_position": 5
+      }
+    }
+  },
+
+  "validation": {
+    "required_fields": ["quote_text", "author"],
+    "business_rules": [
+      "La citation doit être professionnelle et crédible",
+      "L'auteur doit être identifiable (nom complet recommandé)",
+      "La position et l'entreprise ajoutent de la crédibilité",
+      "Les citations longues (>150 caractères) bénéficient du text wrapping"
+    ],
+    "length_limits": {
+      "quote_text_min": 10,
+      "quote_text_max": 500,
+      "author_max": 100,
+      "position_max": 150,
+      "company_max": 150,
+      "title_max": 100
+    },
+    "text_wrapping_recommendations": {
+      "short_quotes": "Text wrapping désactivé pour citations courtes (<100 caractères)",
+      "long_quotes": "Text wrapping activé pour citations longues (>100 caractères)",
+      "attribution": "Text wrapping généralement désactivé pour maintenir sur une ligne"
+    }
+  },
+
+  "technical_details": {
+    "template_slide": {
+      "index": 44,
+      "number": 45,
+      "layout_name": "Citation",
+      "description": "Slide de citation standard Premier Tech"
+    },
+    "shapes_mapping": {
+      "shape_0": {
+        "role": "quote_content",
+        "description": "Texte principal de la citation",
+        "text_wrapping": "configurable",
+        "auto_widen": "appliqué si <4 pouces"
+      },
+      "shape_1": {
+        "role": "attribution",
+        "description": "Attribution complète (auteur - position - entreprise)",
+        "text_wrapping": "généralement désactivé",
+        "auto_widen": "appliqué si <4 pouces"
+      },
+      "title_shape": {
+        "role": "slide_title",
+        "description": "Titre optionnel de la slide",
+        "required": false
+      }
+    },
+    "processing_sequence": [
+      "1. Validation de la configuration JSON",
+      "2. Chargement du template Premier Tech",
+      "3. Localisation du layout de citation",
+      "4. Ajout de la slide avec le bon layout",
+      "5. Personnalisation du contenu",
+      "6. Application de l'élargissement automatique",
+      "7. Configuration du text wrapping",
+      "8. Sauvegarde et génération du rapport"
+    ],
+    "supported_audiences": {
+      "c_level": "Citations stratégiques et impacts business",
+      "technical": "Témoignages sur l'excellence technique",
+      "marketing": "Témoignages clients pour crédibilité",
+      "formation": "Témoignages pédagogiques et retours d'expérience"
+    }
+  },
+
+  "integration": {
+    "presentation_builder": {
+      "function_name": "_call_testimonial_builder",
+      "config_key": "testimonial_builder",
+      "processing_function": "process_testimonial_config"
+    },
+    "test_framework": {
+      "test_categories": ["client_testimonial", "expert_testimonial", "quote_testimonial", "custom_testimonial"],
+      "validation_tests": ["content_validation", "length_validation", "character_encoding", "style_preservation"],
+      "minimum_test_methods": 8
+    }
+  },
+
+  "quality_assurance": {
+    "premier_tech_standards": true,
+    "style_preservation": "100%",
+    "method": "Layout-Based Direct Addition",
+    "text_handling": "Smart wrapping with shape resizing",
+    "backup_creation": "Automatic before modification",
+    "error_recovery": "Automatic restoration on failure"
+  },
+
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Styles Premier Tech 100% préservés",
+    "Configuration flexible par JSON",
+    "Support témoignages variés (clients, experts, citations)",
+    "Text wrapping intelligent selon le contenu",
+    "Attribution complète automatique",
+    "Validation robuste des données",
+    "Intégration transparente dans présentation",
+    "Sauvegarde automatique et récupération d'erreur",
+    "Rapports détaillés de traitement"
+  ],
+
+  "usage_guidelines": {
+    "best_practices": [
+      "Utiliser des citations authentiques et vérifiables",
+      "Inclure position et entreprise pour la crédibilité",
+      "Adapter la longueur selon l'audience cible",
+      "Activer text wrapping pour citations >100 caractères",
+      "Tester le rendu final pour validation"
+    ],
+    "common_mistakes": [
+      "Citations trop longues (>500 caractères)",
+      "Absence d'attribution claire",
+      "Text wrapping mal configuré",
+      "Oubli du titre de slide pour le contexte"
+    ]
+  }
+}

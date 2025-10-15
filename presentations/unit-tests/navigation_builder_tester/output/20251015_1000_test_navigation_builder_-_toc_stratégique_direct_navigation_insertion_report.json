@@ -1,0 +1,38 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:25.988050",
+  "method": "JSON Navigation Builder 2025 - Direct Insertion",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\navigation_builder_tester\\output\\20251015_1000_test_navigation_builder_-_toc_stratégique.pptx",
+  "toc_details": {
+    "title": "Agenda exécutif",
+    "sections_count": 3,
+    "sections": [
+      "Vision stratégique",
+      "Opportunités de marché",
+      "Recommandations clés"
+    ],
+    "intended_position": 2,
+    "auto_widen_enabled": false
+  },
+  "source_slide": {
+    "index": 12,
+    "number": 13,
+    "layout": "Table des matières"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Intégration transparente",
+    "Sauvegarde automatique créée"
+  ]
+}

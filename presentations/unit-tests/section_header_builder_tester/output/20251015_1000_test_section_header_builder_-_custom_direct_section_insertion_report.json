@@ -1,0 +1,36 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:28.228575",
+  "method": "JSON Section Header Builder 2025 - Direct Insertion",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\section_header_builder_tester\\output\\20251015_1000_test_section_header_builder_-_custom.pptx",
+  "section_details": {
+    "title": "Phase 3 : Résultats et recommandations",
+    "number": 3,
+    "style": "major",
+    "intended_position": 3,
+    "auto_widen_enabled": false
+  },
+  "source_slide": {
+    "index": 14,
+    "number": 15,
+    "layout": "Titre de section bleu",
+    "style_description": "Transitions majeures, séparations importantes"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'major' adapté à l'usage"
+  ]
+}

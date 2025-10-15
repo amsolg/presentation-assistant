@@ -1,0 +1,22 @@
+{
+  "presentation_name": "Test Quote Testimonial",
+  "subject": "unit-tests",
+  "audience": "testimonial_builder_tester",
+  "title_slide": {
+    "title": "Test Quote Testimonial Builder",
+    "subtitle": "Citation Courte - Architecture JSON 2025",
+    "metadata": "2025-01-15 – Test Unitaire"
+  },
+  "slides": [
+    {
+      "position": 2,
+      "script_name": "testimonial_builder",
+      "payload_path": "test/unit_tests/testimonial_builder/quote_testimonial/testimonial_payload.json",
+      "description": "Test citation courte sans text wrapping"
+    }
+  ],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}

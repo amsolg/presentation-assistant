@@ -1,0 +1,49 @@
+{
+  "insertion_timestamp": "2025-10-15T10:00:13.838829",
+  "method": "JSON Charts Builder 2025 - Direct Insertion",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\charts_builder_tester\\output\\20251015_1000_test_multi_series_chart.pptx",
+  "chart_details": {
+    "title": "Évolution par Région - Comparaison Multi-Séries",
+    "style": "line_chart",
+    "data_categories": 6,
+    "has_multi_series": true,
+    "series_count": 3,
+    "formatting_applied": {
+      "show_legend": true,
+      "show_data_labels": false,
+      "insights": "Croissance forte en Amérique et Asie - Europe stable avec leadership maintenu"
+    },
+    "auto_widen_enabled": true
+  },
+  "data_processing": {
+    "labels": [
+      "Jan",
+      "Fév",
+      "Mar",
+      "Avr",
+      "Mai",
+      "Jun"
+    ],
+    "data_source_type": "multi-series",
+    "validation_applied": true,
+    "premier_tech_standards": true
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Chart Creation",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Support CSV et données directes",
+    "Validation robuste des données",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Text wrapping et centrage intelligent",
+    "Sauvegarde automatique créée"
+  ]
+}

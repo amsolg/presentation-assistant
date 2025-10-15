@@ -1,0 +1,19 @@
+{
+  "title": "KPI Compacts Q4",
+  "style": "column_compact",
+  "data_source": {
+    "type": "direct",
+    "labels": ["Q1", "Q2", "Q3", "Q4"],
+    "values": [85, 92, 88, 94]
+  },
+  "formatting": {
+    "series_title": "Performance",
+    "show_legend": false,
+    "show_data_labels": true,
+    "insights": "Version compacte pour présentations denses - Objectif 95% presque atteint"
+  },
+  "options": {
+    "auto_widen": false,
+    "position": 2
+  }
+}

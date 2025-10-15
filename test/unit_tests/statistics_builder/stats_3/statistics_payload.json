@@ -1,0 +1,22 @@
+{
+  "title": "Key Performance Indicators",
+  "style": "three_stats",
+  "statistics": [
+    {
+      "value": "23+",
+      "label": "Years Experience"
+    },
+    {
+      "value": "89%",
+      "label": "Client Satisfaction"
+    },
+    {
+      "value": "156M$",
+      "label": "Revenue Generated"
+    }
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}

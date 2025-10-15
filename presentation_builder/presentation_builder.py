@@ -172,7 +172,7 @@ class PresentationBuilder:
             print(f"[ERROR] Erreur création slide titre: {e}")
             return False
 
-    def insert_content_slides(self, config: Dict[str, Any], presentation_path: str) -> bool:
+    def insert_content_slides(self, config: Dict[str, Any], presentation_path: str, config_json_path: str = None) -> bool:
         """
         Insère toutes les slides de contenu définies dans le JSON selon la nouvelle structure.
         Chaque slide spécifie sa position, le script à appeler et son payload JSON.
@@ -206,8 +206,11 @@ class PresentationBuilder:
                 print(f"[SLIDE {i+1}] Position: {position}, Script: {script_name}, Payload: {payload_path}")
                 print(f"[SLIDE {i+1}] Description: {description}")
 
+                # Résoudre le chemin du payload relativement au fichier JSON de configuration
+                resolved_payload_path = self._resolve_payload_path(payload_path, config_json_path)
+
                 # Appeler le script correspondant avec le payload
-                if self._insert_slide_with_payload(script_name, payload_path, presentation_path, position):
+                if self._insert_slide_with_payload(script_name, resolved_payload_path, presentation_path, position):
                     success_count += 1
                     print(f"[SUCCESS] Slide {i+1} insérée à la position {position}")
                 else:
@@ -218,6 +221,34 @@ class PresentationBuilder:
 
         print(f"[CONTENT] {success_count}/{len(slides)} slides insérées avec succès")
         return success_count == len(slides)
+
+    def _resolve_payload_path(self, payload_path: str, config_json_path: str = None) -> str:
+        """
+        Résout le chemin d'un payload relativement au fichier JSON de configuration.
+
+        Args:
+            payload_path: Chemin du payload (peut être relatif ou absolu)
+            config_json_path: Chemin du fichier JSON de configuration
+
+        Returns:
+            str: Chemin absolu résolu du payload
+        """
+        if os.path.isabs(payload_path):
+            return payload_path
+
+        # Si le chemin commence par "test/", c'est un chemin depuis la racine du projet
+        if payload_path.startswith("test/"):
+            project_root = self.script_dir.parent
+            return str(project_root / payload_path)
+
+        # Si pas de config_json_path fourni, résoudre par rapport à la racine du projet
+        if not config_json_path:
+            project_root = self.script_dir.parent
+            return str(project_root / payload_path)
+
+        # Résoudre par rapport au répertoire contenant le fichier JSON de configuration
+        config_dir = Path(config_json_path).parent
+        return str(config_dir / payload_path)
 
     def _insert_slide_with_payload(self, script_name: str, payload_path: str, presentation_path: str, position: int = 2) -> bool:
         """
@@ -247,22 +278,37 @@ class PresentationBuilder:
                 print(f"[INFO] Le script {script_filename} sera créé dans la prochaine phase")
                 return True  # Simule le succès pour les tests de transition
 
+            # Résoudre le chemin du payload relativement à la racine du projet
+            if not os.path.isabs(payload_path):
+                # Chemin relatif depuis la racine du projet
+                project_root = self.script_dir.parent
+                absolute_payload_path = project_root / payload_path
+            else:
+                absolute_payload_path = Path(payload_path)
+
             # Vérifier si le payload existe
-            if not os.path.exists(payload_path):
+            if not absolute_payload_path.exists():
                 print(f"[ERROR] Payload non trouvé: {payload_path}")
+                print(f"[DEBUG] Chemin résolu: {absolute_payload_path}")
                 return False
 
-            # Appeler spécifiquement le script selon son type
+            # Appeler spécifiquement le script selon son type (utiliser le chemin absolu résolu)
             if script_name == "navigation_builder":
-                return self._call_navigation_builder(payload_path, presentation_path)
+                return self._call_navigation_builder(str(absolute_payload_path), presentation_path)
             elif script_name == "section_header_builder":
-                return self._call_section_header_builder(payload_path, presentation_path)
+                return self._call_section_header_builder(str(absolute_payload_path), presentation_path)
             elif script_name == "simple_message_builder":
-                return self._call_simple_message_builder(payload_path, presentation_path)
+                return self._call_simple_message_builder(str(absolute_payload_path), presentation_path)
             elif script_name == "statistics_builder":
-                return self._call_statistics_builder(payload_path, presentation_path)
+                return self._call_statistics_builder(str(absolute_payload_path), presentation_path)
             elif script_name == "content_boxes_builder":
-                return self._call_content_boxes_builder(payload_path, presentation_path)
+                return self._call_content_boxes_builder(str(absolute_payload_path), presentation_path)
+            elif script_name == "detailed_explanation_builder":
+                return self._call_detailed_explanation_builder(str(absolute_payload_path), presentation_path)
+            elif script_name == "testimonial_builder":
+                return self._call_testimonial_builder(str(absolute_payload_path), presentation_path)
+            elif script_name == "charts_builder":
+                return self._call_charts_builder(str(absolute_payload_path), presentation_path)
             else:
                 print(f"[WARNING] Script {script_name} pas encore implémenté dans l'orchestrateur")
                 return True  # Simule le succès pour les tests
@@ -444,6 +490,111 @@ class PresentationBuilder:
 
         except Exception as e:
             print(f"[ERROR] Erreur appel content_boxes_builder: {e}")
+            return False
+
+    def _call_testimonial_builder(self, payload_path: str, presentation_path: str) -> bool:
+        """
+        Appelle spécifiquement le testimonial_builder avec un payload JSON.
+
+        Args:
+            payload_path: Chemin vers le fichier JSON contenant le payload
+            presentation_path: Chemin vers la présentation
+
+        Returns:
+            bool: True si succès, False sinon
+        """
+        try:
+            # Importer le module testimonial_builder
+            sys.path.insert(0, str(self.script_dir))
+            from testimonial_builder import process_testimonial_from_payload_file
+
+            # Appeler la fonction avec le payload
+            result = process_testimonial_from_payload_file(
+                payload_path=payload_path,
+                presentation_path=presentation_path,
+                template_path=str(self.template_path)
+            )
+
+            success = result.get("success", False)
+            if success:
+                print(f"[SUCCESS] Testimonial builder exécuté avec succès")
+            else:
+                print(f"[ERROR] Testimonial builder a échoué: {result.get('error', 'Erreur inconnue')}")
+
+            return success
+
+        except Exception as e:
+            print(f"[ERROR] Erreur appel testimonial_builder: {e}")
+            return False
+
+    def _call_detailed_explanation_builder(self, payload_path: str, presentation_path: str) -> bool:
+        """
+        Appelle spécifiquement le detailed_explanation_builder avec un payload JSON.
+
+        Args:
+            payload_path: Chemin vers le fichier JSON contenant le payload
+            presentation_path: Chemin vers la présentation
+
+        Returns:
+            bool: True si succès, False sinon
+        """
+        try:
+            # Importer le module detailed_explanation_builder
+            sys.path.insert(0, str(self.script_dir))
+            from detailed_explanation_builder import process_detailed_explanation_from_payload_file
+
+            # Appeler la fonction avec le payload
+            result = process_detailed_explanation_from_payload_file(
+                payload_path=payload_path,
+                presentation_path=presentation_path,
+                template_path=str(self.template_path)
+            )
+
+            success = result.get("success", False)
+            if success:
+                print(f"[SUCCESS] Detailed explanation builder exécuté avec succès")
+            else:
+                print(f"[ERROR] Detailed explanation builder a échoué: {result.get('error', 'Erreur inconnue')}")
+
+            return success
+
+        except Exception as e:
+            print(f"[ERROR] Erreur appel detailed_explanation_builder: {e}")
+            return False
+
+    def _call_charts_builder(self, payload_path: str, presentation_path: str) -> bool:
+        """
+        Appelle spécifiquement le charts_builder avec un payload JSON.
+
+        Args:
+            payload_path: Chemin vers le fichier JSON contenant le payload
+            presentation_path: Chemin vers la présentation
+
+        Returns:
+            bool: True si succès, False sinon
+        """
+        try:
+            # Importer le module charts_builder
+            sys.path.insert(0, str(self.script_dir))
+            from charts_builder import process_charts_from_payload_file
+
+            # Appeler la fonction avec le payload
+            result = process_charts_from_payload_file(
+                payload_path=payload_path,
+                presentation_path=presentation_path,
+                template_path=str(self.template_path)
+            )
+
+            success = result.get("success", False)
+            if success:
+                print(f"[SUCCESS] Charts builder exécuté avec succès")
+            else:
+                print(f"[ERROR] Charts builder a échoué: {result.get('error', 'Erreur inconnue')}")
+
+            return success
+
+        except Exception as e:
+            print(f"[ERROR] Erreur appel charts_builder: {e}")
             return False
 
     def add_closing_slide(self, presentation_path: str) -> bool:
@@ -638,7 +789,7 @@ class PresentationBuilder:
                 raise Exception("Échec création slide titre")
 
             # 4. Insérer les slides de contenu
-            if not self.insert_content_slides(config, output_path):
+            if not self.insert_content_slides(config, output_path, json_path):
                 print(f"[WARNING] Certaines slides de contenu ont échoué")
 
             # 5. Ajouter la slide de fermeture (obligatoire)

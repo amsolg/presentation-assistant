@@ -1,0 +1,35 @@
+{
+  "creation_timestamp": "2025-10-15T10:00:18.708829",
+  "method": "Template Slide Cloning (Premier Tech Standards)",
+  "template_used": "c:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "source_slide": {
+    "index": 10,
+    "number": 11,
+    "layout": "Page titre"
+  },
+  "content": {
+    "title": "Test Content Boxes Personnalisé",
+    "subtitle": "Architecture JSON 2025",
+    "metadata": "Test unitaire - Content Boxes Builder"
+  },
+  "output_file": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\content_boxes_builder_tester\\output\\20251015_1000_test_content_boxes_custom.pptx",
+  "file_size_kb": 298.18,
+  "quality_assurance": {
+    "method": "Template Slide Cloning",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "no_duplication": true,
+    "professional_ready": true
+  },
+  "advantages": [
+    "Styles Premier Tech 100% préservés",
+    "Méthode de clonage éprouvée",
+    "Aucune duplication d'éléments",
+    "Qualité professionnelle garantie"
+  ],
+  "text_widening": {
+    "enabled": true,
+    "objects_widened": 0,
+    "modifications": []
+  }
+}

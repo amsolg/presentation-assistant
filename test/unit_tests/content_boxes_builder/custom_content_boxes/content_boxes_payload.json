@@ -1,0 +1,18 @@
+{
+  "title": "Analyse Technique Détaillée",
+  "content_style": "grey_3_detailed",
+  "concepts": [
+    "Évaluation des performances actuelles avec analyse des métriques de latence, throughput et utilisation des ressources système",
+    "Audit de l'architecture existante incluant les patterns de conception, les dépendances inter-services et l'évaluation de la dette technique",
+    "Stratégie de migration progressive avec phases de validation, procédures de rollback automatique et monitoring temps réel des impacts"
+  ],
+  "subtitles": [
+    "Performance",
+    "Architecture",
+    "Migration"
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": 2
+  }
+}

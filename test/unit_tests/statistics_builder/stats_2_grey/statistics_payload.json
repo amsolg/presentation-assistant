@@ -1,0 +1,18 @@
+{
+  "title": "Technical Metrics",
+  "style": "grey_line",
+  "statistics": [
+    {
+      "value": "99.8%",
+      "label": "System Uptime"
+    },
+    {
+      "value": "15ms",
+      "label": "Average Latency"
+    }
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}
