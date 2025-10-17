@@ -1,0 +1,82 @@
+{
+  "presentation_name": "Roadmap AI - Architecture Intelligence Artificielle",
+  "subject": "roadmap-ai",
+  "audience": "equipe-architecture",
+  "title_slide": {
+    "title": "Roadmap AI",
+    "subtitle": "Architecture Intelligence Artificielle - Vision 3 Phases",
+    "metadata": "2025-01-16 – Équipe Architecture d'Entreprise"
+  },
+  "slides": [
+    {
+      "position": 2,
+      "script_name": "simple_message_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/message-contexte.json",
+      "description": "Contexte et positionnement du projet AI"
+    },
+    {
+      "position": 3,
+      "script_name": "navigation_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/roadmap-navigation.json",
+      "description": "Navigation - Les 3 phases du roadmap"
+    },
+    {
+      "position": 4,
+      "script_name": "section_header_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/section-phase1.json",
+      "description": "En-tête Phase 1 - Workflow Automatisé"
+    },
+    {
+      "position": 5,
+      "script_name": "detailed_explanation_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/phase1-details.json",
+      "description": "Détails Phase 1 - Génération automatisée présentations"
+    },
+    {
+      "position": 6,
+      "script_name": "section_header_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/section-phase2.json",
+      "description": "En-tête Phase 2 - Base de Connaissance"
+    },
+    {
+      "position": 7,
+      "script_name": "detailed_explanation_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/phase2-details.json",
+      "description": "Détails Phase 2 - Architecture moderne de données"
+    },
+    {
+      "position": 8,
+      "script_name": "section_header_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/section-phase3.json",
+      "description": "En-tête Phase 3 - Sam AI Assistant"
+    },
+    {
+      "position": 9,
+      "script_name": "detailed_explanation_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/phase3-details.json",
+      "description": "Détails Phase 3 - Agent AI intelligent"
+    },
+    {
+      "position": 10,
+      "script_name": "content_boxes_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/benefices-architecture.json",
+      "description": "Bénéfices pour l'architecture d'entreprise"
+    },
+    {
+      "position": 11,
+      "script_name": "statistics_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/impact-mesurable.json",
+      "description": "Impact mesurable et métriques"
+    },
+    {
+      "position": 12,
+      "script_name": "simple_message_builder",
+      "payload_path": "presentations/roadmap-ai/equipe-architecture/prochaines-etapes.json",
+      "description": "Prochaines étapes et engagement"
+    }
+  ],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "slide_number": 11,
+  "slide_index": 10,
+  "slide_title": "Page Titre - Objet de la présentation",
+  "layout_name": "Page titre",
+  "template_usage": "Slide de titre principal pour introduire une présentation Premier Tech",
+  "slide_dimensions": {
+    "width": 1280.0,
+    "height": 720.0,
+    "aspect_ratio": "16:9"
+  },
+  "shapes": [
+    {
+      "shape_id": 4,
+      "element_id": "shape_3",
+      "type": "text_box",
+      "name": "Titre Principal",
+      "position": {
+        "left": 54.17,
+        "top": 223.97,
+        "left_percent": 4.23,
+        "top_percent": 31.11
+      },
+      "dimensions": {
+        "width": 887.45,
+        "height": 61.39,
+        "width_percent": 69.33,
+        "height_percent": 8.53
+      },
+      "rotation": 0.0,
+      "text_content": "Contexte de projet",
+      "font_size": 44,
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "text_alignment": "center",
+      "description": "Titre principal de la présentation - Nom du projet ou thème central",
+      "usage_guidelines": {
+        "purpose": "Affiche le titre principal de la présentation de manière imposante",
+        "max_characters": 60,
+        "recommended_length": "3-7 mots",
+        "font_style": "Bold, Sans-serif (Premier Tech corporate)",
+        "content_examples": [
+          "Stratégie Innovation 2025",
+          "Transformation Digitale",
+          "Projet SAP S/4HANA",
+          "Roadmap Intelligence Artificielle"
+        ],
+        "restrictions": [
+          "Éviter les acronymes non connus",
+          "Une seule ligne de texte",
+          "Pas de ponctuation finale"
+        ]
+      }
+    },
+    {
+      "shape_id": 3,
+      "element_id": "shape_2",
+      "type": "text_box",
+      "name": "Sous-titre / Objet",
+      "position": {
+        "left": 54.17,
+        "top": 296.9,
+        "left_percent": 4.23,
+        "top_percent": 41.24
+      },
+      "dimensions": {
+        "width": 887.45,
+        "height": 87.24,
+        "width_percent": 69.33,
+        "height_percent": 12.12
+      },
+      "rotation": 0.0,
+      "text_content": "Objet de la présentation",
+      "font_size": 28,
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "text_alignment": "center",
+      "description": "Sous-titre expliquant l'objet ou le contexte de la présentation",
+      "usage_guidelines": {
+        "purpose": "Précise le contexte, l'objectif ou la portée du titre principal",
+        "max_characters": 80,
+        "recommended_length": "5-12 mots",
+        "font_style": "Regular, Sans-serif",
+        "content_examples": [
+          "Plan de mise en œuvre et bénéfices anticipés",
+          "Optimisation des processus manufacturiers",
+          "Revue trimestrielle Q1 2025",
+          "Architecture technique et roadmap"
+        ],
+        "restrictions": [
+          "Maximum 2 lignes de texte",
+          "Complémentaire au titre principal",
+          "Éviter la répétition du titre"
+        ]
+      }
+    },
+    {
+      "shape_id": 2,
+      "element_id": "shape_1",
+      "type": "text_box",
+      "name": "Métadonnées",
+      "position": {
+        "left": 54.17,
+        "top": 395.69,
+        "left_percent": 4.23,
+        "top_percent": 54.96
+      },
+      "dimensions": {
+        "width": 887.45,
+        "height": 38.78,
+        "width_percent": 69.33,
+        "height_percent": 5.39
+      },
+      "rotation": 0.0,
+      "text_content": "2025.03.06 – Statut du projet, Accronymes des auteurs",
+      "font_size": 14,
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "text_alignment": "center",
+      "description": "Métadonnées de présentation incluant date, statut et/ou auteurs",
+      "usage_guidelines": {
+        "purpose": "Fournit le contexte temporel et l'attribution de la présentation",
+        "max_characters": 100,
+        "recommended_format": "YYYY.MM.DD – [Contexte/Statut], [Auteurs/Équipe]",
+        "font_style": "Light, Sans-serif",
+        "content_examples": [
+          "2025.01.16 – Comité de direction",
+          "2025.03.15 – Version finale, Équipe Architecture",
+          "2025.02.01 – Revue technique, J. Tremblay & M. Gagnon",
+          "Q1 2025 – Présentation exécutive"
+        ],
+        "restrictions": [
+          "Une seule ligne obligatoire",
+          "Utiliser le tiret cadratin (–) comme séparateur",
+          "Format de date cohérent (YYYY.MM.DD recommandé)"
+        ]
+      }
+    }
+  ],
+  "total_shapes": 3,
+  "visual_hierarchy": {
+    "reading_order": ["Titre Principal", "Sous-titre / Objet", "Métadonnées"],
+    "emphasis_levels": {
+      "Titre Principal": "Primaire - Plus grande taille, position haute",
+      "Sous-titre / Objet": "Secondaire - Taille moyenne, complète le titre",
+      "Métadonnées": "Tertiaire - Plus petite taille, information contextuelle"
+    }
+  },
+  "branding_elements": {
+    "logo_position": "Non applicable sur cette slide",
+    "color_scheme": "Bleu Premier Tech (#003366) sur fond blanc",
+    "font_family": "Sans-serif corporate Premier Tech"
+  },
+  "best_practices": [
+    "Maintenir la cohérence avec l'identité visuelle Premier Tech",
+    "Assurer la lisibilité à distance (présentation en salle)",
+    "Éviter la surcharge d'information sur la slide titre",
+    "Utiliser des termes professionnels et précis",
+    "Adapter le niveau de langage à l'audience cible"
+  ],
+  "automation_notes": {
+    "builder_script": "presentation_builder.py",
+    "auto_generated": "Cette slide est automatiquement créée comme slide d'ouverture",
+    "customization": "Les trois champs texte sont personnalisables via config JSON",
+    "validation": "Vérification automatique de la longueur des textes"
+  }
+}

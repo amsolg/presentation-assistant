@@ -49,9 +49,16 @@ class PresentationBuilder:
             "charts_builder": "charts_builder.py"
         }
 
+        # Configuration pour la création de slides titre (migration de SlideTitleCreator)
+        self.reference_slide_index = 10  # Slide 11 (index 10) - Page titre
+        self.reference_info = None
+
         # Vérifier l'existence du template
         if not self.template_path.exists():
             raise FileNotFoundError(f"Template Premier Tech non trouvé: {self.template_path}")
+
+        # Analyser la structure de référence pour les slides titre
+        self._analyze_title_slide_reference()
 
     def load_presentation_config(self, json_path: str) -> Dict[str, Any]:
         """
@@ -124,9 +131,267 @@ class PresentationBuilder:
 
         return str(output_dir / filename)
 
+    def _analyze_title_slide_reference(self):
+        """Analyse la structure de la slide de référence (migré de SlideTitleCreator)"""
+        try:
+            from pptx import Presentation
+            pres = Presentation(self.template_path)
+            if len(pres.slides) <= self.reference_slide_index:
+                raise ValueError(f"Template ne contient pas de slide {self.reference_slide_index + 1}")
+
+            reference_slide = pres.slides[self.reference_slide_index]
+
+            self.reference_info = {
+                'layout_name': reference_slide.slide_layout.name,
+                'shape_count': len(reference_slide.shapes),
+                'slide_index': self.reference_slide_index,
+                'slide_number': self.reference_slide_index + 1
+            }
+
+            print(f"[INFO] Slide de référence: {self.reference_info['slide_number']} ({self.reference_info['layout_name']})")
+            print(f"[INFO] {self.reference_info['shape_count']} shapes identifiés")
+
+        except Exception as e:
+            raise Exception(f"Erreur analyse template: {e}")
+
+    def _validate_title_length(self, title: str):
+        """
+        Valide la longueur du titre pour éviter le débordement (migré de SlideTitleCreator).
+
+        Args:
+            title: Titre à valider
+
+        Raises:
+            ValueError: Si le titre est trop long
+        """
+        # Règle empirique: max 50 caractères pour éviter le débordement
+        MAX_TITLE_LENGTH = 45
+
+        if len(title) > MAX_TITLE_LENGTH:
+            raise ValueError(
+                f"ERREUR: Titre trop long ({len(title)} caractères).\n"
+                f"Maximum recommandé: {MAX_TITLE_LENGTH} caractères.\n"
+                f"Titre actuel: '{title}'\n"
+                f"Suggestion: Raccourcissez le titre ou utilisez le sous-titre pour les détails."
+            )
+
+        print(f"[VALIDATION] Titre accepté ({len(title)} caractères): {title}")
+
+    def _clone_template_slide_integrated(self, slide_index: int, output_file: str) -> bool:
+        """
+        Clone une slide du template avec préservation complète des styles Premier Tech (migré de SlideTitleCreator).
+        """
+        try:
+            print(f"[CLONE] Copie complète du template...")
+
+            # ÉTAPE 1: Copier le template complet pour préserver tous les styles
+            shutil.copy2(str(self.template_path), output_file)
+
+            # ÉTAPE 2: Charger et nettoyer pour ne garder que la slide désirée
+            from pptx import Presentation
+            prs = Presentation(output_file)
+
+            if slide_index >= len(prs.slides):
+                print(f"[ERROR] Slide {slide_index + 1} n'existe pas dans le template")
+                return False
+
+            print(f"[CLONE] Suppression des slides non désirées (garder seulement slide {slide_index + 1})...")
+
+            # ÉTAPE 3: Identifier toutes les slides à supprimer
+            slides_to_remove = []
+            for i in range(len(prs.slides)):
+                if i != slide_index:
+                    slides_to_remove.append(i)
+
+            print(f"[CLONE] Suppression de {len(slides_to_remove)} slides sur {len(prs.slides)} total")
+
+            # ÉTAPE 4: Supprimer en ordre inverse pour éviter les problèmes d'index
+            for i in reversed(slides_to_remove):
+                try:
+                    rId = prs.slides._sldIdLst[i].rId
+                    prs.part.drop_rel(rId)
+                    del prs.slides._sldIdLst[i]
+                except Exception as e:
+                    print(f"[WARNING] Erreur suppression slide {i}: {e}")
+
+            # ÉTAPE 5: Sauvegarder la présentation avec seulement la slide clonée
+            prs.save(output_file)
+
+            print(f"[SUCCESS] Slide {slide_index + 1} clonée avec styles Premier Tech intacts")
+            return True
+
+        except Exception as e:
+            print(f"[ERROR] Erreur clonage slide {slide_index + 1}: {e}")
+            return False
+
+    def _widen_text_objects_integrated(self, presentation_path: str, auto_widen: bool = True):
+        """
+        Élargit automatiquement les objets texte pour éviter les retours à la ligne (migré de SlideTitleCreator).
+        """
+        widen_info = {
+            "enabled": auto_widen,
+            "objects_widened": 0,
+            "modifications": []
+        }
+
+        if not auto_widen:
+            return widen_info
+
+        try:
+            print(f"[WIDEN] Élargissement automatique des objets texte...")
+
+            from pptx import Presentation
+            from pptx.util import Inches
+            prs = Presentation(presentation_path)
+            slide = prs.slides[0]  # Première (et unique) slide
+
+            widen_count = 0
+            for i, shape in enumerate(slide.shapes):
+                if hasattr(shape, 'text_frame'):
+                    current_width_inches = shape.width / Inches(1)
+
+                    # Élargir les objets texte étroits (<4 pouces)
+                    if current_width_inches < 4.0:
+                        # Calculer la nouvelle largeur (1.5x mais max 8 pouces)
+                        new_width_inches = min(current_width_inches * 1.5, 8.0)
+                        shape.width = Inches(new_width_inches)
+
+                        print(f"[WIDEN] Shape {i}: {current_width_inches:.2f}\" -> {new_width_inches:.2f}\"")
+                        widen_count += 1
+                        widen_info["modifications"].append({
+                            "shape_index": i,
+                            "before_inches": round(current_width_inches, 2),
+                            "after_inches": round(new_width_inches, 2),
+                            "type": "significant"
+                        })
+
+                    # Élargir modérément les objets moyens (4-6 pouces)
+                    elif current_width_inches < 6.0:
+                        # Élargissement plus modéré (1.2x mais max 8 pouces)
+                        new_width_inches = min(current_width_inches * 1.2, 8.0)
+                        shape.width = Inches(new_width_inches)
+
+                        print(f"[WIDEN] Shape {i}: {current_width_inches:.2f}\" -> {new_width_inches:.2f}\" (modere)")
+                        widen_count += 1
+                        widen_info["modifications"].append({
+                            "shape_index": i,
+                            "before_inches": round(current_width_inches, 2),
+                            "after_inches": round(new_width_inches, 2),
+                            "type": "moderate"
+                        })
+
+            widen_info["objects_widened"] = widen_count
+
+            if widen_count > 0:
+                prs.save(presentation_path)
+                print(f"[SUCCESS] {widen_count} objets texte élargis pour éviter les retours à la ligne")
+            else:
+                print(f"[INFO] Aucun objet texte nécessitant un élargissement")
+
+            return widen_info
+
+        except Exception as e:
+            print(f"[WARNING] Erreur élargissement objets texte: {e}")
+            widen_info["error"] = str(e)
+            return widen_info
+
+    def _disable_text_wrapping_integrated(self, presentation_path: str):
+        """
+        Désactive le renvoi à la ligne automatique pour tous les objets texte (migré de SlideTitleCreator).
+        """
+        try:
+            print(f"[WRAP] Désactivation du renvoi à la ligne automatique...")
+
+            from pptx import Presentation
+            prs = Presentation(presentation_path)
+            slide = prs.slides[0]  # Première (et unique) slide
+
+            wrap_disabled_count = 0
+            for i, shape in enumerate(slide.shapes):
+                if hasattr(shape, 'text_frame') and shape.text_frame:
+                    # Désactiver le word wrap (renvoi à la ligne automatique)
+                    shape.text_frame.word_wrap = False
+                    print(f"[WRAP] Shape {i}: Word wrap désactivé")
+                    wrap_disabled_count += 1
+
+            if wrap_disabled_count > 0:
+                prs.save(presentation_path)
+                print(f"[SUCCESS] Renvoi à la ligne désactivé sur {wrap_disabled_count} objets texte")
+            else:
+                print(f"[INFO] Aucun objet texte trouvé")
+
+        except Exception as e:
+            print(f"[WARNING] Erreur désactivation word wrap: {e}")
+
+    def _customize_cloned_slide_integrated(self, presentation_path: str, title: str, subtitle: Optional[str], metadata: Optional[str]):
+        """
+        Personnalise le contenu de la slide clonée en préservant les styles Premier Tech (migré de SlideTitleCreator).
+        REMPLACE le contenu sans modifier les styles.
+        """
+        try:
+            print(f"[CUSTOMIZE] Personnalisation du contenu...")
+
+            # Charger la présentation clonée
+            from pptx import Presentation
+            prs = Presentation(presentation_path)
+            slide = prs.slides[0]  # Première (et unique) slide
+
+            # Générer les métadonnées par défaut si non fournies
+            if not metadata:
+                metadata = f"{datetime.now().strftime('%Y.%m.%d')} – Présentation Premier Tech"
+
+            # Mapping du contenu
+            content_mapping = {
+                'title': title,
+                'subtitle': subtitle or "Présentation d'entreprise",
+                'metadata': metadata
+            }
+
+            print(f"[CUSTOMIZE] Slide avec {len(slide.shapes)} shapes à traiter")
+
+            # Personnaliser les shapes en préservant les styles
+            updated_count = 0
+            for i, shape in enumerate(slide.shapes):
+                try:
+                    if hasattr(shape, 'text_frame') and shape.text_frame and shape.text_frame.text:
+                        current_text = shape.text_frame.text.lower()
+
+                        # Identifier le rôle du shape selon son contenu actuel
+                        new_content = None
+                        role = None
+
+                        if 'objet' in current_text or 'titre' in current_text:
+                            new_content = content_mapping['title']
+                            role = 'title'
+                        elif 'contexte' in current_text:
+                            new_content = content_mapping['subtitle']
+                            role = 'subtitle'
+                        elif 'statut' in current_text or 'date' in current_text or '2025' in current_text:
+                            new_content = content_mapping['metadata']
+                            role = 'metadata'
+
+                        # Appliquer le nouveau contenu EN PRÉSERVANT LE FORMATAGE
+                        if new_content and role:
+                            # CRITIQUE: Remplacer seulement le texte, pas le formatage
+                            shape.text_frame.text = new_content
+                            print(f"[UPDATE] {role}: {new_content[:50]}...")
+                            updated_count += 1
+
+                except Exception as e:
+                    print(f"[WARNING] Erreur personnalisation shape {i}: {e}")
+
+            print(f"[SUCCESS] {updated_count} éléments personnalisés avec styles Premier Tech préservés")
+
+            # Sauvegarder les modifications
+            prs.save(presentation_path)
+
+        except Exception as e:
+            print(f"[ERROR] Erreur personnalisation: {e}")
+            raise
+
     def create_title_slide(self, config: Dict[str, Any], output_path: str) -> bool:
         """
-        Crée la slide titre en utilisant le script slide_title_creator.
+        Crée la slide titre avec la logique intégrée (refactorisé depuis SlideTitleCreator).
 
         Args:
             config: Configuration de la présentation
@@ -136,36 +401,40 @@ class PresentationBuilder:
             bool: True si succès, False sinon
         """
         try:
-            print(f"[TITLE] Création de la slide titre...")
-
-            # Importer et utiliser le script existant - workaround pour module avec chiffres
-            import importlib.util
-            slide_creator_path = self.script_dir / "01_slide_title_creator.py"
-            spec = importlib.util.spec_from_file_location("slide_title_creator", slide_creator_path)
-            slide_module = importlib.util.module_from_spec(spec)
-            spec.loader.exec_module(slide_module)
-            SlideTitleCreator = slide_module.SlideTitleCreator
+            print(f"[TITLE] Création de la slide titre avec logique intégrée...")
 
             # Configurer les paramètres
             title_config = config["title_slide"]
             title = title_config["title"]
             subtitle = title_config.get("subtitle")
             metadata = title_config.get("metadata")
+            auto_widen = config.get("build_options", {}).get("auto_widen_text", True)
+
+            # VALIDATION: Vérifier la longueur du titre
+            self._validate_title_length(title)
 
             # Créer le dossier parent
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
 
-            # Créer la slide titre
-            creator = SlideTitleCreator()
-            created_path = creator.create_title_slide(
-                title=title,
-                subtitle=subtitle,
-                metadata=metadata,
-                output_path=output_path,
-                auto_widen=config.get("build_options", {}).get("auto_widen_text", True)
-            )
+            print(f"[INFO] Clonage slide {self.reference_slide_index + 1} du template Premier Tech")
 
-            print(f"[SUCCESS] Slide titre créée: {created_path}")
+            # ÉTAPE 1: Cloner la slide du template avec préservation complète des styles
+            success = self._clone_template_slide_integrated(self.reference_slide_index, output_path)
+            if not success:
+                raise Exception(f"Échec du clonage de la slide {self.reference_slide_index + 1}")
+
+            print(f"[SUCCESS] Slide clonée avec styles Premier Tech préservés")
+
+            # ÉTAPE 2: Élargir automatiquement les objets texte
+            widen_info = self._widen_text_objects_integrated(output_path, auto_widen=auto_widen)
+
+            # ÉTAPE 2.5: Désactiver le renvoi à la ligne automatique
+            self._disable_text_wrapping_integrated(output_path)
+
+            # ÉTAPE 3: Personnaliser le contenu en préservant les styles
+            self._customize_cloned_slide_integrated(output_path, title, subtitle, metadata)
+
+            print(f"[SUCCESS] Slide titre créée avec logique intégrée: {output_path}")
             return True
 
         except Exception as e:

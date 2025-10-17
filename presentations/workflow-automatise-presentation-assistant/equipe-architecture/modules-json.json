@@ -1,0 +1,19 @@
+{
+  "title": "Modules JSON Disponibles",
+  "content_style": "blue_4_detailed",
+  "concepts": [
+    "navigation_builder pour tables des matières • section_header_builder pour en-têtes de section",
+    "simple_message_builder pour messages courts • content_boxes_builder pour boîtes organisées",
+    "statistics_builder pour KPI • charts_builder pour graphiques avec support CSV",
+    "detailed_explanation_builder pour contenu approfondi • testimonial_builder pour citations"
+  ],
+  "subtitles": [
+    "Navigation & Structure",
+    "Contenu & Messages",
+    "Données & Analyses",
+    "Explications & Témoignages"
+  ],
+  "options": {
+    "auto_widen": true
+  }
+}

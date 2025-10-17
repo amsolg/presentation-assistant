@@ -1,0 +1,28 @@
+{
+  "build_timestamp": "2025-10-16T13:17:39.941450",
+  "presentation_config": {
+    "name": "Roadmap AI - Architecture Intelligence Artificielle",
+    "subject": "roadmap-ai",
+    "audience": "equipe-architecture",
+    "title": "Roadmap AI"
+  },
+  "build_result": {
+    "success": true,
+    "output_file": "C:\\repos\\presentation-assistant\\presentations\\roadmap-ai\\equipe-architecture\\output\\20251016_1317_roadmap_ai_-_architecture_intelligence_artificielle.pptx",
+    "file_exists": true,
+    "file_size_kb": 298.9
+  },
+  "slides_summary": {
+    "title_slide": "Créée (obligatoire)",
+    "content_slides": 11,
+    "closing_slide": "Ajoutée (obligatoire)",
+    "total_slides": 13
+  },
+  "architecture": {
+    "method": "JSON-based Presentation Builder v2",
+    "base_template": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+    "premier_tech_standards": true,
+    "orchestrated_build": true,
+    "version": "2.0 - Version fonctionnelle sauvegardée"
+  }
+}

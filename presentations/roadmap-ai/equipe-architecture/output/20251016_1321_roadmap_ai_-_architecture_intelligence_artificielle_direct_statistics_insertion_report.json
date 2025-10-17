@@ -1,0 +1,38 @@
+{
+  "insertion_timestamp": "2025-10-16T13:21:40.276150",
+  "method": "Direct Layout-Based Statistics Insertion (Premier Tech Standards)",
+  "template_used": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\presentations\\roadmap-ai\\equipe-architecture\\output\\20251016_1321_roadmap_ai_-_architecture_intelligence_artificielle.pptx",
+  "statistics_details": {
+    "stat1_value": "75%",
+    "stat1_label": "Réduction Temps",
+    "stat2_value": "3x",
+    "stat2_label": "Capacité Diffusion",
+    "slide_title": "Impact Mesurable du Roadmap AI",
+    "style": "four_stats",
+    "intended_position": 11,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 24,
+    "number": 25,
+    "layout": "4 statistiques & Mots-clés",
+    "style_description": "Dashboard complet, vue d'ensemble"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'four_stats' adapté à l'usage",
+    "Comparaisons chiffrées professionnelles"
+  ]
+}

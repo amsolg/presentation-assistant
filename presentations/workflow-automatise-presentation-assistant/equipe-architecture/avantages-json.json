@@ -1,0 +1,19 @@
+{
+  "title": "Avantages Architecture JSON 2025",
+  "content_style": "blue_4_detailed",
+  "concepts": [
+    "Un seul fichier JSON configure toute la présentation avec validation automatique et schema défini",
+    "Chaque slide a son propre fichier JSON réutilisable avec templates standardisés",
+    "Titre et fermeture Premier Tech ajoutés automatiquement sans intervention manuelle",
+    "Organisation prévisible presentations/[sujet]/[audience]/ avec traçabilité complète"
+  ],
+  "subtitles": [
+    "Configuration Centralisée",
+    "Payloads Modulaires",
+    "Slides Automatiques",
+    "Structure Organisée"
+  ],
+  "options": {
+    "auto_widen": true
+  }
+}

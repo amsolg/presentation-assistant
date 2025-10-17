@@ -467,133 +467,349 @@ class SlideExtractor:
     def extract_shape_formatting(self, shape: BaseShape) -> Dict[str, Any]:
         """
         Extrait les informations de formatage d'une forme.
-        
+
         Args:
             shape: Forme PowerPoint
-            
+
         Returns:
             Dict avec les propriétés de formatage
         """
         formatting = {}
-        
+
         try:
             # Formatage du texte si disponible
             if hasattr(shape, 'text_frame') and shape.text_frame:
-                formatting["text"] = self.extract_text_formatting(shape.text_frame)
-            
+                # Pour les placeholders, essayer d'obtenir le formatage depuis le placeholder_format
+                if hasattr(shape, 'placeholder_format') and shape.placeholder_format:
+                    formatting["text"] = self.extract_placeholder_text_formatting(shape)
+                else:
+                    formatting["text"] = self.extract_text_formatting(shape.text_frame)
+
             # Couleur de remplissage
             if hasattr(shape, 'fill'):
                 formatting["fill"] = self.extract_fill_properties(shape.fill)
-            
+
             # Contour
             if hasattr(shape, 'line'):
                 formatting["line"] = self.extract_line_properties(shape.line)
-                
+
         except Exception as e:
             formatting["error"] = str(e)
-        
+
         return formatting
     
-    def extract_text_formatting(self, text_frame) -> Dict[str, Any]:
+    def extract_placeholder_text_formatting(self, shape) -> Dict[str, Any]:
         """
-        Extrait le formatage du texte d'un text_frame.
-        
+        Extrait le formatage du texte d'un placeholder.
+        IMPORTANT: Cette méthode indique maintenant quand les valeurs ne peuvent pas être extraites.
+
         Args:
-            text_frame: Objet text_frame python-pptx
-            
+            shape: Shape avec placeholder_format
+
         Returns:
             Dict avec propriétés de formatage du texte
         """
+        formatting = {
+            "font_name": None,
+            "font_size": None,
+            "bold": None,
+            "italic": None,
+            "underline": None,
+            "color": None,
+            "alignment": None,
+            "_extraction_note": "Values cannot be extracted from placeholder without slide context"
+        }
+
+        try:
+            # D'abord, essayer d'extraire les valeurs directes du text_frame
+            if hasattr(shape, 'text_frame') and shape.text_frame:
+                direct_formatting = self.extract_text_formatting(shape.text_frame)
+
+                # Mettre à jour seulement les valeurs non-null
+                for key, value in direct_formatting.items():
+                    if value is not None:
+                        formatting[key] = value
+                        if "_extraction_note" in formatting:
+                            formatting["_extraction_note"] = "Some values extracted directly from text_frame"
+
+            # Si toujours des valeurs manquantes, l'indiquer clairement
+            missing_values = [k for k, v in formatting.items() if v is None and k != "_extraction_note"]
+            if missing_values:
+                formatting["_missing_values"] = missing_values
+                formatting["_extraction_limitation"] = (
+                    "python-pptx cannot access inherited values from layout/master. "
+                    "Values would need to be extracted via direct XML parsing with layout context."
+                )
+
+        except Exception as e:
+            formatting["_extraction_error"] = str(e)
+
+        return formatting
+
+    def extract_text_formatting(self, text_frame) -> Dict[str, Any]:
+        """
+        Extrait le formatage du texte d'un text_frame.
+
+        Args:
+            text_frame: Objet text_frame python-pptx
+
+        Returns:
+            Dict avec propriétés de formatage du texte
+        """
+        formatting = {
+            "font_name": None,
+            "font_size": None,
+            "bold": None,
+            "italic": None,
+            "underline": None,
+            "color": None,
+            "alignment": None
+        }
+
         try:
             # Prendre le formatage du premier paragraphe comme référence
-            if text_frame.paragraphs:
+            if text_frame and text_frame.paragraphs:
                 para = text_frame.paragraphs[0]
+
+                # Extraire l'alignement du paragraphe
+                if hasattr(para, 'alignment') and para.alignment is not None:
+                    formatting["alignment"] = str(para.alignment)
+
+                # Extraire le formatage du texte depuis les runs
                 if para.runs:
                     run = para.runs[0]
-                    font = run.font
-                    
-                    return {
-                        "font_name": font.name,
-                        "font_size": font.size.pt if font.size else None,
-                        "bold": font.bold,
-                        "italic": font.italic,
-                        "underline": font.underline,
-                        "color": self.get_color_hex(font.color) if font.color else None,
-                        "alignment": str(para.alignment) if para.alignment else None
-                    }
-        except Exception:
-            pass
-        
-        return {}
+                    if hasattr(run, 'font'):
+                        font = run.font
+
+                        # Extraire chaque propriété séparément avec gestion d'erreur
+                        try:
+                            if hasattr(font, 'name') and font.name is not None:
+                                formatting["font_name"] = font.name
+                        except:
+                            pass
+
+                        try:
+                            if hasattr(font, 'size') and font.size is not None:
+                                formatting["font_size"] = font.size.pt
+                        except:
+                            pass
+
+                        try:
+                            if hasattr(font, 'bold') and font.bold is not None:
+                                formatting["bold"] = font.bold
+                        except:
+                            pass
+
+                        try:
+                            if hasattr(font, 'italic') and font.italic is not None:
+                                formatting["italic"] = font.italic
+                        except:
+                            pass
+
+                        try:
+                            if hasattr(font, 'underline') and font.underline is not None:
+                                formatting["underline"] = bool(font.underline)
+                        except:
+                            pass
+
+                        try:
+                            if hasattr(font, 'color') and font.color:
+                                color_hex = self.get_color_hex(font.color)
+                                if color_hex:
+                                    formatting["color"] = color_hex
+                        except:
+                            pass
+
+                # Si pas de runs, essayer d'obtenir le formatage directement du paragraphe
+                elif hasattr(para, 'font'):
+                    font = para.font
+                    try:
+                        if font.name:
+                            formatting["font_name"] = font.name
+                        if font.size:
+                            formatting["font_size"] = font.size.pt
+                    except:
+                        pass
+
+        except Exception as e:
+            # Log l'erreur mais retourne quand même le dictionnaire avec les valeurs par défaut
+            print(f"[WARNING] Erreur lors de l'extraction du formatage: {e}")
+
+        return formatting
     
     def get_color_hex(self, color_obj) -> Optional[str]:
         """
         Convertit un objet couleur PowerPoint en hex.
-        
+
         Args:
             color_obj: Objet couleur python-pptx
-            
+
         Returns:
             String hex de la couleur ou None
         """
         try:
-            if hasattr(color_obj, 'rgb'):
+            if color_obj is None:
+                return None
+
+            # Essayer d'accéder à la propriété rgb
+            if hasattr(color_obj, 'rgb') and color_obj.rgb:
                 rgb = color_obj.rgb
-                return f"#{rgb.r:02x}{rgb.g:02x}{rgb.b:02x}"
-        except Exception:
-            pass
+                if hasattr(rgb, 'r') and hasattr(rgb, 'g') and hasattr(rgb, 'b'):
+                    return f"#{rgb.r:02x}{rgb.g:02x}{rgb.b:02x}"
+                elif isinstance(rgb, (list, tuple)) and len(rgb) >= 3:
+                    return f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
+
+            # Essayer theme_color si rgb n'est pas disponible
+            if hasattr(color_obj, 'theme_color') and color_obj.theme_color:
+                # Mapper les couleurs de thème aux couleurs Premier Tech approximatives
+                theme_colors = {
+                    0: "#000000",  # Background1
+                    1: "#FFFFFF",  # Text1
+                    2: "#0066CC",  # Accent1 (Bleu Premier Tech)
+                    3: "#ED7D31",  # Accent2
+                    4: "#A5A5A5",  # Accent3
+                    5: "#FFC000",  # Accent4
+                    6: "#5B9BD5",  # Accent5
+                    7: "#70AD47",  # Accent6
+                }
+                theme_idx = color_obj.theme_color
+                if isinstance(theme_idx, int) and theme_idx in theme_colors:
+                    return theme_colors[theme_idx]
+
+        except Exception as e:
+            print(f"[DEBUG] Erreur lors de la conversion de couleur: {e}")
+
         return None
     
     def extract_fill_properties(self, fill) -> Dict[str, Any]:
         """Extrait les propriétés de remplissage d'une forme."""
+        properties = {
+            "type": "unknown",
+            "color": None,
+            "transparency": None
+        }
+
         try:
-            return {
-                "type": str(fill.type) if hasattr(fill, 'type') else "unknown",
-                "color": self.get_color_hex(fill.fore_color) if hasattr(fill, 'fore_color') else None
-            }
-        except Exception:
-            return {}
+            if fill is None:
+                return properties
+
+            # Type de remplissage
+            if hasattr(fill, 'type'):
+                fill_type = fill.type
+                if fill_type is not None:
+                    properties["type"] = str(fill_type)
+
+            # Couleur de remplissage
+            if hasattr(fill, 'fore_color'):
+                color = self.get_color_hex(fill.fore_color)
+                if color:
+                    properties["color"] = color
+
+            # Transparence
+            if hasattr(fill, 'transparency') and fill.transparency is not None:
+                properties["transparency"] = fill.transparency
+
+        except Exception as e:
+            print(f"[DEBUG] Erreur extraction fill: {e}")
+
+        return properties
     
     def extract_line_properties(self, line) -> Dict[str, Any]:
         """Extrait les propriétés de contour d'une forme."""
+        properties = {
+            "color": None,
+            "width": None,
+            "style": None
+        }
+
         try:
-            return {
-                "color": self.get_color_hex(line.color) if hasattr(line, 'color') else None,
-                "width": line.width.pt if hasattr(line, 'width') and line.width else None
-            }
-        except Exception:
-            return {}
+            if line is None:
+                return properties
+
+            # Couleur de ligne
+            if hasattr(line, 'color'):
+                color = self.get_color_hex(line.color)
+                if color:
+                    properties["color"] = color
+                elif hasattr(line, 'fill') and hasattr(line.fill, 'fore_color'):
+                    # Essayer via fill pour certains types de lignes
+                    color = self.get_color_hex(line.fill.fore_color)
+                    if color:
+                        properties["color"] = color
+
+            # Largeur de ligne
+            if hasattr(line, 'width') and line.width is not None:
+                try:
+                    properties["width"] = line.width.pt
+                except:
+                    # Essayer de convertir directement si pt échoue
+                    properties["width"] = float(line.width) / 12700  # EMU to pt approximation
+
+            # Style de ligne
+            if hasattr(line, 'dash_style') and line.dash_style is not None:
+                properties["style"] = str(line.dash_style)
+
+        except Exception as e:
+            print(f"[DEBUG] Erreur extraction line: {e}")
+
+        return properties
     
     def extract_shape_properties(self, shape: BaseShape) -> Dict[str, Any]:
         """
         Extrait les propriétés additionnelles d'une forme.
-        
+
         Args:
             shape: Forme PowerPoint
-            
+
         Returns:
             Dict avec propriétés additionnelles
         """
         properties = {}
-        
+
         try:
+            # Propriétés de base
             properties.update({
                 "name": shape.name if hasattr(shape, 'name') else None,
-                "auto_shape_type": str(shape.auto_shape_type) if hasattr(shape, 'auto_shape_type') else None,
+                "shape_id": shape.shape_id if hasattr(shape, 'shape_id') else None,
                 "is_placeholder": hasattr(shape, 'placeholder_format') and shape.placeholder_format is not None,
+                "has_text_frame": hasattr(shape, 'text_frame') and shape.text_frame is not None,
                 "visible": True  # PowerPoint n'expose pas directement la visibilité
             })
-            
+
+            # Type d'autoshape si applicable
+            if hasattr(shape, 'auto_shape_type'):
+                try:
+                    properties["auto_shape_type"] = str(shape.auto_shape_type)
+                    # Pour les cercles/rectangles utilisés comme numéros dans la TOC
+                    if shape.auto_shape_type in [1, 5]:  # 1=Rectangle, 5=Oval
+                        properties["possible_use"] = "number_container"
+                except:
+                    pass
+
             # Propriétés spécifiques selon le type
             if hasattr(shape, 'placeholder_format') and shape.placeholder_format:
                 try:
                     properties["placeholder_type"] = str(shape.placeholder_format.type)
+                    properties["placeholder_idx"] = shape.placeholder_format.idx
                 except Exception:
                     properties["placeholder_type"] = "unknown_placeholder"
-            
+
+            # Essayer d'extraire plus d'infos si c'est un autoshape avec du texte
+            if properties.get("has_text_frame") and hasattr(shape, 'text_frame'):
+                try:
+                    tf = shape.text_frame
+                    if hasattr(tf, 'vertical_anchor'):
+                        properties["text_vertical_anchor"] = str(tf.vertical_anchor)
+                    if hasattr(tf, 'word_wrap'):
+                        properties["text_word_wrap"] = tf.word_wrap
+                    if hasattr(tf, 'auto_size'):
+                        properties["text_auto_size"] = str(tf.auto_size)
+                except:
+                    pass
+
         except Exception as e:
             properties["error"] = str(e)
-        
+
         return properties
     
     def extract_background_info(self, slide) -> Dict[str, Any]:

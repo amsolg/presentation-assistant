@@ -1,0 +1,11 @@
+{
+  "content": "La deuxième phase consiste en le développement d'une architecture moderne pour la capture, le stockage et la lecture d'une grande quantité d'information avec des relations complexes.",
+  "title": "Phase 2 : Base de Connaissance Moderne",
+  "additional_content": [
+    "Architecture scalable pour volumes de données massifs",
+    "Technologies avancées de graphes de connaissances",
+    "Indexation sémantique et recherche intelligente",
+    "Intégration native avec l'écosystème existant"
+  ],
+  "explanation_style": "four_points"
+}

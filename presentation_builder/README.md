@@ -8,7 +8,7 @@ Ce dossier contient les scripts spécialisés pour créer automatiquement des sl
 
 | Script | Besoin | Slides | Usage Rapide |
 |--------|--------|--------|--------------|
-| **`01_slide_title_creator.py`** | Couverture/Intro | 11 | `python 01_slide_title_creator.py "Mon Titre"` |
+| **`presentation_builder.py`** | Couverture/Intro (intégrée) | 11 | Via architecture JSON uniquement |
 | **`02_navigation_builder.py`** | Navigation | 13 | `python 02_navigation_builder.py --sections "Intro" "Développement" "Conclusion"` |
 | **`03_section_header_builder.py`** | Nouvelle section | 14-16 | `python 03_section_header_builder.py "Ma Section" --style major` |
 | **`04_simple_message_builder.py`** | Message simple | 17-22 | `python 04_simple_message_builder.py "Mon message impactant"` |
@@ -19,11 +19,11 @@ Ce dossier contient les scripts spécialisés pour créer automatiquement des sl
 | **`09_comparison_builder.py`** | Comparaison A vs B | 36-44 | `python 09_comparison_builder.py "Solution A" "Solution B" --title "Comparaison"` |
 | **`10_charts_builder.py`** | Graphiques/Visualisations | 46-51 | `python 10_charts_builder.py "Titre Graphique" --insert-into ma_presentation.pptx --style bar_chart` |
 
-## ⚠️ **ARCHITECTURE IMPORTANTE : Seul le Script 01 Crée une Présentation**
+## ⚠️ **ARCHITECTURE IMPORTANTE : Architecture JSON Moderne**
 
 **Règle Fondamentale :**
-- **Script 01** (`01_slide_title_creator.py`) : **SEUL script autorisé à créer une nouvelle présentation**
-- **Scripts 02-10** : **Ne peuvent QUE s'insérer dans une présentation existante** via `--insert-into`
+- **`presentation_builder.py`** : **Script principal basé sur architecture JSON pour créer des présentations complètes**
+- **Scripts 02-10** : **Modules spécialisés intégrés via l'architecture JSON ou utilisables individuellement**
 
 ## 🚀 Démarrage Rapide
 
@@ -38,8 +38,8 @@ pip install python-pptx
 
 ### 2. Premier Usage (Workflow Obligatoire)
 ```bash
-# ÉTAPE 1 : Créer une présentation (SEUL SCRIPT AUTORISÉ)
-python 01_slide_title_creator.py "Ma Première Présentation"
+# ÉTAPE 1 : Créer une présentation via architecture JSON
+python presentation_builder.py config.json
 
 # ÉTAPE 2 : Ajouter les slides dans la présentation créée (via --insert-into)
 
@@ -83,7 +83,7 @@ Tous les scripts supportent :
 ### 4. Workflow Complet
 ```bash
 # 1. Créer la structure de base
-python 01_slide_title_creator.py "Transformation Numérique 2024"
+python presentation_builder.py transformation_numerique_config.json
 python 02_navigation_builder.py --sections "Contexte" "Analyse" "Solutions" "ROI" "Plan d'action"
 
 # 2. Insérer dans une présentation
@@ -181,7 +181,7 @@ Pour des instructions complètes, consultez :
 ## 📈 Scripts Développés vs Planifiés
 
 ### ✅ Scripts Terminés (10/10+)
-- ✅ `01_slide_title_creator.py` - Couverture/Intro
+- ✅ `presentation_builder.py` - Architecture JSON avec création titre intégrée
 - ✅ `02_navigation_builder.py` - Navigation
 - ✅ `03_section_header_builder.py` - Nouvelle section
 - ✅ `04_simple_message_builder.py` - Message simple

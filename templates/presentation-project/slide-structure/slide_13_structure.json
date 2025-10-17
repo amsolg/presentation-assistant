@@ -1,0 +1,364 @@
+{
+  "slide_number": 13,
+  "slide_title": "Table des matières",
+  "layout_name": "Table des matières",
+  "slide_dimensions": {
+    "width": 1280.0,
+    "height": 720.0
+  },
+  "usage_guidelines": {
+    "purpose": "Navigation principale de la présentation avec sections numérotées",
+    "max_sections": 5,
+    "recommended_title_length": "30-40 caractères par section",
+    "visual_hierarchy": {
+      "numbers": "Cercles bleus avec chiffres blancs alignés verticalement",
+      "titles": "Texte noir aligné horizontalement avec les numéros",
+      "page_title": "Grand titre gris à gauche en vertical"
+    }
+  },
+  "shapes": [
+    {
+      "shape_id": 2,
+      "element_id": "shape_1",
+      "type": "text_box",
+      "name": "Section Number 1",
+      "position": {
+        "left": 471.54,
+        "top": 208.68
+      },
+      "dimensions": {
+        "width": 71.81,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "1",
+      "font_size": 24,
+      "font_name": "Calibri",
+      "font_color": "#FFFFFF",
+      "background_color": "#0066CC",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Numéro de la première section - Cercle bleu avec chiffre blanc centré",
+      "constraints": {
+        "max_characters": 2,
+        "content_type": "numeric",
+        "editable": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "shape_id": 3,
+      "element_id": "shape_2",
+      "type": "text_box",
+      "name": "Section Number 2",
+      "position": {
+        "left": 471.54,
+        "top": 262.82
+      },
+      "dimensions": {
+        "width": 71.81,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "2",
+      "font_size": 24,
+      "font_name": "Calibri",
+      "font_color": "#FFFFFF",
+      "background_color": "#0066CC",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Numéro de la deuxième section - Cercle bleu avec chiffre blanc centré",
+      "constraints": {
+        "max_characters": 2,
+        "content_type": "numeric",
+        "editable": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "shape_id": 4,
+      "element_id": "shape_3",
+      "type": "text_box",
+      "name": "Section Number 3",
+      "position": {
+        "left": 471.54,
+        "top": 316.96
+      },
+      "dimensions": {
+        "width": 71.81,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "3",
+      "font_size": 24,
+      "font_name": "Calibri",
+      "font_color": "#FFFFFF",
+      "background_color": "#0066CC",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Numéro de la troisième section - Cercle bleu avec chiffre blanc centré",
+      "constraints": {
+        "max_characters": 2,
+        "content_type": "numeric",
+        "editable": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "shape_id": 5,
+      "element_id": "shape_4",
+      "type": "text_box",
+      "name": "Section Number 4",
+      "position": {
+        "left": 471.54,
+        "top": 371.09
+      },
+      "dimensions": {
+        "width": 71.81,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "4",
+      "font_size": 24,
+      "font_name": "Calibri",
+      "font_color": "#FFFFFF",
+      "background_color": "#0066CC",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Numéro de la quatrième section - Cercle bleu avec chiffre blanc centré",
+      "constraints": {
+        "max_characters": 2,
+        "content_type": "numeric",
+        "editable": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "shape_id": 6,
+      "element_id": "shape_5",
+      "type": "text_box",
+      "name": "Section Number 5",
+      "position": {
+        "left": 471.54,
+        "top": 425.23
+      },
+      "dimensions": {
+        "width": 71.81,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "5",
+      "font_size": 24,
+      "font_name": "Calibri",
+      "font_color": "#FFFFFF",
+      "background_color": "#0066CC",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Numéro de la cinquième section - Cercle bleu avec chiffre blanc centré",
+      "constraints": {
+        "max_characters": 2,
+        "content_type": "numeric",
+        "editable": true,
+        "alignment": "center"
+      }
+    },
+    {
+      "shape_id": 7,
+      "element_id": "shape_6",
+      "type": "text_box",
+      "name": "Section Title 1",
+      "position": {
+        "left": 543.35,
+        "top": 208.68
+      },
+      "dimensions": {
+        "width": 613.89,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "Lorem ipsum dolor sit amet",
+      "font_size": 18,
+      "font_name": "Calibri Light",
+      "font_color": "#333333",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Titre de la première section - Texte aligné avec le numéro",
+      "constraints": {
+        "max_characters": 50,
+        "content_type": "text",
+        "recommended_length": "30-40 caractères",
+        "alignment": "left"
+      }
+    },
+    {
+      "shape_id": 8,
+      "element_id": "shape_7",
+      "type": "text_box",
+      "name": "Section Title 2",
+      "position": {
+        "left": 543.35,
+        "top": 262.82
+      },
+      "dimensions": {
+        "width": 613.89,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "Consectetur adipiscing elit",
+      "font_size": 18,
+      "font_name": "Calibri Light",
+      "font_color": "#333333",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Titre de la deuxième section - Texte aligné avec le numéro",
+      "constraints": {
+        "max_characters": 50,
+        "content_type": "text",
+        "recommended_length": "30-40 caractères",
+        "alignment": "left"
+      }
+    },
+    {
+      "shape_id": 9,
+      "element_id": "shape_8",
+      "type": "text_box",
+      "name": "Section Title 3",
+      "position": {
+        "left": 543.35,
+        "top": 316.96
+      },
+      "dimensions": {
+        "width": 613.89,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "Phasellus eu suscipit elit",
+      "font_size": 18,
+      "font_name": "Calibri Light",
+      "font_color": "#333333",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Titre de la troisième section - Texte aligné avec le numéro",
+      "constraints": {
+        "max_characters": 50,
+        "content_type": "text",
+        "recommended_length": "30-40 caractères",
+        "alignment": "left"
+      }
+    },
+    {
+      "shape_id": 10,
+      "element_id": "shape_9",
+      "type": "text_box",
+      "name": "Section Title 4",
+      "position": {
+        "left": 543.35,
+        "top": 371.09
+      },
+      "dimensions": {
+        "width": 613.89,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "Nullam malesuada ac diam a viverra",
+      "font_size": 18,
+      "font_name": "Calibri Light",
+      "font_color": "#333333",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Titre de la quatrième section - Texte aligné avec le numéro",
+      "constraints": {
+        "max_characters": 50,
+        "content_type": "text",
+        "recommended_length": "30-40 caractères",
+        "alignment": "left"
+      }
+    },
+    {
+      "shape_id": 11,
+      "element_id": "shape_10",
+      "type": "text_box",
+      "name": "Section Title 5",
+      "position": {
+        "left": 543.35,
+        "top": 425.23
+      },
+      "dimensions": {
+        "width": 613.89,
+        "height": 48.47
+      },
+      "rotation": 0.0,
+      "text_content": "Curabitur a velit vel",
+      "font_size": 18,
+      "font_name": "Calibri Light",
+      "font_color": "#333333",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Titre de la cinquième section - Texte aligné avec le numéro",
+      "constraints": {
+        "max_characters": 50,
+        "content_type": "text",
+        "recommended_length": "30-40 caractères",
+        "alignment": "left"
+      }
+    },
+    {
+      "shape_id": 12,
+      "element_id": "shape_11",
+      "type": "text_box",
+      "name": "Page Title",
+      "position": {
+        "left": 126.15,
+        "top": 273.54
+      },
+      "dimensions": {
+        "width": 260.79,
+        "height": 126.02
+      },
+      "rotation": 0.0,
+      "text_content": "Table des matières",
+      "font_size": 36,
+      "font_name": "Calibri Light",
+      "font_color": "#666666",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Titre de la page - Grand titre gris à gauche, orientation verticale",
+      "constraints": {
+        "max_characters": 20,
+        "content_type": "text",
+        "editable": false,
+        "fixed_content": "Table des matières",
+        "orientation": "vertical"
+      }
+    },
+    {
+      "shape_id": 13,
+      "element_id": "shape_12",
+      "type": "text_box",
+      "name": "Page Number",
+      "position": {
+        "left": 1234.92,
+        "top": 687.72
+      },
+      "dimensions": {
+        "width": 24.92,
+        "height": 18.94
+      },
+      "rotation": 0.0,
+      "text_content": "13",
+      "font_size": 10,
+      "font_name": "Calibri",
+      "font_color": "#999999",
+      "has_text_frame": true,
+      "paragraphs_count": 1,
+      "description": "Numéro de page - Petite taille en bas à droite",
+      "constraints": {
+        "max_characters": 3,
+        "content_type": "numeric",
+        "editable": false,
+        "auto_generated": true
+      }
+    }
+  ],
+  "total_shapes": 12
+}

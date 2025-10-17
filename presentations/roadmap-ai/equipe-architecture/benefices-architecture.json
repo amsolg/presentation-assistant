@@ -1,0 +1,20 @@
+{
+  "title": "Bénéfices pour l'Architecture d'Entreprise",
+  "content_style": "blue_4_detailed",
+  "concepts": [
+    "Uniformisation des processus de communication et des formats de présentation selon les standards Premier Tech",
+    "Architecture modulaire permettant l'extension et l'adaptation aux futurs besoins organisationnels",
+    "Contrôle centralisé de la qualité, de la cohérence et de la conformité des communications",
+    "Positionnement avant-gardiste en intelligence artificielle et automatisation des processus métier"
+  ],
+  "subtitles": [
+    "Standardisation",
+    "Scalabilité", 
+    "Gouvernance",
+    "Innovation"
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}

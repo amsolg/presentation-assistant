@@ -350,6 +350,7 @@ python presentation_builder/presentation_builder.py ma_config.json
 - **[docs/QUICK_START.md](docs/QUICK_START.md)** : Démarrage rapide avec l'architecture JSON
 - **[docs/JSON_ARCHITECTURE_GUIDE.md](docs/JSON_ARCHITECTURE_GUIDE.md)** : Guide complet architecture JSON
 - **[docs/CHARTS_ENHANCED_GUIDE.md](docs/CHARTS_ENHANCED_GUIDE.md)** : Guide complet pour les graphiques
+- **[docs/SCRIPTS_SLIDES_MAPPING.md](docs/SCRIPTS_SLIDES_MAPPING.md)** : Mapping complet scripts → slides → templates
 
 ### Projets d'Exemple
 - **[presentations/](presentations/)** : Exemples par sujet et audience
@@ -464,3 +465,37 @@ python test_presentation_builder.py
 - **Templates JSON** : 8 templates payload dans templates/presentation-project/
 
 **L'architecture JSON est opérationnelle et prête pour la production !** 🎯
+
+---
+
+## 🔧 **Gestion des Tâches avec Cycle de Vie Complet**
+
+### Structure Organisationnelle
+```
+tasks/
+├── open/           # Tâches en cours ou à traiter
+│   ├── README.md   # Guide d'utilisation
+│   └── *.md        # Fichiers de tâches actives
+└── closed/         # Tâches terminées
+    ├── README.md   # Archive et référence
+    └── *.md        # Historique des tâches complétées
+```
+
+### Workflow Automatisé (Consolidé)
+1. **Création** : `/create-task [description]` → Nouvelle tâche dans `tasks/open/`
+2. **Exécution + Completion** : `/execute-task [nom-fichier]` → Analyse, implémentation ET archivage automatique vers `tasks/closed/` après validation
+3. **Completion manuelle (optionnel)** : `/complete-task [nom-fichier]` → Pour fermer une tâche sans l'exécuter
+
+### Commandes Disponibles
+- **`/create-task`** : Crée une nouvelle tâche dans `tasks/open/`
+- **`/execute-task`** : Exécute une tâche ET la marque automatiquement comme terminée après validation (consolidation exécution + completion)
+- **`/complete-task`** : Fermeture manuelle d'une tâche sans exécution (usage optionnel)
+- **Autres commandes** : Voir `.claude/commands/` pour la liste complète
+
+### Avantages du Système
+- **Visibilité claire** : Distinction immédiate entre tâches actives et terminées
+- **Traçabilité complète** : Historique préservé dans `tasks/closed/`
+- **Workflow simplifié** : Commandes automatisées pour tout le cycle de vie
+- **Organisation optimale** : Focus sur les tâches actives, archive accessible
+
+Cette approche garantit une gestion cohérente et automatisée des tâches avec cycle de vie complet dans le workflow du projet.

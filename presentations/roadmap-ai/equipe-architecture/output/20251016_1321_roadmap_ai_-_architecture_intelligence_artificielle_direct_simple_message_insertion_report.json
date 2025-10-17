@@ -1,0 +1,37 @@
+{
+  "insertion_timestamp": "2025-10-16T13:21:40.546107",
+  "method": "JSON Simple Message Builder 2025 - Direct Insertion",
+  "template_used": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\presentations\\roadmap-ai\\equipe-architecture\\output\\20251016_1321_roadmap_ai_-_architecture_intelligence_artificielle.pptx",
+  "message_details": {
+    "text": "Le roadmap détaillé de la Phase 1 sera partagé prochainement avec l'équipe architecture. Nous sollicitons votre support pour l'alignement avec l'architecture d'entreprise existante et l'intégration dans la stratégie IT globale. Votre expertise sera précieuse pour optimiser l'impact organisationnel de ce projet d'innovation AI.",
+    "keywords": null,
+    "image_description": null,
+    "style": "centered",
+    "intended_position": 12,
+    "auto_widen_enabled": true
+  },
+  "source_slide": {
+    "index": 16,
+    "number": 17,
+    "layout": "Court énoncé",
+    "style_description": "Message unique sans titre, focus maximal"
+  },
+  "quality_assurance": {
+    "method": "JSON-Native Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "json_configuration": true,
+    "architecture_2025": true
+  },
+  "advantages": [
+    "Architecture JSON 2025 native",
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Configuration JSON validée",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'centered' adapté à l'usage"
+  ]
+}

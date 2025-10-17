@@ -1,18 +1,18 @@
 {
-  "test_timestamp": "2025-10-15T10:09:39.818745",
+  "test_timestamp": "2025-10-16T12:53:00.534592",
   "test_name": "Test Unitaire - Presentation Builder - Architecture JSON",
   "test_configuration": {
-    "script_tested": "C:\\repos\\presentation-assistant\\presentation_builder\\presentation_builder.py",
-    "json_config": "C:\\repos\\presentation-assistant\\test\\unit_tests\\presentation_builder\\test_empty_slides_array.json",
+    "script_tested": "c:\\repos\\presentation-assistant\\presentation_builder\\presentation_builder.py",
+    "json_config": "c:\\repos\\presentation-assistant\\test\\unit_tests\\presentation_builder\\test_empty_slides_array.json",
     "test_scenario": "Array slides vide (titre + fermeture uniquement)"
   },
   "test_results": {
     "json_validation": true,
-    "presentation_build": false,
+    "presentation_build": true,
     "content_validation": true,
-    "overall_success": false
+    "overall_success": true
   },
-  "output_file": null,
+  "output_file": "c:\\repos\\presentation-assistant\\presentations\\unit-tests\\presentation_builder_tester\\output\\20251016_1252_test_présentation_vide.pptx",
   "architecture_validation": {
     "json_based_config": true,
     "automatic_title_creation": true,

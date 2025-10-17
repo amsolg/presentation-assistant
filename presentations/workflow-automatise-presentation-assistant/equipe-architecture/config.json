@@ -1,0 +1,88 @@
+{
+  "presentation_name": "Workflow Automatisé Presentation Assistant",
+  "subject": "workflow-automatise-presentation-assistant",
+  "audience": "equipe-architecture",
+  "title_slide": {
+    "title": "Workflow Automatisé",
+    "subtitle": "Presentation Assistant avec Architecture JSON",
+    "metadata": "2025-01-16 – Équipe Architecture d'Entreprise"
+  },
+  "slides": [
+    {
+      "position": 2,
+      "script_name": "navigation_builder",
+      "payload_path": "navigation.json",
+      "description": "Plan de présentation"
+    },
+    {
+      "position": 3,
+      "script_name": "section_header_builder",
+      "payload_path": "section-architecture.json",
+      "description": "Section Architecture Moderne"
+    },
+    {
+      "position": 4,
+      "script_name": "content_boxes_builder",
+      "payload_path": "avantages-json.json",
+      "description": "Avantages Architecture JSON"
+    },
+    {
+      "position": 5,
+      "script_name": "section_header_builder",
+      "payload_path": "section-workflow.json",
+      "description": "Section Workflow Automatisé"
+    },
+    {
+      "position": 6,
+      "script_name": "detailed_explanation_builder",
+      "payload_path": "etapes-workflow.json",
+      "description": "Étapes du workflow automatisé"
+    },
+    {
+      "position": 7,
+      "script_name": "section_header_builder",
+      "payload_path": "section-technique.json",
+      "description": "Section Détails Techniques"
+    },
+    {
+      "position": 8,
+      "script_name": "content_boxes_builder",
+      "payload_path": "modules-json.json",
+      "description": "Modules JSON disponibles"
+    },
+    {
+      "position": 9,
+      "script_name": "statistics_builder",
+      "payload_path": "metriques-performance.json",
+      "description": "Métriques et performance"
+    },
+    {
+      "position": 10,
+      "script_name": "section_header_builder",
+      "payload_path": "section-sam-ai.json",
+      "description": "Section Sam AI"
+    },
+    {
+      "position": 11,
+      "script_name": "detailed_explanation_builder",
+      "payload_path": "sam-adaptatif.json",
+      "description": "Sam AI adaptatif selon audience"
+    },
+    {
+      "position": 12,
+      "script_name": "section_header_builder",
+      "payload_path": "section-impact.json",
+      "description": "Section Impact et Adoption"
+    },
+    {
+      "position": 13,
+      "script_name": "content_boxes_builder",
+      "payload_path": "benefices-organisation.json",
+      "description": "Bénéfices pour l'organisation"
+    }
+  ],
+  "build_options": {
+    "auto_widen_text": true,
+    "generate_reports": true
+  }
+}

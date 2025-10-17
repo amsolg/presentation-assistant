@@ -1,0 +1,46 @@
+{
+  "insertion_timestamp": "2025-10-16T13:21:40.066081",
+  "method": "Direct Layout-Based Content Boxes Insertion (Premier Tech Standards)",
+  "template_used": "C:\\repos\\presentation-assistant\\templates\\Template_PT.pptx",
+  "target_presentation": "C:\\repos\\presentation-assistant\\presentations\\roadmap-ai\\equipe-architecture\\output\\20251016_1321_roadmap_ai_-_architecture_intelligence_artificielle.pptx",
+  "content_details": {
+    "title": "Bénéfices pour l'Architecture d'Entreprise",
+    "concepts": [
+      "Uniformisation des processus de communication et des formats de présentation selon les standards Premier Tech",
+      "Architecture modulaire permettant l'extension et l'adaptation aux futurs besoins organisationnels",
+      "Contrôle centralisé de la qualité, de la cohérence et de la conformité des communications",
+      "Positionnement avant-gardiste en intelligence artificielle et automatisation des processus métier"
+    ],
+    "subtitles": [
+      "Standardisation",
+      "Scalabilité",
+      "Gouvernance",
+      "Innovation"
+    ],
+    "style": "blue_4_detailed",
+    "intended_position": 10,
+    "actual_position": "End of presentation"
+  },
+  "source_slide": {
+    "index": 32,
+    "number": 33,
+    "layout": "4 boîtes bleues pour courts énoncés avec sous-titres",
+    "style_description": "Processus business catégorisés"
+  },
+  "quality_assurance": {
+    "method": "Direct Layout-Based Addition",
+    "styles_preserved": true,
+    "premier_tech_standards": true,
+    "direct_integration": true,
+    "no_manual_steps": true
+  },
+  "advantages": [
+    "Insertion directe dans la présentation",
+    "Styles Premier Tech 100% préservés",
+    "Aucun fichier temporaire",
+    "Intégration transparente",
+    "Sauvegarde automatique créée",
+    "Style 'blue_4_detailed' adapté à l'usage",
+    "4 concepts équilibrés"
+  ]
+}

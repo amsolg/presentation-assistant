@@ -1,0 +1,30 @@
+{
+  "title": "Impact Mesurable du Roadmap AI",
+  "style": "four_stats",
+  "statistics": [
+    {
+      "value": "75%",
+      "label": "Réduction Temps",
+      "description": "Création présentations"
+    },
+    {
+      "value": "3x",
+      "label": "Capacité Diffusion",
+      "description": "Information organisationnelle"
+    },
+    {
+      "value": "100%",
+      "label": "Standardisation",
+      "description": "Formats Premier Tech"
+    },
+    {
+      "value": "24/7",
+      "label": "Disponibilité",
+      "description": "Assistant AI Sam"
+    }
+  ],
+  "options": {
+    "auto_widen": true,
+    "insert_position": null
+  }
+}
