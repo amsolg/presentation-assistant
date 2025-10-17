@@ -436,7 +436,19 @@ class Theme:
         Returns:
             Valeur hexadécimale ou None
         """
-        return self.colors.get(scheme_color_name)
+        color = self.colors.get(scheme_color_name)
+
+        # Couleurs par défaut communes si non trouvées dans le thème
+        if color is None:
+            default_colors = {
+                'tx1': '#FFFFFF',  # Texte principal (blanc)
+                'tx2': '#000000',  # Texte secondaire (noir)
+                'bg1': '#000000',  # Arrière-plan principal
+                'bg2': '#FFFFFF',  # Arrière-plan secondaire
+            }
+            color = default_colors.get(scheme_color_name)
+
+        return color
 
     def get_font(self, font_scheme_name: str) -> Optional[str]:
         """
@@ -713,11 +725,17 @@ class StyleResolver:
     def _resolve_color(self, run_element, paragraph_element, placeholder_idx: Optional[int], placeholder_type: Optional[str] = None) -> Optional[str]:
         """Résout la couleur du texte."""
 
-        # 1. Formatage direct
+        # 1. Formatage direct dans les propriétés du run (a:rPr)
         if run_element is not None:
-            color = self._extract_color_from_element(run_element)
-            if color:
-                return color
+            if LXML_AVAILABLE:
+                rpr = run_element.xpath('.//a:rPr', namespaces=self.nsmap)
+            else:
+                rpr = run_element.findall(f'.//{{{self.nsmap["a"]}}}rPr')
+
+            if rpr:
+                color = self._extract_color_from_element(rpr[0])
+                if color:
+                    return color
 
         # 2. Propriétés par défaut du paragraphe
         if paragraph_element is not None:
@@ -731,13 +749,19 @@ class StyleResolver:
                 if color:
                     return color
 
-        # 3. Styles du master
+        # 3. Styles du layout (priorité sur master pour les couleurs spécifiques)
+        if placeholder_idx is not None and self.layout_tree is not None:
+            layout_color = self._get_layout_text_style_property(placeholder_idx, placeholder_type, 'color')
+            if layout_color:
+                return layout_color
+
+        # 4. Styles du master (fallback pour couleurs génériques)
         if placeholder_idx is not None and self.master_tree is not None:
             master_color = self._get_master_text_style_property(placeholder_idx, placeholder_type, 'color')
             if master_color:
                 return master_color
 
-        return '#000000'  # Noir par défaut
+        return None
 
     def _resolve_alignment(self, paragraph_element, placeholder_idx: Optional[int], placeholder_type: Optional[str] = None) -> Optional[str]:
         """Résout l'alignement du paragraphe."""
@@ -822,6 +846,8 @@ class StyleResolver:
         """Extrait la couleur d'un élément XML."""
 
         try:
+            # Recherche couleur dans l'élément
+
             # sRGB Color
             if LXML_AVAILABLE:
                 srgb = element.xpath('.//a:srgbClr', namespaces=self.nsmap)
@@ -839,9 +865,9 @@ class StyleResolver:
             else:
                 scheme = element.findall(f'.//{{{self.nsmap["a"]}}}schemeClr')
 
-            if scheme and self.theme:
+            if scheme:
                 val = scheme[0].get('val')
-                if val:
+                if val and self.theme:
                     theme_color = self.theme.get_color(val)
                     if theme_color:
                         return theme_color
@@ -1067,6 +1093,27 @@ class StyleResolver:
                                 typeface = latin_elements[0].get('typeface')
                                 if typeface:
                                     return self._resolve_font_reference(typeface)
+
+                        elif property_name == 'bold':
+                            bold_val = def_rpr.get('b')
+                            return bold_val == '1'
+
+                        elif property_name == 'italic':
+                            return def_rpr.get('i') == '1'
+
+                        elif property_name == 'color':
+                            # Analyser solidFill/schemeClr pour la couleur
+                            if LXML_AVAILABLE:
+                                scheme_clr = def_rpr.xpath('.//a:solidFill/a:schemeClr', namespaces=self.nsmap)
+                            else:
+                                scheme_clr = def_rpr.findall(f'.//{{{self.nsmap["a"]}}}solidFill/{{{self.nsmap["a"]}}}schemeClr')
+
+                            if scheme_clr:
+                                scheme_val = scheme_clr[0].get('val')
+                                if scheme_val and self.theme:
+                                    layout_color = self.theme.get_color(scheme_val)
+                                    if layout_color:
+                                        return layout_color
 
         except Exception as e:
             # print(f"[DEBUG] Erreur dans _get_layout_text_style_property: {e}")
@@ -1389,6 +1436,18 @@ class SlideExtractor:
                 # Formatage mixte (certains True, certains False)
                 comprehensive_format['underline'] = None
         # Si aucune valeur underline explicite dans les runs, garder la valeur par défaut résolue
+
+        # Analyser color - respect de la valeur résolue par défaut si pas de couleur explicite
+        color_values = [rf.get('color') for rf in run_formats if 'color' in rf and rf.get('color') is not None]
+        if color_values:
+            unique_color_values = set(color_values)
+            if len(unique_color_values) == 1:
+                # Tous les runs ont la même couleur
+                comprehensive_format['color'] = color_values[0]
+            else:
+                # Formatage mixte (couleurs différentes dans les runs)
+                comprehensive_format['color'] = None
+        # Si aucune valeur color explicite dans les runs, garder la valeur par défaut résolue
 
         return comprehensive_format
 
