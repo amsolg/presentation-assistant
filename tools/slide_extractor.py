@@ -778,7 +778,13 @@ class StyleResolver:
                 if algn:
                     return self._map_alignment(algn)
 
-        # 2. Styles du master
+        # 2. Styles du layout (priorité sur master)
+        if placeholder_idx is not None and self.layout_tree is not None:
+            layout_align = self._get_layout_text_style_property(placeholder_idx, placeholder_type, 'alignment')
+            if layout_align:
+                return layout_align
+
+        # 3. Styles du master (fallback)
         if placeholder_idx is not None and self.master_tree is not None:
             master_align = self._get_master_text_style_property(placeholder_idx, placeholder_type, 'alignment')
             if master_align:
@@ -1012,6 +1018,39 @@ class StyleResolver:
             # print(f"[DEBUG] Erreur dans _get_master_text_style_property: {e}")
             pass
 
+        # Gestion spéciale pour l'alignement (propriété de paragraphe, pas de run)
+        if property_name == 'alignment':
+            try:
+                # Chercher dans les propriétés de paragraphe du niveau approprié
+                if LXML_AVAILABLE:
+                    if level == 1:
+                        xpath = f'.//p:txStyles/p:{style_section}/a:lvl1pPr'
+                    elif level == 2:
+                        xpath = f'.//p:txStyles/p:{style_section}/a:lvl2pPr'
+                    else:
+                        xpath = f'.//p:txStyles/p:{style_section}/a:lvl3pPr'
+
+                    ppr_elements = self.master_tree.xpath(xpath, namespaces=self.nsmap)
+                else:
+                    # ElementTree fallback
+                    if level == 1:
+                        path = f'.//{{{self.nsmap["p"]}}}txStyles/{{{self.nsmap["p"]}}}{style_section}/{{{self.nsmap["a"]}}}lvl1pPr'
+                    elif level == 2:
+                        path = f'.//{{{self.nsmap["p"]}}}txStyles/{{{self.nsmap["p"]}}}{style_section}/{{{self.nsmap["a"]}}}lvl2pPr'
+                    else:
+                        path = f'.//{{{self.nsmap["p"]}}}txStyles/{{{self.nsmap["p"]}}}{style_section}/{{{self.nsmap["a"]}}}lvl3pPr'
+
+                    ppr_elements = self.master_tree.findall(path)
+
+                if ppr_elements:
+                    algn = ppr_elements[0].get('algn')
+                    if algn:
+                        return self._map_alignment(algn)
+
+            except Exception as e:
+                # print(f"[DEBUG] Erreur alignment master: {e}")
+                pass
+
         return None
 
     def _get_layout_text_style_property(self, placeholder_idx: Optional[int], placeholder_type: Optional[str], property_name: str):
@@ -1118,6 +1157,65 @@ class StyleResolver:
         except Exception as e:
             # print(f"[DEBUG] Erreur dans _get_layout_text_style_property: {e}")
             pass
+
+        # Gestion spéciale pour l'alignement (propriété de paragraphe, pas de run)
+        if property_name == 'alignment':
+            try:
+                # Chercher le placeholder correspondant dans le layout
+                if LXML_AVAILABLE:
+                    ph_shapes = self.layout_tree.xpath('//p:sp[.//p:nvSpPr/p:nvPr/p:ph]', namespaces=self.nsmap)
+                else:
+                    root = self.layout_tree.getroot()
+                    ph_shapes = []
+                    for sp in root.findall(f'.//{{{self.nsmap["p"]}}}sp'):
+                        ph_check = sp.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')
+                        if ph_check:
+                            ph_shapes.append(sp)
+
+                for ph_shape in ph_shapes:
+                    if LXML_AVAILABLE:
+                        ph_elem = ph_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=self.nsmap)[0]
+                    else:
+                        ph_elem = ph_shape.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')[0]
+
+                    ph_type = ph_elem.get('type')
+                    ph_idx_str = ph_elem.get('idx')
+                    ph_idx = None
+                    if ph_idx_str and ph_idx_str != "None":
+                        try:
+                            ph_idx = int(ph_idx_str)
+                        except:
+                            pass
+
+                    # Si c'est notre placeholder cible
+                    if ((placeholder_type == ph_type) and (placeholder_idx == ph_idx)):
+                        # Chercher dans les propriétés de paragraphe - plusieurs niveaux possibles
+                        if LXML_AVAILABLE:
+                            # Chercher dans tous les niveaux de paragraphe possible
+                            ppr_paths = ['.//a:pPr', './/a:lvl1pPr', './/a:lvl2pPr', './/a:lvl3pPr']
+                            for ppr_path in ppr_paths:
+                                ppr_elements = ph_shape.xpath(ppr_path, namespaces=self.nsmap)
+                                if ppr_elements:
+                                    algn = ppr_elements[0].get('algn')
+                                    if algn:
+                                        return self._map_alignment(algn)
+                        else:
+                            # ElementTree fallback
+                            ppr_paths = [
+                                f'.//{{{self.nsmap["a"]}}}pPr',
+                                f'.//{{{self.nsmap["a"]}}}lvl1pPr',
+                                f'.//{{{self.nsmap["a"]}}}lvl2pPr',
+                                f'.//{{{self.nsmap["a"]}}}lvl3pPr'
+                            ]
+                            for ppr_path in ppr_paths:
+                                ppr_elements = ph_shape.findall(ppr_path)
+                                if ppr_elements:
+                                    algn = ppr_elements[0].get('algn')
+                                    if algn:
+                                        return self._map_alignment(algn)
+
+            except Exception as e:
+                pass
 
         return None
 
