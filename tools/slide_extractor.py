@@ -805,25 +805,74 @@ class StyleResolver:
             return margins
 
         try:
+            # Chercher d'abord directement dans la shape
             if LXML_AVAILABLE:
                 body_pr = shape_element.xpath('.//a:bodyPr', namespaces=self.nsmap)
             else:
                 body_pr = shape_element.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
 
+            # Fonction pour extraire et convertir les marges depuis un élément bodyPr
+            def extract_margins_from_bodypr(bp_elem):
+                extracted = {}
+                # Convertir EMUs en points avec valeurs par défaut OOXML si manquantes
+                # Extraire les marges avec gestion des valeurs None vs vraies valeurs
+                lins = bp_elem.get('lIns')
+                if lins is not None:
+                    try:
+                        extracted['margin_left'] = round(int(lins) / EMU_PER_POINT, 2)
+                    except (ValueError, TypeError):
+                        pass
+
+                rins = bp_elem.get('rIns')
+                if rins is not None:
+                    try:
+                        extracted['margin_right'] = round(int(rins) / EMU_PER_POINT, 2)
+                    except (ValueError, TypeError):
+                        pass
+
+                tins = bp_elem.get('tIns')
+                if tins is not None:
+                    try:
+                        extracted['margin_top'] = round(int(tins) / EMU_PER_POINT, 2)
+                    except (ValueError, TypeError):
+                        pass
+
+                bins = bp_elem.get('bIns')
+                if bins is not None:
+                    try:
+                        extracted['margin_bottom'] = round(int(bins) / EMU_PER_POINT, 2)
+                    except (ValueError, TypeError):
+                        pass
+
+                return extracted
+
             if body_pr:
                 bp = body_pr[0]
+                extracted_margins = extract_margins_from_bodypr(bp)
 
-                # Convertir EMUs en points
-                if bp.get('lIns'):
-                    margins['margin_left'] = int(bp.get('lIns')) / EMU_PER_POINT
-                if bp.get('rIns'):
-                    margins['margin_right'] = int(bp.get('rIns')) / EMU_PER_POINT
-                if bp.get('tIns'):
-                    margins['margin_top'] = int(bp.get('tIns')) / EMU_PER_POINT
-                if bp.get('bIns'):
-                    margins['margin_bottom'] = int(bp.get('bIns')) / EMU_PER_POINT
-        except:
-            pass
+                # Si des marges ont été extraites directement, les utiliser
+                if extracted_margins:
+                    margins.update(extracted_margins)
+
+                # Pour les marges non définies, utiliser la cascade d'héritage
+                placeholder_info = self._get_placeholder_info(shape_element)
+                placeholder_type = placeholder_info.get("placeholder_type")
+                placeholder_idx = placeholder_info.get("placeholder_idx")
+
+                # Combler les marges manquantes avec le layout/master/défaut
+                self._fill_missing_margins(margins, placeholder_idx, placeholder_type)
+
+            else:
+                # Si pas de bodyPr dans la shape, chercher dans le layout ou master
+                placeholder_info = self._get_placeholder_info(shape_element)
+                placeholder_type = placeholder_info.get("placeholder_type")
+                placeholder_idx = placeholder_info.get("placeholder_idx")
+
+                # Utiliser la cascade complète
+                self._fill_missing_margins(margins, placeholder_idx, placeholder_type)
+        except Exception as e:
+            # En cas d'erreur, utiliser la méthode de fallback
+            self._fill_missing_margins(margins, None, None)
 
         return margins
 
@@ -1237,6 +1286,253 @@ class StyleResolver:
             'b': 'BOTTOM'
         }
         return mapping.get(anchor, 'TOP')
+
+    def _get_layout_margins(self, placeholder_idx: Optional[int], placeholder_type: Optional[str]) -> Optional[Dict[str, float]]:
+        """
+        Récupère les marges depuis le layout pour un placeholder donné.
+
+        Args:
+            placeholder_idx: Index du placeholder
+            placeholder_type: Type du placeholder
+
+        Returns:
+            Dict avec les marges ou None si non trouvé
+        """
+        if self.layout_tree is None:
+            return None
+
+        try:
+            # Chercher le placeholder correspondant dans le layout
+            if LXML_AVAILABLE:
+                ph_shapes = self.layout_tree.xpath('//p:sp[.//p:nvSpPr/p:nvPr/p:ph]', namespaces=self.nsmap)
+            else:
+                root = self.layout_tree.getroot()
+                ph_shapes = []
+                for sp in root.findall(f'.//{{{self.nsmap["p"]}}}sp'):
+                    ph_check = sp.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')
+                    if ph_check:
+                        ph_shapes.append(sp)
+
+            for ph_shape in ph_shapes:
+                # Vérifier si c'est le bon placeholder
+                if LXML_AVAILABLE:
+                    ph_elem = ph_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=self.nsmap)[0]
+                else:
+                    ph_elem = ph_shape.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')[0]
+
+                ph_type = ph_elem.get('type')
+                ph_idx_str = ph_elem.get('idx')
+
+                # Convertir l'index
+                ph_idx = None
+                if ph_idx_str and ph_idx_str != "None":
+                    try:
+                        ph_idx = int(ph_idx_str)
+                    except:
+                        pass
+
+                # Vérifier si c'est le bon placeholder
+                if ((placeholder_type == ph_type) and (placeholder_idx == ph_idx)):
+                    # Chercher bodyPr dans ce placeholder du layout
+                    if LXML_AVAILABLE:
+                        body_pr = ph_shape.xpath('.//a:bodyPr', namespaces=self.nsmap)
+                    else:
+                        body_pr = ph_shape.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
+
+                    if body_pr:
+                        bp = body_pr[0]
+                        margins = {}
+
+                        # Extraire les marges avec valeurs par défaut
+                        lins = bp.get('lIns')
+                        if lins is not None:
+                            try:
+                                margins['margin_left'] = round(int(lins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                margins['margin_left'] = round(91440 / EMU_PER_POINT, 2)
+                        else:
+                            margins['margin_left'] = round(91440 / EMU_PER_POINT, 2)
+
+                        rins = bp.get('rIns')
+                        if rins is not None:
+                            try:
+                                margins['margin_right'] = round(int(rins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                margins['margin_right'] = round(91440 / EMU_PER_POINT, 2)
+                        else:
+                            margins['margin_right'] = round(91440 / EMU_PER_POINT, 2)
+
+                        tins = bp.get('tIns')
+                        if tins is not None:
+                            try:
+                                margins['margin_top'] = round(int(tins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                margins['margin_top'] = round(45720 / EMU_PER_POINT, 2)
+                        else:
+                            margins['margin_top'] = round(45720 / EMU_PER_POINT, 2)
+
+                        bins = bp.get('bIns')
+                        if bins is not None:
+                            try:
+                                margins['margin_bottom'] = round(int(bins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                margins['margin_bottom'] = round(45720 / EMU_PER_POINT, 2)
+                        else:
+                            margins['margin_bottom'] = round(45720 / EMU_PER_POINT, 2)
+
+                        return margins
+
+        except Exception as e:
+            pass
+
+        return None
+
+    def _fill_missing_margins(self, margins: Dict[str, Optional[float]], placeholder_idx: Optional[int], placeholder_type: Optional[str]):
+        """
+        Remplit les marges manquantes en utilisant la cascade d'héritage complète.
+
+        Args:
+            margins: Dict des marges (modifié en place)
+            placeholder_idx: Index du placeholder
+            placeholder_type: Type du placeholder
+        """
+        # 1. Essayer de récupérer depuis le layout
+        if self.layout_tree is not None:
+            layout_margins = self._get_layout_margins(placeholder_idx, placeholder_type)
+            if layout_margins:
+                for key, value in layout_margins.items():
+                    if margins.get(key) is None:
+                        margins[key] = value
+
+        # 2. Essayer de récupérer depuis le master
+        if self.master_tree is not None:
+            master_margins = self._get_master_margins(placeholder_idx, placeholder_type)
+            if master_margins:
+                for key, value in master_margins.items():
+                    if margins.get(key) is None:
+                        margins[key] = value
+
+        # 3. Utiliser des valeurs par défaut intelligentes basées sur le type de placeholder
+        default_margins = self._get_smart_default_margins(placeholder_type)
+        for key, value in default_margins.items():
+            if margins.get(key) is None:
+                margins[key] = value
+
+    def _get_master_margins(self, placeholder_idx: Optional[int], placeholder_type: Optional[str]) -> Optional[Dict[str, float]]:
+        """
+        Récupère les marges depuis le master pour un placeholder donné.
+
+        Args:
+            placeholder_idx: Index du placeholder
+            placeholder_type: Type du placeholder
+
+        Returns:
+            Dict avec les marges ou None si non trouvé
+        """
+        if self.master_tree is None:
+            return None
+
+        try:
+            # Chercher le placeholder correspondant dans le master
+            if LXML_AVAILABLE:
+                ph_shapes = self.master_tree.xpath('//p:sp[.//p:nvSpPr/p:nvPr/p:ph]', namespaces=self.nsmap)
+            else:
+                root = self.master_tree.getroot()
+                ph_shapes = []
+                for sp in root.findall(f'.//{{{self.nsmap["p"]}}}sp'):
+                    ph_check = sp.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')
+                    if ph_check:
+                        ph_shapes.append(sp)
+
+            for ph_shape in ph_shapes:
+                # Vérifier si c'est le bon placeholder
+                if LXML_AVAILABLE:
+                    ph_elem = ph_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=self.nsmap)[0]
+                else:
+                    ph_elem = ph_shape.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')[0]
+
+                ph_type = ph_elem.get('type')
+                ph_idx_str = ph_elem.get('idx')
+
+                # Convertir l'index
+                ph_idx = None
+                if ph_idx_str and ph_idx_str != "None":
+                    try:
+                        ph_idx = int(ph_idx_str)
+                    except:
+                        pass
+
+                # Vérifier si c'est le bon placeholder
+                if ((placeholder_type == ph_type) and (placeholder_idx == ph_idx)):
+                    # Chercher bodyPr dans ce placeholder du master
+                    if LXML_AVAILABLE:
+                        body_pr = ph_shape.xpath('.//a:bodyPr', namespaces=self.nsmap)
+                    else:
+                        body_pr = ph_shape.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
+
+                    if body_pr:
+                        bp = body_pr[0]
+                        margins = {}
+
+                        # Extraire les marges du master
+                        lins = bp.get('lIns')
+                        if lins is not None:
+                            try:
+                                margins['margin_left'] = round(int(lins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                pass
+
+                        rins = bp.get('rIns')
+                        if rins is not None:
+                            try:
+                                margins['margin_right'] = round(int(rins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                pass
+
+                        tins = bp.get('tIns')
+                        if tins is not None:
+                            try:
+                                margins['margin_top'] = round(int(tins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                pass
+
+                        bins = bp.get('bIns')
+                        if bins is not None:
+                            try:
+                                margins['margin_bottom'] = round(int(bins) / EMU_PER_POINT, 2)
+                            except (ValueError, TypeError):
+                                pass
+
+                        if margins:  # Retourner seulement si des marges ont été trouvées
+                            return margins
+
+        except Exception as e:
+            pass
+
+        return None
+
+    def _get_smart_default_margins(self, placeholder_type: Optional[str]) -> Dict[str, float]:
+        """
+        Retourne des marges par défaut intelligentes basées sur le type de placeholder.
+
+        Args:
+            placeholder_type: Type du placeholder
+
+        Returns:
+            Dict avec les marges par défaut
+        """
+        # VALEURS BASÉES SUR LE TEMPLATE PREMIER TECH RÉEL
+        # Observées dans PowerPoint : 0.25cm (gauche/droite), 0.13cm (haut/bas)
+        # Conversion : 1 cm = 28.35 points
+        # 0.25 cm = 7.09 points ≈ 7.2 points
+        # 0.13 cm = 3.69 points ≈ 3.6 points
+
+        return {
+            'margin_left': 7.2,      # 0.25 cm dans le template PT
+            'margin_right': 7.2,     # 0.25 cm dans le template PT
+            'margin_top': 3.6,       # 0.13 cm dans le template PT
+            'margin_bottom': 3.6     # 0.13 cm dans le template PT
+        }
 
 
 # =============================================================================
