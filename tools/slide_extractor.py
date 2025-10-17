@@ -911,7 +911,8 @@ class StyleResolver:
                 style_section = 'bodyStyle'
                 level = 1
 
-            print(f"[DEBUG] placeholder_idx={placeholder_idx}, placeholder_type={placeholder_type}, property={property_name}, style_section={style_section}, level={level}")
+            # Debug info pour le style resolver (peut être activé si nécessaire)
+            # print(f"[DEBUG] placeholder_idx={placeholder_idx}, placeholder_type={placeholder_type}, property={property_name}, style_section={style_section}, level={level}")
 
             # Construire le XPath pour trouver le style approprié
             if LXML_AVAILABLE:
@@ -979,7 +980,7 @@ class StyleResolver:
                         return self.theme.get_color(scheme_val)
 
         except Exception as e:
-            print(f"[DEBUG] Erreur dans _get_master_text_style_property: {e}")
+            # print(f"[DEBUG] Erreur dans _get_master_text_style_property: {e}")
             pass
 
         return None
@@ -1065,7 +1066,7 @@ class StyleResolver:
                                     return self._resolve_font_reference(typeface)
 
         except Exception as e:
-            print(f"[DEBUG] Erreur dans _get_layout_text_style_property: {e}")
+            # print(f"[DEBUG] Erreur dans _get_layout_text_style_property: {e}")
             pass
 
         return None
@@ -1443,47 +1444,130 @@ class SlideExtractor:
         """Obtient la position et dimensions de la forme."""
         position = {"left": 0, "top": 0, "width": 0, "height": 0}
 
-        try:
-            if LXML_AVAILABLE:
-                xfrm = shape_element.xpath('.//p:spPr/a:xfrm', namespaces=NAMESPACES)
-            else:
-                xfrm = shape_element.findall(f'.//{{{NAMESPACES["p"]}}}spPr/{{{NAMESPACES["a"]}}}xfrm')
+        # Étape 1: Chercher position directe dans la forme
+        xfrm_elem = self._find_xfrm_in_shape(shape_element)
 
-            if xfrm:
-                xfrm_elem = xfrm[0]
+        # Étape 2: Si pas trouvé et c'est un placeholder, chercher dans le layout
+        if xfrm_elem is None and self._is_placeholder(shape_element):
+            xfrm_elem = self._find_xfrm_in_layout_for_placeholder(shape_element)
 
-                # Position (off)
-                if LXML_AVAILABLE:
-                    off = xfrm_elem.xpath('.//a:off', namespaces=NAMESPACES)
-                else:
-                    off = xfrm_elem.findall(f'.//{{{NAMESPACES["a"]}}}off')
-
-                if off:
-                    x = off[0].get('x')
-                    y = off[0].get('y')
-                    if x:
-                        position["left"] = round(int(x) / EMU_PER_POINT, 2)
-                    if y:
-                        position["top"] = round(int(y) / EMU_PER_POINT, 2)
-
-                # Dimensions (ext)
-                if LXML_AVAILABLE:
-                    ext = xfrm_elem.xpath('.//a:ext', namespaces=NAMESPACES)
-                else:
-                    ext = xfrm_elem.findall(f'.//{{{NAMESPACES["a"]}}}ext')
-
-                if ext:
-                    cx = ext[0].get('cx')
-                    cy = ext[0].get('cy')
-                    if cx:
-                        position["width"] = round(int(cx) / EMU_PER_POINT, 2)
-                    if cy:
-                        position["height"] = round(int(cy) / EMU_PER_POINT, 2)
-
-        except Exception as e:
-            print(f"[WARNING] Erreur extraction position: {e}")
+        if xfrm_elem is not None:
+            self._extract_position_from_xfrm(xfrm_elem, position)
 
         return position
+
+    def _find_xfrm_in_shape(self, shape_element):
+        """Cherche l'élément xfrm directement dans la forme."""
+        try:
+            if LXML_AVAILABLE:
+                xfrm = shape_element.xpath('./p:spPr/a:xfrm', namespaces=NAMESPACES)
+            else:
+                xfrm = shape_element.findall(f'./{{{NAMESPACES["p"]}}}spPr/{{{NAMESPACES["a"]}}}xfrm')
+
+            return xfrm[0] if xfrm else None
+        except:
+            return None
+
+    def _find_xfrm_in_layout_for_placeholder(self, shape_element):
+        """Cherche la position dans le layout pour un placeholder."""
+        if self.layout_tree is None:
+            return None
+
+        try:
+            # Obtenir les informations du placeholder
+            placeholder_info = self._get_placeholder_info(shape_element)
+            placeholder_type = placeholder_info.get("placeholder_type")
+            placeholder_idx = placeholder_info.get("placeholder_idx")
+
+            # Chercher le placeholder correspondant dans le layout
+            if LXML_AVAILABLE:
+                layout_shapes = self.layout_tree.xpath('//p:sp', namespaces=NAMESPACES)
+            else:
+                layout_shapes = self.layout_tree.findall(f'.//{{{NAMESPACES["p"]}}}sp')
+
+            for layout_shape in layout_shapes:
+                # Vérifier si c'est le bon placeholder
+                if LXML_AVAILABLE:
+                    ph_elements = layout_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=NAMESPACES)
+                else:
+                    ph_elements = layout_shape.findall(f'.//{{{NAMESPACES["p"]}}}nvSpPr/{{{NAMESPACES["p"]}}}nvPr/{{{NAMESPACES["p"]}}}ph')
+
+                if ph_elements:
+                    ph_elem = ph_elements[0]
+                    layout_type = ph_elem.get('type', 'body')
+                    layout_idx_str = ph_elem.get('idx')
+
+                    layout_idx = None
+                    if layout_idx_str and layout_idx_str != "None":
+                        try:
+                            layout_idx = int(layout_idx_str)
+                        except:
+                            pass
+
+                    # Vérifier correspondance
+                    if ((placeholder_type == layout_type) and
+                        (placeholder_idx == layout_idx)):
+
+                        # Chercher xfrm dans ce placeholder du layout
+                        if LXML_AVAILABLE:
+                            xfrm = layout_shape.xpath('./p:spPr/a:xfrm', namespaces=NAMESPACES)
+                        else:
+                            xfrm = layout_shape.findall(f'./{{{NAMESPACES["p"]}}}spPr/{{{NAMESPACES["a"]}}}xfrm')
+
+                        if xfrm:
+                            return xfrm[0]
+
+        except Exception as e:
+            # print(f"[DEBUG] Erreur recherche dans layout: {e}")
+            pass
+
+        return None
+
+    def _extract_position_from_xfrm(self, xfrm_elem, position):
+        """Extrait les positions depuis un élément xfrm."""
+        try:
+            # Position (off)
+            if LXML_AVAILABLE:
+                off = xfrm_elem.xpath('./a:off', namespaces=NAMESPACES)
+            else:
+                off = xfrm_elem.findall(f'./{{{NAMESPACES["a"]}}}off')
+
+            if off:
+                x = off[0].get('x')
+                y = off[0].get('y')
+                if x:
+                    try:
+                        position["left"] = round(int(x) / EMU_PER_POINT, 2)
+                    except ValueError:
+                        pass
+                if y:
+                    try:
+                        position["top"] = round(int(y) / EMU_PER_POINT, 2)
+                    except ValueError:
+                        pass
+
+            # Dimensions (ext)
+            if LXML_AVAILABLE:
+                ext = xfrm_elem.xpath('./a:ext', namespaces=NAMESPACES)
+            else:
+                ext = xfrm_elem.findall(f'./{{{NAMESPACES["a"]}}}ext')
+
+            if ext:
+                cx = ext[0].get('cx')
+                cy = ext[0].get('cy')
+                if cx:
+                    try:
+                        position["width"] = round(int(cx) / EMU_PER_POINT, 2)
+                    except ValueError:
+                        pass
+                if cy:
+                    try:
+                        position["height"] = round(int(cy) / EMU_PER_POINT, 2)
+                    except ValueError:
+                        pass
+
+        except Exception as e:
+            print(f"[WARNING] Erreur extraction depuis xfrm: {e}")
 
 
 # =============================================================================
