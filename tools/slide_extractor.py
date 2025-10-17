@@ -638,8 +638,9 @@ class StyleResolver:
                     return bold_attr in ('1', 'true')
 
         # 3. Styles du master
-        if placeholder_idx is not None and self.master_tree is not None:
+        if self.master_tree is not None:
             master_bold = self._get_master_text_style_property(placeholder_idx, placeholder_type, 'bold')
+            # print(f"[DEBUG] Master bold for placeholder_type='{placeholder_type}', idx={placeholder_idx}: {master_bold}")
             if master_bold is not None:
                 return master_bold
 
@@ -962,7 +963,9 @@ class StyleResolver:
                         return self._resolve_font_reference(typeface)
 
             elif property_name == 'bold':
-                return def_rpr.get('b') == '1'
+                bold_val = def_rpr.get('b')
+                # print(f"[DEBUG] Bold found in master: b='{bold_val}' for {style_section} level {level}")
+                return bold_val == '1'
 
             elif property_name == 'italic':
                 return def_rpr.get('i') == '1'
@@ -1293,12 +1296,12 @@ class SlideExtractor:
                         if t_elem.text:
                             full_text += t_elem.text
 
-                # Résoudre le formatage du premier run
+                # Résoudre le formatage en analysant tous les runs
                 if runs:
                     placeholder_idx = self._get_placeholder_idx(shape_element)
                     placeholder_type = self._get_placeholder_type(shape_element)
-                    formatting = self.style_resolver.resolve_text_properties(
-                        runs[0], para, shape_element, placeholder_idx, placeholder_type
+                    formatting = self._analyze_comprehensive_formatting(
+                        runs, para, shape_element, placeholder_idx, placeholder_type
                     )
 
             if full_text.strip():
@@ -1311,6 +1314,83 @@ class SlideExtractor:
             print(f"[WARNING] Erreur extraction texte: {e}")
 
         return None
+
+    def _analyze_comprehensive_formatting(self, runs, paragraph_element, shape_element, placeholder_idx, placeholder_type):
+        """
+        Analyse le formatage de tous les runs pour déterminer l'état global des propriétés.
+
+        Logique tri-état :
+        - true : tous les runs ont la propriété activée
+        - false : tous les runs ont la propriété désactivée
+        - null : formatage mixte (certains runs activés, d'autres non)
+        """
+        if not runs:
+            return {}
+
+        # Collecter le formatage de tous les runs qui contiennent du texte
+        run_formats = []
+
+        for run in runs:
+            # Vérifier si ce run contient du texte
+            if LXML_AVAILABLE:
+                t_elements = run.xpath('.//a:t', namespaces=NAMESPACES)
+            else:
+                t_elements = run.findall(f'.//{{{NAMESPACES["a"]}}}t')
+
+            has_text = any(t.text and t.text.strip() for t in t_elements if t.text)
+
+            if has_text:
+                run_format = self.style_resolver.resolve_text_properties(
+                    run, paragraph_element, shape_element, placeholder_idx, placeholder_type
+                )
+                run_formats.append(run_format)
+
+        if not run_formats:
+            # Si aucun run avec texte, utiliser le formatage par défaut
+            return self.style_resolver.resolve_text_properties(
+                runs[0], paragraph_element, shape_element, placeholder_idx, placeholder_type
+            )
+
+        # Analyser les propriétés tri-état pour bold, italic, underline
+        comprehensive_format = run_formats[0].copy()  # Base format
+
+        # Analyser bold - respect de la valeur résolue par défaut si pas de formatage explicite
+        bold_values = [rf.get('bold') for rf in run_formats if 'bold' in rf and rf.get('bold') is not None]
+        if bold_values:
+            unique_bold_values = set(bold_values)
+            if len(unique_bold_values) == 1:
+                # Tous les runs ont la même valeur
+                comprehensive_format['bold'] = bold_values[0]
+            else:
+                # Formatage mixte (certains True, certains False)
+                comprehensive_format['bold'] = None
+        # Si aucune valeur bold explicite dans les runs, garder la valeur par défaut résolue
+
+        # Analyser italic - respect de la valeur résolue par défaut si pas de formatage explicite
+        italic_values = [rf.get('italic') for rf in run_formats if 'italic' in rf and rf.get('italic') is not None]
+        if italic_values:
+            unique_italic_values = set(italic_values)
+            if len(unique_italic_values) == 1:
+                # Tous les runs ont la même valeur
+                comprehensive_format['italic'] = italic_values[0]
+            else:
+                # Formatage mixte (certains True, certains False)
+                comprehensive_format['italic'] = None
+        # Si aucune valeur italic explicite dans les runs, garder la valeur par défaut résolue
+
+        # Analyser underline - respect de la valeur résolue par défaut si pas de formatage explicite
+        underline_values = [rf.get('underline') for rf in run_formats if 'underline' in rf and rf.get('underline') is not None]
+        if underline_values:
+            unique_underline_values = set(underline_values)
+            if len(unique_underline_values) == 1:
+                # Tous les runs ont la même valeur
+                comprehensive_format['underline'] = underline_values[0]
+            else:
+                # Formatage mixte (certains True, certains False)
+                comprehensive_format['underline'] = None
+        # Si aucune valeur underline explicite dans les runs, garder la valeur par défaut résolue
+
+        return comprehensive_format
 
     def _filter_populated_content(self, shapes: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """
