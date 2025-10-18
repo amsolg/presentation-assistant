@@ -533,6 +533,7 @@ class StyleResolver:
             margins = self._resolve_margins(shape_element)
             properties.update(margins)
             properties['vertical_alignment'] = self._resolve_vertical_alignment(shape_element)
+            properties['text_wrapping'] = self._resolve_text_wrapping(shape_element, placeholder_idx, placeholder_type)
 
         return properties
 
@@ -875,6 +876,42 @@ class StyleResolver:
             self._fill_missing_margins(margins, None, None)
 
         return margins
+
+    def _resolve_text_wrapping(self, shape_element, placeholder_idx: Optional[int] = None, placeholder_type: Optional[str] = None) -> str:
+        """Résout le text wrapping du text frame."""
+
+        if shape_element is None:
+            return 'square'  # Valeur par défaut OOXML
+
+        try:
+            if LXML_AVAILABLE:
+                body_pr = shape_element.xpath('.//a:bodyPr', namespaces=self.nsmap)
+            else:
+                body_pr = shape_element.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
+
+            if body_pr:
+                wrap_attr = body_pr[0].get('wrap')
+                if wrap_attr is not None:
+                    # Les valeurs possibles sont : none, square
+                    # Valeur par défaut OOXML est 'square' si l'attribut n'est pas présent
+                    return wrap_attr
+
+            # Si pas de bodyPr dans la shape, chercher dans le layout ou master
+            # Chercher dans le layout
+            layout_wrap = self._get_layout_text_wrapping(placeholder_idx, placeholder_type)
+            if layout_wrap is not None:
+                return layout_wrap
+
+            # Chercher dans le master
+            master_wrap = self._get_master_text_wrapping(placeholder_idx, placeholder_type)
+            if master_wrap is not None:
+                return master_wrap
+
+        except Exception as e:
+            print(f"[WARNING] Erreur résolution text wrapping: {e}")
+
+        # Valeur par défaut OOXML
+        return 'square'
 
     def _resolve_vertical_alignment(self, shape_element) -> Optional[str]:
         """Résout l'alignement vertical du text frame."""
@@ -1505,6 +1542,100 @@ class StyleResolver:
 
                         if margins:  # Retourner seulement si des marges ont été trouvées
                             return margins
+
+        except Exception as e:
+            pass
+
+        return None
+
+    def _get_layout_text_wrapping(self, placeholder_idx: Optional[int], placeholder_type: Optional[str]) -> Optional[str]:
+        """Récupère le text wrapping depuis le layout pour un placeholder donné."""
+
+        if self.layout_tree is None:
+            return None
+
+        try:
+            # Chercher le placeholder correspondant dans le layout
+            if LXML_AVAILABLE:
+                ph_shapes = self.layout_tree.xpath('//p:sp[.//p:nvSpPr/p:nvPr/p:ph]', namespaces=self.nsmap)
+            else:
+                root = self.layout_tree.getroot()
+                ph_shapes = []
+                for el in root.iter():
+                    if el.tag.endswith('}sp'):
+                        ph_elements = el.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')
+                        if ph_elements:
+                            ph_shapes.append(el)
+
+            for ph_shape in ph_shapes:
+                if LXML_AVAILABLE:
+                    ph_element = ph_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=self.nsmap)[0]
+                else:
+                    ph_element = ph_shape.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')[0]
+
+                ph_type = ph_element.get('type')
+                ph_idx = ph_element.get('idx')
+                ph_idx = int(ph_idx) if ph_idx else None
+
+                # Vérifier si c'est le bon placeholder
+                if ((placeholder_type == ph_type) and (placeholder_idx == ph_idx)):
+                    # Chercher bodyPr dans ce placeholder du layout
+                    if LXML_AVAILABLE:
+                        body_pr = ph_shape.xpath('.//a:bodyPr', namespaces=self.nsmap)
+                    else:
+                        body_pr = ph_shape.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
+
+                    if body_pr:
+                        wrap_attr = body_pr[0].get('wrap')
+                        if wrap_attr is not None:
+                            return wrap_attr
+
+        except Exception as e:
+            pass
+
+        return None
+
+    def _get_master_text_wrapping(self, placeholder_idx: Optional[int], placeholder_type: Optional[str]) -> Optional[str]:
+        """Récupère le text wrapping depuis le master pour un placeholder donné."""
+
+        if self.master_tree is None:
+            return None
+
+        try:
+            # Chercher le placeholder correspondant dans le master
+            if LXML_AVAILABLE:
+                ph_shapes = self.master_tree.xpath('//p:sp[.//p:nvSpPr/p:nvPr/p:ph]', namespaces=self.nsmap)
+            else:
+                root = self.master_tree.getroot()
+                ph_shapes = []
+                for el in root.iter():
+                    if el.tag.endswith('}sp'):
+                        ph_elements = el.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')
+                        if ph_elements:
+                            ph_shapes.append(el)
+
+            for ph_shape in ph_shapes:
+                if LXML_AVAILABLE:
+                    ph_element = ph_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=self.nsmap)[0]
+                else:
+                    ph_element = ph_shape.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')[0]
+
+                ph_type = ph_element.get('type')
+                ph_idx = ph_element.get('idx')
+                ph_idx = int(ph_idx) if ph_idx else None
+
+                # Vérifier si c'est le bon placeholder
+                if ((placeholder_type == ph_type) and (placeholder_idx == ph_idx)):
+                    # Chercher bodyPr dans ce placeholder du master
+                    if LXML_AVAILABLE:
+                        body_pr = ph_shape.xpath('.//a:bodyPr', namespaces=self.nsmap)
+                    else:
+                        body_pr = ph_shape.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
+
+                    if body_pr:
+                        wrap_attr = body_pr[0].get('wrap')
+                        if wrap_attr is not None:
+                            return wrap_attr
 
         except Exception as e:
             pass
