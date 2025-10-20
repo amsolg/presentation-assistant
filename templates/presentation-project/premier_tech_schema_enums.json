@@ -1,0 +1,178 @@
+{
+  "description": "Enums extraits de l'analyse de 57 slides Premier Tech authentiques pour validation JSON",
+  "extraction_date": "2025-10-20",
+  "total_slides_analyzed": 57,
+  "total_shapes_analyzed": 166,
+
+  "enums": {
+    "shape_type": {
+      "enum": ["placeholder", "shape"],
+      "description": "Types de shapes dans les templates Premier Tech"
+    },
+
+    "placeholder_type": {
+      "enum": ["body", "title", "ctrTitle"],
+      "description": "Types de placeholders utilisés",
+      "usage": {
+        "body": "Contenu principal des slides (120 occurrences)",
+        "title": "Titres de slides (37 occurrences)",
+        "ctrTitle": "Titre centré spécialisé (1 occurrence)"
+      }
+    },
+
+    "font_name": {
+      "enum": ["Premier Tech Text", "Premier Tech Title", "Premier Tech Title Bold"],
+      "description": "Polices officielles Premier Tech",
+      "usage": {
+        "Premier Tech Title": "Titres et en-têtes (86 occurrences)",
+        "Premier Tech Text": "Texte de contenu (58 occurrences)",
+        "Premier Tech Title Bold": "Titres accentués (22 occurrences)"
+      }
+    },
+
+    "color": {
+      "enum": ["#FFFFFF", "#41B6E6", "#BDBDBD"],
+      "description": "Palette de couleurs Premier Tech",
+      "usage": {
+        "#FFFFFF": "Blanc - Texte principal (88 occurrences)",
+        "#41B6E6": "Bleu corporate Premier Tech (24 occurrences)",
+        "#BDBDBD": "Gris clair - Texte secondaire (7 occurrences)"
+      }
+    },
+
+    "alignment": {
+      "enum": ["LEFT", "CENTER", "RIGHT"],
+      "description": "Alignements horizontaux",
+      "usage": {
+        "CENTER": "50% des occurrences (83)",
+        "LEFT": "49.4% des occurrences (82)",
+        "RIGHT": "0.6% des occurrences (1)"
+      }
+    },
+
+    "vertical_alignment": {
+      "enum": ["TOP"],
+      "description": "Alignement vertical (100% des cas)",
+      "note": "Premier Tech utilise exclusivement TOP"
+    },
+
+    "text_wrapping": {
+      "enum": ["square"],
+      "description": "Type d'habillage de texte",
+      "note": "Standard PowerPoint (100% des cas)"
+    },
+
+    "autofit_type": {
+      "enum": ["none", "normal"],
+      "description": "Types d'ajustement automatique",
+      "usage": {
+        "none": "98.2% des cas (163 occurrences)",
+        "normal": "1.8% des cas (3 occurrences)"
+      }
+    },
+
+    "font_size": {
+      "enum": [18.0, 20.0, 24.0, 28.0, 32.0, 44.0, 48.0, 54.0, 60.0, 66.0],
+      "description": "Tailles de police utilisées",
+      "common_usage": {
+        "20.0": "Texte de contenu standard (49 occurrences)",
+        "44.0": "Titres de section (31 occurrences)",
+        "28.0": "Sous-titres (24 occurrences)",
+        "24.0": "Texte accentué (19 occurrences)",
+        "18.0": "Métadonnées (14 occurrences)",
+        "48.0": "Titres principaux (12 occurrences)"
+      }
+    },
+
+    "margin_values": {
+      "enum": [3.6, 5.67, 7.2, 8.5],
+      "description": "Valeurs de marges utilisées",
+      "usage": {
+        "horizontal": [7.2, 8.5],
+        "vertical": [3.6, 5.67]
+      }
+    },
+
+    "layout_name": {
+      "enum": [
+        "Page titre",
+        "Guide de texte",
+        "Guide de couleurs",
+        "Standards et astuces",
+        "Standards et astuces 2",
+        "Titre & Espace pour tableau ou graphique",
+        "Titre de présentation",
+        "Table des matières",
+        "Titre de section avec chiffre",
+        "Titre de section bleu",
+        "Titre de section blanc",
+        "Court énoncé",
+        "Mots-clés & Mots complémentaires",
+        "Mots-clés & Court énoncé",
+        "Mots-clés & Court énoncé avec titre de section",
+        "Court énoncé avec titre de section",
+        "2 statistiques avec ligne bleue",
+        "2 statistiques avec ligne grise",
+        "3 statistiques & Mots-clés",
+        "4 statistiques & Mots-clés",
+        "4 statistiques & Mots-clés avec lignes",
+        "3 boîtes grises pour courts énoncés avec sous-titres",
+        "3 boîtes grises pour courts énoncés sans sous-titres",
+        "3 boîtes bleues pour courts énoncés avec sous-titres",
+        "3 boîtes bleues pour courts énoncés sans sous-titres",
+        "4 boîtes grises pour courts énoncés avec sous-titres",
+        "4 boîtes grises pour courts énoncés sans sous-titres",
+        "4 boîtes bleues pour courts énoncés avec sous-titres",
+        "4 boîtes bleues pour courts énoncés sans sous-titres",
+        "4 énoncés & Mots-clés",
+        "2 énoncés avec sous-titres et image",
+        "Énoncé avec titre et image",
+        "Liste avec titre et image",
+        "2 énoncés avec sous-titres et ligne bleue",
+        "2 énoncés avec sous-titres et ligne grise",
+        "2 énoncés avec titre et ligne bleue",
+        "2 énoncés avec titre et ligne grise",
+        "2 listes avec sous-titres et ligne bleue",
+        "2 listes avec sous-titres et ligne grise",
+        "Citation",
+        "Passion et Technologies pour faire la différence",
+        "Nourrir, Protéger, Améliorer",
+        "Diapositive vide",
+        "Vidéo",
+        "We are PT",
+        "Monogramme PT"
+      ],
+      "description": "47 layouts uniques identifiés dans les templates Premier Tech",
+      "most_common": "Titre & Espace pour tableau ou graphique (11 occurrences)"
+    }
+  },
+
+  "constants": {
+    "font_italic": {
+      "const": false,
+      "description": "Premier Tech n'utilise jamais l'italique (166/166 cas)"
+    },
+    "font_underline": {
+      "const": false,
+      "description": "Premier Tech n'utilise jamais le soulignement (166/166 cas)"
+    }
+  },
+
+  "analysis_summary": {
+    "slides_analyzed": 57,
+    "total_shapes": 166,
+    "placeholder_percentage": 95.2,
+    "shape_percentage": 4.8,
+    "fonts_used": 3,
+    "colors_used": 3,
+    "layouts_identified": 47,
+    "margin_values_used": 4,
+    "font_sizes_used": 10
+  },
+
+  "validation_notes": {
+    "strict_compliance": "Ces enums garantissent la conformité avec l'identité visuelle Premier Tech",
+    "extensibility": "Ajouter de nouvelles valeurs nécessite validation corporate",
+    "quality_assurance": "Basé sur l'analyse de templates officiels authentiques"
+  }
+}

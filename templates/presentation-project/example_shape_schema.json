@@ -1,0 +1,165 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Premier Tech Shape Schema",
+  "description": "Schéma JSON pour valider les shapes basé sur l'analyse des 57 slides Premier Tech",
+
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Nom du shape"
+    },
+    "shape_id": {
+      "type": "integer",
+      "description": "Identifiant unique du shape"
+    },
+    "type": {
+      "enum": ["placeholder", "shape"],
+      "description": "Type de shape"
+    },
+    "position": {
+      "type": "object",
+      "properties": {
+        "left": {"type": "number"},
+        "top": {"type": "number"},
+        "width": {"type": "number"},
+        "height": {"type": "number"}
+      },
+      "required": ["left", "top", "width", "height"]
+    },
+    "placeholder_type": {
+      "enum": ["body", "title", "ctrTitle"],
+      "description": "Type de placeholder (si applicable)"
+    },
+    "placeholder_idx": {
+      "type": "integer",
+      "description": "Index du placeholder"
+    },
+    "text": {
+      "type": "string",
+      "description": "Contenu textuel du shape"
+    },
+    "font_name": {
+      "enum": ["Premier Tech Text", "Premier Tech Title", "Premier Tech Title Bold"],
+      "description": "Police utilisée"
+    },
+    "font_size": {
+      "enum": [18.0, 20.0, 24.0, 28.0, 32.0, 44.0, 48.0, 54.0, 60.0, 66.0],
+      "description": "Taille de la police"
+    },
+    "bold": {
+      "type": "boolean",
+      "description": "Texte en gras"
+    },
+    "italic": {
+      "const": false,
+      "description": "Premier Tech n'utilise jamais l'italique"
+    },
+    "underline": {
+      "const": false,
+      "description": "Premier Tech n'utilise jamais le soulignement"
+    },
+    "color": {
+      "enum": ["#FFFFFF", "#41B6E6", "#BDBDBD", null],
+      "description": "Couleur du texte (null pour couleur par défaut)"
+    },
+    "alignment": {
+      "enum": ["LEFT", "CENTER", "RIGHT"],
+      "description": "Alignement horizontal"
+    },
+    "vertical_alignment": {
+      "enum": ["TOP"],
+      "description": "Alignement vertical"
+    },
+    "margin_left": {
+      "enum": [7.2, 8.5],
+      "description": "Marge gauche"
+    },
+    "margin_right": {
+      "enum": [7.2, 8.5],
+      "description": "Marge droite"
+    },
+    "margin_top": {
+      "enum": [3.6, 5.67],
+      "description": "Marge supérieure"
+    },
+    "margin_bottom": {
+      "enum": [3.6, 5.67],
+      "description": "Marge inférieure"
+    },
+    "text_wrapping": {
+      "enum": ["square"],
+      "description": "Type d'habillage de texte"
+    },
+    "autofit": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "enum": ["none", "normal"],
+          "description": "Type d'ajustement automatique"
+        },
+        "font_scale": {
+          "type": ["number", "null"],
+          "description": "Facteur d'échelle de la police"
+        },
+        "line_spacing_reduction": {
+          "type": ["number", "null"],
+          "description": "Réduction de l'espacement des lignes"
+        }
+      },
+      "required": ["type"]
+    }
+  },
+
+  "required": [
+    "name",
+    "shape_id",
+    "type",
+    "position"
+  ],
+
+  "if": {
+    "properties": {
+      "type": { "const": "placeholder" }
+    }
+  },
+  "then": {
+    "required": ["placeholder_type"]
+  },
+
+  "additionalProperties": false,
+
+  "examples": [
+    {
+      "name": "Titre 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 167.98,
+        "width": 665.59,
+        "height": 46.05
+      },
+      "placeholder_type": "title",
+      "text": "Exemple de Titre",
+      "font_name": "Premier Tech Title",
+      "font_size": 48.0,
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ]
+}
