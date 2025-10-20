@@ -534,6 +534,7 @@ class StyleResolver:
             properties.update(margins)
             properties['vertical_alignment'] = self._resolve_vertical_alignment(shape_element)
             properties['text_wrapping'] = self._resolve_text_wrapping(shape_element, placeholder_idx, placeholder_type)
+            properties['autofit'] = self._resolve_autofit(shape_element, placeholder_idx, placeholder_type)
 
         return properties
 
@@ -912,6 +913,80 @@ class StyleResolver:
 
         # Valeur par défaut OOXML
         return 'square'
+
+    def _resolve_autofit(self, shape_element, placeholder_idx: Optional[int] = None, placeholder_type: Optional[str] = None) -> Dict[str, Any]:
+        """Résout les propriétés d'autofit du text frame."""
+
+        autofit_data = {
+            'type': 'none',  # none, normal, shape
+            'font_scale': None,
+            'line_spacing_reduction': None
+        }
+
+        if shape_element is None:
+            return autofit_data
+
+        try:
+            if LXML_AVAILABLE:
+                body_pr = shape_element.xpath('.//a:bodyPr', namespaces=self.nsmap)
+            else:
+                body_pr = shape_element.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
+
+            if body_pr:
+                # Vérifier normAutofit
+                if LXML_AVAILABLE:
+                    norm_autofit = body_pr[0].xpath('.//a:normAutofit', namespaces=self.nsmap)
+                else:
+                    norm_autofit = body_pr[0].findall(f'.//{{{self.nsmap["a"]}}}normAutofit')
+
+                if norm_autofit:
+                    autofit_data['type'] = 'normal'
+
+                    # Extraire fontScale (en pourcentage, 100000 = 100%)
+                    font_scale = norm_autofit[0].get('fontScale')
+                    if font_scale:
+                        autofit_data['font_scale'] = int(font_scale) / 1000  # Convertir en pourcentage
+
+                    # Extraire lnSpcReduction (réduction de l'espacement des lignes)
+                    ln_spc_reduction = norm_autofit[0].get('lnSpcReduction')
+                    if ln_spc_reduction:
+                        autofit_data['line_spacing_reduction'] = int(ln_spc_reduction) / 1000  # Convertir en pourcentage
+
+                else:
+                    # Vérifier spAutofit
+                    if LXML_AVAILABLE:
+                        sp_autofit = body_pr[0].xpath('.//a:spAutofit', namespaces=self.nsmap)
+                    else:
+                        sp_autofit = body_pr[0].findall(f'.//{{{self.nsmap["a"]}}}spAutofit')
+
+                    if sp_autofit:
+                        autofit_data['type'] = 'shape'
+
+                    else:
+                        # Vérifier noAutofit (explicitement défini)
+                        if LXML_AVAILABLE:
+                            no_autofit = body_pr[0].xpath('.//a:noAutofit', namespaces=self.nsmap)
+                        else:
+                            no_autofit = body_pr[0].findall(f'.//{{{self.nsmap["a"]}}}noAutofit')
+
+                        if no_autofit:
+                            autofit_data['type'] = 'none'
+
+            # Si pas de bodyPr dans la shape, chercher dans le layout ou master
+            if autofit_data['type'] == 'none':
+                layout_autofit = self._get_layout_autofit(placeholder_idx, placeholder_type)
+                if layout_autofit['type'] != 'none':
+                    autofit_data = layout_autofit
+
+            if autofit_data['type'] == 'none':
+                master_autofit = self._get_master_autofit(placeholder_idx, placeholder_type)
+                if master_autofit['type'] != 'none':
+                    autofit_data = master_autofit
+
+        except Exception as e:
+            print(f"[WARNING] Erreur résolution autofit: {e}")
+
+        return autofit_data
 
     def _resolve_vertical_alignment(self, shape_element) -> Optional[str]:
         """Résout l'alignement vertical du text frame."""
@@ -1641,6 +1716,144 @@ class StyleResolver:
             pass
 
         return None
+
+    def _get_layout_autofit(self, placeholder_idx: Optional[int], placeholder_type: Optional[str]) -> Dict[str, Any]:
+        """Récupère l'autofit depuis le layout pour un placeholder donné."""
+
+        autofit_data = {
+            'type': 'none',
+            'font_scale': None,
+            'line_spacing_reduction': None
+        }
+
+        if self.layout_tree is None:
+            return autofit_data
+
+        try:
+            # Chercher le placeholder correspondant dans le layout
+            if LXML_AVAILABLE:
+                ph_shapes = self.layout_tree.xpath('//p:sp[.//p:nvSpPr/p:nvPr/p:ph]', namespaces=self.nsmap)
+            else:
+                root = self.layout_tree.getroot()
+                ph_shapes = []
+                for el in root.iter():
+                    if el.tag.endswith('}sp'):
+                        ph_elements = el.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')
+                        if ph_elements:
+                            ph_shapes.append(el)
+
+            for ph_shape in ph_shapes:
+                if LXML_AVAILABLE:
+                    ph_element = ph_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=self.nsmap)[0]
+                else:
+                    ph_element = ph_shape.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')[0]
+
+                ph_type = ph_element.get('type')
+                ph_idx = ph_element.get('idx')
+                ph_idx = int(ph_idx) if ph_idx else None
+
+                # Vérifier si c'est le bon placeholder
+                if ((placeholder_type == ph_type) and (placeholder_idx == ph_idx)):
+                    return self._extract_autofit_from_shape(ph_shape)
+
+        except Exception as e:
+            pass
+
+        return autofit_data
+
+    def _get_master_autofit(self, placeholder_idx: Optional[int], placeholder_type: Optional[str]) -> Dict[str, Any]:
+        """Récupère l'autofit depuis le master pour un placeholder donné."""
+
+        autofit_data = {
+            'type': 'none',
+            'font_scale': None,
+            'line_spacing_reduction': None
+        }
+
+        if self.master_tree is None:
+            return autofit_data
+
+        try:
+            # Chercher le placeholder correspondant dans le master
+            if LXML_AVAILABLE:
+                ph_shapes = self.master_tree.xpath('//p:sp[.//p:nvSpPr/p:nvPr/p:ph]', namespaces=self.nsmap)
+            else:
+                root = self.master_tree.getroot()
+                ph_shapes = []
+                for el in root.iter():
+                    if el.tag.endswith('}sp'):
+                        ph_elements = el.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')
+                        if ph_elements:
+                            ph_shapes.append(el)
+
+            for ph_shape in ph_shapes:
+                if LXML_AVAILABLE:
+                    ph_element = ph_shape.xpath('.//p:nvSpPr/p:nvPr/p:ph', namespaces=self.nsmap)[0]
+                else:
+                    ph_element = ph_shape.findall(f'.//{{{self.nsmap["p"]}}}nvSpPr/{{{self.nsmap["p"]}}}nvPr/{{{self.nsmap["p"]}}}ph')[0]
+
+                ph_type = ph_element.get('type')
+                ph_idx = ph_element.get('idx')
+                ph_idx = int(ph_idx) if ph_idx else None
+
+                # Vérifier si c'est le bon placeholder
+                if ((placeholder_type == ph_type) and (placeholder_idx == ph_idx)):
+                    return self._extract_autofit_from_shape(ph_shape)
+
+        except Exception as e:
+            pass
+
+        return autofit_data
+
+    def _extract_autofit_from_shape(self, shape_element) -> Dict[str, Any]:
+        """Extrait l'autofit d'un élément shape."""
+
+        autofit_data = {
+            'type': 'none',
+            'font_scale': None,
+            'line_spacing_reduction': None
+        }
+
+        try:
+            if LXML_AVAILABLE:
+                body_pr = shape_element.xpath('.//a:bodyPr', namespaces=self.nsmap)
+            else:
+                body_pr = shape_element.findall(f'.//{{{self.nsmap["a"]}}}bodyPr')
+
+            if body_pr:
+                # Vérifier normAutofit
+                if LXML_AVAILABLE:
+                    norm_autofit = body_pr[0].xpath('.//a:normAutofit', namespaces=self.nsmap)
+                else:
+                    norm_autofit = body_pr[0].findall(f'.//{{{self.nsmap["a"]}}}normAutofit')
+
+                if norm_autofit:
+                    autofit_data['type'] = 'normal'
+
+                    # Extraire fontScale
+                    font_scale = norm_autofit[0].get('fontScale')
+                    if font_scale:
+                        autofit_data['font_scale'] = int(font_scale) / 1000
+
+                    # Extraire lnSpcReduction
+                    ln_spc_reduction = norm_autofit[0].get('lnSpcReduction')
+                    if ln_spc_reduction:
+                        autofit_data['line_spacing_reduction'] = int(ln_spc_reduction) / 1000
+
+                else:
+                    # Vérifier spAutofit
+                    if LXML_AVAILABLE:
+                        sp_autofit = body_pr[0].xpath('.//a:spAutofit', namespaces=self.nsmap)
+                    else:
+                        sp_autofit = body_pr[0].findall(f'.//{{{self.nsmap["a"]}}}spAutofit')
+
+                    if sp_autofit:
+                        autofit_data['type'] = 'shape'
+
+        except Exception as e:
+            pass
+
+        return autofit_data
 
     def _get_smart_default_margins(self, placeholder_type: Optional[str]) -> Dict[str, float]:
         """
