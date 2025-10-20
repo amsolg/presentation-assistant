@@ -17,6 +17,11 @@
       "type": "string",
       "description": "Audience cible (pour navigation dans presentations/[sujet]/[audience]/)"
     },
+    "is_test": {
+      "type": "boolean",
+      "default": false,
+      "description": "Indique si cette présentation est pour un test. Si true, utilise le dossier 'tests' au lieu de 'presentations'"
+    },
     "output_path": {
       "type": "string",
       "description": "Chemin de sortie pour la présentation générée",
