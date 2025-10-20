@@ -1,0 +1,72 @@
+{
+  "slide_number": 21,
+  "layout_name": "Court énoncé avec titre de section",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Espace réservé du texte 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 165.3,
+        "width": 878.75,
+        "height": 123.6
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 10,
+      "text": "Court énoncé interdum lorem, quis imperdiet felis vulputate vel",
+      "font_name": "Premier Tech Title",
+      "font_size": 48.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 2",
+      "shape_id": 3,
+      "type": "placeholder",
+      "position": {
+        "left": 40.6,
+        "top": 125.1,
+        "width": 878.75,
+        "height": 29.08
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 14,
+      "text": "Titre de section",
+      "font_name": "Premier Tech Title",
+      "font_size": 18.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#BDBDBD",
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 2
+}

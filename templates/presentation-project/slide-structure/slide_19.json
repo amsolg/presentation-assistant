@@ -1,0 +1,71 @@
+{
+  "slide_number": 19,
+  "layout_name": "Mots-clés & Court énoncé",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Titre 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 167.92,
+        "width": 878.75,
+        "height": 60.59
+      },
+      "placeholder_type": "title",
+      "text": "Pellentesque egestas",
+      "font_name": "Premier Tech Title",
+      "font_size": 44.0,
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 2",
+      "shape_id": 2,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 233.12,
+        "width": 878.75,
+        "height": 77.55
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 10,
+      "text": "Nunc non mauris et eros venenatis convallis nec vitae purus.",
+      "font_name": "Premier Tech Text",
+      "font_size": 24.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 2
+}

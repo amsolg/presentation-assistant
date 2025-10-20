@@ -1,0 +1,71 @@
+{
+  "slide_number": 14,
+  "layout_name": "Titre de section avec chiffre",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Espace réservé du texte 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 140.74,
+        "top": 212.78,
+        "width": 99.13,
+        "height": 79.97
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 10,
+      "text": "1",
+      "font_name": "Premier Tech Title Bold",
+      "font_size": 60.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#41B6E6",
+      "alignment": "RIGHT",
+      "vertical_alignment": "TOP",
+      "margin_left": 8.5,
+      "margin_right": 8.5,
+      "margin_top": 5.67,
+      "margin_bottom": 5.67,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "normal",
+        "font_scale": 92.5,
+        "line_spacing_reduction": 10.0
+      }
+    },
+    {
+      "name": "Titre 2",
+      "shape_id": 2,
+      "type": "placeholder",
+      "position": {
+        "left": 193.6,
+        "top": 211.86,
+        "width": 572.79,
+        "height": 79.97
+      },
+      "placeholder_type": "title",
+      "text": "Titre de section",
+      "font_name": "Premier Tech Title",
+      "font_size": 60.0,
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "normal",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 2
+}

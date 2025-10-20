@@ -1,0 +1,295 @@
+{
+  "slide_number": 26,
+  "layout_name": "4 statistiques & Mots-clés avec lignes",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Titre 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 198.03,
+        "width": 382.11,
+        "height": 60.59
+      },
+      "placeholder_type": "title",
+      "text": "Aliquam et tortor",
+      "font_name": "Premier Tech Title",
+      "font_size": 44.0,
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 2",
+      "shape_id": 2,
+      "type": "placeholder",
+      "position": {
+        "left": 480.0,
+        "top": 108.46,
+        "width": 200.26,
+        "height": 31.5
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 12,
+      "text": "Nam posuere",
+      "font_name": "Premier Tech Title",
+      "font_size": 20.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 3",
+      "shape_id": 3,
+      "type": "placeholder",
+      "position": {
+        "left": 480.0,
+        "top": 142.94,
+        "width": 200.26,
+        "height": 65.43
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 15,
+      "text": "22k",
+      "font_name": "Premier Tech Title Bold",
+      "font_size": 48.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 4",
+      "shape_id": 4,
+      "type": "placeholder",
+      "position": {
+        "left": 719.11,
+        "top": 108.46,
+        "width": 200.26,
+        "height": 31.5
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 24,
+      "text": "Interdum",
+      "font_name": "Premier Tech Title",
+      "font_size": 20.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 5",
+      "shape_id": 5,
+      "type": "placeholder",
+      "position": {
+        "left": 719.11,
+        "top": 142.94,
+        "width": 200.26,
+        "height": 65.43
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 25,
+      "text": "90 %",
+      "font_name": "Premier Tech Title Bold",
+      "font_size": 48.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 6",
+      "shape_id": 6,
+      "type": "placeholder",
+      "position": {
+        "left": 480.0,
+        "top": 247.25,
+        "width": 200.26,
+        "height": 31.5
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 26,
+      "text": "Imperdiet felis",
+      "font_name": "Premier Tech Title",
+      "font_size": 20.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 7",
+      "shape_id": 7,
+      "type": "placeholder",
+      "position": {
+        "left": 480.0,
+        "top": 281.05,
+        "width": 200.26,
+        "height": 65.43
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 27,
+      "text": "+ 132",
+      "font_name": "Premier Tech Title Bold",
+      "font_size": 48.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 8",
+      "shape_id": 8,
+      "type": "placeholder",
+      "position": {
+        "left": 719.11,
+        "top": 247.25,
+        "width": 200.26,
+        "height": 31.5
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 28,
+      "text": "Vulputate vel",
+      "font_name": "Premier Tech Title",
+      "font_size": 20.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 9",
+      "shape_id": 9,
+      "type": "placeholder",
+      "position": {
+        "left": 719.11,
+        "top": 281.05,
+        "width": 200.26,
+        "height": 65.43
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 29,
+      "text": "- 200",
+      "font_name": "Premier Tech Title Bold",
+      "font_size": 48.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 9
+}

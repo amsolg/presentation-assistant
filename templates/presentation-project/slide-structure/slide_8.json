@@ -1,0 +1,39 @@
+{
+  "slide_number": 8,
+  "layout_name": "Titre & Espace pour tableau ou graphique",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Title 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 0,
+        "top": 0,
+        "width": 0,
+        "height": 0
+      },
+      "placeholder_type": "title",
+      "text": "Iconographie Premier Tech",
+      "font_name": "Premier Tech Title Bold",
+      "font_size": 44.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 1
+}

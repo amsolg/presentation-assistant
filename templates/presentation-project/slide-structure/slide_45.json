@@ -1,0 +1,72 @@
+{
+  "slide_number": 45,
+  "layout_name": "Citation",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Espace réservé du texte 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 136.99,
+        "width": 665.59,
+        "height": 126.02
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 10,
+      "text": "« Nullam pellentesque a felis non semper. »",
+      "font_name": "Premier Tech Title Bold",
+      "font_size": 44.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 2",
+      "shape_id": 2,
+      "type": "placeholder",
+      "position": {
+        "left": 40.62,
+        "top": 268.87,
+        "width": 665.59,
+        "height": 50.89
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 18,
+      "text": "Nom de la personne citée",
+      "font_name": "Premier Tech Text",
+      "font_size": 18.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#BDBDBD",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 2
+}

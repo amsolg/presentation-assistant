@@ -1,0 +1,167 @@
+{
+  "slide_number": 39,
+  "layout_name": "2 énoncés avec sous-titres et ligne bleue",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Titre 1",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 125.57,
+        "width": 878.75,
+        "height": 60.59
+      },
+      "placeholder_type": "title",
+      "text": "Morbi condimentum",
+      "font_name": "Premier Tech Title",
+      "font_size": 44.0,
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 2",
+      "shape_id": 2,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 263.04,
+        "width": 425.2,
+        "height": 55.74
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 10,
+      "text": "Etiam risus magna, ultricies non commodo fermentum, maximus et",
+      "font_name": "Premier Tech Text",
+      "font_size": 20.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 3",
+      "shape_id": 3,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 212.2,
+        "width": 425.2,
+        "height": 41.2
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 14,
+      "text": "Lorem ipsum dolor sit",
+      "font_name": "Premier Tech Title",
+      "font_size": 28.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 6",
+      "shape_id": 4,
+      "type": "placeholder",
+      "position": {
+        "left": 494.05,
+        "top": 263.04,
+        "width": 425.2,
+        "height": 55.74
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 17,
+      "text": "Ut pharetra metus sit amet ante fermentum interdum sed eu massa",
+      "font_name": "Premier Tech Text",
+      "font_size": 20.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 7",
+      "shape_id": 5,
+      "type": "placeholder",
+      "position": {
+        "left": 494.05,
+        "top": 212.2,
+        "width": 425.2,
+        "height": 41.2
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 18,
+      "text": "Consectetur adipiscing elit",
+      "font_name": "Premier Tech Title",
+      "font_size": 28.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "CENTER",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 5
+}

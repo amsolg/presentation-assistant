@@ -1,0 +1,103 @@
+{
+  "slide_number": 38,
+  "layout_name": "Liste avec titre et image",
+  "extraction_method": "xml_direct_analysis_with_inheritance",
+  "shapes": [
+    {
+      "name": "Titre 2",
+      "shape_id": 1,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 198.13,
+        "width": 439.37,
+        "height": 60.59
+      },
+      "placeholder_type": "title",
+      "text": "In placerat sodales",
+      "font_name": "Premier Tech Title",
+      "font_size": 44.0,
+      "bold": true,
+      "italic": false,
+      "underline": false,
+      "color": null,
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 3",
+      "shape_id": 2,
+      "type": "placeholder",
+      "position": {
+        "left": 40.63,
+        "top": 275.73,
+        "width": 439.37,
+        "height": 104.21
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 10,
+      "text": "Ut ultrices orci mollis id",
+      "font_name": "Premier Tech Text",
+      "font_size": 20.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#FFFFFF",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    },
+    {
+      "name": "Espace réservé du texte 4",
+      "shape_id": 3,
+      "type": "placeholder",
+      "position": {
+        "left": 40.6,
+        "top": 157.19,
+        "width": 439.37,
+        "height": 29.08
+      },
+      "placeholder_type": "body",
+      "placeholder_idx": 14,
+      "text": "Titre de section",
+      "font_name": "Premier Tech Title",
+      "font_size": 18.0,
+      "bold": false,
+      "italic": false,
+      "underline": false,
+      "color": "#BDBDBD",
+      "alignment": "LEFT",
+      "vertical_alignment": "TOP",
+      "margin_left": 7.2,
+      "margin_right": 7.2,
+      "margin_top": 3.6,
+      "margin_bottom": 3.6,
+      "text_wrapping": "square",
+      "autofit": {
+        "type": "none",
+        "font_scale": null,
+        "line_spacing_reduction": null
+      }
+    }
+  ],
+  "total_shapes": 3
+}
