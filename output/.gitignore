@@ -1,0 +1,7 @@
+# Ce dossier est obsolète et ne devrait plus être utilisé
+# Les outputs sont maintenant forcés dans presentations/[sujet]/[audience]/output/
+# ou tests/[sujet]/[audience]/output/
+
+# Ignorer tout le contenu
+*
+!.gitignore

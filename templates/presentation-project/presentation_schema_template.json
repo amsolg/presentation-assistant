@@ -24,8 +24,13 @@
     },
     "output_path": {
       "type": "string",
-      "description": "Chemin de sortie pour la présentation générée",
-      "pattern": "^.+\\.pptx$"
+      "description": "Chemin de sortie pour la présentation générée. Sera automatiquement normalisé vers presentations/[sujet]/[audience]/output/ ou tests/[sujet]/[audience]/output/",
+      "pattern": "^.+\\.pptx$",
+      "examples": [
+        "ma_presentation.pptx",
+        "presentations/innovation-ai/c-level/output/innovation_strategy.pptx",
+        "tests/demo/technique/output/demo_technique.pptx"
+      ]
     },
     "slides": {
       "type": "array",

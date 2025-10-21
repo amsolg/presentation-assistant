@@ -164,13 +164,42 @@ class LayoutBasedPresentationBuilder:
             if not isinstance(config["slides"], list) or len(config["slides"]) == 0:
                 raise ValueError("Le tableau 'slides' ne peut pas être vide")
 
-            # Traitement du chemin de base selon is_test
+            # Traitement et normalisation du chemin de sortie
             is_test = config.get("is_test", False)
-            if is_test:
-                output_path = config["output_path"]
+            subject = config["subject"]
+            audience = config["audience"]
+            output_path = config["output_path"]
+
+            # Forcer la structure d'output dans le dossier de l'audience
+            base_dir = "tests" if is_test else "presentations"
+
+            # Si l'output_path est un nom de fichier simple ou dans le root, le rediriger
+            if not output_path.startswith(("presentations/", "tests/")) or "/" not in output_path:
+                # Extraire le nom du fichier
+                filename = os.path.basename(output_path)
+                if not filename.endswith(".pptx"):
+                    filename = f"{subject}_{audience}.pptx"
+
+                # Construire le chemin normalisé
+                normalized_path = f"{base_dir}/{subject}/{audience}/output/{filename}"
+                config["output_path"] = normalized_path
+                print(f"[CONFIG] Output path normalisé: {normalized_path}")
+            elif is_test:
+                # Mode test: rediriger presentations/ vers tests/
                 if output_path.startswith("presentations/"):
                     config["output_path"] = output_path.replace("presentations/", "tests/", 1)
                     print(f"[CONFIG] Mode test activé - Redirection vers dossier 'tests'")
+
+            # Validation finale: s'assurer que le path contient /output/
+            final_output = config["output_path"]
+            if "/output/" not in final_output:
+                # Insérer /output/ avant le nom de fichier
+                parts = final_output.split("/")
+                if len(parts) >= 3:  # base_dir/subject/audience/file.pptx
+                    filename = parts[-1]
+                    path_prefix = "/".join(parts[:-1])
+                    config["output_path"] = f"{path_prefix}/output/{filename}"
+                    print(f"[CONFIG] Ajout du dossier output: {config['output_path']}")
 
             # Validation et conversion des slides
             for i, slide in enumerate(config["slides"]):
