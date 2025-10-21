@@ -1,0 +1,116 @@
+{
+  "presentation_name": "Présentation Ia Generative Integration - Technique",
+  "subject": "ia-generative-integration",
+  "audience": "technique",
+  "is_test": true,
+  "output_path": "output/ia-generative-integration_technique_20251021_102513.pptx",
+  "slides": [
+    {
+      "slide_number": 1,
+      "layout_name": "Page titre",
+      "shapes": [
+        {
+          "name": "Espace réservé du texte 1",
+          "shape_id": 1,
+          "type": "placeholder",
+          "position": {
+            "left": 40.63,
+            "top": 296.76,
+            "width": 665.59,
+            "height": 29.08
+          },
+          "placeholder_type": "body",
+          "placeholder_idx": 11,
+          "text": "2025.10.21 – IA Générative Integration, Équipe Technique",
+          "font_name": "Premier Tech Text",
+          "font_size": 18.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": "#FFFFFF",
+          "alignment": "LEFT",
+          "vertical_alignment": "TOP",
+          "margin_left": 7.2,
+          "margin_right": 7.2,
+          "margin_top": 3.6,
+          "margin_bottom": 3.6,
+          "text_wrapping": "square",
+          "autofit": {
+            "type": "none",
+            "font_scale": null,
+            "line_spacing_reduction": null
+          }
+        },
+        {
+          "name": "Titre 2",
+          "shape_id": 2,
+          "type": "placeholder",
+          "position": {
+            "left": 40.63,
+            "top": 222.68,
+            "width": 665.59,
+            "height": 65.43
+          },
+          "placeholder_type": "title",
+          "text": "IA Générative et Intégration d'Entreprise",
+          "font_name": "Premier Tech Title",
+          "font_size": 48.0,
+          "bold": true,
+          "italic": false,
+          "underline": false,
+          "color": null,
+          "alignment": "LEFT",
+          "vertical_alignment": "TOP",
+          "margin_left": 7.2,
+          "margin_right": 7.2,
+          "margin_top": 3.6,
+          "margin_bottom": 3.6,
+          "text_wrapping": "square",
+          "autofit": {
+            "type": "none",
+            "font_scale": null,
+            "line_spacing_reduction": null
+          }
+        },
+        {
+          "name": "Espace réservé du texte 3",
+          "shape_id": 3,
+          "type": "placeholder",
+          "position": {
+            "left": 40.63,
+            "top": 167.98,
+            "width": 665.59,
+            "height": 46.05
+          },
+          "placeholder_type": "body",
+          "placeholder_idx": 14,
+          "text": "Architectures et Implémentation Technique",
+          "font_name": "Premier Tech Title",
+          "font_size": 32.0,
+          "bold": false,
+          "italic": false,
+          "underline": false,
+          "color": null,
+          "alignment": "LEFT",
+          "vertical_alignment": "TOP",
+          "margin_left": 7.2,
+          "margin_right": 7.2,
+          "margin_top": 3.6,
+          "margin_bottom": 3.6,
+          "text_wrapping": "square",
+          "autofit": {
+            "type": "none",
+            "font_scale": null,
+            "line_spacing_reduction": null
+          }
+        }
+      ]
+    }
+  ],
+  "build_options": {
+    "base_template": "templates/Template_PT.pptx",
+    "auto_widen_text": true,
+    "generate_reports": true,
+    "preserve_styles": true
+  }
+}
