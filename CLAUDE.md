@@ -18,6 +18,8 @@ Création automatisée de présentations professionnelles avec :
 - **Reconnaissance contextuelle** des expertises pertinentes
 - **Timing optimal** : ~15.8s par slide
 
+**📖 Méthodologie complète d'adaptation :** [docs/strategie-diffusion-connaissances.md](docs/strategie-diffusion-connaissances.md)
+
 ### Configuration Automatique selon Audience
 ```python
 audience_configs = {
@@ -89,200 +91,93 @@ python tools/presentation_builder.py config.json
 ## 🔧 **Outils Principaux**
 
 ### [tools/presentation_builder.py](tools/presentation_builder.py) ⭐
-**Générateur principal basé sur layout_name**
-- Configuration JSON avec layout_name descriptifs
-- Validation automatique des layouts Premier Tech
-- Fidélité bidirectionnelle parfaite
-- Support complet des propriétés de formatage
+**Générateur principal basé sur layout_name** avec architecture JSON moderne
 
-### [tools/init_presentation.py](tools/init_presentation.py)
-**Initialisation de projets de présentation**
-```bash
-python tools/init_presentation.py innovation-ai c-level false
-```
-Crée la structure complète dans `presentations/innovation-ai/c-level/`
+### Outils Complémentaires
+- **[tools/init_presentation.py](tools/init_presentation.py)** : Initialisation projets
+- **[tools/slide_extractor.py](tools/slide_extractor.py)** : Extraction et validation
+- **[tools/add_slide.py](tools/add_slide.py)** / **[tools/remove_slide.py](tools/remove_slide.py)** : Gestion dynamique
+- **[tools/validation_checker.py](tools/validation_checker.py)** : Contrôle qualité PT
 
-### [tools/slide_extractor.py](tools/slide_extractor.py)
-**Extraction et validation de slides**
-```bash
-python tools/slide_extractor.py templates/Template_PT.pptx --slide-number 11
-```
-- Extraction complète des propriétés
-- Validation bidirectionnelle
-- Support layout_name
+**📖 Documentation technique :** [archive/presentation_builder/README.md](archive/presentation_builder/README.md)
 
-### [tools/add_slide.py](tools/add_slide.py) et [tools/remove_slide.py](tools/remove_slide.py)
-**Gestion dynamique des slides**
-```bash
-python tools/add_slide.py config.json "Page titre" ajout
-python tools/remove_slide.py presentation.pptx 3
-```
-
-### [tools/validation_checker.py](tools/validation_checker.py)
-**Contrôle qualité Premier Tech**
-```bash
-python tools/validation_checker.py presentation.pptx
-```
+**⚠️ Scripts Archive :** [archive/presentation_builder/](archive/presentation_builder/) contient les scripts spécialisés 02-10 pour compatibilité, mais l'architecture layout-based via `presentation_builder.py` est recommandée.
 
 ## 📋 **Commandes Intégrées**
 
-### [/initialize-presentation](.claude/commands/initialize-presentation.md)
-Initialise une nouvelle présentation avec structure complète et validation automatique.
+### Orchestration Intelligente des Commandes
+
+**Claude détermine automatiquement** quelles commandes exécuter selon le contexte :
+
+#### [/initialize-presentation](.claude/commands/initialize-presentation.md) ⭐
+**Utilisation :** Démarrage d'un nouveau projet de présentation
 
 ```bash
 /initialize-presentation "innovation-ai c-level"
 ```
-- Exécute `tools/init_presentation.py`
-- Crée la structure optimisée
-- Guide d'utilisation personnalisé
-- Templates suggérés par audience
 
-### [/research-audience](.claude/commands/research-audience.md)
-Recherche et documente un guide spécifique pour une audience de présentation.
+**Claude orchestration automatique :**
+- **Toujours exécuté :** Structure de base et validation
+- **Si audience nouvelle :** Déclenche automatiquement `/research-audience`
+- **Si sujet complexe :** Propose automatiquement `/research-presentation-data`
+- **Si adaptation requise :** Suggère automatiquement `/adapt-content-for-audience`
 
-```bash
-/research-audience "c-level"
-/research-audience "john-doe individual"
-```
-- Analyse des personas et individus
-- Navigation en graphe de connaissances PT
-- Guides réutilisables dans `docs/audience/`
+#### [/research-audience](.claude/commands/research-audience.md)
+**Déclenchement automatique :** Audience non documentée ou individu spécifique
 
-### [/research-presentation-data](.claude/commands/research-presentation-data.md)
-Effectue une recherche documentaire approfondie pour alimenter une présentation.
+#### [/research-presentation-data](.claude/commands/research-presentation-data.md)
+**Déclenchement automatique :** Sujet technique complexe ou besoin documentaire identifié
 
-```bash
-/research-presentation-data "presentations/innovation-digitale/c-level"
-```
-- Recherche web ciblée par audience
-- Synthèse dans `data/research_report_[date].md`
-- Sources internes et externes
+#### [/adapt-content-for-audience](.claude/commands/adapt-content-for-audience.md)
+**Déclenchement automatique :** Après recherche documentaire pour optimiser l'adaptation
 
-### [/adapt-content-for-audience](.claude/commands/adapt-content-for-audience.md)
-Adapte l'information de recherche documentaire pour une audience spécifique.
-
-```bash
-/adapt-content-for-audience "presentations/sujet/audience" "docs/audience/c-level.md"
-```
-- Distillation intelligente du contenu
-- Adaptation au profil d'audience
-- Génération de `content-brief.md`
+**📖 Documentation complète :** Voir [.claude/commands/](.claude/commands/) pour détails techniques
 
 ## 📊 **Layouts Premier Tech Supportés**
 
-### **Slides de Base**
-- **"Page titre"** : Slide de titre principale
-- **"Titre de présentation"** : Titre spécialisé
-- **"Table des matières"** : Sommaire structuré
+**57 layouts authentiques Premier Tech** avec noms descriptifs pour configuration intuitive.
 
-### **Sections et Navigation**
-- **"Titre de section avec chiffre"** : Section numérotée
-- **"Titre de section bleu"** : Section emphasis
-- **"Titre de section blanc"** : Section standard
+**📖 Liste complète :** [docs/reports/slide_structures_analysis_report.md](docs/reports/slide_structures_analysis_report.md)
 
-### **Messages et Contenu**
-- **"Court énoncé"** : Message simple centré
-- **"Court énoncé avec titre de section"** : Message avec contexte
-- **"Énoncé avec titre et image"** : Contenu illustré
-- **"Liste avec titre et image"** : Liste illustrée
+### **Catégories Principales**
+- **Slides de Base** : Page titre, Table des matières
+- **Sections** : Titres avec numérotation et emphasis
+- **Statistiques** : 2-4 KPI avec lignes bleues/grises
+- **Boîtes de Contenu** : 3-4 concepts avec sous-titres
+- **Branding PT** : Logos et signatures corporate
 
-### **Statistiques et Métriques**
-- **"2 statistiques avec ligne bleue"** : Duo de métriques
-- **"2 statistiques avec ligne grise"** : Métriques neutres
-- **"3 statistiques mots clés"** : Triple KPI
-- **"4 statistiques mots clés"** : Quadruple KPI
-- **"4 statistiques mots clés avec lignes"** : KPI structurés
-
-### **Boîtes de Contenu**
-- **"3 boîtes bleues pour courts énoncés avec sous-titre"** : Triple concept détaillé
-- **"3 boîtes bleues pour courts énoncés sans sous-titre"** : Triple concept simple
-- **"4 boîtes bleues pour courts énoncés avec sous-titre"** : Quadruple concept détaillé
-- **"4 boîtes grises pour courts énoncés sans sous-titre"** : Quadruple concept simple
-
-### **Éléments Spéciaux**
-- **"Citation"** : Témoignage ou citation
-- **"Titre espace pour tableau ou graphique"** : Placeholder données
-- **"Diapositive vide"** : Canvas libre
-- **"Vidéo"** : Placeholder multimédia
-
-### **Branding Premier Tech**
-- **"Monogramme PT"** : Logo corporate
-- **"We are PT"** : Identité d'entreprise
-- **"Nourrir protéger améliorer"** : Mission PT
-- **"Passion et technologies pour faire la différence"** : Signature PT
+**Exemples d'usage layout-based :**
+```json
+{"layout_name": "Page titre", "shapes": [...]}
+{"layout_name": "2 statistiques avec ligne bleue", "shapes": [...]}
+{"layout_name": "3 boîtes bleues pour courts énoncés avec sous-titre", "shapes": [...]}
+```
 
 ## 🚀 **Workflow Automatisé par Sujet**
 
-### Structure par Projet de Présentation
+### Structure Moderne par Projet
 ```
-presentations/[sujet]/
-├── README.md                    # Contexte global du sujet
-├── documentation/               # Sources et recherches
-│   ├── context.md              # Analyse contextuelle
-│   ├── research_log.md         # Historique des recherches
-│   └── sources/                # Documents de référence
-├── [audience-1]/                # Première audience
-│   ├── audience.md             # Profil d'audience détaillé
-│   ├── content-brief.md        # Documentation adaptée
-│   ├── config.json             # Configuration layout-based
-│   ├── data/                   # Datasets et recherches
-│   └── output/                 # Présentation finale
-└── [audience-2]/                # Autre audience
-    └── ... (même structure)
+presentations/[sujet]/[audience]/
+├── config.json                  # Configuration layout-based
+├── README.md                    # Guide d'utilisation
+├── data/                        # Recherches et datasets
+└── output/                      # Présentation finale
 ```
 
-### Workflow Complet
+### Workflow Orchestré Automatiquement
 
-#### **ÉTAPE 1 : Initialisation**
-```bash
-/initialize-presentation "innovation-ai c-level"
-```
-- Crée `presentations/innovation-ai/c-level/`
-- Génère `config.json` layout-based
-- README.md et guides d'utilisation
+**Commande Unique :** `/initialize-presentation "innovation-ai c-level"`
 
-#### **ÉTAPE 2 : Recherche d'Audience**
-```bash
-/research-audience "c-level"
-```
-- Analyse des besoins informationnels
-- Guide dans `docs/audience/c-level.md`
-- Stratégies de communication adaptées
+**Claude orchestration intelligente :**
+1. **Initialisation** : Structure et config.json layout-based
+2. **Auto-détection** : Si audience/sujet nécessite recherche
+3. **Recherche automatique** : Documentation et adaptation
+4. **Configuration finale** : Layouts optimisés par audience
+5. **Génération** : `python tools/presentation_builder.py config.json`
 
-#### **ÉTAPE 3 : Recherche Documentaire**
-```bash
-/research-presentation-data "presentations/innovation-ai/c-level"
-```
-- Recherche web ciblée C-Level (stratégie, ROI, business)
-- Rapport dans `data/research_report_[date].md`
-- Sources et références
+**📖 Méthodologie d'adaptation :** [docs/strategie-diffusion-connaissances.md](docs/strategie-diffusion-connaissances.md)
 
-#### **ÉTAPE 4 : Adaptation de Contenu**
-```bash
-/adapt-content-for-audience "presentations/innovation-ai/c-level" "docs/audience/c-level.md"
-```
-- Distillation du contenu pour C-Level
-- `content-brief.md` adapté
-- Messages clés et structure
-
-#### **ÉTAPE 5 : Configuration Layout-Based**
-Modification de `config.json` avec layouts appropriés :
-```json
-{
-  "slides": [
-    {"layout_name": "Page titre", "shapes": [...]},
-    {"layout_name": "2 statistiques avec ligne bleue", "shapes": [...]},
-    {"layout_name": "3 boîtes bleues pour courts énoncés avec sous-titre", "shapes": [...]}
-  ]
-}
-```
-
-#### **ÉTAPE 6 : Génération**
-```bash
-python tools/presentation_builder.py presentations/innovation-ai/c-level/config.json
-```
-- Présentation dans `output/innovation_ai.pptx`
-- Fidélité Premier Tech garantie
+**📁 Structure détaillée :** [presentations/README.md](presentations/README.md)
 
 ## ⚙️ **Règles Critiques**
 
@@ -311,32 +206,19 @@ def load_config(config_file):
 
 ```
 presentation-assistant/
-├── tools/                      # Scripts principaux layout-based
-│   ├── presentation_builder.py # Orchestrateur principal
-│   ├── init_presentation.py   # Initialisation projets
-│   ├── slide_extractor.py     # Extraction et validation
-│   ├── add_slide.py           # Ajout de slides
-│   ├── remove_slide.py        # Suppression de slides
-│   └── validation_checker.py  # Contrôle qualité
-├── .claude/commands/           # 4 commandes intégrées
-│   ├── initialize-presentation.md
-│   ├── research-audience.md
-│   ├── research-presentation-data.md
-│   └── adapt-content-for-audience.md
-├── templates/
-│   ├── Template_PT.pptx        # 57 slides authentiques PT
-│   └── presentation-project/
-│       └── slide-structure/    # Structures par layout_name
-├── presentations/              # Structure [sujet]/[audience]/
-├── tests/                      # Tests et validations
-├── docs/                       # Documentation et guides
-├── src/                        # Scripts utilitaires
-│   └── text_to_speech.py      # Synthèse vocale simple
-└── archive/                    # Scripts et outils obsolètes
-    ├── powerpoint_presenter.py
-    ├── audio_generator.py
-    └── presentation_builder/   # Ancienne architecture slide-number
+├── tools/                      # Scripts layout-based principaux
+├── .claude/commands/           # 4 commandes orchestrées
+├── templates/                  # Template PT + structures
+├── presentations/              # Projets [sujet]/[audience]/
+├── docs/                       # Documentation spécialisée
+│   ├── strategie-diffusion-connaissances.md  # Méthodologie
+│   ├── reports/                # Analyses techniques
+│   └── audience/              # Guides d'audience générés
+├── tests/                      # Validations
+└── archive/                    # Anciens scripts et outils
 ```
+
+**📖 Documentation :** [docs/README.md](docs/README.md) pour navigation complète
 
 ## 🔄 **Setup et Utilisation**
 
@@ -348,23 +230,15 @@ export ELEVENLABS_API_KEY="your_key"
 
 ### 🚀 **Méthode Layout-Based (Moderne)**
 ```bash
-# 1. Initialiser un projet
+# Workflow automatisé avec orchestration intelligente
 /initialize-presentation "innovation-strategy c-level"
+# Claude détermine automatiquement les commandes suivantes à exécuter
 
-# 2. Rechercher l'audience
-/research-audience "c-level"
-
-# 3. Rechercher le contenu
-/research-presentation-data "presentations/innovation-strategy/c-level"
-
-# 4. Adapter le contenu
-/adapt-content-for-audience "presentations/innovation-strategy/c-level" "docs/audience/c-level.md"
-
-# 5. Générer la présentation
+# Génération finale
 python tools/presentation_builder.py presentations/innovation-strategy/c-level/config.json
 
-# 6. Validation bidirectionnelle
-python tools/slide_extractor.py presentations/innovation-strategy/c-level/output/innovation_strategy.pptx --slide-number 1
+# Validation technique (optionnelle)
+python tools/slide_extractor.py output/innovation_strategy.pptx --slide-number 1
 ```
 
 ### **Configuration Layout-Based Complète**
@@ -429,11 +303,9 @@ python tools/slide_extractor.py presentations/innovation-strategy/c-level/output
 
 ### Commandes Essentielles
 ```bash
-# Workflow complet avec commandes
+# Workflow automatisé avec orchestration Claude
 /initialize-presentation "sujet audience"
-/research-audience "audience"
-/research-presentation-data "chemin/vers/projet"
-/adapt-content-for-audience "chemin/vers/projet" "docs/audience/guide.md"
+# Les autres commandes sont déclenchées automatiquement selon le contexte
 
 # Génération finale
 python tools/presentation_builder.py config.json
@@ -444,16 +316,19 @@ python tools/presentation_builder.py config.json
 - **Templates authentiques** : 57 slides Premier Tech préservés
 - **Validation automatique** : Conformité corporate garantie
 
-## 📚 **Ressources Layout-Based**
+## 📚 **Ressources Techniques**
 
-Dans `templates/presentation-project/` :
-- **[slide-structure/](templates/presentation-project/slide-structure/)** : Structures par layout_name
-- **Mapping automatique** : layout_name → slide_number
+**Templates et Structures :**
+- **[templates/presentation-project/slide-structure/](templates/presentation-project/slide-structure/)** : Structures par layout_name
+- **[templates/presentation-project/content-brief.md.template](templates/presentation-project/content-brief.md.template)** : Template adaptation audience
 
-### Outils d'Extraction et Validation
-- **[tools/slide_extractor.py](tools/slide_extractor.py)** : Extraction avec support layout_name
-- **Structures layout-based** : Mapping par noms descriptifs
-- **Validation bidirectionnelle** : Test de fidélité
+**Documentation Technique :**
+- **[docs/technical-reports/POWERPOINT_FORMATTING_EXTRACTION_REPORT.md](docs/technical-reports/POWERPOINT_FORMATTING_EXTRACTION_REPORT.md)** : Analyse architecture layout-based
+- **[docs/strategie-diffusion-connaissances.md](docs/strategie-diffusion-connaissances.md)** : Méthodologie complète d'adaptation
+
+**Validation et Test :**
+- **[tools/slide_extractor.py](tools/slide_extractor.py)** : Validation bidirectionnelle
+- **[tools/validation_checker.py](tools/validation_checker.py)** : Conformité Premier Tech
 
 ## 🎯 **Objectifs du Workflow Layout-Based**
 
