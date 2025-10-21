@@ -1,0 +1,14 @@
+{
+  "presentation_name": "Présentation Test Empty Slides - Technical",
+  "subject": "test-empty-slides",
+  "audience": "technical",
+  "is_test": true,
+  "output_path": "output/test-empty-slides_technical_20251020_211305.pptx",
+  "slides": [],
+  "build_options": {
+    "base_template": "templates/Template_PT.pptx",
+    "auto_widen_text": true,
+    "generate_reports": true,
+    "preserve_styles": true
+  }
+}
