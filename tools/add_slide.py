@@ -64,40 +64,52 @@ def convert_template_to_slide_config(template, new_slide_number):
 
     # Convertir chaque shape du template
     for shape in template.get("shapes", []):
+        # Créer la shape_config dans l'ordre exact des templates
         shape_config = {
-            "shape_id": shape["shape_id"],
             "name": shape.get("name", f"Shape {shape['shape_id']}"),
+            "shape_id": shape["shape_id"],
+            "type": shape.get("type", "placeholder")
+        }
+
+        # Ajouter l'objet position avec la structure exacte du template
+        if "position" in shape:
+            shape_config["position"] = {
+                "left": shape["position"].get("left"),
+                "top": shape["position"].get("top"),
+                "width": shape["position"].get("width"),
+                "height": shape["position"].get("height")
+            }
+
+        # Ajouter placeholder_type et placeholder_idx dans l'ordre
+        shape_config["placeholder_type"] = shape.get("placeholder_type", "body")
+        if "placeholder_idx" in shape:
+            shape_config["placeholder_idx"] = shape["placeholder_idx"]
+
+        # Continuer avec les attributs de texte dans l'ordre exact
+        shape_config.update({
             "text": shape.get("text", ""),
             "font_name": shape.get("font_name", "Premier Tech Text"),
             "font_size": shape.get("font_size", 18.0),
             "bold": shape.get("bold", False),
-            "alignment": shape.get("alignment", "LEFT"),
+            "italic": shape.get("italic", False),
+            "underline": shape.get("underline", False),
             "color": shape.get("color", "#FFFFFF"),
+            "alignment": shape.get("alignment", "LEFT"),
             "vertical_alignment": shape.get("vertical_alignment", "TOP"),
             "margin_left": shape.get("margin_left", 7.2),
             "margin_right": shape.get("margin_right", 7.2),
             "margin_top": shape.get("margin_top", 3.6),
             "margin_bottom": shape.get("margin_bottom", 3.6),
-            "autofit_type": shape.get("autofit", {}).get("type", "none"),
-            "text_wrapping": shape.get("text_wrapping", "square"),
-            "placeholder_type": shape.get("placeholder_type", "body")
-        }
+            "text_wrapping": shape.get("text_wrapping", "square")
+        })
 
-        # Ajouter les propriétés de position si disponibles
-        if "position" in shape:
-            shape_config.update({
-                "left": shape["position"].get("left"),
-                "top": shape["position"].get("top"),
-                "width": shape["position"].get("width"),
-                "height": shape["position"].get("height")
-            })
-
-        # Ajouter autofit avancé si disponible
-        autofit = shape.get("autofit", {})
-        if autofit.get("font_scale"):
-            shape_config["font_scale"] = autofit["font_scale"]
-        if autofit.get("line_spacing_reduction"):
-            shape_config["line_spacing_reduction"] = autofit["line_spacing_reduction"]
+        # Ajouter l'objet autofit avec la structure exacte du template
+        if "autofit" in shape:
+            shape_config["autofit"] = {
+                "type": shape["autofit"].get("type", "none"),
+                "font_scale": shape["autofit"].get("font_scale"),
+                "line_spacing_reduction": shape["autofit"].get("line_spacing_reduction")
+            }
 
         slide_config["shapes"].append(shape_config)
 
