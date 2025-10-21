@@ -21,7 +21,8 @@
       "SlashCommand(/create-task Validation et nettoyage: Vérifier que la logique de 01_slide_title_creator.py est bien implémentée dans presentation_builder.py, identifier toutes les références au fichier, et le supprimer s'il est devenu obsolète)",
       "SlashCommand(/create-task:*)",
       "SlashCommand(/execute-task roadmap/tasks/refactorisation-integration-title-creator.md)",
-      "SlashCommand(/execute-task:*)"
+      "SlashCommand(/execute-task:*)",
+      "Read(//c/Users/max_o/OneDrive - Premier Tech/PTOS/**)"
     ],
     "deny": [],
     "ask": []
