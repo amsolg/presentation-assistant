@@ -25,6 +25,8 @@ import argparse
 import json
 import sys
 import os
+import re
+import glob
 from typing import Dict, List, Any, Optional, Union
 from pathlib import Path
 
@@ -63,6 +65,65 @@ PRESET_COLORS = {
     'magenta': '#FF00FF',
     'cyan': '#00FFFF'
 }
+
+
+# =============================================================================
+# FONCTIONS UTILITAIRES
+# =============================================================================
+
+def clean_layout_name(layout_name: str) -> str:
+    """
+    Nettoie un nom de layout pour l'utiliser comme nom de fichier.
+
+    Args:
+        layout_name: Nom du layout (ex: "Page titre", "4 boîtes bleues pour courts énoncés")
+
+    Returns:
+        Nom nettoyé pour fichier (ex: "page_titre", "4_boites_bleues_courts_enonces")
+    """
+    if not layout_name:
+        return "unknown_layout"
+
+    # Remplacer les caractères accentués
+    replacements = {
+        'à': 'a', 'á': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a', 'å': 'a',
+        'è': 'e', 'é': 'e', 'ê': 'e', 'ë': 'e',
+        'ì': 'i', 'í': 'i', 'î': 'i', 'ï': 'i',
+        'ò': 'o', 'ó': 'o', 'ô': 'o', 'õ': 'o', 'ö': 'o',
+        'ù': 'u', 'ú': 'u', 'û': 'u', 'ü': 'u',
+        'ç': 'c', 'ñ': 'n'
+    }
+
+    cleaned = layout_name.lower()
+    for accent, replacement in replacements.items():
+        cleaned = cleaned.replace(accent, replacement)
+
+    # Remplacer espaces et caractères spéciaux par underscore
+    cleaned = re.sub(r'[^\w\d]+', '_', cleaned)
+
+    # Enlever les underscores multiples et en début/fin
+    cleaned = re.sub(r'_+', '_', cleaned)
+    cleaned = cleaned.strip('_')
+
+    # Limiter la longueur pour éviter les noms de fichiers trop longs
+    if len(cleaned) > 50:
+        cleaned = cleaned[:50].rstrip('_')
+
+    return cleaned or "unknown_layout"
+
+
+def generate_layout_filename(layout_name: str) -> str:
+    """
+    Génère un nom de fichier JSON basé sur le layout_name.
+
+    Args:
+        layout_name: Nom du layout
+
+    Returns:
+        Nom de fichier (ex: "slide_page_titre.json")
+    """
+    clean_name = clean_layout_name(layout_name)
+    return f"slide_{clean_name}.json"
 
 
 # =============================================================================
@@ -2494,6 +2555,77 @@ def find_slide_part_name(package: PPTXPackage, slide_number: int) -> Optional[st
     return f"ppt/slides/slide{slide_number}.xml"
 
 
+def regenerate_all_layouts(pptx_file: str, output_dir: str = None, debug: bool = False):
+    """
+    Régénère toutes les structures de layout avec noms basés sur layout_name.
+
+    Args:
+        pptx_file: Chemin vers le fichier template .pptx
+        output_dir: Dossier de sortie (défaut: templates/presentation-project/slide-structure/)
+        debug: Mode debug
+    """
+    if output_dir is None:
+        output_dir = "templates/presentation-project/slide-structure"
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    print(f"[INFO] Régénération de toutes les structures de layout...")
+    print(f"[INFO] Template: {pptx_file}")
+    print(f"[INFO] Dossier de sortie: {output_dir}")
+
+    package = None
+    generated_count = 0
+
+    try:
+        package = PPTXPackage(pptx_file)
+
+        # Extraire toutes les slides (1 à 57)
+        for slide_number in range(1, 58):
+            try:
+                slide_part_name = find_slide_part_name(package, slide_number)
+                if not slide_part_name:
+                    if debug:
+                        print(f"[DEBUG] Slide {slide_number} non trouvée, ignorée")
+                    continue
+
+                extractor = SlideExtractor(package, slide_part_name)
+                metadata = extractor.extract_metadata()
+
+                layout_name = metadata.get('layout_name', f'Unknown_Layout_{slide_number}')
+                filename = generate_layout_filename(layout_name)
+                output_path = os.path.join(output_dir, filename)
+
+                # Sauvegarder avec le nouveau nom
+                with open(output_path, 'w', encoding='utf-8') as f:
+                    json.dump(metadata, f, indent=2, ensure_ascii=False)
+
+                generated_count += 1
+                print(f"[CREATED] Slide {slide_number}: {layout_name} -> {filename}")
+
+                if debug:
+                    print(f"[DEBUG] - Shapes: {metadata.get('total_shapes', 0)}")
+                    print(f"[DEBUG] - Fichier: {output_path}")
+
+            except Exception as e:
+                print(f"[WARNING] Erreur slide {slide_number}: {e}")
+                if debug:
+                    import traceback
+                    traceback.print_exc()
+
+        print(f"\n[SUCCESS] {generated_count} structures de layout générées dans {output_dir}")
+
+    except Exception as e:
+        print(f"[ERROR] Erreur lors de la régénération: {e}")
+        if debug:
+            import traceback
+            traceback.print_exc()
+        raise
+
+    finally:
+        if package:
+            package.close()
+
+
 def main():
     """Point d'entrée principal du script."""
     parser = argparse.ArgumentParser(
@@ -2501,16 +2633,34 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Exemples d'utilisation:
+  # Extraire une slide spécifique
   python tools/slide_extractor.py presentation.pptx --slide-number 11
   python tools/slide_extractor.py presentation.pptx --slide-number 11 --output slide_11.json
+
+  # Extraire avec nommage automatique selon layout
+  python tools/slide_extractor.py presentation.pptx --slide-number 11 --auto-name
+
+  # Régénérer toutes les structures de template
+  python tools/slide_extractor.py templates/Template_PT.pptx --regenerate-all
+
+  # Debug détaillé
   python tools/slide_extractor.py presentation.pptx --slide-number 11 --debug
         """
     )
 
     parser.add_argument("pptx_file", help="Chemin vers le fichier .pptx")
-    parser.add_argument("--slide-number", type=int, required=True,
-                       help="Numéro de la slide à extraire (commence à 1)")
+
+    # Groupe mutuellement exclusif pour slide-number vs regenerate-all
+    action_group = parser.add_mutually_exclusive_group(required=True)
+    action_group.add_argument("--slide-number", type=int,
+                             help="Numéro de la slide à extraire (commence à 1)")
+    action_group.add_argument("--regenerate-all", action="store_true",
+                             help="Régénérer toutes les structures de layout du template")
+
     parser.add_argument("--output", help="Chemin du fichier JSON de sortie")
+    parser.add_argument("--output-dir", help="Dossier de sortie pour --regenerate-all")
+    parser.add_argument("--auto-name", action="store_true",
+                       help="Générer automatiquement le nom de fichier selon layout_name")
     parser.add_argument("--debug", action="store_true",
                        help="Affichage des informations de debug détaillées")
 
@@ -2521,55 +2671,74 @@ Exemples d'utilisation:
         print(f"[ERROR] Fichier non trouvé : {args.pptx_file}")
         sys.exit(1)
 
-    package = None
     try:
+        # Mode régénération de tous les layouts
+        if args.regenerate_all:
+            output_dir = args.output_dir or "templates/presentation-project/slide-structure"
+            regenerate_all_layouts(args.pptx_file, output_dir, args.debug)
+            return
+
+        # Mode extraction d'une slide spécifique
         if args.debug:
             print(f"[DEBUG] Ouverture de {args.pptx_file}")
             print(f"[DEBUG] lxml disponible: {LXML_AVAILABLE}")
 
-        # Initialiser le package
-        package = PPTXPackage(args.pptx_file)
+        package = None
+        try:
+            # Initialiser le package
+            package = PPTXPackage(args.pptx_file)
 
-        # Trouver la partie slide
-        slide_part_name = find_slide_part_name(package, args.slide_number)
-        if not slide_part_name:
-            print(f"[ERROR] Impossible de trouver la slide {args.slide_number}")
-            sys.exit(1)
+            # Trouver la partie slide
+            slide_part_name = find_slide_part_name(package, args.slide_number)
+            if not slide_part_name:
+                print(f"[ERROR] Impossible de trouver la slide {args.slide_number}")
+                sys.exit(1)
 
-        if args.debug:
-            print(f"[DEBUG] Partie slide trouvée: {slide_part_name}")
+            if args.debug:
+                print(f"[DEBUG] Partie slide trouvée: {slide_part_name}")
 
-        # Extraire les métadonnées
-        extractor = SlideExtractor(package, slide_part_name)
+            # Extraire les métadonnées
+            extractor = SlideExtractor(package, slide_part_name)
 
-        if args.debug:
-            print(f"[DEBUG] Chaîne d'héritage:")
-            print(f"  - Slide: {slide_part_name}")
-            print(f"  - Layout: {'Trouvé' if extractor.layout_tree else 'Non trouvé'}")
-            print(f"  - Master: {'Trouvé' if extractor.master_tree else 'Non trouvé'}")
-            print(f"  - Theme: {'Trouvé' if extractor.theme else 'Non trouvé'}")
+            if args.debug:
+                print(f"[DEBUG] Chaîne d'héritage:")
+                print(f"  - Slide: {slide_part_name}")
+                print(f"  - Layout: {'Trouvé' if extractor.layout_tree else 'Non trouvé'}")
+                print(f"  - Master: {'Trouvé' if extractor.master_tree else 'Non trouvé'}")
+                print(f"  - Theme: {'Trouvé' if extractor.theme else 'Non trouvé'}")
 
-        metadata = extractor.extract_metadata()
+            metadata = extractor.extract_metadata()
 
-        # Sortie des résultats
-        if args.output:
-            with open(args.output, 'w', encoding='utf-8') as f:
-                json.dump(metadata, f, indent=2, ensure_ascii=False)
-            print(f"[SUCCESS] Métadonnées sauvegardées dans {args.output}")
-        else:
-            print(json.dumps(metadata, indent=2, ensure_ascii=False))
+            # Déterminer le fichier de sortie
+            output_file = args.output
+            if args.auto_name and not output_file:
+                layout_name = metadata.get('layout_name', 'Unknown_Layout')
+                output_file = generate_layout_filename(layout_name)
+                print(f"[INFO] Nommage automatique: {layout_name} -> {output_file}")
 
-        # Affichage du résumé
-        print(f"\n[INFO] Slide {args.slide_number} - Layout: {metadata.get('layout_name', 'Unknown')}")
-        print(f"[INFO] Formes extraites : {metadata.get('total_shapes', 0)}")
+            # Sortie des résultats
+            if output_file:
+                with open(output_file, 'w', encoding='utf-8') as f:
+                    json.dump(metadata, f, indent=2, ensure_ascii=False)
+                print(f"[SUCCESS] Métadonnées sauvegardées dans {output_file}")
+            else:
+                print(json.dumps(metadata, indent=2, ensure_ascii=False))
 
-        if args.debug:
-            shapes_with_text = [s for s in metadata.get('shapes', []) if s.get('text')]
-            print(f"[DEBUG] Formes avec texte : {len(shapes_with_text)}")
+            # Affichage du résumé
+            print(f"\n[INFO] Slide {args.slide_number} - Layout: {metadata.get('layout_name', 'Unknown')}")
+            print(f"[INFO] Formes extraites : {metadata.get('total_shapes', 0)}")
 
-            for shape in shapes_with_text:
-                text_preview = shape.get('text', '')[:50] + ('...' if len(shape.get('text', '')) > 50 else '')
-                print(f"[DEBUG] - {shape.get('name', 'Unknown')}: {text_preview}")
+            if args.debug:
+                shapes_with_text = [s for s in metadata.get('shapes', []) if s.get('text')]
+                print(f"[DEBUG] Formes avec texte : {len(shapes_with_text)}")
+
+                for shape in shapes_with_text:
+                    text_preview = shape.get('text', '')[:50] + ('...' if len(shape.get('text', '')) > 50 else '')
+                    print(f"[DEBUG] - {shape.get('name', 'Unknown')}: {text_preview}")
+
+        finally:
+            if package:
+                package.close()
 
     except Exception as e:
         print(f"[ERROR] Erreur lors de l'extraction : {e}")
@@ -2577,10 +2746,6 @@ Exemples d'utilisation:
             import traceback
             traceback.print_exc()
         sys.exit(1)
-
-    finally:
-        if package:
-            package.close()
 
 
 if __name__ == "__main__":

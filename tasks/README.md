@@ -20,6 +20,7 @@ tasks/
 
 | Tâche | Priorité | Description |
 |-------|----------|-------------|
+| [presentation-builder-configuration-complete](open/presentation-builder-configuration-complete.md) | 🔴 Élevée | Support complet configurations Premier Tech avec test bidirectionnel |
 | [extracteur-contenu-pptx-agnostique](open/extracteur-contenu-pptx-agnostique.md) | Élevée | Extracteur PowerPoint avec hiérarchie d'héritage |
 | [validation-nettoyage-title-creator](open/validation-nettoyage-title-creator.md) | Élevée | Validation architecture JSON |
 | [refactorisation-integration-title-creator](open/refactorisation-integration-title-creator.md) | Élevée | Intégration logique title creator |
@@ -45,4 +46,4 @@ Les rapports sont générés automatiquement dans `tasks/reports/` après chaque
 Dernier rapport généré : [2025-01-16_14-30_ameliorer-creation-rapports_report.md](reports/2025-01-16_14-30_ameliorer-creation-rapports_report.md)
 
 ---
-**Dernière mise à jour :** 2025-01-17
+**Dernière mise à jour :** 2025-01-20
