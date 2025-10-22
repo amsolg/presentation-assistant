@@ -164,23 +164,90 @@ Pour une présentation complète, l'ordre optimal est :
 
 ## 📊 **Layouts Premier Tech Supportés**
 
-**57 layouts authentiques Premier Tech** avec noms descriptifs pour configuration intuitive.
+**46 layouts authentiques Premier Tech** avec noms descriptifs pour configuration intuitive.
+**37 layouts utilisables** pour les présentations automatisées (80.4%).
 
 **📖 Liste complète :** [docs/reports/slide_structures_analysis_report.md](docs/reports/slide_structures_analysis_report.md)
 
-### **Catégories Principales**
-- **Slides de Base** : Page titre, Table des matières
-- **Sections** : Titres avec numérotation et emphasis
-- **Statistiques** : 2-4 KPI avec lignes bleues/grises
-- **Boîtes de Contenu** : 3-4 concepts avec sous-titres
-- **Branding PT** : Logos et signatures corporate
+### **Layouts Utilisables par Catégorie**
+
+#### **Structure et Navigation** (7 layouts)
+- `Court énoncé avec titre de section`
+- `Mots-clés & Court énoncé avec titre de section`
+- `Page titre`
+- `Table des matières`
+- `Titre de section avec chiffre`
+- `Titre de section blanc`
+- `Titre de section bleu`
+
+#### **Contenu Textuel** (11 layouts)
+- `3 boîtes bleues pour courts énoncés avec sous-titres`
+- `3 boîtes grises pour courts énoncés avec sous-titres`
+- `4 boîtes bleues pour courts énoncés avec sous-titres`
+- `4 boîtes grises pour courts énoncés avec sous-titres`
+- `4 énoncés & Mots-clés`
+- `Citation`
+- `Court énoncé`
+- `Mots-clés & Court énoncé`
+- `Mots-clés & Mots complémentaires`
+- `Titre & Espace pour tableau ou graphique`
+- `Titre de présentation`
+
+#### **Statistiques et KPI** (5 layouts)
+- `2 statistiques avec ligne bleue`
+- `2 statistiques avec ligne grise`
+- `3 statistiques & Mots-clés`
+- `4 statistiques & Mots-clés`
+- `4 statistiques & Mots-clés avec lignes`
+
+#### **Contenus Visuels** (9 layouts)
+- `2 listes avec sous-titres et ligne bleue`
+- `2 listes avec sous-titres et ligne grise`
+- `2 énoncés avec sous-titres et image`
+- `2 énoncés avec sous-titres et ligne bleue`
+- `2 énoncés avec sous-titres et ligne grise`
+- `2 énoncés avec titre et ligne bleue`
+- `2 énoncés avec titre et ligne grise`
+- `Liste avec titre et image`
+- `Énoncé avec titre et image`
+
+#### **Branding Premier Tech** (4 layouts)
+- `Monogramme PT`
+- `Nourrir, Protéger, Améliorer`
+- `Passion et Technologies pour faire la différence`
+- `We are PT`
+
+#### **Layouts Techniques** (1 layout)
+- `Diapositive vide`
+
+### **Layouts Non Utilisables**
+
+_Ces layouts sont des guides de documentation ou n'ont pas de contenu configurable :_
+
+- `3 boîtes bleues pour courts énoncés sans sous-titres`
+- `3 boîtes grises pour courts énoncés sans sous-titres`
+- `4 boîtes bleues pour courts énoncés sans sous-titres`
+- `4 boîtes grises pour courts énoncés sans sous-titres`
+- `Guide de couleurs`
+- `Guide de texte`
+- `Standards et astuces`
+- `Standards et astuces 2`
+- `Vidéo`
 
 **Exemples d'usage layout-based :**
 ```json
 {"layout_name": "Page titre", "shapes": [...]}
 {"layout_name": "2 statistiques avec ligne bleue", "shapes": [...]}
-{"layout_name": "3 boîtes bleues pour courts énoncés avec sous-titre", "shapes": [...]}
+{"layout_name": "3 boîtes bleues pour courts énoncés avec sous-titres", "shapes": [...]}
 ```
+
+### **Guide de Sélection des Layouts**
+
+- **Pour débuter** : Utilisez `Page titre` et `Table des matières`
+- **Pour structurer** : Utilisez les layouts `Titre de section`
+- **Pour du contenu** : Choisissez selon le nombre d'éléments (2, 3 ou 4)
+- **Pour des données** : Utilisez les layouts `statistiques`
+- **Pour terminer** : Utilisez les layouts de branding Premier Tech
 
 ## 🚀 **Workflow Automatisé par Sujet**
 
