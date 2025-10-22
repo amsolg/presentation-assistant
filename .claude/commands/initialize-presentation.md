@@ -42,7 +42,7 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
 2. **Capturer et analyser la sortie** :
    - Vérifier que l'exécution s'est bien déroulée
    - Identifier le chemin de la structure créée
-   - Noter les fichiers générés (presentation_schema.json, README.md)
+   - Noter les fichiers générés (config.json, README.md)
 
 3. **Gestion des erreurs** :
    - Si le dossier existe déjà : proposer des options (écraser, choisir nouveau nom, annuler)
@@ -53,14 +53,14 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
 
 ### Vérification de la Structure
 1. **Valider les fichiers créés** :
-   - Vérifier existence de `presentation_schema.json`
+   - Vérifier existence de `config.json`
    - Valider le contenu JSON (syntaxe correcte)
    - Contrôler les métadonnées (nom, sujet, audience, is_test)
 
 2. **Examiner la structure des dossiers** :
    ```
    [presentations|tests]/[sujet]/[audience]/
-   ├── presentation_schema.json ✓
+   ├── config.json ✓
    ├── README.md ✓
    ├── output/ ✓
    └── data/ ✓
@@ -77,7 +77,7 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
    - Inclure instructions d'utilisation spécialisées
    - Suggérer templates de slides appropriés selon l'audience
 
-2. **Personnaliser presentation_schema.json** :
+2. **Personnaliser config.json** :
    - Adapter le nom de présentation selon le contexte
    - Optimiser le chemin de sortie
    - Ajouter commentaires si pertinent
@@ -87,22 +87,71 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
    - Suggérer 3-5 templates de slides appropriés
    - Créer un fichier de suggestions `suggested_slides.md`
 
-## Phase 4: Documentation et Guidance
+## Phase 4: Orchestration Intelligente des Commandes
+
+### 🤖 **Exécution Autonome des Commandes Suivantes**
+
+Claude peut automatiquement enchaîner les commandes suivantes selon les besoins identifiés :
+
+1. **Évaluation automatique** :
+   - **Si audience nouvelle ou inconnue** → Exécuter automatiquement `/research-audience`
+   - **Si sujet complexe nécessitant recherche** → Exécuter automatiquement `/research-presentation-data`
+   - **Si données disponibles** → Exécuter automatiquement `/adapt-content-for-audience`
+   - **Si contenu adapté disponible** → Proposer `/create-presentation-plan`
+
+2. **Workflow complet recommandé** :
+   ```bash
+   # Ordre d'exécution optimal (automatique par Claude)
+   /initialize-presentation "sujet audience"       # ← Commande initiale
+   /research-audience "audience"                   # ← Si nécessaire
+   /research-presentation-data "sujet/audience"    # ← Si nécessaire
+   /adapt-content-for-audience "..." "..."         # ← Adaptation intelligente
+   /create-presentation-plan "sujet/audience"      # ← Plan stratégique
+   /add-slide "layout" position                    # ← Ajout de slides (répétable)
+   /generate-presentation "config.json"            # ← Génération finale avec validation
+   ```
+
+3. **Intelligence d'orchestration** :
+   - **Détection automatique** : Claude identifie les besoins sans instruction explicite
+   - **Exécution séquentielle** : Respect de l'ordre optimal pour la qualité
+   - **Adaptation contextuelle** : Ajustement selon le type de présentation
+   - **Usage autonome** : Chaque commande peut être utilisée indépendamment
+
+## Phase 5: Documentation et Guidance
 
 ### Création de la Documentation d'Aide
 1. **Générer le guide de démarrage** dans le dossier créé :
    ```markdown
    # Guide de Démarrage - [Sujet] pour [Audience]
 
-   ## 🚀 Prochaines Étapes Recommandées
+   ## 🚀 Workflow Recommandé
 
-   ### 1. Ajouter des Slides
+   L'initialisation a créé la structure de base. Claude peut maintenant automatiquement :
+
+   1. **Analyser l'audience** (si nouvelle) - `/research-audience`
+   2. **Rechercher le contenu** (si nécessaire) - `/research-presentation-data`
+   3. **Adapter le contenu** pour l'audience - `/adapt-content-for-audience`
+   4. **Créer un plan stratégique** - `/create-presentation-plan`
+   5. **Ajouter des slides** personnalisées - `/add-slide`
+   6. **Générer la présentation** finale - `/generate-presentation`
+
+   ## 🤖 Usage Autonome
+
+   Chaque commande peut être utilisée indépendamment selon les besoins :
+   - Modification d'audience → `/research-audience`
+   - Nouveau contenu → `/research-presentation-data`
+   - Réadaptation → `/adapt-content-for-audience`
+   - Nouveau plan → `/create-presentation-plan`
+   - Ajout de slides → `/add-slide`
+   - Génération finale → `/generate-presentation`
+
+   ### 1. Prochaines Étapes Recommandées
    ```bash
    # Ajouter une slide de titre
-   python tools/add_slide.py [chemin]/presentation_schema.json 11 ajout
+   python tools/add_slide.py [chemin]/config.json 11 ajout
 
    # Ajouter une table des matières
-   python tools/add_slide.py [chemin]/presentation_schema.json 13 ajout
+   python tools/add_slide.py [chemin]/config.json 13 ajout
    ```
 
    ### 2. Templates Suggérés pour votre Audience
@@ -111,7 +160,7 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
 
    ### 3. Générer la Présentation
    ```bash
-   python presentation_builder/presentation_builder.py [chemin]/presentation_schema.json
+   python presentation_builder/presentation_builder.py [chemin]/config.json
    ```
    ```
 
@@ -129,7 +178,7 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
 
 2. **Nettoyage si nécessaire** :
    - Supprimer les fichiers de test
-   - Réinitialiser presentation_schema.json à l'état initial
+   - Réinitialiser config.json à l'état initial
    - S'assurer que la structure est propre pour l'utilisateur
 
 ## Phase 5: Rapport et Finalisation
@@ -141,7 +190,7 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
 
    📁 Structure créée dans : [chemin complet]
    📄 Fichiers générés :
-   - presentation_schema.json (configuration principale)
+   - config.json (configuration principale)
    - README.md (instructions d'utilisation)
    - guide_demarrage.md (étapes recommandées)
    - suggested_slides.md (templates suggérés)
@@ -152,10 +201,10 @@ Initialise une nouvelle présentation en créant la structure complète, exécut
 2. **Fournir les commandes de suite** :
    ```bash
    # Ajouter vos premières slides :
-   python tools/add_slide.py [chemin]/presentation_schema.json [template] ajout
+   python tools/add_slide.py [chemin]/config.json [template] ajout
 
    # Générer la présentation :
-   python presentation_builder/presentation_builder.py [chemin]/presentation_schema.json
+   python presentation_builder/presentation_builder.py [chemin]/config.json
    ```
 
 3. **Suggestions d'amélioration** :

@@ -9,7 +9,7 @@ respectent fidèlement leurs schémas de configuration.
 
 Workflow:
 1. Prend en entrée un chemin d'audience et un numéro de slide
-2. Trouve et parse le presentation_schema.json associé
+2. Trouve et parse le config.json associé
 3. Exécute slide_extractor.py sur la présentation générée
 4. Compare shape par shape chaque configuration
 5. Génère un rapport détaillé des résultats
@@ -126,8 +126,8 @@ class PresentationValidator:
             }
 
     def _load_presentation_schema(self, audience_path: str) -> Dict[str, Any]:
-        """Charge le fichier presentation_schema.json."""
-        schema_path = os.path.join(audience_path, "presentation_schema.json")
+        """Charge le fichier config.json."""
+        schema_path = os.path.join(audience_path, "config.json")
 
         if not os.path.exists(schema_path):
             raise FileNotFoundError(f"Schema non trouvé: {schema_path}")
@@ -514,7 +514,7 @@ class PresentationValidator:
 - **Score global** : {summary["quality_score"]:.1f}%
 
 ## 🛠️ Informations Techniques
-- **Fichier schéma** : {report_data["audience_path"]}/presentation_schema.json
+- **Fichier schéma** : {report_data["audience_path"]}/config.json
 - **Présentation générée** : {report_data["presentation_path"]}
 - **Validation effectuée** : {report_data["timestamp"]}
 

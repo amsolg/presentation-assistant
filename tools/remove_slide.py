@@ -3,14 +3,14 @@
 Script pour supprimer des slides d'un schéma de présentation existant.
 
 Usage:
-    python tools/remove_slide.py <presentation_schema_path> <slide_position>
+    python tools/remove_slide.py <config_path> <slide_position>
 
 Arguments:
-    presentation_schema_path (str): Chemin vers le fichier presentation_schema.json
+    config_path (str): Chemin vers le fichier config.json
     slide_position (int): Position de la slide à supprimer (1-based)
 
 Exemple:
-    python tools/remove_slide.py presentations/mon-sujet/audience/presentation_schema.json 3
+    python tools/remove_slide.py presentations/mon-sujet/audience/config.json 3
 """
 
 import os
@@ -91,11 +91,11 @@ def main():
         print("Usage: python tools/remove_slide.py <schema_path> <slide_position>")
         print()
         print("Arguments:")
-        print("  schema_path     : Chemin vers presentation_schema.json")
+        print("  config_path     : Chemin vers config.json")
         print("  slide_position  : Position de la slide à supprimer (1-based)")
         print()
         print("Exemple:")
-        print("  python tools/remove_slide.py presentations/sujet/audience/presentation_schema.json 3")
+        print("  python tools/remove_slide.py presentations/sujet/audience/config.json 3")
         sys.exit(1)
 
     try:

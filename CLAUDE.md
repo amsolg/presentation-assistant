@@ -105,9 +105,23 @@ python tools/presentation_builder.py config.json
 
 ## 📋 **Commandes Intégrées**
 
-### Orchestration Intelligente des Commandes
+### 🤖 **Usage Autonome des Commandes**
 
-**Claude détermine automatiquement** quelles commandes exécuter selon le contexte :
+**Toutes les commandes peuvent être utilisées de manière autonome** par Claude selon les besoins identifiés. Claude détermine automatiquement quelles commandes exécuter selon le contexte et peut enchaîner intelligemment les commandes dans l'ordre optimal.
+
+### 🔄 **Ordre d'Exécution Recommandé**
+
+Pour une présentation complète, l'ordre optimal est :
+
+1. **[/initialize-presentation](.claude/commands/initialize-presentation.md)** ⭐ - Démarrage projet
+2. **[/research-audience](.claude/commands/research-audience.md)** - Analyse audience (si nécessaire)
+3. **[/research-presentation-data](.claude/commands/research-presentation-data.md)** - Recherche contenu (si nécessaire)
+4. **[/adapt-content-for-audience](.claude/commands/adapt-content-for-audience.md)** - Adaptation intelligente
+5. **[/create-presentation-plan](.claude/commands/create-presentation-plan.md)** - Plan stratégique
+6. **[/add-slide](.claude/commands/add-slide.md)** - Ajout de slides (répétable)
+7. **[/generate-presentation](.claude/commands/generate-presentation.md)** ⭐ - Génération finale avec validation
+
+### Détail des Commandes
 
 #### [/initialize-presentation](.claude/commands/initialize-presentation.md) ⭐
 **Utilisation :** Démarrage d'un nouveau projet de présentation
@@ -123,13 +137,28 @@ python tools/presentation_builder.py config.json
 - **Si adaptation requise :** Suggère automatiquement `/adapt-content-for-audience`
 
 #### [/research-audience](.claude/commands/research-audience.md)
+**Usage autonome :** Analyse et documentation d'audience spécifique
 **Déclenchement automatique :** Audience non documentée ou individu spécifique
 
 #### [/research-presentation-data](.claude/commands/research-presentation-data.md)
+**Usage autonome :** Recherche documentaire approfondie sur un sujet
 **Déclenchement automatique :** Sujet technique complexe ou besoin documentaire identifié
 
 #### [/adapt-content-for-audience](.claude/commands/adapt-content-for-audience.md)
+**Usage autonome :** Adaptation de contenu pour audience spécifique
 **Déclenchement automatique :** Après recherche documentaire pour optimiser l'adaptation
+
+#### [/create-presentation-plan](.claude/commands/create-presentation-plan.md) 🆕
+**Usage autonome :** Génération d'un plan stratégique de présentation
+**Exécution recommandée :** Après `/adapt-content-for-audience`
+
+#### [/add-slide](.claude/commands/add-slide.md) 🆕
+**Usage autonome :** Ajout ou insertion de slides avec personnalisation automatique
+**Exécution :** Selon les besoins pendant la création de présentation
+
+#### [/generate-presentation](.claude/commands/generate-presentation.md) ⭐🆕
+**Usage autonome :** Génération finale PowerPoint avec validation automatique complète
+**Exécution finale :** Dernière étape du workflow avec contrôle qualité Premier Tech
 
 **📖 Documentation complète :** Voir [.claude/commands/](.claude/commands/) pour détails techniques
 
@@ -207,7 +236,7 @@ def load_config(config_file):
 ```
 presentation-assistant/
 ├── tools/                      # Scripts layout-based principaux
-├── .claude/commands/           # 4 commandes orchestrées
+├── .claude/commands/           # 7 commandes orchestrées
 ├── templates/                  # Template PT + structures
 ├── presentations/              # Projets [sujet]/[audience]/
 ├── docs/                       # Documentation spécialisée

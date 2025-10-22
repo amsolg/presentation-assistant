@@ -40,7 +40,7 @@ def create_directory_structure(sujet, audience, is_test):
     return presentation_dir
 
 def create_presentation_schema(presentation_dir, sujet, audience, is_test):
-    """Crée le fichier de configuration presentation_schema.json pré-rempli."""
+    """Crée le fichier de configuration config.json pré-rempli."""
 
     # Générer le nom de la présentation
     presentation_name = f"Présentation {sujet.replace('-', ' ').title()} - {audience.replace('-', ' ').title()}"
@@ -67,7 +67,7 @@ def create_presentation_schema(presentation_dir, sujet, audience, is_test):
     }
 
     # Écrire le fichier de configuration
-    config_path = presentation_dir / "presentation_schema.json"
+    config_path = presentation_dir / "config.json"
     with open(config_path, 'w', encoding='utf-8') as f:
         json.dump(config, f, indent=2, ensure_ascii=False)
 
@@ -84,18 +84,18 @@ def create_readme_file(presentation_dir, sujet, audience, is_test):
 - **Créé le** : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
 ## Structure des fichiers
-- `presentation_schema.json` : Configuration principale de la présentation
+- `config.json` : Configuration principale de la présentation
 - `output/` : Présentations générées
 - `data/` : Données pour graphiques (CSV)
 
 ## Utilisation
 Pour générer la présentation :
 ```bash
-python presentation_builder/presentation_builder.py {presentation_dir}/presentation_schema.json
+python presentation_builder/presentation_builder.py {presentation_dir}/config.json
 ```
 
 ## Notes
-- Modifier `presentation_schema.json` pour personnaliser les slides
+- Modifier `config.json` pour personnaliser les slides
 - Ajouter des fichiers CSV dans `data/` pour les graphiques
 - Les présentations générées seront dans `output/`
 """
