@@ -3,20 +3,20 @@
 Script pour ajouter ou insérer des slides dans un schéma de présentation existant.
 
 Usage:
-    python tools/add_slide.py <presentation_schema_path> <slide_number> <mode> [position]
+    python tools/add_slide.py <config_path> <slide_number> <mode> [position]
 
 Arguments:
-    presentation_schema_path (str): Chemin vers le fichier presentation_schema.json
+    config_path (str): Chemin vers le fichier config.json
     slide_number (int): Numéro de la slide à copier (1-57)
     mode (str): Mode d'ajout - "ajout" ou "insertion"
     position (int, optionnel): Position d'insertion (requis si mode = "insertion")
 
 Exemples:
     # Ajouter une slide à la fin
-    python tools/add_slide.py presentations/mon-sujet/audience/presentation_schema.json 13 ajout
+    python tools/add_slide.py presentations/mon-sujet/audience/config.json 13 ajout
 
     # Insérer une slide à la position 2 (les slides suivantes sont renumérotées)
-    python tools/add_slide.py presentations/mon-sujet/audience/presentation_schema.json 13 insertion 2
+    python tools/add_slide.py presentations/mon-sujet/audience/config.json 13 insertion 2
 """
 
 import os
@@ -25,8 +25,30 @@ import json
 import copy
 from pathlib import Path
 
-def load_slide_template(slide_number):
+def find_slide_template_by_layout_name(layout_name):
+    """Trouve le template de slide par nom de layout."""
+    slide_structure_dir = Path("templates/presentation-project/slide-structure")
+
+    for template_file in slide_structure_dir.glob("slide_*.json"):
+        try:
+            with open(template_file, 'r', encoding='utf-8') as f:
+                template = json.load(f)
+                if template.get("layout_name") == layout_name:
+                    return template, template.get("slide_number")
+        except (json.JSONDecodeError, FileNotFoundError):
+            continue
+
+    raise FileNotFoundError(f"Template avec layout_name '{layout_name}' non trouvé")
+
+def load_slide_template(slide_identifier):
     """Charge le template de slide depuis slide-structure."""
+    # Vérifier si c'est un numéro ou un nom de layout
+    if isinstance(slide_identifier, str) and not slide_identifier.isdigit():
+        # C'est un layout_name
+        return find_slide_template_by_layout_name(slide_identifier)
+
+    # C'est un numéro de slide
+    slide_number = int(slide_identifier)
     template_path = Path("templates/presentation-project/slide-structure") / f"slide_{slide_number}.json"
 
     if not template_path.exists():
@@ -35,7 +57,7 @@ def load_slide_template(slide_number):
     with open(template_path, 'r', encoding='utf-8') as f:
         slide_template = json.load(f)
 
-    return slide_template
+    return slide_template, slide_number
 
 def load_presentation_schema(schema_path):
     """Charge le schéma de présentation."""
@@ -55,61 +77,32 @@ def save_presentation_schema(schema, schema_path):
         json.dump(schema, f, indent=2, ensure_ascii=False)
 
 def convert_template_to_slide_config(template, new_slide_number):
-    """Convertit un template de slide-structure en configuration pour presentation_schema."""
+    """Convertit un template de slide-structure en configuration pour presentation_schema (layout-based)."""
     slide_config = {
-        "slide_number": new_slide_number,
         "layout_name": template.get("layout_name", "Layout inconnu"),
         "shapes": []
     }
 
-    # Convertir chaque shape du template
+    # Convertir chaque shape du template pour architecture layout-based
     for shape in template.get("shapes", []):
-        # Créer la shape_config dans l'ordre exact des templates
+        # Configuration simplifiée layout-based
         shape_config = {
-            "name": shape.get("name", f"Shape {shape['shape_id']}"),
             "shape_id": shape["shape_id"],
-            "type": shape.get("type", "placeholder")
-        }
-
-        # Ajouter l'objet position avec la structure exacte du template
-        if "position" in shape:
-            shape_config["position"] = {
-                "left": shape["position"].get("left"),
-                "top": shape["position"].get("top"),
-                "width": shape["position"].get("width"),
-                "height": shape["position"].get("height")
-            }
-
-        # Ajouter placeholder_type et placeholder_idx dans l'ordre
-        shape_config["placeholder_type"] = shape.get("placeholder_type", "body")
-        if "placeholder_idx" in shape:
-            shape_config["placeholder_idx"] = shape["placeholder_idx"]
-
-        # Continuer avec les attributs de texte dans l'ordre exact
-        shape_config.update({
             "text": shape.get("text", ""),
             "font_name": shape.get("font_name", "Premier Tech Text"),
             "font_size": shape.get("font_size", 18.0),
-            "bold": shape.get("bold", False),
-            "italic": shape.get("italic", False),
-            "underline": shape.get("underline", False),
             "color": shape.get("color", "#FFFFFF"),
+            "bold": shape.get("bold", False),
             "alignment": shape.get("alignment", "LEFT"),
             "vertical_alignment": shape.get("vertical_alignment", "TOP"),
             "margin_left": shape.get("margin_left", 7.2),
             "margin_right": shape.get("margin_right", 7.2),
             "margin_top": shape.get("margin_top", 3.6),
             "margin_bottom": shape.get("margin_bottom", 3.6),
-            "text_wrapping": shape.get("text_wrapping", "square")
-        })
-
-        # Ajouter l'objet autofit avec la structure exacte du template
-        if "autofit" in shape:
-            shape_config["autofit"] = {
-                "type": shape["autofit"].get("type", "none"),
-                "font_scale": shape["autofit"].get("font_scale"),
-                "line_spacing_reduction": shape["autofit"].get("line_spacing_reduction")
-            }
+            "autofit_type": shape.get("autofit", {}).get("type", "none"),
+            "text_wrapping": shape.get("text_wrapping", "square"),
+            "placeholder_type": shape.get("placeholder_type", "body")
+        }
 
         slide_config["shapes"].append(shape_config)
 
@@ -123,42 +116,32 @@ def renumber_slides(slides, start_position):
     return slides
 
 def add_slide_to_end(schema, slide_template, template_slide_number):
-    """Ajoute une slide à la fin du schéma."""
-    # Calculer le nouveau numéro de slide
-    if schema["slides"]:
-        new_slide_number = max(slide["slide_number"] for slide in schema["slides"]) + 1
-    else:
-        new_slide_number = 1
-
-    # Convertir le template en configuration de slide
-    new_slide = convert_template_to_slide_config(slide_template, new_slide_number)
+    """Ajoute une slide à la fin du schéma (architecture layout-based)."""
+    # Convertir le template en configuration de slide layout-based
+    new_slide = convert_template_to_slide_config(slide_template, None)
 
     # Ajouter à la fin
     schema["slides"].append(new_slide)
 
-    print(f"[OK] Slide {template_slide_number} ajoutée à la fin (nouvelle position: {new_slide_number})")
+    print(f"[OK] Slide '{slide_template.get('layout_name')}' ajoutée à la fin (position: {len(schema['slides'])})")
 
     return schema
 
 def insert_slide_at_position(schema, slide_template, template_slide_number, position):
-    """Insère une slide à la position spécifiée et renumérote les suivantes."""
+    """Insère une slide à la position spécifiée (architecture layout-based)."""
     if position < 1:
         raise ValueError("La position doit être >= 1")
 
     if position > len(schema["slides"]) + 1:
         raise ValueError(f"Position trop élevée. Maximum: {len(schema['slides']) + 1}")
 
-    # Convertir le template en configuration de slide
-    new_slide = convert_template_to_slide_config(slide_template, position)
+    # Convertir le template en configuration de slide layout-based
+    new_slide = convert_template_to_slide_config(slide_template, None)
 
     # Insérer à la position spécifiée (index = position - 1)
     schema["slides"].insert(position - 1, new_slide)
 
-    # Renumérotter toutes les slides
-    schema["slides"] = renumber_slides(schema["slides"], 0)
-
-    print(f"[OK] Slide {template_slide_number} insérée à la position {position}")
-    print(f"[OK] {len(schema['slides']) - position} slides suivantes renumérotées")
+    print(f"[OK] Slide '{slide_template.get('layout_name')}' insérée à la position {position}")
 
     return schema
 
@@ -166,18 +149,19 @@ def validate_arguments(args):
     """Valide les arguments de ligne de commande."""
     if len(args) < 4:
         print("Erreur: Arguments insuffisants")
-        print("Usage: python tools/add_slide.py <schema_path> <slide_number> <mode> [position]")
+        print("Usage: python tools/add_slide.py <schema_path> <slide_identifier> <mode> [position]")
         sys.exit(1)
 
     schema_path = args[1]
+    slide_identifier = args[2]
 
-    try:
-        slide_number = int(args[2])
+    # Valider le slide_identifier (peut être un numéro ou un layout_name)
+    if slide_identifier.isdigit():
+        slide_number = int(slide_identifier)
         if slide_number < 1 or slide_number > 57:
-            raise ValueError("Le numéro de slide doit être entre 1 et 57")
-    except ValueError as e:
-        print(f"Erreur: Numéro de slide invalide - {e}")
-        sys.exit(1)
+            print("Erreur: Le numéro de slide doit être entre 1 et 57")
+            sys.exit(1)
+    # Sinon, on considère que c'est un layout_name et on le validera plus tard
 
     mode = args[3].lower()
     if mode not in ["ajout", "insertion"]:
@@ -199,35 +183,35 @@ def validate_arguments(args):
     elif len(args) >= 5:
         print("Attention: Position ignorée en mode 'ajout'")
 
-    return schema_path, slide_number, mode, position
+    return schema_path, slide_identifier, mode, position
 
 def main():
     if len(sys.argv) < 4:
         print("Usage: python tools/add_slide.py <schema_path> <slide_number> <mode> [position]")
         print()
         print("Arguments:")
-        print("  schema_path   : Chemin vers presentation_schema.json")
+        print("  config_path   : Chemin vers config.json")
         print("  slide_number  : Numéro de slide à copier (1-57)")
         print("  mode          : 'ajout' ou 'insertion'")
         print("  position      : Position d'insertion (requis si mode = 'insertion')")
         print()
         print("Exemples:")
-        print("  python tools/add_slide.py presentations/sujet/audience/presentation_schema.json 13 ajout")
-        print("  python tools/add_slide.py presentations/sujet/audience/presentation_schema.json 13 insertion 2")
+        print("  python tools/add_slide.py presentations/sujet/audience/config.json 13 ajout")
+        print("  python tools/add_slide.py presentations/sujet/audience/config.json 13 insertion 2")
         sys.exit(1)
 
     try:
         # Valider les arguments
-        schema_path, slide_number, mode, position = validate_arguments(sys.argv)
+        schema_path, slide_identifier, mode, position = validate_arguments(sys.argv)
 
-        print(f"Ajout de slide {slide_number} au schéma {schema_path}")
+        print(f"Ajout de slide {slide_identifier} au schéma {schema_path}")
         print(f"Mode: {mode}" + (f", Position: {position}" if position else ""))
         print()
 
         # Charger le template de slide
-        print(f"[INFO] Chargement du template slide_{slide_number}.json...")
-        slide_template = load_slide_template(slide_number)
-        print(f"[OK] Template chargé: {slide_template.get('layout_name', 'Layout inconnu')}")
+        print(f"[INFO] Chargement du template pour '{slide_identifier}'...")
+        slide_template, actual_slide_number = load_slide_template(slide_identifier)
+        print(f"[OK] Template chargé: {slide_template.get('layout_name', 'Layout inconnu')} (slide {actual_slide_number})")
 
         # Charger le schéma de présentation
         print(f"[INFO] Chargement du schéma de présentation...")
@@ -240,9 +224,9 @@ def main():
 
         # Traiter selon le mode
         if mode == "ajout":
-            schema = add_slide_to_end(schema, slide_template, slide_number)
+            schema = add_slide_to_end(schema, slide_template, actual_slide_number)
         else:  # insertion
-            schema = insert_slide_at_position(schema, slide_template, slide_number, position)
+            schema = insert_slide_at_position(schema, slide_template, actual_slide_number, position)
 
         # Sauvegarder le schéma mis à jour
         print(f"[INFO] Sauvegarde du schéma mis à jour...")
@@ -255,7 +239,7 @@ def main():
         # Afficher un résumé
         print()
         print("=== RÉSUMÉ ===")
-        print(f"Template utilisé: slide_{slide_number}.json ({slide_template.get('layout_name', 'Layout inconnu')})")
+        print(f"Template utilisé: {slide_identifier} -> slide_{actual_slide_number}.json ({slide_template.get('layout_name', 'Layout inconnu')})")
         print(f"Mode d'ajout: {mode}")
         if mode == "insertion":
             print(f"Position d'insertion: {position}")
